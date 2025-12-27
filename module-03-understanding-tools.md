@@ -393,7 +393,7 @@ Check if this package is still maintained
 
 **What you'll see:**
 ```
-Searching: "React useEffect best practices 2024"
+Searching: "React useEffect best practices 2025"
 
 Found:
 - React documentation on useEffect
