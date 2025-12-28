@@ -316,7 +316,7 @@ By the end of this course, you'll be able to:
 
 ---
 
-### [Module 15: Advanced Topics and Production Deployment](module-15-advanced-topics.md)
+### [Module 15: Production Deployment](module-15-production-deployment.md)
 
 **Goal:** Take your applications to production
 
