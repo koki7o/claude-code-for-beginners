@@ -497,6 +497,12 @@ Claude Code makes it possible for anyone to create professional software. This c
 
 ---
 
+## Star History
+
+[![Star History Chart](https://api.star-history.com/svg?repos=koki7o/claude-code-for-beginners&type=date&legend=top-left)](https://www.star-history.com/#koki7o/claude-code-for-beginners&type=date&legend=top-left)
+
+---
+
 *Last updated: December 2025*
 
 </div>
