@@ -254,6 +254,8 @@ By the end of this course, you'll be able to:
 
 *These modules are for learners who want to go deeper after completing the core course.*
 
+> **Want even more?** After completing this free course, check out the [**Real Projects Pack**](https://devfounder.gumroad.com/l/claude-code-real-projects) (10 hands-on project templates) and [**Advanced Modules**](https://devfounder.gumroad.com/l/claude-code-advanced-modules) (5 enterprise-level training modules). Or get the [**Complete Bundle**](https://devfounder.gumroad.com/l/claude-code-advanced-modules+real-projects-bundle) and save $10!
+
 ---
 
 ### [Module 11: MCP Servers - Extending Claude Code](module-11-mcp-servers.md)
@@ -462,6 +464,57 @@ Once you've completed this course, you can:
 - Integrate Claude Code into professional workflows
 - Build custom MCP servers and skills
 - Share your knowledge with other beginners
+
+---
+
+## 🚀 Take Your Skills Further (Premium Content)
+
+**Ready to go from beginner to professional?** Continue your journey with our premium resources:
+
+### 📦 [Real Projects Pack - $39.99](https://devfounder.gumroad.com/l/claude-code-real-projects)
+
+**10 complete project templates with step-by-step Claude Code workflows:**
+
+- AI-Powered Todo App (Claude API integration)
+- Code Review Automation Tool
+- Documentation Generator
+- Bug Finder Assistant
+- Test Case Generator
+- API Client Builder
+- Database Schema Designer
+- CLI Tool Starter Kit
+- Microservice Template
+- Full-Stack SaaS Boilerplate (Auth, Stripe, Multi-tenancy)
+
+*Each project includes 3-5 hours of content, production code examples, and copy-paste prompts.*
+
+---
+
+### 🎓 [Advanced Modules - $29.99](https://devfounder.gumroad.com/l/claude-code-advanced-modules)
+
+**5 enterprise-level training modules for professional developers:**
+
+- **Module 16:** Production Deployment at Scale (Kubernetes, auto-scaling, multi-region)
+- **Module 17:** Multi-Agent Systems (Complex AI workflows, agent orchestration)
+- **Module 18:** Custom MCP Server Development (Build production-grade MCP servers)
+- **Module 19:** Enterprise Integration Patterns (SSO, RBAC, audit logging, compliance)
+- **Module 20:** Performance Optimization & Profiling (Advanced profiling, caching, token optimization)
+
+*Each module includes 3-4 hours of detailed content, production code examples, and best practices.*
+
+---
+
+### 🔥 [Complete Bundle - $59.99 (Save $10!)](https://devfounder.gumroad.com/l/claude-code-advanced-modules+real-projects-bundle)
+
+**Get everything: 5 Advanced Modules + 10 Real Projects**
+
+- ✅ **40+ hours** of comprehensive content
+- ✅ **15 complete modules** covering theory and practice
+- ✅ **Production-ready code** for real-world applications
+- ✅ **AI prompt workflows** for every scenario
+- ✅ **Save $10** compared to buying separately
+
+**Perfect for:** Developers building enterprise applications, freelancers expanding services, anyone serious about mastering Claude Code.
 
 ---
 
