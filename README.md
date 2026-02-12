@@ -504,7 +504,7 @@ Once you've completed this course, you can:
 
 ---
 
-### 🔥 [Complete Bundle - $59.99 (Save $10!)](https://devfounder.gumroad.com/l/claude-code-advanced-modules+real-projects-bundle)
+### 🔥 [Complete Bundle - $59.99 (Save $10!)](https://devfounder.gumroad.com/l/claude-code-advanced-modules-real-projects-bundle)
 
 **Get everything: 5 Advanced Modules + 10 Real Projects**
 
