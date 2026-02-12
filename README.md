@@ -490,7 +490,7 @@ Once you've completed this course, you can:
 
 ---
 
-### 🎓 [Advanced Modules - $29.99](https://devfounder.gumroad.com/l/claude-code-advanced-modules)
+### 🎓 [Advanced Modules - $29.99](https://devfounder.gumroad.com/l/claude-code-advanced)
 
 **5 enterprise-level training modules for professional developers:**
 
