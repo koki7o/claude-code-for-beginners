@@ -8,7 +8,7 @@
 
 All content is freely available for everyone.
 
-> **Note:** This course content is generated with the help of Claude Code itself, but created under the strict guidance and verification of an experienced Claude Code power user who uses it as a daily driver. I've  built production projects including [gitscroll.dev](https://gitscroll.dev), [mcp-framework](https://github.com/koki7o/mcp-framework) 🦀 (Rust MCP framework for building AI agents), [time-portal.vercel.app](https://time-portal.vercel.app) (Doom scroll back in time), and [childrenbooks.vercel.app](https://childrenbooks.vercel.app) (Children's books), all using Claude Code.
+> **Note:** This course content is generated with the help of Claude Code itself, but created under the strict guidance and verification of an experienced Claude Code power user who uses it as a daily driver. I've  built production projects including [gitscroll.dev](https://gitscroll.dev), [mcp-framework](https://github.com/koki7o/mcp-framework) 🦀 (Rust MCP framework for building AI agents), [time-portal.vercel.app](https://time-portal.vercel.app) (Doom scroll back in time), and [childrenbooks.vercel.app](https://childrenbooks.vercel.app) (Children's books), and currently building [aicofounders.co](https://aicofounders.co) (6 AI co-founders) and [moltplace.net](https://www.moltplace.net) (Moltbot marketplace), all using Claude Code.
 
 ![AI Powered](https://img.shields.io/badge/AI%20Powered-0066FF?style=for-the-badge&logoColor=ffffff)
 ![Beginner Friendly](https://img.shields.io/badge/Beginner%20Friendly-32CD32?style=for-the-badge&logoColor=ffffff)
