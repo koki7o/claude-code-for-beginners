@@ -1,6 +1,6 @@
 # Troubleshooting Guide
 
-**Common issues and how to resolve them**
+Things break. Here's how to fix them.
 
 ---
 
@@ -27,7 +27,7 @@ npm install -g claude-code
 ```
 
 **Solution 2: Restart your terminal**
-Close and reopen your terminal application
+Close and reopen your terminal application.
 
 **Solution 3: Check npm global path**
 ```bash
@@ -63,7 +63,7 @@ npm config set prefix '~/.npm-global'
 export PATH=~/.npm-global/bin:$PATH
 ```
 
-Add the export line to your shell profile
+Add that export line to your shell profile so it sticks.
 
 **Solution 3: Use sudo (not recommended)**
 ```bash
@@ -81,7 +81,7 @@ Error: Claude Code requires Node.js 18 or higher
 
 **Solution:**
 
-Update Node.js to version 18+:
+You need Node.js 18+.
 
 **Using nvm (recommended):**
 ```bash
@@ -94,7 +94,7 @@ nvm use node
 ```
 
 **Or download from nodejs.org:**
-Visit [nodejs.org](https://nodejs.org) and download the LTS version
+Grab the LTS version from [nodejs.org](https://nodejs.org).
 
 ---
 
@@ -109,7 +109,7 @@ Error: ANTHROPIC_API_KEY environment variable not set
 
 **Solutions:**
 
-**Solution 1: Set environment variable (current session)**
+**Solution 1: Set environment variable (current session only)**
 ```bash
 export ANTHROPIC_API_KEY="your-api-key-here"
 ```
@@ -147,7 +147,7 @@ Error: Invalid API key
 
 **Solutions:**
 
-1. **Get a new API key:**
+1. **Get a fresh API key:**
    - Go to [console.anthropic.com](https://console.anthropic.com)
    - Create a new API key
    - Copy the entire key (starts with `sk-ant-`)
@@ -175,15 +175,14 @@ Error: Insufficient credits in your account
 
 1. **Check your balance:**
    - Visit [console.anthropic.com](https://console.anthropic.com)
-   - Check "Usage" section
+   - Check the "Usage" section
 
 2. **Add credits:**
-   - Add payment method
+   - Add a payment method
    - Purchase credits
 
 3. **Wait for monthly reset:**
    - Free tier credits reset monthly
-   - Check when your next reset is
 
 ---
 
@@ -192,8 +191,8 @@ Error: Insufficient credits in your account
 ### Problem: Claude Code freezes or hangs
 
 **Symptoms:**
-- No response after sending prompt
-- Cursor not blinking
+- No response after sending a prompt
+- Cursor isn't blinking
 - No output for minutes
 
 **Solutions:**
@@ -210,7 +209,7 @@ claude --timeout 300
 ```
 
 **Solution 3: Kill and restart**
-Press `Ctrl+C` to stop, then start again
+Press `Ctrl+C` to stop, then start again.
 
 **Solution 4: Check for background processes**
 ```bash
@@ -230,22 +229,21 @@ Error: Rate limit exceeded. Please try again later.
 ```
 
 **Causes:**
-- Too many requests in short time
+- Too many requests in a short time
 - API limits reached
 
 **Solutions:**
 
 1. **Wait and retry:**
-   - Wait 60 seconds
-   - Try again
+   - Give it 60 seconds, then try again
 
 2. **Reduce request frequency:**
-   - Combine multiple small requests
-   - Make larger, less frequent requests
+   - Combine multiple small requests into larger ones
+   - Fewer, bigger requests beat many small ones
 
 3. **Check your usage:**
    - Visit console.anthropic.com
-   - Review usage limits
+   - Review your usage limits
 
 ---
 
@@ -293,7 +291,7 @@ Show me [filename] to verify
 **For file tools (Read/Write/Edit):**
 1. **Check file paths:**
    - Use absolute paths: `/home/user/project/file.js`
-   - Or ensure you're in the right directory
+   - Or make sure you're in the right directory
 
 2. **Check permissions:**
    ```bash
@@ -311,7 +309,7 @@ Show me [filename] to verify
    Please explain this command before running it
    ```
 
-2. **Test command manually:**
+2. **Test the command manually:**
    ```bash
    # Exit Claude Code and test
    [your command]
@@ -352,7 +350,7 @@ pip install -r requirements.txt
 ls node_modules/
 ```
 
-If empty or missing:
+If it's empty or missing:
 ```bash
 rm -rf node_modules package-lock.json
 npm install
@@ -422,7 +420,7 @@ Explain why these tests are failing
 Fix the code to make the tests pass
 ```
 
-Or:
+Or if the new behavior is intentional:
 ```
 Update the tests to match the new implementation
 ```
@@ -455,12 +453,12 @@ git init
 git --version
 ```
 
-If not installed, install Git:
+If it's not installed:
 - **macOS:** `brew install git`
 - **Ubuntu:** `sudo apt-get install git`
 - **Windows:** Download from git-scm.com
 
-**Solution 3: Verify you're in right directory**
+**Solution 3: Verify you're in the right directory**
 ```bash
 pwd
 ls -la .git
@@ -475,9 +473,10 @@ ls -la .git
 Error: Please tell me who you are
 ```
 
-**Solutions:**
+**Solution:**
 
-**Configure Git identity:**
+Git needs to know who you are before it'll let you commit.
+
 ```bash
 git config --global user.name "Your Name"
 git config --global user.email "your.email@example.com"
@@ -496,7 +495,7 @@ Configure git with my name and email
 
 **Symptoms:**
 - Long delays between request and response
-- Tools take forever to execute
+- Tools take a long time to execute
 
 **Solutions:**
 
@@ -507,18 +506,18 @@ speedtest-cli
 ```
 
 **Solution 2: Simplify requests**
-- Break complex tasks into smaller ones
-- Be more specific to reduce thinking time
+- Break big tasks into smaller ones
+- Be more specific -- it cuts down on thinking time
 
-**Solution 3: Use agents for complex tasks**
+**Solution 3: Use agents for multi-step tasks**
 ```
 Use an agent to [complex task]
 ```
-Agents can be more efficient for multi-step tasks
+Agents can handle multi-step work more efficiently.
 
 **Solution 4: Close other applications**
 - Free up memory and CPU
-- Close other Claude Code sessions
+- Close other Claude Code sessions if you have any running
 
 ---
 
@@ -585,15 +584,15 @@ Check `~/.config/claude/config.json`:
 ```
 
 **Solution 4: Check server logs**
-Look in `~/.config/claude/logs/` for error messages
+Look in `~/.config/claude/logs/` for error messages.
 
 ---
 
 ## Getting More Help
 
-### When to ask Claude Code for help
+### Ask Claude Code itself
 
-You can ask Claude Code itself to help troubleshoot:
+You can just ask Claude Code to help you troubleshoot directly:
 
 ```
 I'm getting this error: [error message]
@@ -604,28 +603,23 @@ Can you help me understand and fix it?
 Something's not working correctly. Can you help me debug?
 ```
 
-```
-The [feature] isn't behaving as expected. Help me troubleshoot.
-```
-
-### When to check documentation
+### Check the docs
 
 - [Claude Code GitHub](https://github.com/anthropics/claude-code)
 - [Claude API Docs](https://docs.anthropic.com)
 - [GitHub Issues](https://github.com/anthropics/claude-code/issues)
 
-### When to ask the community
+### File a GitHub issue
 
-- Search existing GitHub issues
-- Create new issue with:
-  - Clear problem description
+If you're stuck, search the existing issues first. If nothing matches, open a new one with:
+  - A clear problem description
   - Steps to reproduce
   - Error messages
-  - System information
+  - System information (see below)
 
-### System information to provide
+### System information to include
 
-When reporting issues, include:
+When reporting issues, grab this info:
 
 ```bash
 # Claude Code version
@@ -645,38 +639,18 @@ systeminfo  # Windows
 
 ---
 
-## Prevention Tips
+## Preventing Problems
 
-### Best Practices to Avoid Issues
+1. **Use version control (Git).** Commit working code before making changes so you can revert if something breaks.
 
-1. **Always use version control (Git)**
-   - Commit working code before making changes
-   - Easy to revert if something breaks
+2. **Review changes before accepting.** Check Edit tool outputs and verify Bash commands before they run.
 
-2. **Review changes before accepting**
-   - Check Edit tool outputs
-   - Verify Bash commands before they run
+3. **Test after each change.** Don't wait until you've made ten changes to find out the first one broke something.
 
-3. **Test incrementally**
-   - Test after each change
-   - Catch issues early
+4. **Commit to Git regularly** and push to a remote. That's your safety net.
 
-4. **Keep backups**
-   - Commit to Git regularly
-   - Push to remote repositories
+5. **Be specific in your requests.** Vague prompts lead to vague results.
 
-5. **Be specific in requests**
-   - Reduces misunderstandings
-   - Gets better results
+6. **Ask for explanations.** If you don't understand what Claude Code did, ask. You'll learn to spot problems faster.
 
-6. **Ask for explanations**
-   - Understand what Claude Code is doing
-   - Learn to spot issues
-
-7. **Start simple, add complexity**
-   - Get basics working first
-   - Add features incrementally
-
----
-
-*Most issues can be solved with clear communication and systematic troubleshooting!*
+7. **Start simple, then add complexity.** Get the basics working before piling on features.

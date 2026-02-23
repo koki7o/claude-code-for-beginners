@@ -6,12 +6,7 @@
 
 ## How to Use This Guide
 
-This guide provides **suggested solutions** for the challenges in each module. Remember:
-
-- **Try the challenge yourself first!** Don't peek until you've attempted it.
-- **There are many valid approaches** - yours might be different and equally good!
-- **Compare your approach** - See how your solution differs from these suggestions.
-- **Learn from differences** - Understanding why different approaches work helps you improve.
+Fair warning: spoilers below. These are suggested solutions -- not the only way to do things. Your approach might look completely different and still be perfectly fine. If you're comparing your solution to what's here, the interesting part isn't whether they match, it's understanding why the differences exist.
 
 ---
 
@@ -59,10 +54,10 @@ This guide provides **suggested solutions** for the challenges in each module. R
    Run the greeting.py script
    ```
 
-**Key Learnings:**
-- How to install and configure Claude Code
+**What you'll get out of this:**
+- Installing and configuring Claude Code
 - Basic prompt structure
-- Watching tool usage (Write, Bash)
+- Seeing tool usage in action (Write, Bash)
 
 ---
 
@@ -85,7 +80,7 @@ Create a REST API for notes using Express.js with these requirements:
 ```
 
 **Step 2: Project Structure**
-Claude Code should create:
+Claude Code should create something like this:
 ```
 notes-api/
 ├── package.json
@@ -113,14 +108,10 @@ curl -X POST http://localhost:3000/notes \
 curl http://localhost:3000/notes
 ```
 
-**Alternative Approach:**
-You could also ask Claude Code to:
-1. Start with basic structure
-2. Add endpoints one by one
-3. Add validation last
-4. Add error handling last
+**Another way to do it:**
+Instead of one big prompt, you could build it up piece by piece -- start with the basic server, add endpoints one at a time, then layer in validation and error handling at the end. That's actually a great habit to develop.
 
-**Key Learnings:**
+**What you'll get out of this:**
 - RESTful API design
 - Express.js routing
 - Input validation
@@ -193,11 +184,11 @@ Test all validation cases
 Test successful submission
 ```
 
-**Key Learnings:**
+**What you'll get out of this:**
 - Next.js page and API routes
-- Form validation (client and server)
+- Form validation on both client and server
 - State management with hooks
-- Error handling in full-stack apps
+- Error handling across the stack
 
 ---
 
@@ -253,7 +244,7 @@ Help me create a pull request with:
 - Reference to any related issues
 ```
 
-**Key Learnings:**
+**What you'll get out of this:**
 - Git workflow (fork, clone, branch)
 - Following contribution guidelines
 - Code review process
@@ -299,10 +290,10 @@ Help me create a pull request with:
    Install the express package
    ```
 
-**Key Learnings:**
-- Understanding what each tool does
-- When to use which tool
-- How to be specific in requests
+**What you'll get out of this:**
+- What each tool actually does
+- Knowing when to reach for which tool
+- Being specific in your requests
 
 ---
 
@@ -322,29 +313,19 @@ Help me create a pull request with:
 
 ### General Approach
 
-1. **Read the challenge carefully**
-   - Understand all requirements
-   - Note any specific technologies mentioned
+1. **Read the challenge carefully** -- make sure you understand all the requirements and note any specific technologies mentioned.
 
-2. **Break it down**
-   - List the steps needed
-   - Tackle one step at a time
+2. **Break it down** into steps and tackle them one at a time. Don't try to hold the whole thing in your head.
 
-3. **Start simple**
-   - Get basic functionality working
-   - Add complexity gradually
+3. **Start simple.** Get the basic version working first, then add complexity.
 
-4. **Test as you go**
-   - Verify each piece works
-   - Catch issues early
+4. **Test as you go.** It's way easier to catch problems early than to debug a whole finished project that doesn't work.
 
-5. **Ask for help when stuck**
-   - Use Claude Code to explain concepts
-   - Ask for alternative approaches
+5. **Ask for help when you're stuck.** Use Claude Code to explain concepts or suggest different approaches -- that's what it's there for.
 
 ### Prompting Tips
 
-**For complex challenges:**
+**For bigger challenges:**
 ```
 I need to build [X]. Let's break it down:
 1. First, create the basic structure
@@ -353,70 +334,53 @@ I need to build [X]. Let's break it down:
 Let's start with step 1.
 ```
 
-**When stuck:**
+**When you're stuck:**
 ```
 I'm trying to [goal] but [problem].
 Can you help me understand what's wrong and suggest a fix?
 ```
 
-**For learning:**
+**When you want to actually learn what happened:**
 ```
 Please explain what this code does and why you chose this approach
 ```
 
 ### Evaluation Criteria
 
-When comparing your solution to these:
+When comparing your solution to these, here's what to look at:
 
-**Functionality:**
-- ✅ Does it work as required?
-- ✅ Does it handle edge cases?
-- ✅ Is error handling present?
+**Functionality** -- Does it work? Does it handle edge cases? Is there error handling?
 
-**Code Quality:**
-- ✅ Is it readable and well-organized?
-- ✅ Are names descriptive?
-- ✅ Is it properly commented?
+**Code Quality** -- Is it readable and well-organized? Are names descriptive? Is it properly commented?
 
-**Best Practices:**
-- ✅ Follows language conventions?
-- ✅ Uses appropriate patterns?
-- ✅ Security considerations addressed?
+**Best Practices** -- Does it follow language conventions? Use appropriate patterns? Address security considerations?
 
-**Learning:**
-- ✅ Do you understand how it works?
-- ✅ Could you explain it to someone?
-- ✅ Could you modify it if needed?
+**Understanding** -- Do you actually get how it works? Could you explain it to someone else? Could you modify it if you needed to?
 
 ---
 
-## Common Pitfalls to Avoid
+## Common Pitfalls
 
 ### Pitfall 1: Too Vague
-❌ **Bad:** "Make an API"
-✅ **Good:** "Create a REST API with Express that has endpoints for CRUD operations on users"
+"Make an API" won't get you far. "Create a REST API with Express that has endpoints for CRUD operations on users" -- that's something Claude Code can work with.
 
-### Pitfall 2: Too Complex at Once
-❌ **Bad:** Asking for entire application in one prompt
-✅ **Good:** Build incrementally, feature by feature
+### Pitfall 2: Too Much at Once
+Asking for an entire application in one prompt usually doesn't go well. Build incrementally, feature by feature.
 
 ### Pitfall 3: Not Testing
-❌ **Bad:** Building everything then testing at the end
-✅ **Good:** Test after each major change
+Building everything and then testing at the end is a recipe for confusion. Test after each major change.
 
 ### Pitfall 4: Ignoring Errors
-❌ **Bad:** Continuing when something doesn't work
-✅ **Good:** Stop and fix errors immediately
+If something breaks, stop and fix it. Don't keep building on top of broken code.
 
-### Pitfall 5: Not Reading Documentation
-❌ **Bad:** Guessing how technologies work
-✅ **Good:** Ask Claude Code to explain or search documentation
+### Pitfall 5: Guessing Instead of Asking
+If you don't know how a technology works, ask Claude Code to explain it or look up the docs. Guessing wastes time.
 
 ---
 
 ## Additional Practice Ideas
 
-Beyond the official challenges, try:
+If you want more to work on beyond the official challenges, here are some ideas:
 
 ### Beginner Projects
 - Calculator CLI
@@ -443,13 +407,4 @@ Beyond the official challenges, try:
 
 ## Getting the Most from Challenges
 
-1. **Do them in order** - They build on each other
-2. **Don't skip ahead** - Master basics before advanced topics
-3. **Try variations** - Modify challenges to explore more
-4. **Share your solutions** - Discuss with other learners
-5. **Review periodically** - Come back to early challenges with new knowledge
-6. **Create your own** - Design challenges based on real needs
-
----
-
-*Remember: The goal is learning, not perfection. Every attempt teaches you something!*
+These challenges are ordered intentionally -- they build on each other, so it's worth doing them in sequence. Once you've finished a challenge, try tweaking it or adding features to explore further. And if you come back to an early challenge after finishing later modules, you'll probably spot things you'd do differently now. That's a good sign.

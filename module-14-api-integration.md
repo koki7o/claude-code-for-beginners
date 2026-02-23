@@ -6,16 +6,9 @@
 
 ---
 
-## What You'll Learn in This Module
+## What You'll Learn
 
-By the end of this module, you will:
-- Use Claude Code's WebSearch to find documentation
-- Fetch API documentation with WebFetch
-- Integrate third-party APIs into your projects
-- Handle different authentication methods
-- Implement rate limiting and quotas
-- Handle API errors gracefully
-- Build complete API client wrappers
+This module is all about connecting your projects to the outside world. You'll use Claude Code's WebSearch and WebFetch tools to pull in documentation, then build real API integrations -- complete with authentication, rate limiting, error handling, and production-ready client wrappers.
 
 ---
 
@@ -23,7 +16,8 @@ By the end of this module, you will:
 
 ### Finding Documentation
 
-**Search for official docs:**
+You can point Claude Code at the web to find official docs for just about anything:
+
 ```
 Search for the latest Stripe API documentation
 ```
@@ -40,7 +34,8 @@ Search for Node.js Express middleware best practices
 
 ### Finding Solutions
 
-**Search for specific problems:**
+Same idea works when you're stuck on a specific problem:
+
 ```
 Search for how to fix "CORS error in Express API"
 ```
@@ -71,6 +66,8 @@ Search for the best npm packages for:
 
 ### Fetching and Understanding Docs
 
+WebFetch goes a step further -- it actually pulls down a page and lets Claude Code reason about the contents. This is incredibly useful for API docs.
+
 ```
 Fetch the documentation from https://docs.stripe.com/api/customers/create
 and create a TypeScript function to create a customer
@@ -84,6 +81,8 @@ and show me how to list repositories for a user
 ---
 
 ### Generating Code from Docs
+
+Here's where things get interesting. You can have Claude Code read the docs and produce a full implementation in one shot:
 
 ```
 Fetch the SendGrid API documentation
@@ -112,7 +111,7 @@ Create a weather service that integrates with OpenWeatherMap API:
 - Include TypeScript types
 ```
 
-**Claude Code will create:**
+Claude Code will produce something like this:
 
 ```typescript
 //weather.service.ts
@@ -204,9 +203,11 @@ Create a GitHub API client with:
 
 ## Lesson 4: Authentication Methods
 
+Authentication is one of those things that sounds simple until you're three hours deep in token refresh logic. The good news: Claude Code handles the boilerplate well, so you can focus on the parts that actually matter.
+
 ### API Key Authentication
 
-**Simple API key in header:**
+The simplest approach -- just a key in a header:
 
 ```
 Create a SendGrid email client that:
@@ -221,6 +222,8 @@ Create a SendGrid email client that:
 
 ### OAuth 2.0 Integration
 
+OAuth is more involved. There are multiple steps, and getting them wrong means silent failures that are annoying to debug.
+
 ```
 Implement GitHub OAuth flow:
 1. Generate authorization URL
@@ -231,11 +234,13 @@ Implement GitHub OAuth flow:
 6. Handle token refresh
 ```
 
-**Claude Code will create the complete OAuth flow with security best practices.**
+Claude Code will generate the complete OAuth flow with security best practices baked in.
 
 ---
 
 ### JWT Token Management
+
+JWTs are everywhere in modern APIs. The tricky part isn't using them -- it's managing their lifecycle properly.
 
 ```
 Create an API client for our internal service that:
@@ -253,6 +258,8 @@ Create an API client for our internal service that:
 
 ### Implementing Client-Side Rate Limiting
 
+This matters more than you think. Hit a rate limit in production and your whole integration falls over. Build the limiter upfront.
+
 ```
 Create a rate limiter class that:
 - Limits API calls to X per second
@@ -263,7 +270,7 @@ Create a rate limiter class that:
 - Logs when hitting limits
 ```
 
-**Example implementation:**
+Here's what a solid implementation looks like:
 
 ```typescript
 class APIRateLimiter {
@@ -327,6 +334,8 @@ class APIRateLimiter {
 
 ### Robust API Error Handling
 
+Fair warning: if you skip error handling on API calls, you'll regret it the first time a third-party service goes down. And they all go down eventually.
+
 ```
 Create comprehensive error handling for API calls that:
 - Distinguishes between error types:
@@ -344,6 +353,8 @@ Create comprehensive error handling for API calls that:
 ---
 
 ### Retry Logic with Exponential Backoff
+
+The key insight here: retry server errors and network failures, but never retry client errors. A 400 Bad Request won't magically start working on the second try.
 
 ```typescript
 async function fetchWithRetry<T>(
@@ -397,6 +408,8 @@ function sleep(ms: number): Promise<void> {
 
 ### Production-Ready API Client
 
+This is where everything comes together. A real API wrapper needs all the pieces -- auth, retries, rate limiting, types, tests. Trust me on this: getting the infrastructure right upfront saves enormous pain later.
+
 ```
 Build a complete Stripe API wrapper with:
 
@@ -427,7 +440,7 @@ Security:
 
 ### Exercise 1: Weather CLI App
 
-**Task:** Build a weather command-line tool
+Build a weather command-line tool:
 
 ```
 Create a CLI weather app that:
@@ -447,7 +460,7 @@ node weather.js "San Francisco"
 
 ### Exercise 2: GitHub CLI Tool
 
-**Task:** Build a GitHub client
+Build a GitHub client:
 
 ```
 Create a GitHub CLI tool that:
@@ -464,7 +477,7 @@ Create a GitHub CLI tool that:
 
 ### Exercise 3: Multi-API Dashboard
 
-**Task:** Combine multiple APIs
+This one's a step up -- you're combining multiple APIs into a single service, and each one can fail independently. That's the real challenge.
 
 ```
 Build a daily digest service that fetches:
@@ -499,48 +512,44 @@ Before moving to Module 15, make sure you can:
 ## Best Practices
 
 **API Integration:**
-- ✅ Use environment variables for API keys
-- ✅ Implement proper error handling
-- ✅ Add retry logic for transient failures
-- ✅ Cache when appropriate
-- ✅ Respect rate limits
-- ✅ Log API interactions
-- ✅ Validate all inputs
-- ✅ Use TypeScript for type safety
+- Use environment variables for API keys
+- Implement proper error handling
+- Add retry logic for transient failures
+- Cache when appropriate
+- Respect rate limits
+- Log API interactions
+- Validate all inputs
+- Use TypeScript for type safety
 
 **Security:**
-- ✅ Never commit API keys
-- ✅ Use HTTPS only
-- ✅ Validate API responses
-- ✅ Sanitize before using data
-- ✅ Handle tokens securely
+- Never commit API keys
+- Use HTTPS only
+- Validate API responses
+- Sanitize before using data
+- Handle tokens securely
 
 **Testing:**
-- ✅ Mock API responses in tests
-- ✅ Test error scenarios
-- ✅ Test rate limiting
-- ✅ Test authentication flows
+- Mock API responses in tests
+- Test error scenarios
+- Test rate limiting
+- Test authentication flows
 
 ---
 
 ## Common Mistakes to Avoid
 
-❌ Hardcoding API keys
-❌ Not handling errors
-❌ Ignoring rate limits
-❌ Not using TypeScript types
-❌ Exposing sensitive data in logs
-❌ Not caching expensive requests
-❌ Not validating API responses
+- Hardcoding API keys -- use environment variables, always
+- Skipping error handling (it will bite you)
+- Ignoring rate limits until you get blocked
+- Not using TypeScript types for API responses
+- Exposing sensitive data in logs
+- Not caching expensive requests
+- Blindly trusting API responses without validation
 
 ---
 
-## What's Next?
-
-Great work! You can now integrate with any API and build powerful integrations!
-
-**Ready for Module 15?** The final module covers deploying your applications to production!
+Next up: Module 15 -- deploying your applications to production. You've built the thing; now it's time to ship it.
 
 ---
 
-*Module 14 Complete!*
+*Module 14 Complete*

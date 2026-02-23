@@ -6,16 +6,9 @@
 
 ---
 
-## What You'll Learn in This Module
+## What You'll Learn
 
-By the end of this module, you will:
-- Understand what agents are and when to use them
-- Know the different types of specialized agents
-- Learn to use the Explore agent for codebase navigation
-- Master the Plan agent for implementation design
-- Use general-purpose agents for complex tasks
-- Run agents in parallel for efficiency
-- Interpret and act on agent results
+This module covers agents -- specialized AI assistants that can work autonomously on tasks too big or tedious to guide step by step. You'll learn when to reach for them, how to use the Explore and Plan agents effectively, and how to run multiple agents in parallel when you've got a lot of ground to cover.
 
 ---
 
@@ -23,9 +16,9 @@ By the end of this module, you will:
 
 ### Understanding Agents
 
-**Agents** are specialized AI assistants that work autonomously to complete complex tasks. Think of them as experts you can call in for specific jobs.
+Agents are specialized AI assistants that work autonomously to complete complex tasks. You give them a goal, they figure out the steps, and they report back when they're done.
 
-**Key differences from regular conversation:**
+Here's how they differ from regular Claude Code conversation:
 
 **Regular Claude Code:**
 - You guide each step
@@ -38,22 +31,15 @@ By the end of this module, you will:
 - Completes multi-step tasks independently
 - Reports back when done
 
+The short version: regular mode is a conversation, agent mode is delegation.
+
 ---
 
 ### When to Use Agents
 
-**Use agents for:**
-- Complex tasks requiring multiple steps
-- Exploring unfamiliar codebases
-- Planning implementations
-- Research tasks
-- Tasks that need decision-making
+Agents shine when the task involves multiple steps, exploration, or decision-making. Think: exploring an unfamiliar codebase, planning a feature implementation, doing research that spans many files, or tackling anything where you'd otherwise be saying "now do this... okay now do that..." over and over.
 
-**Use regular conversation for:**
-- Simple, single-step tasks
-- When you want to guide each step
-- Learning (seeing each tool use)
-- Quick modifications
+Stick with regular conversation for simple, single-step tasks, quick modifications, or situations where you actually want to see each tool call happen -- like when you're learning how Claude Code works under the hood.
 
 ---
 
@@ -61,13 +47,7 @@ By the end of this module, you will:
 
 ### What is the Explore Agent?
 
-**Purpose:** Navigate and understand codebases quickly
-
-**Best for:**
-- Understanding how a project works
-- Finding where functionality is implemented
-- Analyzing architecture
-- Learning from unfamiliar code
+The Explore agent is built for navigating and understanding codebases. It's your go-to when you need to figure out how a project works, find where something is implemented, or get a feel for the architecture. It reads files, traces connections, and comes back with a coherent explanation instead of making you piece it together yourself.
 
 ---
 
@@ -78,12 +58,7 @@ By the end of this module, you will:
 Use the Explore agent to understand how authentication works in this codebase
 ```
 
-**What the agent does:**
-1. Searches for auth-related files
-2. Reads relevant code
-3. Analyzes the implementation
-4. Traces the flow
-5. Returns comprehensive explanation
+When you send that, the agent searches for auth-related files, reads the relevant code, analyzes the implementation, traces the flow, and returns a comprehensive explanation. All without you lifting a finger.
 
 ---
 
@@ -99,12 +74,7 @@ I need to know:
 - The complete flow from checkout to confirmation
 ```
 
-**The agent will:**
-- Find all payment-related files
-- Read configuration
-- Trace the payment flow
-- Analyze security implementations
-- Provide detailed report
+The agent finds all payment-related files, reads configuration, traces the payment flow, analyzes security implementations, and gives you a detailed report.
 
 ---
 
@@ -117,7 +87,7 @@ Explore the codebase and list all API endpoints with:
 - Required parameters
 ```
 
-**The agent returns:**
+You'll get back something like:
 ```
 API Endpoints Found:
 
@@ -154,7 +124,7 @@ Use the Explore agent to analyze this codebase and explain:
 
 ### Specifying Thoroughness
 
-**You can control how deep the agent explores:**
+You can control how deep the agent digs. This matters more than you think -- a quick scan and a thorough analysis produce very different results.
 
 **Quick exploration:**
 ```
@@ -177,13 +147,9 @@ Use the Explore agent with very thorough analysis to document the entire API
 
 ### What is the Plan Agent?
 
-**Purpose:** Design implementation strategies before coding
+The Plan agent designs implementation strategies before you write a single line of code. Use it for planning new features, designing system architecture, thinking through complex changes, and catching problems before they become expensive.
 
-**Best for:**
-- Planning new features
-- Designing system architecture
-- Thinking through complex changes
-- Avoiding mistakes before they happen
+Trust me on this -- spending five minutes with the Plan agent before a big change can save you hours of backtracking.
 
 ---
 
@@ -194,12 +160,7 @@ Use the Explore agent with very thorough analysis to document the entire API
 Use the Plan agent to create an implementation plan for adding user roles and permissions
 ```
 
-**What the agent does:**
-1. Analyzes current codebase
-2. Identifies what needs to change
-3. Plans the steps
-4. Considers edge cases
-5. Returns detailed plan
+The agent analyzes your current codebase, identifies what needs to change, plans the steps, considers edge cases, and returns a detailed plan you can follow -- or push back on.
 
 ---
 
@@ -217,7 +178,7 @@ Use the Plan agent to create an implementation plan including:
 - Potential issues to watch for
 ```
 
-**Agent returns:**
+Here's the kind of plan you'll get back:
 ```
 Implementation Plan: Email Notifications for Messages
 
@@ -290,13 +251,7 @@ Use the Plan agent to create an optimization strategy.
 
 ### What is the General-Purpose Agent?
 
-**Purpose:** Handle complex, multi-step tasks that don't fit specific categories
-
-**Best for:**
-- Research and implementation combined
-- Tasks requiring web search
-- Complex debugging
-- Comprehensive updates
+This one handles complex, multi-step tasks that don't fit neatly into "explore" or "plan." It's best for tasks that combine research and implementation, require web search, involve complex debugging, or need comprehensive updates across a codebase.
 
 ---
 
@@ -311,13 +266,7 @@ Use an agent to:
 4. Document how it works
 ```
 
-**What the agent does:**
-- Searches web for best practices
-- Reads your current code
-- Implements rate limiting
-- Creates tests
-- Writes documentation
-- All autonomously!
+The agent searches the web for best practices, reads your current code, implements rate limiting, creates tests, and writes documentation -- all autonomously.
 
 ---
 
@@ -348,9 +297,7 @@ Use an agent to:
 
 ### Why Use Parallel Agents?
 
-**Speed:** Multiple tasks complete simultaneously
-**Efficiency:** Maximize use of time
-**Independence:** Tasks don't depend on each other
+Sometimes you've got three independent questions and no reason to ask them one at a time. Parallel agents let multiple tasks run simultaneously, so you get all your answers at once instead of waiting in sequence.
 
 ---
 
@@ -378,7 +325,7 @@ Use parallel agents to:
 
 ### Practical Parallel Use Cases
 
-**Example: Multiple features**
+**Planning multiple features at once:**
 ```
 Run in parallel:
 1. Agent to plan implementing user roles
@@ -386,7 +333,7 @@ Run in parallel:
 3. Agent to plan implementing audit logging
 ```
 
-**Example: Research**
+**Research across topics:**
 ```
 Research in parallel:
 1. Best practices for REST API design
@@ -402,31 +349,26 @@ Then summarize findings
 
 ### Understanding Agent Output
 
-**Agents return:**
-- Comprehensive reports
-- Detailed explanations
-- File locations and code snippets
-- Recommendations
-- Warnings about potential issues
+Agents return comprehensive reports -- detailed explanations, file locations, code snippets, recommendations, and warnings about potential issues. The output is meant to be actionable, not just informational.
 
 ---
 
 ### Acting on Agent Plans
 
-**After agent creates a plan:**
+Once an agent creates a plan, you've got options.
 
-**Option 1: Implement the plan**
+**Implement it:**
 ```
 That plan looks good. Let's implement step 1: database migrations
 ```
 
-**Option 2: Modify the plan**
+**Modify it:**
 ```
 The plan looks good, but instead of using a background job,
 let's send emails synchronously for now. Update the plan.
 ```
 
-**Option 3: Ask questions**
+**Ask for clarification:**
 ```
 I don't understand step 3. Can you explain in more detail?
 ```
@@ -435,7 +377,7 @@ I don't understand step 3. Can you explain in more detail?
 
 ### Using Explore Results
 
-**After agent explores code:**
+After an agent explores your code, put that knowledge to work.
 
 **Make informed changes:**
 ```
@@ -443,7 +385,7 @@ Now that you've explained how auth works,
 add two-factor authentication following the same patterns
 ```
 
-**Ask follow-up questions:**
+**Dig deeper:**
 ```
 You mentioned the auth tokens expire after 24 hours.
 Where is that configured?
@@ -454,6 +396,8 @@ Where is that configured?
 ## Lesson 7: Agent Best Practices
 
 ### Be Specific About What You Want
+
+This is the single biggest factor in getting good results from agents. Vague prompts produce vague output.
 
 ❌ **Vague:**
 ```
@@ -485,7 +429,7 @@ targeting the 5 most frequently called endpoints
 
 ### Specify Constraints
 
-**Include limitations:**
+Real projects have real limitations. Tell the agent about yours upfront:
 ```
 Plan implementing real-time notifications, but:
 - Cannot use WebSockets (firewall restrictions)
@@ -497,6 +441,7 @@ Plan implementing real-time notifications, but:
 
 ### Ask for Different Perspectives
 
+When you're weighing options, let the agent do the comparison work:
 ```
 Use the Plan agent to create 3 different approaches for adding search:
 1. Simple SQL LIKE queries
@@ -514,7 +459,7 @@ For each, list pros, cons, and complexity
 
 **Task:** Use Explore agent to understand a project
 
-**Find an open source project (or use one of yours) and:**
+Find an open source project (or use one of yours) and try this:
 
 ```
 Use the Explore agent to:
@@ -524,7 +469,7 @@ Use the Explore agent to:
 4. List potential areas for improvement
 ```
 
-**Review the results and ask follow-up questions:**
+Then follow up on something that caught your eye:
 ```
 You mentioned [component]. Can you show me where it's defined?
 ```
@@ -535,7 +480,7 @@ You mentioned [component]. Can you show me where it's defined?
 
 **Task:** Use Plan agent to design an implementation
 
-**In a project:**
+In a project:
 
 ```
 I want to add user profile pictures.
@@ -554,7 +499,7 @@ Consider:
 - Performance implications
 ```
 
-**Review the plan and refine:**
+Then refine based on what comes back:
 ```
 The plan suggests local storage, but I prefer cloud storage.
 Update the plan to use AWS S3.
@@ -597,7 +542,7 @@ Use an agent to:
 6. Test that logging works
 ```
 
-**This would take you hours manually, but the agent can do it autonomously!**
+This would take you hours to do manually. An agent handles it in minutes.
 
 ---
 
@@ -617,23 +562,23 @@ Before moving to Module 7, make sure you understand:
 
 ## Common Questions (FAQ)
 
-### Q: How long do agents take?
-**A:** Depends on task complexity. Simple exploration: 30 seconds. Complex planning: 1-2 minutes.
+**Q: How long do agents take?**
+Depends on the task. A simple exploration might take 30 seconds; complex planning can run 1-2 minutes.
 
-### Q: Can I stop an agent mid-task?
-**A:** Yes! Press Ctrl+C or use the /tasks command to manage running agents.
+**Q: Can I stop an agent mid-task?**
+Yes -- press Ctrl+C or use the /tasks command to manage running agents.
 
-### Q: Do agents make changes to my code?
-**A:** Only if you ask them to implement. Explore and Plan agents only analyze and suggest.
+**Q: Do agents make changes to my code?**
+Only if you ask them to implement something. Explore and Plan agents just analyze and suggest.
 
-### Q: Can agents make mistakes?
-**A:** Yes, like any AI. Always review agent output before acting on it.
+**Q: Can agents make mistakes?**
+Absolutely. Like any AI, they can get things wrong. Always review agent output before acting on it.
 
-### Q: Should I use agents for simple tasks?
-**A:** No. Agents add overhead. Use regular conversation for simple, quick tasks.
+**Q: Should I use agents for simple tasks?**
+No. Agents add overhead. For quick, straightforward tasks, regular conversation is faster.
 
-### Q: Can multiple agents work on the same files?
-**A:** Be careful with this. If agents modify the same files, conflicts can occur.
+**Q: Can multiple agents work on the same files?**
+Fair warning: if agents modify the same files, you can end up with conflicts. Keep parallel agents pointed at different parts of the codebase.
 
 ---
 
@@ -641,42 +586,27 @@ Before moving to Module 7, make sure you understand:
 
 | Agent Type | Best For | Speed | Autonomy |
 |------------|----------|-------|----------|
-| **Explore** | Understanding code | Fast | High |
-| **Plan** | Designing implementations | Medium | High |
-| **General** | Complex multi-step tasks | Varies | Very High |
-| **Regular Chat** | Simple tasks, learning | Fastest | Low |
-
----
-
-## What's Next?
-
-Great work! You now understand how to:
-- Use specialized agents for complex tasks
-- Explore codebases efficiently
-- Plan implementations before coding
-- Run multiple agents in parallel
-- Work with agent results effectively
-
-**Ready for Module 7?** In the next module, we'll master Git operations and version control with Claude Code's help!
+| Explore | Understanding code | Fast | High |
+| Plan | Designing implementations | Medium | High |
+| General | Complex multi-step tasks | Varies | Very High |
+| Regular Chat | Simple tasks, learning | Fastest | Low |
 
 ---
 
 ## Pro Tips
 
-1. **Use Explore before modifying** - Understand the code first
-
-2. **Use Plan for complex features** - Think before coding
-
-3. **Be specific** - Clear goals = better results
-
-4. **Review agent output** - Don't blindly trust, verify
-
-5. **Parallel for independent tasks** - Save time when tasks don't depend on each other
-
-6. **Ask follow-up questions** - Agents can clarify their findings
-
-7. **Iterate on plans** - Refine until you're confident
+1. **Use Explore before modifying** -- understand the code first
+2. **Use Plan for complex features** -- think before coding
+3. **Be specific** -- clear goals produce better results
+4. **Review agent output** -- verify, don't blindly trust
+5. **Parallel for independent tasks** -- save time when tasks don't overlap
+6. **Ask follow-up questions** -- agents can clarify their own findings
+7. **Iterate on plans** -- refine until you're confident
 
 ---
 
-*Module 6 Complete!*
+Next up: Module 7 -- where you'll learn to handle Git operations and version control through Claude Code.
+
+---
+
+*Module 6 Complete*

@@ -254,37 +254,39 @@ By the end of this course, you'll be able to:
 
 *These modules are for learners who want to go deeper after completing the core course.*
 
-> **Want even more?** After completing this free course, check out the [**Real Projects Pack**](https://devfounder.gumroad.com/l/claude-code-real-projects) (10 hands-on project templates) and [**Advanced Modules**](https://devfounder.gumroad.com/l/claude-code-advanced-modules) (5 enterprise-level training modules). Or get the [**Complete Bundle**](https://devfounder.gumroad.com/l/claude-code-advanced-modules+real-projects-bundle) and save $10!
+> **Want even more?** After completing this free course, check out the [**Real Projects Pack**](https://devfounder.gumroad.com/l/claude-code-real-projects) (11 hands-on project templates) and [**Advanced Modules**](https://devfounder.gumroad.com/l/claude-code-advanced-modules) (8 enterprise-level training modules). Or get the [**Complete Bundle**](https://devfounder.gumroad.com/l/claude-code-advanced-modules+real-projects-bundle) and save $10!
 
 ---
 
 ### [Module 11: MCP Servers - Extending Claude Code](module-11-mcp-servers.md)
 
-**Goal:** Learn to use Model Context Protocol servers
+**Goal:** Learn to use Model Context Protocol servers to give Claude Code new capabilities
 
 **What you'll learn:**
-- **What is MCP:** Understanding the protocol
-- **Installing MCP servers:** Adding new capabilities
-- **Using MCP servers:** Filesystem, database, API integrations
-- **Creating custom MCP servers:** Build your own extensions
-- **Common MCP servers:** PostgreSQL, GitHub, Slack, and more
+- **What is MCP:** Understanding the protocol and why it matters
+- **Essential MCP servers:** The daily-driver servers that actually matter (Context7, Playwright, DeepWiki)
+- **Installing and configuring:** Project-level `.mcp.json` and user-level settings
+- **Common MCP servers:** Filesystem, database, GitHub, and more
+- **Creating custom MCP servers:** Build your own extensions with the current SDK
 
-**Hands-on:** Set up and use MCP servers in your projects
+**Hands-on:** Set up essential MCP servers and build a custom one
 
 ---
 
-### [Module 12: Skills and Hooks - Customizing Claude Code](module-12-skills-and-hooks.md)
+### [Module 12: Customizing Claude Code - Making It Yours](module-12-skills-and-hooks.md)
 
-**Goal:** Customize Claude Code for your workflow
+**Goal:** Learn every way to customize Claude Code's behavior
 
 **What you'll learn:**
-- **Skills:** Creating custom slash commands
-- **Hooks:** Automating actions on events
-- **Configuration:** Customizing Claude Code settings
-- **IDE Integration:** Using Claude Code with your editor
-- **Keyboard shortcuts:** Speed up your workflow
+- **CLAUDE.md & Memory:** Project memory files, auto memory, `@imports`
+- **Rules:** Modular `.claude/rules/` files with path-scoping
+- **Settings:** The 5-tier hierarchy, permissions, and modes
+- **Skills:** Custom slash commands with `.claude/skills/<name>/SKILL.md`
+- **Commands:** The simpler `.claude/commands/` format
+- **Hooks:** 17 hook events for automation (auto-format, security checks, notifications)
+- **Custom Agents:** Introduction to `.claude/agents/` files
 
-**Hands-on:** Create custom skills and hooks
+**Hands-on:** Set up project memory, create a skill, and write a hook
 
 ---
 
@@ -473,7 +475,7 @@ Once you've completed this course, you can:
 
 ### 📦 [Real Projects Pack - $39.99](https://devfounder.gumroad.com/l/claude-code-real-projects)
 
-**10 complete project templates with step-by-step Claude Code workflows:**
+**11 complete project templates with step-by-step Claude Code workflows:**
 
 - AI-Powered Todo App (Claude API integration)
 - Code Review Automation Tool
@@ -485,6 +487,7 @@ Once you've completed this course, you can:
 - CLI Tool Starter Kit
 - Microservice Template
 - Full-Stack SaaS Boilerplate (Auth, Stripe, Multi-tenancy)
+- **NEW:** Claude Code Power Configuration (Build a complete `.claude/` setup with skills, agents, hooks, and permissions)
 
 *Each project includes 3-5 hours of content, production code examples, and copy-paste prompts.*
 
@@ -492,13 +495,16 @@ Once you've completed this course, you can:
 
 ### 🎓 [Advanced Modules - $29.99](https://devfounder.gumroad.com/l/claude-code-advanced-modules)
 
-**5 enterprise-level training modules for professional developers:**
+**8 enterprise-level training modules for professional developers:**
 
 - **Module 16:** Production Deployment at Scale (Kubernetes, auto-scaling, multi-region)
 - **Module 17:** Multi-Agent Systems (Complex AI workflows, agent orchestration)
 - **Module 18:** Custom MCP Server Development (Build production-grade MCP servers)
 - **Module 19:** Enterprise Integration Patterns (SSO, RBAC, audit logging, compliance)
 - **Module 20:** Performance Optimization & Profiling (Advanced profiling, caching, token optimization)
+- **NEW Module 21:** Custom Agents & Orchestration (Agent frontmatter, memory scopes, Command→Agent→Skills architecture)
+- **NEW Module 22:** Sandbox, Plugins & Advanced Config (Permission wildcards, plugins, marketplaces, CLI flags)
+- **NEW Module 23:** Professional Development Workflows (RPI methodology, token optimization, git worktrees, monorepo patterns)
 
 *Each module includes 3-4 hours of detailed content, production code examples, and best practices.*
 
@@ -506,10 +512,10 @@ Once you've completed this course, you can:
 
 ### 🔥 [Complete Bundle - $59.99 (Save $10!)](https://devfounder.gumroad.com/l/claude-code-advanced-modules+real-projects-bundle)
 
-**Get everything: 5 Advanced Modules + 10 Real Projects**
+**Get everything: 8 Advanced Modules + 11 Real Projects**
 
-- ✅ **40+ hours** of comprehensive content
-- ✅ **15 complete modules** covering theory and practice
+- ✅ **55+ hours** of comprehensive content
+- ✅ **19 complete modules** covering theory and practice
 - ✅ **Production-ready code** for real-world applications
 - ✅ **AI prompt workflows** for every scenario
 - ✅ **Save $10** compared to buying separately
@@ -558,6 +564,6 @@ Claude Code makes it possible for anyone to create professional software. This c
 
 ---
 
-*Last updated: December 2025*
+*Last updated: February 2026*
 
 </div>

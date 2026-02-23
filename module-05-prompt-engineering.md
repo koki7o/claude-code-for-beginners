@@ -6,15 +6,9 @@
 
 ---
 
-## What You'll Learn in This Module
+## What You'll Learn
 
-By the end of this module, you will:
-- Understand what makes a good coding prompt
-- Know how to be specific about technical requirements
-- Learn to provide helpful context
-- Master iterative development techniques
-- Use common prompt patterns effectively
-- Know when to ask Claude Code for clarification
+This module is about the single most important skill you'll develop with Claude Code: writing good prompts. The quality of what you get back is almost entirely determined by the quality of what you put in. We'll cover how to be specific, how to give useful context, how to build things incrementally, and a handful of prompt patterns that work well for common coding tasks.
 
 ---
 
@@ -22,11 +16,9 @@ By the end of this module, you will:
 
 ### What Makes a Good Coding Prompt?
 
-A **good prompt** is:
-- **Specific** - Clear about what you want
-- **Contextual** - Provides relevant information
-- **Actionable** - Claude Code knows what to do
-- **Testable** - Results can be verified
+A good prompt is specific -- Claude Code knows exactly what you want. It's contextual -- you've given it the information it needs. It's actionable -- there's a clear thing to do. And it's testable -- you can verify the result actually works.
+
+That sounds obvious, but it's easy to underestimate. Let's look at some real examples.
 
 ### Bad vs Good Prompts
 
@@ -69,6 +61,8 @@ The login function in auth.js is not handling empty passwords correctly.
 When a user submits an empty password, the app crashes with "Cannot read property 'length' of undefined".
 Please add validation to check for empty passwords and return an appropriate error message.
 ```
+
+The difference between "fix the bug" and that last version is night and day. The more you tell Claude Code about what's happening, what you expected, and where to look, the faster it'll get you to a fix.
 
 ---
 
@@ -135,13 +129,15 @@ Write a React functional component using:
 - Tailwind CSS for styling
 ```
 
+This matters more than you think. If you don't specify, Claude Code will make reasonable choices -- but they might not match your project's conventions. A few extra seconds of specificity saves you from rewriting things later.
+
 ---
 
 ## Lesson 3: Providing Context
 
 ### Project Context
 
-When working on an existing project, provide context:
+When you're working on an existing project, context is everything:
 
 **Without Context:**
 ```
@@ -155,6 +151,8 @@ Each route file exports a router with the route handlers.
 Add a new route for /api/users that returns all users from the database.
 Follow the pattern used in /routes/posts.js
 ```
+
+That last line -- "Follow the pattern used in /routes/posts.js" -- is especially powerful. It tells Claude Code to match your existing style instead of inventing its own.
 
 ### Code Context
 
@@ -194,11 +192,15 @@ Add validation to the user registration form:
 Show errors inline below each field, not in an alert
 ```
 
+The parenthetical about being a financial services app? That kind of detail changes how Claude Code thinks about the problem. It might suggest stricter validation or compliance-related checks you hadn't considered.
+
 ---
 
 ## Lesson 4: Iterative Development
 
 ### Start Simple, Add Complexity
+
+Here's the deal: trying to describe an entire feature in one massive prompt usually doesn't work well. Build it up in layers instead.
 
 **Step 1: Basic Version**
 ```
@@ -230,10 +232,7 @@ Now add:
 
 ### Why Iterate?
 
-- **Easier to understand:** Each step is simple
-- **Easier to test:** Verify each piece works
-- **Easier to fix:** Issues are isolated to recent changes
-- **Learn progressively:** Understand each addition
+Each step is small enough to understand, test, and fix on its own. When something breaks, you know it was the most recent change. And you actually learn what each piece does -- instead of staring at a huge blob of generated code wondering how it all fits together.
 
 ---
 
@@ -241,7 +240,7 @@ Now add:
 
 ### Pattern 1: The Scaffold Pattern
 
-**Use when:** Starting a new project
+Use this when starting a new project.
 
 **Template:**
 ```
@@ -271,7 +270,7 @@ Add Tailwind CSS
 
 ### Pattern 2: The Feature Pattern
 
-**Use when:** Adding new functionality
+Use this when adding new functionality.
 
 **Template:**
 ```
@@ -299,7 +298,7 @@ Store users in the database
 
 ### Pattern 3: The Fix Pattern
 
-**Use when:** Debugging issues
+Use this when debugging issues.
 
 **Template:**
 ```
@@ -321,7 +320,7 @@ Please investigate why the route isn't working
 
 ### Pattern 4: The Refactor Pattern
 
-**Use when:** Improving code
+Use this when improving existing code.
 
 **Template:**
 ```
@@ -344,11 +343,13 @@ Refactor the user validation functions to:
 Maintain all current validation rules
 ```
 
+That last line is critical. Always tell Claude Code what shouldn't change -- otherwise it might "improve" things you didn't want touched.
+
 ---
 
 ### Pattern 5: The Test Pattern
 
-**Use when:** Writing tests
+Use this when writing tests.
 
 **Template:**
 ```
@@ -380,7 +381,7 @@ Aim for 100% code coverage
 
 ### When to Ask Questions
 
-**Instead of guessing, ask:**
+Instead of guessing, just ask. Seriously -- Claude Code is great at helping you think through decisions before you commit to them.
 
 **Scenario 1: Technology Choice**
 ```
@@ -407,24 +408,21 @@ What are the current best practices for:
 
 ### Let Claude Code Ask YOU Questions
 
-**Powerful prompt pattern:**
+This is one of my favorite patterns. Try this:
+
 ```
 Create a user dashboard for my app.
 Ask me any questions you need to fully understand what I want.
 ```
 
-Claude Code might ask:
+Claude Code might ask things like:
 - What data should the dashboard show?
 - Who are the users?
 - What actions can they take?
 - What's the visual style?
 - Mobile responsive?
 
-**Benefits:**
-- Gets exactly what you want
-- Uncovers requirements you hadn't thought of
-- Reduces back-and-forth
-- Better final result
+This is surprisingly effective. It surfaces requirements you hadn't thought about, cuts down on back-and-forth, and the end result is usually much closer to what you actually wanted.
 
 ---
 
@@ -432,7 +430,7 @@ Claude Code might ask:
 
 ### Chaining Prompts
 
-**For complex tasks, chain simple prompts:**
+For complex tasks, don't try to do it all at once. Chain simple prompts together:
 
 **Prompt 1:**
 ```
@@ -454,9 +452,11 @@ Add validation middleware to that route
 Write tests for the new route
 ```
 
+Each prompt builds on the previous one. Claude Code retains context within a conversation, so it remembers what it did in earlier steps.
+
 ### Providing Examples
 
-**Show what you want:**
+Showing is better than telling:
 
 ```
 I want to add more API endpoints.
@@ -475,7 +475,7 @@ Please create similar endpoints for:
 
 ### Negative Instructions
 
-**Tell Claude Code what NOT to do:**
+Sometimes it's just as important to say what you don't want:
 
 ```
 Add user authentication but:
@@ -486,7 +486,7 @@ Add user authentication but:
 
 ### Constraints and Requirements
 
-**Be explicit about constraints:**
+Be explicit about non-functional requirements -- these are the things that often get missed:
 
 ```
 Create a data processing script that:
@@ -501,6 +501,8 @@ Requirements:
 - Must continue on errors (log but don't stop)
 - Must provide progress updates
 ```
+
+Without those requirements, you'd probably get a script that reads the entire file into memory. Fine for small files, but it'll crash on anything large.
 
 ---
 
@@ -635,56 +637,38 @@ Before moving to Module 6, make sure you can:
 
 ## Common Prompting Mistakes to Avoid
 
-### Mistake 1: Too Vague
-**Problem:** Claude Code has to guess what you want
-**Fix:** Be specific about technologies, structure, and behavior
+**Mistake 1: Too Vague** -- Claude Code has to guess what you want. Fix this by being specific about technologies, structure, and behavior.
 
-### Mistake 2: Everything at Once
-**Problem:** Complex request, hard to verify, hard to fix if wrong
-**Fix:** Break into steps, build iteratively
+**Mistake 2: Everything at Once** -- One massive prompt for a complex feature is hard to verify and hard to fix when something goes wrong. Break it into steps and build iteratively.
 
-### Mistake 3: No Context
-**Problem:** Claude Code doesn't know your project structure or conventions
-**Fix:** Explain existing patterns, show examples
+**Mistake 3: No Context** -- Claude Code doesn't magically know your project structure or conventions. Explain existing patterns, show examples.
 
-### Mistake 4: Assuming Knowledge
-**Problem:** "Add the usual validation" - what's usual?
-**Fix:** Be explicit about what "usual" means in your context
+**Mistake 4: Assuming Knowledge** -- "Add the usual validation" doesn't mean anything. What's usual? Be explicit about what you mean.
 
-### Mistake 5: Not Testing
-**Problem:** Requesting many changes without verifying each works
-**Fix:** Request, test, then proceed
-
----
-
-## What's Next?
-
-Excellent! You now know how to communicate effectively with Claude Code for coding tasks. You understand:
-- How to write specific, actionable prompts
-- When to provide context
-- How to iterate on complex features
-- Common patterns for different tasks
-
-**Ready for Module 6?** In the next module, we'll learn about using background agents for complex tasks and exploration!
+**Mistake 5: Not Testing Between Steps** -- Requesting many changes without verifying each one works is a recipe for confusion. Request, test, then proceed.
 
 ---
 
 ## Pro Tips
 
-1. **Start conversations with context** - "I'm working on a React app with TypeScript..."
+1. **Start conversations with context** -- "I'm working on a React app with TypeScript..." sets the stage for everything that follows.
 
-2. **Use examples from your code** - "Following the pattern in auth.js..."
+2. **Reference your own code** -- "Following the pattern in auth.js..." is one of the most useful things you can say.
 
-3. **Be explicit about constraints** - "Without using external libraries..."
+3. **State constraints up front** -- "Without using external libraries..." avoids wasted effort.
 
-4. **Ask for explanations** - "Please explain your approach before implementing"
+4. **Ask for an explanation first** -- "Please explain your approach before implementing" can save you from going down the wrong path.
 
-5. **Iterate in public** - "Let's start with X, then add Y"
+5. **Build in public** -- "Let's start with X, then add Y" makes your plan clear.
 
-6. **Verify understanding** - "Can you summarize what you're going to build?"
+6. **Verify understanding** -- "Can you summarize what you're going to build?" catches misunderstandings early.
 
-7. **Learn from responses** - Pay attention to how Claude Code interprets your prompts
+7. **Pay attention to how Claude Code interprets your prompts.** If it misunderstands something, that's feedback on how to write the next prompt better.
 
 ---
 
-*Module 5 Complete!*
+## What's Next?
+
+That covers prompt engineering -- honestly the skill that makes the biggest difference in how productive you'll be with Claude Code. Trust me on this: time spent writing a clear prompt is never wasted.
+
+Next up: Module 6 -- where we'll get into background agents for handling complex tasks and codebase exploration.

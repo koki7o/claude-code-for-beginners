@@ -6,16 +6,9 @@
 
 ---
 
-## What You'll Learn in This Module
+## What You'll Learn
 
-By the end of this module, you will:
-- Understand Git basics and why version control matters
-- Know how to create meaningful commits with Claude Code
-- Learn to work with branches effectively
-- Master creating pull requests with AI-generated descriptions
-- Understand how to review code before committing
-- Learn to resolve merge conflicts with Claude Code's help
-- Know how to use GitHub CLI integration
+This module covers how to use Git through Claude Code -- from basic commits and branches all the way to pull requests and merge conflict resolution. If you've ever written a commit message that just says "fixed stuff," this one's for you.
 
 ---
 
@@ -23,35 +16,24 @@ By the end of this module, you will:
 
 ### What is Version Control?
 
-**Version control** is a system that tracks changes to your code over time. Think of it as:
-- **Unlimited undo** - Go back to any previous version
-- **Collaboration** - Work with others without conflicts
-- **History** - See what changed, when, and why
-- **Safety net** - Experiment without fear of breaking things
+Version control is a system that tracks changes to your code over time. Here's the short version of why it matters:
+
+- **Unlimited undo** -- go back to any previous version of your code
+- **Collaboration** -- work with other people without stepping on each other's changes
+- **History** -- see what changed, when, and why
+- **Safety net** -- experiment freely, knowing you can always roll back
 
 ### Git Basics
 
-**Key concepts:**
+There are a few core concepts you'll need to know before we go further.
 
-**Repository (Repo)**
-- A project tracked by Git
-- Contains all files and history
-- Can be local or remote (GitHub, GitLab, etc.)
+**Repository (Repo)** -- a project tracked by Git. It contains all your files and their entire change history. Repos can live on your machine (local) or on a server like GitHub or GitLab (remote).
 
-**Commit**
-- A snapshot of your code at a point in time
-- Has a message describing what changed
-- Creates a permanent record
+**Commit** -- a snapshot of your code at a specific point in time. Every commit has a message describing what changed, and together they form a permanent record of your project's evolution.
 
-**Branch**
-- A parallel version of your code
-- Lets you work on features without affecting main code
-- Can be merged back later
+**Branch** -- a parallel version of your code. Branches let you work on features in isolation without touching the main codebase. When you're done, you merge the branch back in.
 
-**Remote**
-- A version of your repo on a server (like GitHub)
-- Lets you backup and collaborate
-- Usually called "origin"
+**Remote** -- a copy of your repo hosted on a server, usually called "origin." This is how you back up your work and collaborate with others.
 
 ---
 
@@ -59,7 +41,7 @@ By the end of this module, you will:
 
 ### Checking Status
 
-**See what's changed:**
+To see what's changed in your project:
 ```
 Show me git status
 What files have I modified?
@@ -70,26 +52,19 @@ Claude Code will run:
 git status
 ```
 
-**Output shows:**
-- Modified files
-- New files (untracked)
-- Deleted files
-- Files staged for commit
+The output tells you which files have been modified, which are new (untracked), which have been deleted, and which are already staged for a commit.
 
 ---
 
 ### Viewing Changes
 
-**See what you've changed:**
+To see the actual code differences:
 ```
 Show me the git diff
 What changes have I made to auth.js?
 ```
 
-Claude Code will show:
-- Lines added (green, with +)
-- Lines removed (red, with -)
-- Context around changes
+Claude Code will show lines added (green, with +), lines removed (red, with -), and some surrounding context so you can orient yourself.
 
 **Example output:**
 ```diff
@@ -101,25 +76,20 @@ Claude Code will show:
 
 ### Creating Commits with Claude Code
 
-This is where Claude Code really shines!
+This is one of the places where Claude Code saves you the most time.
 
-**Manual way (old):**
+**The old way:**
 ```bash
 git add .
 git commit -m "Updated the thing"  # Vague, unhelpful
 ```
 
-**With Claude Code (new):**
+**With Claude Code:**
 ```
 Please create a commit with my current changes
 ```
 
-**What Claude Code does:**
-1. Runs `git status` to see changes
-2. Runs `git diff` to see what changed
-3. Analyzes the changes
-4. Writes a meaningful commit message
-5. Creates the commit with proper formatting
+When you ask for a commit, Claude Code runs `git status` and `git diff` to understand what changed, analyzes the differences, writes a descriptive commit message, and creates the commit with proper formatting.
 
 **Example commit message Claude Code might write:**
 ```
@@ -134,13 +104,13 @@ Add user authentication with JWT tokens
 This provides secure user authentication for the API.
 ```
 
-**Much better than "fixed stuff"!**
+A lot better than "fixed stuff."
 
 ---
 
 ### Commit Message Best Practices
 
-**Claude Code follows these conventions:**
+Claude Code follows standard conventions automatically, but it's worth knowing what good looks like:
 
 **Structure:**
 ```
@@ -156,7 +126,7 @@ Issue references: #123
 
 **Good vs Bad:**
 
-❌ **Bad:**
+Bad:
 ```
 - "fixed bug"
 - "updated code"
@@ -164,7 +134,7 @@ Issue references: #123
 - "asdfasdf"
 ```
 
-✅ **Good:**
+Good:
 ```
 - "Fix login error when password is empty"
 - "Add email validation to user registration"
@@ -178,11 +148,7 @@ Issue references: #123
 
 ### Why Use Branches?
 
-**Branches let you:**
-- Work on features without breaking main code
-- Try experiments safely
-- Collaborate without conflicts
-- Organize different types of work
+Branches let you work on features without breaking the main codebase, try experiments safely, collaborate without stepping on each other, and keep different types of work organized. Trust me on this -- once you start using branches properly, you won't go back.
 
 ### Creating Branches with Claude Code
 
@@ -196,7 +162,7 @@ Claude Code will:
 git checkout -b feature/user-dashboard
 ```
 
-**Or:**
+You can also be more descriptive and let Claude Code pick a sensible name:
 ```
 Create a feature branch for adding password reset
 ```
@@ -251,11 +217,7 @@ Switch back to my feature branch
 Merge the feature/user-dashboard branch into main
 ```
 
-Claude Code will:
-1. Switch to main
-2. Pull latest changes
-3. Merge the feature branch
-4. Handle any conflicts (more on this later)
+Claude Code will switch to main, pull the latest changes, merge the feature branch, and handle any conflicts -- which brings us to a later lesson.
 
 ---
 
@@ -263,15 +225,11 @@ Claude Code will:
 
 ### What is a Pull Request (PR)?
 
-A **Pull Request** is:
-- A request to merge your code into another branch
-- Used for code review
-- Discussion platform for changes
-- Quality control mechanism
+A pull request is how you propose merging your code into another branch. It's a request for review, a place for discussion about the changes, and a quality gate before code hits production.
 
 ### Creating PRs with Claude Code
 
-**This is incredibly powerful!**
+This matters more than you think. Writing good PR descriptions is tedious, and Claude Code handles it really well.
 
 **Simple request:**
 ```
@@ -280,14 +238,10 @@ Create a pull request for my changes
 
 **What Claude Code does:**
 
-1. **Analyzes all commits** in your branch
-2. **Reviews the code changes**
-3. **Generates a comprehensive PR description:**
-   - Summary of changes
-   - List of modifications
-   - Test plan
-   - Screenshots (if applicable)
-4. **Uses GitHub CLI to create the PR**
+1. Analyzes all commits in your branch
+2. Reviews the code changes
+3. Generates a comprehensive PR description -- summary, list of modifications, test plan, the works
+4. Uses GitHub CLI to create the PR
 
 **Example PR description Claude Code might generate:**
 
@@ -355,13 +309,13 @@ CREATE TABLE users (
 Generated with Claude Code
 ```
 
-**That's way better than manually writing all that!**
+That would take you 20 minutes to write by hand. Claude Code does it in seconds.
 
 ---
 
 ### Customizing PR Creation
 
-**Be specific about what you want:**
+You can be specific about what you want:
 
 ```
 Create a pull request with:
@@ -377,11 +331,7 @@ Create a pull request with:
 
 ### Why Review First?
 
-**Benefits:**
-- Catch mistakes before they're committed
-- Understand what you're committing
-- Learn from the changes
-- Verify quality
+Reviewing your own changes before committing catches mistakes early, helps you understand exactly what you're shipping, and -- honestly -- it's just a good habit that'll save you from embarrassing "oops" commits.
 
 ### Review Workflow with Claude Code
 
@@ -421,10 +371,7 @@ Now create a commit with these changes
 
 ### What are Merge Conflicts?
 
-**Conflicts occur when:**
-- Two branches change the same line
-- Git doesn't know which change to keep
-- You must manually decide
+Conflicts happen when two branches change the same line of code and Git doesn't know which version to keep. You have to decide. Fair warning: this can be tricky the first few times, but Claude Code makes it much less painful.
 
 **Example conflict:**
 ```javascript
@@ -437,17 +384,12 @@ const PORT = 8080;
 
 ### Resolving Conflicts with Claude Code
 
-**When you get a conflict:**
+When you hit a conflict:
 ```
 I have a merge conflict in server.js. Help me resolve it.
 ```
 
-**Claude Code will:**
-1. Show you the conflict
-2. Explain both versions
-3. Ask which to keep (or suggest combining)
-4. Resolve the conflict
-5. Mark as resolved
+Claude Code will show you the conflict, explain both versions, ask which to keep -- or suggest combining them -- then resolve it and mark the file as resolved.
 
 **Example dialogue:**
 ```
@@ -468,12 +410,7 @@ Claude Code: I'll update it to use process.env.PORT with 8080 as default.
 
 ### What is GitHub CLI (gh)?
 
-**gh** is GitHub's official command-line tool. Claude Code can use it to:
-- Create pull requests
-- List issues
-- View PR status
-- Check CI/CD results
-- Manage releases
+`gh` is GitHub's official command-line tool, and Claude Code can use it directly. This gives you access to pull requests, issues, CI/CD status, releases, and more -- all without leaving your terminal.
 
 ### Common gh Operations
 
@@ -505,6 +442,8 @@ Merge pull request #42
 ## Lesson 8: Complete Git Workflow Example
 
 ### Scenario: Adding a New Feature
+
+Here's the full lifecycle of a feature, from branch to merge. This is the workflow you'll use over and over.
 
 **Step 1: Create feature branch**
 ```
@@ -639,34 +578,34 @@ Before moving to Module 8, make sure you can:
 
 ### Do's
 
-✅ **Commit working code** - Make sure it works before committing
-✅ **Write clear messages** - Let Claude Code help
-✅ **Review before committing** - Check what you're committing
-✅ **Use branches** - Keep main branch stable
-✅ **Pull before push** - Get latest changes first
-✅ **Push regularly** - Backup your work
+- **Commit working code** -- make sure it runs before you commit
+- **Write clear messages** -- or better yet, let Claude Code write them
+- **Review before committing** -- always know what you're shipping
+- **Use branches** -- keep your main branch stable
+- **Pull before push** -- get the latest changes first to avoid surprises
+- **Push regularly** -- back up your work; your laptop isn't immortal
 
 ### Don'ts
 
-❌ **Don't commit broken code** - Test first
-❌ **Don't commit secrets** - API keys, passwords, etc.
-❌ **Don't force push to main** - Dangerous!
-❌ **Don't skip commit messages** - Future you will thank you
-❌ **Don't commit large files** - Use .gitignore
-❌ **Don't edit history on shared branches** - Creates conflicts
+- **Don't commit broken code** -- test first
+- **Don't commit secrets** -- API keys, passwords, database credentials, none of it
+- **Don't force push to main** -- this can destroy other people's work
+- **Don't skip commit messages** -- future you will be grateful
+- **Don't commit large binary files** -- use .gitignore for those
+- **Don't rewrite history on shared branches** -- it creates a mess for everyone
 
 ---
 
 ## Common Questions (FAQ)
 
 ### Q: Should I commit after every small change?
-**A:** Commit when you have a logical, working unit of functionality. Not too small (every line) or too big (entire feature).
+**A:** Commit when you have a logical, working unit of functionality. Not after every line, but don't wait until you've built an entire feature either. Think of each commit as one coherent thought.
 
 ### Q: How often should I push to GitHub?
-**A:** At least daily, and always when you have working features. More frequent is better for backup.
+**A:** At least daily, and always when you've got working features. More frequent is better -- it's your backup.
 
 ### Q: Can Claude Code write commit messages for any project?
-**A:** Yes! It analyzes your actual code changes, not just your description.
+**A:** Yes. It analyzes your actual code changes, so it works regardless of the project or language.
 
 ### Q: What if I accidentally committed something I shouldn't have?
 **A:** Tell Claude Code: "I accidentally committed [file]. Help me remove it from the last commit"
@@ -676,36 +615,22 @@ Before moving to Module 8, make sure you can:
 
 ---
 
-## What's Next?
-
-Excellent work! You now know how to:
-- Use Git effectively with Claude Code
-- Create meaningful commits
-- Work with branches
-- Generate comprehensive pull requests
-- Review code before committing
-- Resolve conflicts
-
-**Ready for Module 8?** In the next module, we'll learn about debugging and testing with Claude Code!
-
----
-
 ## Pro Tips
 
-1. **Always review before committing** - Understand what's being committed
+1. **Always review before committing** -- know what you're shipping.
 
-2. **Use Claude Code for commit messages** - They'll be better than yours (no offense!)
+2. **Let Claude Code write your commit messages** -- they'll be more descriptive than what most people write manually. No shame in that.
 
-3. **Create small, focused commits** - Easier to understand and revert if needed
+3. **Make small, focused commits** -- each commit should do one thing. It's easier to understand, easier to review, and easier to revert if something goes wrong.
 
-4. **Branch for every feature** - Keep work isolated
+4. **Branch for every feature** -- even if it feels like overkill for a small change. The habit pays off.
 
-5. **Use descriptive branch names** - feature/what-it-does
+5. **Use descriptive branch names** -- `feature/add-password-reset` tells you a lot more than `my-branch`.
 
-6. **Let Claude Code write PR descriptions** - Saves time, more comprehensive
+6. **Let Claude Code write PR descriptions** -- it's thorough and fast. You can always edit the result.
 
-7. **Commit working code** - Don't commit broken features
+7. **Never commit broken code to a shared branch** -- run your tests first.
 
 ---
 
-*Module 7 Complete!*
+Next up: Module 8 -- debugging and testing with Claude Code, where things get really practical.

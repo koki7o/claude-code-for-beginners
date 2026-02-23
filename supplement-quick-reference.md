@@ -1,6 +1,6 @@
 # Quick Reference Guide
 
-**Your cheat sheet for common Claude Code tasks**
+**The stuff you'll actually look up mid-session.**
 
 ---
 
@@ -11,7 +11,7 @@
 claude
 ```
 
-### Start in specific directory
+### Start in a specific directory
 ```bash
 cd /path/to/project
 claude
@@ -223,7 +223,7 @@ Generate a changelog
 
 ## Tool-Specific Requests
 
-### When you want specific tools
+You don't usually need to name tools directly -- Claude Code picks the right one. But if you want to steer it, here's how.
 
 **Read tool:**
 ```
@@ -268,6 +268,8 @@ Research and implement [solution]
 ---
 
 ## Effective Prompting Patterns
+
+These are reusable shapes for prompts. Fill in the blanks and you're good.
 
 ### The Specific Pattern
 ```
@@ -318,22 +320,22 @@ claude config set [key] [value]
 
 ### Do's
 
-✅ Be specific about what you want
-✅ Provide context about your project
-✅ Review changes before accepting
-✅ Ask for explanations when learning
-✅ Use version control (Git)
-✅ Test changes incrementally
-✅ Break complex tasks into steps
+- Be specific about what you want
+- Give context about your project
+- Review changes before accepting
+- Ask for explanations when you're learning
+- Use version control (Git)
+- Test changes incrementally
+- Break big tasks into steps
 
 ### Don'ts
 
-❌ Don't give vague instructions
-❌ Don't skip testing after changes
-❌ Don't blindly accept all changes
-❌ Don't forget to commit working code
-❌ Don't ask for too many changes at once
-❌ Don't ignore error messages
+- Don't give vague instructions
+- Don't skip testing after changes
+- Don't blindly accept all changes
+- Don't forget to commit working code
+- Don't ask for too many changes at once
+- Don't ignore error messages
 
 ---
 
@@ -469,7 +471,7 @@ Enable strict mode
 
 ## Quick Debugging Checklist
 
-When something isn't working:
+When something's broken, work through this:
 
 1. **Read the error:** `What does this error mean?`
 2. **Check the file:** `Show me [filename] around line [X]`
@@ -490,7 +492,3 @@ When something isn't working:
 - [Main README](README.md) - Course overview
 - [Troubleshooting Guide](supplement-troubleshooting.md) - Detailed solutions
 - [Challenge Solutions](supplement-challenge-solutions.md) - Practice answers
-
----
-
-*Keep this reference handy while working with Claude Code!*

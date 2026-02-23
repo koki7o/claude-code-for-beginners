@@ -6,17 +6,9 @@
 
 ---
 
-## What You'll Learn in This Module
+## What You'll Learn
 
-By the end of this module, you will have:
-- Built a complete application from scratch
-- Implemented authentication and authorization
-- Created a database with proper schema
-- Written comprehensive tests
-- Added proper error handling
-- Created documentation
-- Used Git for version control
-- Deployed a working application
+This is where it all comes together. You're going to build a real application from scratch -- authentication, database, tests, error handling, documentation, version control, and deployment. It's a lot, but you've already practiced every piece of this individually. Now you're just wiring it all up into one cohesive project.
 
 ---
 
@@ -87,13 +79,7 @@ A weather information dashboard
 ### Option 5: CLI Todo Application
 A powerful command-line task manager
 
-**Features:**
-- Add/complete/delete tasks
-- Categories and tags
-- Due dates and priorities
-- Search and filter
-- Data persistence
-- Colorful, interactive CLI
+Features range from basic CRUD to categories, tags, due dates, priorities, search, filtering, data persistence, and a colorful interactive CLI.
 
 **Technologies:** Node.js, Commander.js, Chalk, SQLite
 
@@ -101,8 +87,7 @@ A powerful command-line task manager
 
 ## We'll Build: Task Management API
 
-**For this module, we'll build Option 1 step-by-step.**
-(You can apply the same process to any project!)
+For this module, we'll walk through Option 1 step by step. The process applies to any of the projects above -- pick whichever one excites you and adapt the prompts accordingly.
 
 ---
 
@@ -373,6 +358,8 @@ Return clear error messages
 
 ### Step 14: Global Error Handler
 
+This matters more than you think. A good error handler is the difference between an app that's debuggable and one that's a nightmare when something goes wrong in production.
+
 ```
 Create error handling middleware at src/middleware/errorHandler.js that:
 - Catches all errors
@@ -462,6 +449,8 @@ Aim for at least 80% coverage
 Add tests for any uncovered critical paths
 ```
 
+Fair warning: you'll almost certainly have failing tests on the first run. That's normal. Read the error messages carefully -- Claude Code can help you fix them, but understanding *why* they fail is where the real learning happens.
+
 ---
 
 ## Phase 7: Documentation
@@ -510,6 +499,8 @@ Create initial commit with project structure
 ---
 
 ### Step 22: Commit Your Progress
+
+Trust me on this -- small, meaningful commits will save you later. If you break something, you can roll back to a working state instead of starting over.
 
 ```
 Create meaningful commits for each major feature:
@@ -581,7 +572,9 @@ Add scripts to package.json:
 
 ### Enhancement Ideas
 
-**Add more features:**
+If you want to keep going, here are some directions to take it:
+
+**More features:**
 ```
 - Task due date reminders
 - Task comments
@@ -593,7 +586,7 @@ Add scripts to package.json:
 - Team collaboration features
 ```
 
-**Improve code quality:**
+**Code quality improvements:**
 ```
 - Add TypeScript
 - Add API versioning
@@ -697,41 +690,36 @@ Create deployment guide for Ubuntu VPS:
 
 ---
 
-## What You've Accomplished
+## What You've Built
 
-By completing this project, you've:
+Here's what you walked away with from this module:
 
-✅ Built a complete, working API
-✅ Implemented secure authentication
-✅ Created a proper database schema
-✅ Written comprehensive tests
-✅ Added proper error handling
-✅ Created good documentation
-✅ Used professional Git workflow
-✅ Made your code production-ready
+- A complete, working API with secure authentication
+- A proper database schema with models
+- Comprehensive tests (unit and integration)
+- Solid error handling and logging
+- Real documentation that someone else could follow
+- A professional Git history
+- Production-ready configuration
 
-**This is a real portfolio piece you can show employers!**
-
----
-
-## Next Steps
-
-**To go further:**
-
-1. **Add a frontend:** Build a React app that uses your API
-2. **Add more features:** Implement the enhancement ideas
-3. **Deploy it:** Get it running on a real server
-4. **Get feedback:** Ask others to review your code
-5. **Contribute to open source:** You now have the skills!
+This is a genuine portfolio piece. It's the kind of project that shows you can build something end to end, not just follow a tutorial.
 
 ---
 
-## Module 9 Complete!
+## Going Further
 
-Congratulations on building a complete application! You've applied everything from the previous modules and created something real and valuable.
+A few ideas if you want to keep building on this:
 
-**Ready for Module 10?** In the final core module, we'll learn professional workflow best practices to take your development process to the next level!
+1. **Add a frontend** -- build a React app that consumes your API
+2. **Implement the enhancements** from Phase 10
+3. **Actually deploy it** -- getting code running on a real server teaches you things nothing else will
+4. **Ask for code review** -- have someone else read your code and give feedback
+5. **Contribute to open source** -- you've got the workflow down now
 
 ---
 
-*Module 9 Complete - You're a builder now!*
+Next up: Module 10 -- professional workflow and best practices that'll make everything you build from here on cleaner and faster.
+
+---
+
+*Module 9 Complete*

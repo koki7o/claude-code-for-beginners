@@ -6,16 +6,9 @@
 
 ---
 
-## What You'll Learn in This Module
+## What You'll Learn
 
-By the end of this module, you will:
-- Use Claude Code with Python projects
-- Work with JavaScript/TypeScript ecosystems
-- Build Go applications
-- Develop Rust projects
-- Handle Java and Spring Boot
-- Work with multiple languages in one project
-- Understand language-specific best practices
+Claude Code doesn't care what language you're writing in. Python, TypeScript, Go, Rust, Java -- it handles all of them, and it adapts to the idioms and conventions of each. This module walks you through using it across the major ecosystems, including projects that mix several languages at once.
 
 ---
 
@@ -23,7 +16,7 @@ By the end of this module, you will:
 
 ### Setting Up Python Projects
 
-**Create a new Python project:**
+Here's a solid starting prompt for spinning up a new Python project from scratch:
 
 ```
 Create a new Python project with:
@@ -68,6 +61,8 @@ Create a Django project for a blog with:
 
 ### FastAPI Application
 
+FastAPI is where Claude Code really shines with Python -- the type hints and Pydantic models give it a lot to work with.
+
 ```
 Create a FastAPI application with:
 - Automatic API documentation
@@ -84,7 +79,7 @@ Create a FastAPI application with:
 
 ### Node.js Backend
 
-**Express with TypeScript:**
+Express with TypeScript is one of the most common stacks you'll encounter. Claude Code handles the boilerplate well, which is good because there's a lot of it.
 
 ```
 Create an Express TypeScript API with:
@@ -100,8 +95,6 @@ Create an Express TypeScript API with:
 ---
 
 ### React Frontend
-
-**Modern React application:**
 
 ```
 Create a React app with:
@@ -168,6 +161,8 @@ Create a Go web server with:
 
 ### Rust CLI Tool
 
+Fair warning: Rust projects involve more back-and-forth with Claude Code than most languages. The borrow checker is strict, and sometimes the generated code won't compile on the first pass. That's normal. Just feed the compiler errors back and Claude Code will sort it out.
+
 ```
 Create a Rust CLI application with:
 - Clap for argument parsing
@@ -199,6 +194,8 @@ Create a Rust web API with Actix-web:
 
 ### Spring Boot REST API
 
+Spring Boot projects tend to be verbose. Claude Code is genuinely useful here because it'll generate all the annotation-heavy boilerplate that nobody wants to type by hand.
+
 ```
 Create a Spring Boot application with:
 - Maven or Gradle build
@@ -217,7 +214,7 @@ Create a Spring Boot application with:
 
 ### Working with Multiple Languages
 
-**Example: Microservices Architecture**
+This is where things get interesting. Real-world projects often mix languages -- a Python ML service talking to a Go gateway, fronted by a Node.js app. Claude Code can context-switch between them in the same session.
 
 ```
 I have a project with:
@@ -238,7 +235,7 @@ Help me:
 
 ### Language-Specific Tasks
 
-**Switch context based on file:**
+You can tell Claude Code to adjust its style based on what file you're working in. Trust me on this -- it makes polyglot work way smoother.
 
 ```
 I'm working in a polyglot codebase.
@@ -252,6 +249,8 @@ When I ask you to add features:
 ---
 
 ## Lesson 7: Language-Specific Best Practices
+
+Each language has its own set of conventions, and Claude Code can enforce them for you. Use these review prompts when you want a second pair of eyes on your code.
 
 ### Python Best Practices
 
@@ -313,7 +312,7 @@ Review this Rust code for:
 
 ### Exercise 1: Python FastAPI Project
 
-**Task:** Build a complete FastAPI application
+Build a complete FastAPI application from scratch:
 
 ```
 Create a FastAPI task management API with:
@@ -330,7 +329,7 @@ Create a FastAPI task management API with:
 
 ### Exercise 2: TypeScript Full-Stack
 
-**Task:** Build Next.js + API application
+Build a Next.js + API application:
 
 ```
 Create a Next.js blog application with:
@@ -346,7 +345,7 @@ Create a Next.js blog application with:
 
 ### Exercise 3: Go Microservice
 
-**Task:** Build a Go service
+Build a production-style Go service:
 
 ```
 Create a Go microservice that:
@@ -363,7 +362,7 @@ Create a Go microservice that:
 
 ### Exercise 4: Polyglot Integration
 
-**Task:** Connect services in different languages
+This one's the most ambitious -- connect services written in different languages into a working system:
 
 ```
 Build a system with:
@@ -458,10 +457,4 @@ cargo test
 
 ## What's Next?
 
-You can now use Claude Code with any major programming language!
-
-**Ready for Module 14?** Next, we'll master API integration and working with external services!
-
----
-
-*Module 13 Complete!*
+Next up: Module 14 -- API integration and working with external services. You'll connect Claude Code to real-world APIs, which is where a lot of practical development happens.

@@ -6,40 +6,27 @@
 
 ---
 
-## What You'll Learn in This Module
+## What You'll Learn
 
-By the end of this module, you will:
-- Understand what "AI Pair Programming" is and why it's revolutionary
-- Know how to install Claude Code on your system
-- Be familiar with the command-line interface
-- Understand the basic conversation flow
-- Know the essential terminology you need
+This module covers the basics: what Claude Code actually is, how to install it, how to talk to it, and the jargon you'll run into along the way. We'll also build a small Python script together so you can see the whole workflow in action.
 
 ---
 
 ## Lesson 1: What is "AI Pair Programming"?
 
-### Understanding the Concept
+### The Short Version
 
-**AI Pair Programming** is a revolutionary approach to software development. Let's break this down in the simplest way possible:
+AI pair programming means you describe what you want, and an AI helps you build it. You're still in the driver's seat -- you decide what to build and how -- but you've got a knowledgeable partner that can write code, read your files, run commands, and explain what's happening.
 
-**Traditional Programming (The Old Way):**
-- You write every line of code yourself
-- You search documentation for hours
-- You manually debug errors
-- You need to remember syntax and APIs
-- Small mistakes can take hours to find
+Here's the contrast:
 
-**AI Pair Programming (The Claude Code Way):**
-- You describe what you want to accomplish
-- AI helps you implement it step-by-step
-- AI can read your code, understand context, and make changes
-- AI explains what it's doing so you learn
-- Debugging is collaborative and faster
+**The traditional way:** You write every line yourself, dig through docs, manually hunt for bugs, and keep all the syntax and APIs in your head. A small typo can cost you an hour.
 
-### Real-World Example
+**With Claude Code:** You say "create an HTTP server on port 3000" and it writes the code, creates the file, and can even run it for you. When something breaks, you debug it together.
 
-**Instead of doing this manually:**
+### A Quick Example
+
+Instead of this:
 ```bash
 # Search Google for "how to create HTTP server in Node.js"
 # Read documentation
@@ -49,30 +36,24 @@ By the end of this module, you will:
 # Test manually
 ```
 
-**You simply say:**
+You type:
 > "Create a simple HTTP server in Node.js that returns 'Hello World' on port 3000"
 
-And Claude Code:
-1. Creates the file
-2. Writes the code
-3. Explains what it did
-4. Can even run it for you!
-
-That's the power of AI Pair Programming.
+Claude Code creates the file, writes the code, explains what it did, and can run it. That's it.
 
 ---
 
 ## Lesson 2: Installing Claude Code
 
-### System Requirements
+### What You Need
 
-Before installing, make sure you have:
+Before installing:
 - A computer running macOS, Linux, or Windows (WSL)
 - Internet connection
 - Terminal/command-line access
-- A Claude API key (we'll get this)
+- A Claude API key (we'll get this below)
 
-**Beginner Tip:** If you're on Windows, you'll need WSL (Windows Subsystem for Linux). Don't worry - we'll guide you!
+If you're on Windows, you'll need WSL (Windows Subsystem for Linux). It sounds intimidating, but it's just a quick setup.
 
 ### Step-by-Step Installation
 
@@ -80,18 +61,15 @@ Before installing, make sure you have:
 
 Claude Code requires Node.js version 18 or higher.
 
-**Check if you have Node.js:**
+Check if you already have it:
 ```bash
 node --version
 ```
 
-**If you see a version number like `v18.x.x` or higher, you're good!**
-
-**If not, install Node.js:**
+If you see `v18.x.x` or higher, you're set. If not:
 1. Go to [nodejs.org](https://nodejs.org)
 2. Download the LTS (Long Term Support) version
-3. Run the installer
-4. Follow the installation prompts
+3. Run the installer and follow the prompts
 
 #### Step 2: Get Your Claude API Key
 
@@ -100,9 +78,7 @@ node --version
 3. Navigate to "API Keys"
 4. Click "Create Key"
 5. Copy your API key (starts with `sk-ant-...`)
-6. **Keep this safe!** Don't share it with anyone
-
-**Beginner Tip:** Your API key is like a password - keep it secret and secure!
+6. Keep this safe -- treat it like a password. Don't share it, don't commit it to Git.
 
 #### Step 3: Install Claude Code
 
@@ -112,72 +88,62 @@ Open your terminal and run:
 npm install -g claude-code
 ```
 
-**What's happening:**
-- `npm` is the Node Package Manager (it installs software)
-- `install` tells npm to install something
-- `-g` means "globally" (available everywhere)
-- `claude-code` is the package name
+Quick breakdown of that command:
+- `npm` = Node Package Manager (installs software)
+- `install` = install something
+- `-g` = globally (available everywhere on your system)
+- `claude-code` = the package name
 
-**Wait for installation to complete.** You'll see a progress indicator.
+Wait for it to finish. You'll see a progress indicator.
 
 #### Step 4: Set Up Your API Key
 
-You need to tell Claude Code your API key. There are two ways:
+You need to tell Claude Code your API key. Two options:
 
-**Option A: Set it as an environment variable (recommended)**
+**Option A: Environment variable (recommended)**
 
-**On macOS/Linux:**
+On macOS/Linux:
 ```bash
 export ANTHROPIC_API_KEY="your-api-key-here"
 ```
 
-**On Windows (PowerShell):**
+On Windows (PowerShell):
 ```powershell
 $env:ANTHROPIC_API_KEY="your-api-key-here"
 ```
 
-To make it permanent, add it to your shell configuration file (`.bashrc`, `.zshrc`, etc.)
+To make it permanent, add that line to your shell config file (`.bashrc`, `.zshrc`, etc.).
 
-**Option B: Create a config file**
-
-Claude Code can also read from a config file:
+**Option B: Config file**
 ```bash
 claude config set apiKey "your-api-key-here"
 ```
 
 #### Step 5: Verify Installation
 
-Run this command to make sure everything works:
-
 ```bash
 claude --version
 ```
 
-You should see the Claude Code version number!
-
-**Beginner Tip:** If you get an error, make sure you restarted your terminal after installation.
+You should see a version number. If you get an error, restart your terminal and try again.
 
 ---
 
 ## Lesson 3: Understanding the Claude Code Interface
 
-### What is a CLI (Command Line Interface)?
+### What's a CLI?
 
-A **CLI** is a text-based way to interact with software. Instead of clicking buttons, you type commands.
+A CLI (Command Line Interface) is a text-based way to interact with software. Instead of clicking buttons, you type commands. Claude Code's CLI is conversational though -- you talk to it in plain English.
 
-**Don't be intimidated!** Claude Code makes the CLI friendly and conversational.
+### Your First Look
 
-### Your First Look at Claude Code
-
-#### Starting Claude Code
-
-In your terminal, simply type:
+Start Claude Code by typing:
 
 ```bash
 claude
 ```
 
-**What you'll see:**
+You'll see something like:
 ```
 ╭───────────────────────────────────────────────────╮
 │                                                   │
@@ -192,296 +158,194 @@ How can I help you today?
 >
 ```
 
-**This is your conversation interface!** The `>` is where you type.
+The `>` is where you type. That's your conversation interface.
 
-### Understanding the Interface
+### What's on Screen
 
-#### The Header
-Shows:
-- Claude Code version
-- Your current working directory
-- Status information
+- **Header** -- version info, your current working directory, status
+- **Prompt (`>`)** -- where you type your requests, in plain English
+- **Response area** -- Claude's answers, tool usage, and output appear above the prompt
 
-#### The Prompt (`>`)
-This is where you type your requests, just like chatting with a friend.
+### Try It Out
 
-#### Response Area
-Above the prompt, you'll see:
-- Claude's responses
-- Tool usage (when Claude reads files, runs commands, etc.)
-- Results and output
-
-### Your First Conversation
-
-Let's try something simple. At the `>` prompt, type:
+Type this at the prompt:
 
 ```
 Hello! Can you explain what you can do?
 ```
 
-Press Enter and watch Claude Code respond!
-
-**You'll see:**
-- A friendly greeting
-- An explanation of capabilities
-- Suggestions for what to try
-
-**Beginner Tip:** Claude Code is conversational. You can ask questions in plain English!
+Hit Enter. You'll get a friendly rundown of capabilities. Claude Code is conversational -- just talk to it like you'd talk to a coworker.
 
 ---
 
-## Lesson 4: Basic Terminology You Need to Know
+## Lesson 4: Basic Terminology
 
-Let's learn the essential words you'll see in Claude Code. Don't worry - we'll explain everything in simple terms!
+Here are the key terms you'll encounter. You don't need to memorize these -- just come back here when you see a word you don't recognize.
 
-### Essential Terms
+**Session** -- One conversation with Claude Code, from start to finish. You start Claude Code, do your work, and exit. That's a session.
 
-**Session**
-- **What it means:** One conversation with Claude Code, from start to end
-- **Think of it like:** A chat conversation that ends when you close the terminal
-- **Example:** You start Claude Code, ask it to help build a website, then exit
+**Working Directory** -- The folder Claude Code is operating in. If you start Claude Code in `/home/user/my-project`, that's where it reads and writes files.
 
-**Working Directory**
-- **What it means:** The folder Claude Code is currently working in
-- **Think of it like:** Your current location on your computer
-- **Example:** `/home/user/my-project` is where your project files are
+**Tool** -- A specific capability Claude Code has. Reading files, running commands, editing code -- each of these is a "tool." You'll see Claude mention which tool it's using as it works.
 
-**Tool**
-- **What it means:** A capability Claude Code has (like reading files, running commands)
-- **Think of it like:** Different skills or abilities
-- **Example:** The "Read" tool lets Claude read your code files
+**Prompt** -- Your message or request. "Create a Python script that prints Hello World" is a prompt.
 
-**Prompt**
-- **What it means:** Your message or request to Claude Code
-- **Think of it like:** An instruction or question you ask
-- **Example:** "Create a Python script that prints Hello World"
+**Tool Use / Tool Call** -- When Claude actually does something with one of its tools. You'll see this in the output -- something like "Using Write tool" or "Using Bash tool."
 
-**Tool Use / Tool Call**
-- **What it means:** When Claude Code uses one of its tools to do something
-- **Think of it like:** Claude performing an action
-- **Example:** Using the Write tool to create a new file
+**Agent** -- A specialized helper for complex tasks. Think of it as delegating a specific job to an expert. The "Explore" agent, for instance, helps you understand large codebases.
 
-**Agent**
-- **What it means:** A specialized AI helper for complex tasks
-- **Think of it like:** Calling in an expert for a specific job
-- **Example:** The "Explore" agent helps you understand large codebases
+**Context** -- What Claude knows about your project so far. Every file it reads, every command it runs -- that all becomes context for the conversation.
 
-**Context**
-- **What it means:** The information Claude Code has about your project
-- **Think of it like:** What Claude "knows" about your code
-- **Example:** Files it has read, commands it has run
-
-**MCP Server**
-- **What it means:** An extension that gives Claude Code new capabilities
-- **Think of it like:** A plugin or add-on
-- **Example:** A database MCP server lets Claude Code work with databases
-
-**Beginner Tip:** Don't try to memorize all of these right now! You'll learn them naturally as you use Claude Code. Just refer back to this list if you see a word you don't understand.
+**MCP Server** -- An extension that gives Claude Code new capabilities, like connecting to databases or external services. Think plugins.
 
 ---
 
 ## Hands-On Practice: Your First Claude Code Session
 
-Now let's actually build something! This will be very simple - we're just getting you comfortable with the process.
+Let's build something. It'll be simple -- the point is to get you comfortable with the workflow.
 
 ### Practice Project: A Simple Python Script
 
 #### Step 1: Create a Project Directory
 
-First, let's create a folder for your project. In your terminal (before starting Claude Code):
+In your terminal (before starting Claude Code):
 
 ```bash
 mkdir hello-claude
 cd hello-claude
 ```
 
-**What you did:**
-- `mkdir` = make directory (create a folder)
-- `cd` = change directory (go into the folder)
+`mkdir` creates a folder, `cd` moves into it.
 
 #### Step 2: Start Claude Code
-
-Now start Claude Code in this directory:
 
 ```bash
 claude
 ```
 
-You're now in a Claude Code session!
+You're in a session now.
 
 #### Step 3: Your First Request
 
-At the `>` prompt, type:
+Type:
 
 ```
 Create a Python script called hello.py that asks for the user's name and greets them
 ```
 
-Press Enter.
+Hit Enter.
 
-**What you'll see:**
-- Claude Code acknowledging your request
-- It using the Write tool to create the file
-- The code being written
-- Confirmation that it's done
+You'll see Claude Code acknowledge your request, use the Write tool to create the file, and confirm it's done.
 
 #### Step 4: Check What Was Created
 
-Let's see the file. Type:
+Type:
 
 ```
 Can you show me what's in hello.py?
 ```
 
-Claude Code will use the Read tool and display the contents!
+Claude Code uses the Read tool and shows you the contents.
 
 #### Step 5: Run the Program
 
-Now let's run it! Type:
+Type:
 
 ```
 Run the hello.py script
 ```
 
-Claude Code will:
-- Use the Bash tool to run `python hello.py`
-- The script will ask for your name
-- Type your name and press Enter
-- See the greeting!
+Claude Code uses the Bash tool to run `python hello.py`. The script asks for your name, you type it, and you see the greeting.
 
 #### Step 6: Make a Change
 
-Let's practice making changes. Type:
+Type:
 
 ```
 Make the greeting more enthusiastic with exclamation marks
 ```
 
-Watch as Claude Code:
-- Uses the Edit tool
-- Shows you the change
-- Updates the file
+Watch Claude Code use the Edit tool, show you what changed, and update the file. Only the greeting changes -- everything else stays put.
 
-**Congratulations!** You just:
-- Created a file with AI
-- Ran a program
-- Made modifications
-- All through conversation!
+You just created a file, ran a program, and modified code, all through conversation.
 
 ---
 
 ## Understanding What Just Happened
 
-Let's break down what Claude Code did:
+Here's the pattern you'll use for basically everything in Claude Code:
 
-### When you asked to create a script:
-1. **Understood your request** - Parsed what you wanted
-2. **Chose the right tool** - Decided to use Write
-3. **Created the file** - Wrote the Python code
-4. **Confirmed completion** - Let you know it was done
+**Creating the script:** Claude understood your request, chose the Write tool, created the file, and confirmed.
 
-### When you asked to see the file:
-1. **Used the Read tool** - Opened and read the file
-2. **Displayed contents** - Showed you the code
-3. **Explained what it does** - Helped you understand
+**Viewing the file:** Claude used the Read tool to open the file and display its contents.
 
-### When you asked to run it:
-1. **Used the Bash tool** - Ran the command
-2. **Showed output** - Displayed the results
-3. **Handled interaction** - Let you type your name
+**Running it:** Claude used the Bash tool to execute the command and showed you the output.
 
-### When you asked for changes:
-1. **Used the Edit tool** - Made precise modifications
-2. **Showed the diff** - Highlighted what changed
-3. **Preserved other code** - Only changed what was needed
+**Editing it:** Claude used the Edit tool to make a precise change, showing you the diff. It only touched what needed changing.
 
-This is the basic workflow you'll use for all Claude Code tasks!
+This workflow -- describe what you want, watch the tools do their thing, review the results -- is the core loop. Everything else builds on it.
 
 ---
 
 ## Module 1 Checklist
 
-Before moving to Module 2, make sure you can:
+Before moving on, make sure you can:
 
-- [ ] Explain what "AI Pair Programming" is in your own words
-- [ ] Successfully install Claude Code on your system
+- [ ] Explain what AI pair programming is in your own words
+- [ ] Install Claude Code on your system
 - [ ] Start a Claude Code session in your terminal
-- [ ] Understand basic terms like "tool," "prompt," and "session"
+- [ ] Understand the basic terms (tool, prompt, session, context)
 - [ ] Create a simple file using Claude Code
 - [ ] Make changes to a file
 - [ ] Run a program with Claude Code's help
 
 ---
 
-## Common Questions (FAQ)
+## Common Questions
 
-### Q: Do I need to know how to code?
-**A:** No! Claude Code can help you learn programming. However, some basic understanding helps you guide Claude Code better.
+**Do I need to know how to code?**
+No, but some basic understanding helps you guide Claude Code better. You'll pick things up as you go.
 
-### Q: Is Claude Code free?
-**A:** Claude Code itself is free, but you need a Claude API key which has usage costs. New users typically get free credits to start.
+**Is Claude Code free?**
+Claude Code itself is free. You need a Claude API key, which has usage costs. New users typically get free credits to start.
 
-### Q: What if I make a mistake in my request?
-**A:** No problem! You can clarify, ask Claude Code to undo changes, or simply make a new request. Nothing is permanent.
+**What if I make a mistake in my request?**
+Just clarify, ask to undo changes, or make a new request. Nothing is permanent.
 
-### Q: Can Claude Code work with any programming language?
-**A:** Yes! Claude Code can help with Python, JavaScript, Java, Go, Rust, and many more languages.
+**What languages does it support?**
+Python, JavaScript, TypeScript, Java, Go, Rust, and many more.
 
-### Q: What if Claude Code does something wrong?
-**A:** You're always in control. Review changes before accepting them, and you can always ask Claude Code to fix or revert things.
+**What if Claude Code does something wrong?**
+You're in control. Review changes before accepting them, and you can always ask to fix or revert things.
 
-### Q: How do I exit Claude Code?
-**A:** Type `/exit` or press Ctrl+C. Your files are saved automatically.
-
----
-
-## What's Next?
-
-Great job completing Module 1! You now understand:
-- What Claude Code is and how it works
-- How to install and set it up
-- How to start a session and have a conversation
-- How to create and modify files
-
-**Ready for Module 2?** In the next module, we'll learn different ways to start projects with Claude Code - from scratch, from templates, and from existing codebases!
+**How do I exit?**
+Type `/exit` or press Ctrl+C. Your files are already saved.
 
 ---
 
-## Pro Tips for Beginners
+## Tips
 
-1. **Be conversational** - Talk to Claude Code naturally, like a colleague
-
-2. **Be specific** - The more details you provide, the better the results
-
-3. **Ask questions** - If you don't understand something, ask Claude Code to explain
-
-4. **Review changes** - Always check what Claude Code does so you learn
-
-5. **Experiment** - Try different requests and see what happens. You can't break anything!
-
-6. **Save your work** - Use Git (we'll learn this later) to track changes
-
-7. **Read the output** - Claude Code explains what it's doing - this helps you learn
+1. **Be conversational** -- talk to Claude Code like a colleague, not a search engine
+2. **Be specific** -- more detail gets better results
+3. **Ask questions** -- if you don't understand something, ask for an explanation
+4. **Review changes** -- always look at what changed so you actually learn
+5. **Experiment** -- try different requests. You can't break anything.
+6. **Read the output** -- Claude Code explains what it's doing, and that's how you learn
 
 ---
 
-## Troubleshooting Common Issues
+## Troubleshooting
 
-### "Command not found: claude"
-**Solution:** Make sure you installed globally with `-g` and restarted your terminal.
+**"Command not found: claude"** -- Make sure you installed with `-g` and restarted your terminal.
 
-### "API key not found"
-**Solution:** Set your `ANTHROPIC_API_KEY` environment variable or use `claude config set apiKey`.
+**"API key not found"** -- Set your `ANTHROPIC_API_KEY` environment variable or use `claude config set apiKey`.
 
-### "Permission denied"
-**Solution:** You might need to use `sudo` on macOS/Linux: `sudo npm install -g claude-code`
+**"Permission denied"** -- Try `sudo npm install -g claude-code` on macOS/Linux.
 
-### Claude Code seems slow
-**Solution:** This is normal. AI processing takes time. Complex requests take longer than simple ones.
+**Claude Code seems slow** -- Normal. AI processing takes time, especially for complex requests.
 
-### I don't see any output
-**Solution:** Make sure you pressed Enter after typing your request. Check your internet connection.
+**No output** -- Make sure you pressed Enter. Check your internet connection.
 
 ---
 
-*Module 1 Complete!*
+*Next up: Module 2 -- different ways to start projects with Claude Code.*
