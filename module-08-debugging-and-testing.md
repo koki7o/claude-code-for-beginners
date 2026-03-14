@@ -366,6 +366,38 @@ Refactor it to be more clear while keeping tests passing.
 
 ---
 
+### TDD in Practice: Automating the Workflow
+
+Once you're comfortable with the TDD loop, you can speed it up by telling Claude Code to handle the full cycle:
+
+```
+Using TDD, add an email validation utility:
+
+1. Write tests for: valid emails, invalid emails, edge cases (empty string,
+   very long emails, unicode characters, multiple @ signs)
+2. Run tests -- confirm they fail
+3. Implement the minimum code to pass
+4. Run tests -- confirm they pass
+5. Refactor for readability
+6. Run tests one more time to confirm nothing broke
+
+Do all steps in sequence, showing me the test results at each stage.
+```
+
+**The power move:** You can also set up a continuous TDD workflow where Claude Code watches for test failures and implements fixes automatically:
+
+```
+Watch the test suite. Every time a test fails:
+1. Read the failing test to understand what's expected
+2. Find the relevant source code
+3. Fix the code to make the test pass
+4. Run the full suite to make sure nothing else broke
+```
+
+This is how TDD becomes second nature -- the tests drive the implementation, and you focus on defining the behavior you want rather than writing the code directly.
+
+---
+
 ## Lesson 6: Debugging Common Scenarios
 
 ### Scenario 1: Null/Undefined Errors
@@ -453,6 +485,21 @@ Found issues:
 Estimated improvement: 5s → 0.5s
 ```
 
+**Pro tip: The build-error-resolver pattern.** When your build breaks and the error is cryptic, try this approach:
+
+```
+My build is failing with this error: [paste error]
+
+Don't just fix the immediate error. Instead:
+1. Explain what the error means
+2. Find the root cause (not just the symptom)
+3. Fix it
+4. Check if the same pattern exists elsewhere in the codebase
+5. Fix those too if they'd cause the same problem
+```
+
+This catches the whole class of bug, not just the one instance you happened to notice.
+
 ---
 
 ## Lesson 7: Test Coverage and Quality
@@ -487,6 +534,32 @@ Write additional tests to cover:
 - The password reset function
 - Edge cases in token generation
 ```
+
+---
+
+### Testing Standards with Rules
+
+You can codify your testing standards so Claude Code enforces them automatically. Create a testing rule file:
+
+**Example (.claude/rules/testing.md):**
+```markdown
+---
+description: Testing standards for all test files
+globs: ["**/*.test.*", "**/*.spec.*"]
+---
+
+## Testing Rules
+
+- Every test file must have at least one describe block
+- Test names must clearly state the expected behavior
+- Always test: happy path, error cases, edge cases, boundary values
+- Mock all external services (APIs, databases, email)
+- Never use real credentials or external services in tests
+- Tests must be independent -- no shared mutable state between tests
+- Clean up any test data in afterEach/afterAll hooks
+```
+
+When Claude Code writes or modifies tests, it automatically follows these rules for every matching file. No more inconsistent test quality across the codebase.
 
 ---
 

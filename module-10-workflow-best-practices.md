@@ -373,6 +373,40 @@ Refactor so that:
 
 ---
 
+### Codifying Standards with Rules
+
+Instead of relying on memory or hoping everyone follows the same conventions, you can encode your project's standards into rules files that Claude Code follows automatically.
+
+**Create a rules directory:**
+```
+.claude/rules/
+├── code-style.md        # Formatting and naming conventions
+├── error-handling.md    # How errors should be handled
+├── testing.md           # Testing requirements
+└── security.md          # Security requirements
+```
+
+**Example rule file (.claude/rules/error-handling.md):**
+```markdown
+---
+description: Error handling standards for all application code
+globs: ["src/**/*.ts", "src/**/*.js"]
+---
+
+## Error Handling Rules
+
+- All async functions must use try/catch
+- Never expose internal error details to API responses
+- Use custom error classes (ValidationError, NotFoundError, etc.)
+- Log all errors with context (userId, requestId, operation)
+- Database errors must be wrapped in application-specific errors
+- Always include a meaningful error message for debugging
+```
+
+**Why this matters:** Rules are enforced automatically every time Claude Code works on matching files. No more "we forgot to add error handling" -- it's baked into the workflow. This is especially powerful on teams where multiple people use Claude Code on the same codebase.
+
+---
+
 ## Lesson 7: Security Best Practices
 
 ### Input Validation
@@ -535,6 +569,44 @@ Create a pull request with:
 ```
 
 This flow might feel like a lot of overhead at first, but it catches problems early and keeps your git history clean. Future you will appreciate it.
+
+---
+
+### Advanced Workflow: The Automated Pipeline
+
+Once you're comfortable with the manual workflow above, you can automate chunks of it. Here's a professional pipeline that handles quality checks automatically:
+
+**Step 1: Pre-flight checks**
+```
+Before I start working on this feature, run these checks:
+1. Are all tests passing?
+2. Is the linter clean?
+3. Are there any uncommitted changes?
+4. Is my branch up to date with main?
+```
+
+**Step 2: Research-first development**
+```
+Before writing any code for this feature:
+1. Explore how similar features are implemented in this codebase
+2. Check if there are existing utilities or patterns I should reuse
+3. Identify which files will need to change
+4. Create a plan, then implement
+```
+
+This "research before coding" approach prevents the common mistake of reimplementing something that already exists or breaking patterns the rest of the codebase follows.
+
+**Step 3: Automated quality gate**
+```
+After implementing, run the full quality check:
+1. Run the linter -- fix any issues
+2. Run the test suite -- fix any failures
+3. Check test coverage -- add tests if coverage dropped
+4. Review the diff for security issues
+5. Generate a summary of all changes
+```
+
+**The key insight:** The best workflows aren't about following more steps -- they're about automating the steps so quality becomes effortless. Set up the automation once, and every feature you build goes through the same rigorous process without any extra effort.
 
 ---
 

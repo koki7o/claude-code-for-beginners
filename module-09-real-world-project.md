@@ -159,6 +159,43 @@ README.md
 
 ---
 
+### Step 4b: Create a CLAUDE.md
+
+Before diving into implementation, set up a CLAUDE.md so Claude Code follows your project's conventions from the start:
+
+```
+Create a CLAUDE.md for this Task Management API that includes:
+
+## Quick Commands
+- npm run dev — Start development server
+- npm test — Run all tests
+- npm run lint — Run ESLint
+
+## Architecture
+- Express.js REST API with SQLite
+- Routes → Controllers → Services → Models pattern
+- All async functions use try/catch
+
+## Code Style
+- Use async/await, never callbacks
+- Named exports, not default
+- Error responses: { error: { status, message, details } }
+
+## Testing
+- Jest for unit and integration tests
+- Tests go in tests/ directory mirroring src/ structure
+- Mock database for unit tests, test database for integration
+
+## Don't
+- Don't use console.log — use the logger utility
+- Don't skip input validation on any endpoint
+- Don't commit .env files
+```
+
+This file gets loaded automatically every time you start Claude Code in this project. Instead of reminding Claude about your conventions in every prompt, you write them once and they stick. As the project grows, update CLAUDE.md to reflect what you've learned.
+
+---
+
 ## Phase 2: Database Setup
 
 ### Step 5: Design Database Schema

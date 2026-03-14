@@ -198,6 +198,8 @@ Here are the key terms you'll encounter. You don't need to memorize these -- jus
 
 **MCP Server** -- An extension that gives Claude Code new capabilities, like connecting to databases or external services. Think plugins.
 
+**CLAUDE.md** -- A special file you can put in your project root that tells Claude Code how to work with your project. Think of it as a briefing document -- coding conventions, preferred patterns, project-specific instructions. We'll cover this in detail in later modules.
+
 ---
 
 ## Hands-On Practice: Your First Claude Code Session
@@ -331,6 +333,7 @@ Type `/exit` or press Ctrl+C. Your files are already saved.
 4. **Review changes** -- always look at what changed so you actually learn
 5. **Experiment** -- try different requests. You can't break anything.
 6. **Read the output** -- Claude Code explains what it's doing, and that's how you learn
+7. **Create a CLAUDE.md early** -- even a simple one with your preferred language and conventions helps Claude Code give you better results from the start
 
 ---
 

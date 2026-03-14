@@ -588,6 +588,72 @@ Look in `~/.config/claude/logs/` for error messages.
 
 ---
 
+## CLAUDE.md and Rules Issues
+
+### Problem: CLAUDE.md not being followed
+
+**Symptoms:**
+- Claude Code ignores conventions you put in CLAUDE.md
+- Code style doesn't match your preferences
+
+**Solutions:**
+
+**Solution 1: Check file location**
+CLAUDE.md must be in the project root -- the same directory where you start Claude Code.
+```bash
+ls CLAUDE.md
+```
+
+**Solution 2: Check formatting**
+Make sure your CLAUDE.md uses clear, imperative language:
+```markdown
+# Good
+- Use async/await, never callbacks
+- All API responses use { data: T } format
+
+# Less effective
+- It would be nice to use async/await
+- Consider using a consistent response format
+```
+
+**Solution 3: Be specific, not vague**
+"Write clean code" doesn't mean anything concrete. "Use named exports, camelCase for functions, PascalCase for classes" does.
+
+---
+
+### Problem: Rules not applying to files
+
+**Symptoms:**
+- Rules in `.claude/rules/` aren't being enforced
+
+**Solutions:**
+
+**Solution 1: Check glob patterns**
+Make sure the `globs` field in your rule frontmatter matches the files you're working on:
+```markdown
+---
+description: TypeScript rules
+globs: ["src/**/*.ts", "src/**/*.tsx"]
+---
+```
+
+**Solution 2: Verify file location**
+Rules must be in `.claude/rules/` in your project root:
+```bash
+ls .claude/rules/
+```
+
+**Solution 3: Check frontmatter format**
+The frontmatter must use valid YAML with `---` delimiters:
+```markdown
+---
+description: Your description here
+globs: ["pattern"]
+---
+```
+
+---
+
 ## Getting More Help
 
 ### Ask Claude Code itself

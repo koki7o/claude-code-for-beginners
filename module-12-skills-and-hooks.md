@@ -110,6 +110,34 @@ Both relative and absolute paths work. Relative paths resolve from the file cont
 
 ---
 
+### Production CLAUDE.md Examples
+
+What does a mature CLAUDE.md look like for real projects? Here are condensed examples across different stacks:
+
+**SaaS Next.js (Supabase + Stripe + RLS):**
+- Architecture split: server components use `createServerClient()`, client components use `createBrowserClient()` -- never mix them
+- All database queries go through RLS policies; direct table access is forbidden outside migrations
+- Stripe webhook handlers live in `src/app/api/webhooks/stripe/` and must be idempotent
+- Test commands: `npm test`, `npm run test:e2e`, `npx supabase db reset` for clean DB state
+
+**Go Microservice (gRPC + PostgreSQL):**
+- Clean architecture layers: `internal/domain/`, `internal/service/`, `internal/repository/`, `internal/transport/`
+- All errors wrap with `fmt.Errorf("operation: %w", err)` -- never discard error context
+- Proto files in `proto/`, generate with `make proto`; never hand-edit generated `.pb.go` files
+- Build: `make build`, Test: `make test`, Lint: `golangci-lint run ./...`
+
+**Django API (DRF + Celery):**
+- Serializers in `serializers.py`, views in `views.py`, business logic in `services.py` -- views must stay thin
+- Background jobs use Celery tasks in `tasks.py`; never call external APIs synchronously in request handlers
+- Management commands for data operations: `python manage.py <command>`, test with `pytest --reuse-db`
+
+**Rust API (Axum + SQLx):**
+- Handler functions in `src/handlers/`, extractors in `src/extractors/`, SQLx queries use compile-time checked `sqlx::query!` macro
+- All database migrations in `migrations/` managed by `sqlx migrate run`
+- Build: `cargo build`, Test: `cargo test`, Lint: `cargo clippy -- -D warnings`
+
+---
+
 ### How Claude Looks Up Memory
 
 Claude reads CLAUDE.md files recursively up the directory tree from your current working directory. If you're working in `packages/frontend/`, Claude reads:
@@ -189,6 +217,28 @@ Organize rules into subdirectories if you want -- they're discovered recursively
 │   └── database.md
 └── general.md
 ```
+
+For polyglot projects -- where you have multiple languages in one repo -- organizing rules by language keeps things clean and avoids cross-contamination of conventions:
+
+```
+.claude/rules/
+├── common/
+│   ├── coding-style.md
+│   ├── testing.md
+│   ├── security.md
+│   └── git-workflow.md
+├── typescript/
+│   ├── strict-mode.md
+│   └── react-patterns.md
+├── python/
+│   ├── type-hints.md
+│   └── django-patterns.md
+└── golang/
+    ├── error-handling.md
+    └── concurrency.md
+```
+
+The `common/` directory holds rules that apply regardless of language -- things like commit message format, testing philosophy, and security requirements. Language-specific directories contain rules scoped to their respective file types using `paths` frontmatter (e.g., `paths: ["**/*.ts", "**/*.tsx"]` for the TypeScript rules). Language-specific rules can reference common ones with `@imports`, so your Go error-handling rules can point to `@../common/coding-style.md` for the shared conventions they build on. This structure mirrors how your codebase is actually organized and makes it obvious where new rules belong.
 
 ---
 
@@ -425,6 +475,29 @@ For an example of a good review, see [examples/good-review.md](examples/good-rev
 
 ---
 
+### Real-World Skills Gallery
+
+Once you understand the format, skills become your primary way to encode workflows. Here are the categories of skills that show up in mature setups:
+
+**Development Workflow:**
+- `tdd-workflow` -- Structured red-green-refactor cycle. Frontmatter: `allowed-tools: Bash, Edit, Read` and `disable-model-invocation: true`. The skill walks Claude through writing a failing test first, implementing the minimum code to pass, then refactoring.
+- `e2e-testing` -- End-to-end test generation using Playwright Page Object Model. Frontmatter: `argument-hint: [page-or-feature]`. Includes supporting files with POM templates and selector conventions.
+
+**Quality:**
+- `security-review` -- Vulnerability scanning against common patterns (SQL injection, XSS, secrets in code). Frontmatter: `context: fork`, `agent: Explore`, `model: sonnet`. Runs in isolation so findings don't pollute the main conversation.
+- `coding-standards` -- Per-language enforcement with auto-fix suggestions. Frontmatter: `user-invocable: false` (background knowledge). Claude loads this automatically when editing code.
+
+**Operations:**
+- `deployment-patterns` -- Docker build verification, CI/CD pipeline checks, environment variable validation. Frontmatter: `disable-model-invocation: true` (only run when you explicitly ask). Includes checklists as supporting files.
+- `database-migrations` -- Safe schema change workflow: generate migration, review SQL, check for destructive operations, test rollback. Frontmatter: `allowed-tools: Bash, Read, Grep`.
+
+**Learning:**
+- `continuous-learning` -- Extracts patterns from the current session and records them with a confidence score. Frontmatter: `hooks: { "Stop": [...] }` to trigger at session end. Over time, builds a knowledge base of project-specific insights that feed back into CLAUDE.md.
+
+Each of these follows the same SKILL.md format you already know -- the difference is just in how they combine frontmatter fields, supporting files, and dynamic context injection. You'll build your own in the exercises below.
+
+---
+
 ## Lesson 5: Commands
 
 ### The Original Slash Commands
@@ -467,6 +540,22 @@ Use skills when you need the extra power -- supporting files, frontmatter contro
 Use commands when you just want something quick. One markdown file, done. No directory structure needed. Good for prototyping before you need the extra features.
 
 In practice, most people start with commands and graduate to skills once they need more.
+
+---
+
+### What a Full Command Library Looks Like
+
+Power users end up with 30-40+ commands organized by category. Here's what a mature command library looks like:
+
+| Category | Commands | Purpose |
+|----------|----------|---------|
+| Core Workflow | `/plan`, `/tdd`, `/code-review`, `/build-fix` | Day-to-day development loop |
+| Quality | `/verify`, `/quality-gate`, `/test-coverage` | Pre-merge validation checks |
+| Documentation | `/update-docs`, `/update-codemaps` | Keep documentation current with code changes |
+| Session | `/sessions`, `/checkpoint`, `/compact` | Context and session management |
+| Multi-Agent | `/orchestrate`, `/multi-plan` | Coordinated workflows across multiple agents |
+
+You don't need to build all of these on day one. Most teams start with 3-5 commands that address their biggest pain points -- usually something like `/plan`, `/review`, and `/test`. As patterns emerge in your daily work, you'll notice things you keep asking Claude to do repeatedly. Those repetitive prompts are your next commands. The library grows organically from actual usage, not from trying to anticipate every possible need upfront.
 
 ---
 
@@ -626,6 +715,57 @@ Hooks can also run in the background with `"async": true`, which is useful for r
 
 ---
 
+### Session Management Hooks
+
+The most practical hook pattern is memory persistence across sessions. Claude's context resets between sessions, but hooks let you bridge that gap by saving and restoring state automatically.
+
+The pattern uses three hooks working together:
+
+```json
+{
+  "hooks": {
+    "SessionStart": [
+      {
+        "hooks": [
+          {
+            "type": "command",
+            "command": "node \"$CLAUDE_PROJECT_DIR/.claude/hooks/scripts/session-start.js\""
+          }
+        ]
+      }
+    ],
+    "PreCompact": [
+      {
+        "hooks": [
+          {
+            "type": "command",
+            "command": "node \"$CLAUDE_PROJECT_DIR/.claude/hooks/scripts/pre-compact.js\""
+          }
+        ]
+      }
+    ],
+    "SessionEnd": [
+      {
+        "hooks": [
+          {
+            "type": "command",
+            "command": "node \"$CLAUDE_PROJECT_DIR/.claude/hooks/scripts/session-end.js\""
+          }
+        ]
+      }
+    ]
+  }
+}
+```
+
+- **`SessionStart`** loads saved context from a state file (e.g., `.claude/state/last-session.json`) and outputs it as JSON so Claude picks up where it left off -- recent decisions, open tasks, known issues.
+- **`PreCompact`** saves the current working state before Claude compacts the conversation. This is critical because compaction throws away detail; the hook preserves what matters.
+- **`SessionEnd`** extracts patterns and insights from the session and persists them for next time.
+
+Notice the scripts use Node.js instead of bash. This is deliberate -- Node.js scripts in a `scripts/` directory work identically on macOS, Linux, and Windows (via WSL), making your hooks portable across your team. Keep the scripts in `.claude/hooks/scripts/` and they'll be versioned alongside the rest of your configuration.
+
+---
+
 ## Lesson 7: Custom Agents (Introduction)
 
 ### What Are Custom Agents?
@@ -673,6 +813,58 @@ Where agents live:
 Use `/agents` to manage them interactively, or create the files manually.
 
 We'll go much deeper on agents in the advanced modules. For now, just know they exist and how the basic file format works.
+
+---
+
+### Real-World Agent Examples
+
+To make agents concrete, here are three production agents with different design tradeoffs. Pay attention to *why* each choice was made -- model selection and tool restrictions aren't arbitrary.
+
+**1. Planner Agent** -- deep reasoning, zero side effects:
+```yaml
+---
+name: planner
+description: Analyzes codebases and creates detailed implementation plans. Use when the user needs architecture decisions or multi-step plans.
+tools: Read, Grep, Glob
+model: opus
+---
+
+You are a senior architect. Analyze the codebase and produce a detailed plan.
+Never suggest changes directly -- only produce plans with reasoning.
+```
+Why opus? Planning requires deep reasoning and long-horizon thinking. Why only Read/Grep/Glob? A planner must never modify code -- it only reads and reasons. Restricting tools makes this guarantee structural, not behavioral.
+
+**2. Security Reviewer Agent** -- specialized checklist, moderate cost:
+```yaml
+---
+name: security-reviewer
+description: Reviews code for security vulnerabilities using OWASP guidelines. Use after code changes that touch auth, input handling, or data access.
+tools: Read, Grep, Glob, Bash
+model: sonnet
+---
+
+You are a security specialist. Review code against OWASP Top 10.
+Check for: SQL injection, XSS, CSRF, broken auth, secrets in code,
+insecure deserialization, and missing input validation.
+Run `grep -r` for patterns like API keys, passwords, and tokens.
+```
+Why sonnet? Security review needs good reasoning but runs frequently -- opus would be too expensive for every PR. Bash access is included so the agent can run `grep` for secret patterns and `npm audit` or similar tools.
+
+**3. Documentation Updater Agent** -- routine work, high volume:
+```yaml
+---
+name: doc-updater
+description: Updates documentation to reflect code changes. Use after features are merged.
+tools: Read, Grep, Glob, Edit, Write
+model: haiku
+---
+
+You update documentation files to match current code. Read the changed files,
+then update relevant docs. Keep the existing style and tone.
+```
+Why haiku? Doc updates are straightforward -- read what changed, update the matching docs. This runs often and the work is routine, so the cheapest capable model keeps costs down. Edit and Write access is needed because this agent actually modifies files.
+
+Module 21 goes deep into agent architecture, including multi-agent coordination, worktree isolation, and agent-to-agent communication patterns.
 
 ---
 

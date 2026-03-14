@@ -653,6 +653,7 @@ That wraps up the final module. Make sure you can:
 - Have a rollback plan
 - Deploy during low-traffic times when possible
 - Monitor closely after deployment
+- Use hooks to automate pre-deployment checks (linting, tests, security scans)
 
 **Security** -- these aren't optional:
 - Use HTTPS everywhere
@@ -668,6 +669,37 @@ That wraps up the final module. Make sure you can:
 - Use a CDN for static files
 - Cache appropriately
 - Monitor performance over time
+
+---
+
+## Automating Deployment Workflows
+
+As your deployment process matures, you can codify it in a CLAUDE.md and use hooks to enforce it:
+
+```markdown
+# CLAUDE.md (deployment section)
+## Deployment Checklist
+- All tests must pass before deploying
+- Run security audit: npm audit
+- Check for environment variable documentation
+- Database migrations must be tested on staging first
+- Tag releases with semantic versioning
+```
+
+You can also create a PreCommit hook to catch issues before they reach your deployment pipeline:
+
+```json
+{
+  "hooks": {
+    "PreCommit": [{
+      "command": "npm run lint && npm test",
+      "description": "Run lint and tests before commit"
+    }]
+  }
+}
+```
+
+This kind of automation is what separates hobby projects from production-grade workflows. We covered hooks in detail in Module 12 -- go back and review if you want to set this up for your deployments.
 
 ---
 

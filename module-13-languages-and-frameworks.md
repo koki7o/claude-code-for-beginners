@@ -75,6 +75,25 @@ Create a FastAPI application with:
 
 ---
 
+### Python Standards That Matter
+
+Beyond just generating code, you want Claude Code to enforce patterns that actually matter in Python codebases. Here are the ones worth encoding into your workflow:
+
+- **Always use type hints**, including return types. Not just for function signatures -- annotate variables when the type isn't obvious. This gives Claude Code (and your IDE) far more to work with.
+- **Use `Protocol` for duck typing** instead of abstract base classes where possible. Protocols are more Pythonic and don't force inheritance hierarchies.
+- **Context managers for resource cleanup.** If something opens, connects, or acquires -- it should use `with`. Tell Claude Code to wrap database connections, file handles, and locks in context managers every time.
+- **List comprehensions over loops**, but only when readability isn't sacrificed. A comprehension that spans three lines is worse than a simple for-loop.
+- **pytest fixtures and parametrized tests.** Don't let Claude Code generate `unittest.TestCase` classes. Fixtures for setup/teardown, `@pytest.mark.parametrize` for testing multiple inputs.
+- **Django-specific conventions:**
+  - ViewSets over function-based views -- they reduce boilerplate and play better with routers
+  - Always use serializers for data validation, even for internal APIs
+  - Management commands over standalone scripts -- they get Django's ORM and settings for free
+- **FastAPI-specific:** Pydantic models for everything, dependency injection for shared resources, async endpoints by default.
+
+You can make these standards persistent by encoding them into `.claude/rules/python/` files. Module 12 covers this in detail, but the short version: create a rule file with these conventions, and Claude Code will follow them automatically whenever it touches Python files.
+
+---
+
 ## Lesson 2: JavaScript/TypeScript
 
 ### Node.js Backend
@@ -125,6 +144,25 @@ Create a Next.js application with:
 
 ---
 
+### TypeScript Standards That Matter
+
+TypeScript's type system is powerful, but only if you actually use it. These are the standards that separate clean TypeScript from "JavaScript with extra steps":
+
+- **Strict mode, always.** Enable every strict flag in `tsconfig.json`. No exceptions. Claude Code should never generate code that requires loosening strictness.
+- **No `any`.** Use `unknown` and narrow the type with type guards. If Claude Code reaches for `any`, push back. The whole point of TypeScript is the types.
+- **Named exports over default exports.** Default exports make refactoring harder and auto-imports less reliable. The only exception is Next.js page components, where default exports are required by the framework.
+- **`interface` for object shapes, `type` for unions and intersections.** This isn't just style -- interfaces can be extended and merged, types can't. Use each where it's strongest.
+- **Barrel exports only at module boundaries.** A `src/components/index.ts` that re-exports everything is fine. A barrel file in every subdirectory creates circular dependency nightmares.
+- **React-specific conventions:**
+  - Server Components by default in Next.js App Router -- only add `'use client'` when the component genuinely needs browser APIs or interactivity
+  - Props interfaces named `{ComponentName}Props`
+  - Custom hooks for shared logic, not utility functions that secretly use React internals
+  - Zod schemas for runtime validation at API boundaries
+
+Encode these into `.claude/rules/typescript/` files so they apply automatically. See Module 12 for the full setup.
+
+---
+
 ## Lesson 3: Go Development
 
 ### Go CLI Application
@@ -154,6 +192,21 @@ Create a Go web server with:
 - Graceful shutdown
 - Docker containerization
 ```
+
+---
+
+### Go Standards That Matter
+
+Go's simplicity is deceptive. The language is small, but writing idiomatic Go requires discipline. These are the patterns Claude Code should always follow:
+
+- **Always wrap errors with context.** Use `fmt.Errorf("failed to fetch user: %w", err)` -- never return a bare error, and never silently ignore one. The `%w` verb preserves the error chain for `errors.Is` and `errors.As`.
+- **Table-driven tests as the default.** Every test function should start with a slice of test cases. This is the single most idiomatic Go testing pattern, and Claude Code should reach for it automatically.
+- **Context propagation through all layers.** Every function that does I/O or could block should accept `context.Context` as its first parameter. No exceptions. This enables cancellation, timeouts, and tracing.
+- **Goroutine safety: always know who owns the lifecycle.** Before launching a goroutine, answer: who waits for it to finish? What happens if it panics? Use `errgroup` for managing groups of goroutines with proper error collection.
+- **Channel patterns: prefer closing channels over signaling.** A closed channel is readable by all receivers simultaneously -- a signal value only reaches one. Use `done` channels or context cancellation for shutdown coordination.
+- **Go reviewer mindset.** When asking Claude Code to review Go code, have it check for: exported functions without doc comments, error returns that aren't checked, goroutines without lifecycle management, and missing `defer` for cleanup.
+
+Encode these into `.claude/rules/golang/` files so they're enforced automatically. Module 12 has the details on setting up language-scoped rules.
 
 ---
 
@@ -207,6 +260,41 @@ Create a Spring Boot application with:
 - JUnit tests
 - Docker configuration
 ```
+
+---
+
+## Lesson 5b: Swift and iOS Development
+
+### SwiftUI Application
+
+Swift and iOS development is another area where Claude Code pulls its weight. The framework APIs are extensive, and having Claude Code generate the boilerplate for views, data models, and persistence saves real time.
+
+```
+Create a SwiftUI application with:
+- Core Data persistence layer
+- async/await for all network calls
+- MVVM architecture
+- Navigation using NavigationStack
+- @Observable macro for state management
+- Unit tests with XCTest
+```
+
+---
+
+### Swift Standards That Matter
+
+iOS codebases accumulate complexity fast. These patterns keep things manageable:
+
+- **Swift actors for state isolation.** Any shared mutable state should live inside an `actor`. This eliminates data races at compile time instead of debugging them at runtime.
+- **Protocol-oriented design over class inheritance.** Define behavior through protocols, provide defaults via extensions. This is how the Swift standard library is built, and your code should follow the same pattern.
+- **Dependency injection via protocols for testability.** Never instantiate services directly inside views or view models. Define a protocol, inject the concrete implementation, and swap in mocks for testing.
+- **SwiftUI patterns:**
+  - Use the `@Observable` macro (not `ObservableObject`) for new code -- it's more efficient and requires less boilerplate
+  - Prefer view modifiers over wrapper views for styling and behavior
+  - Use `NavigationStack` with typed navigation paths, not the deprecated `NavigationView`
+- **Testing with XCTest:** Use `async` test methods for testing async code. Combine `XCTestExpectation` with structured concurrency for integration tests. Keep UI tests focused on critical user flows, not pixel-perfect layout.
+
+Encode Swift-specific conventions into `.claude/rules/swift/` files to keep them consistent across your project. Module 12 covers the setup.
 
 ---
 
@@ -308,6 +396,47 @@ Review this Rust code for:
 
 ---
 
+## Lesson 8: Setting Up Language-Specific Claude Code Configuration
+
+Everything in this module -- the standards, the patterns, the idioms -- is only useful if Claude Code remembers it between sessions. That's what the `.claude/rules/` directory is for. You organize your conventions by language, and Claude Code loads the relevant ones based on what files you're working in.
+
+Here's the recommended directory structure:
+
+```
+.claude/rules/
+├── common/
+│   ├── coding-style.md    # Universal: naming, file length, DRY
+│   ├── testing.md         # 80% coverage, TDD-first, colocated tests
+│   └── git-workflow.md    # Conventional commits, branch naming
+├── python/
+│   └── patterns.md        # Type hints, pytest, Django conventions
+├── typescript/
+│   └── patterns.md        # Strict mode, named exports, React patterns
+└── golang/
+    └── patterns.md        # Error wrapping, table-driven tests
+```
+
+Each rule file is a short Markdown document that states conventions directly. Here's what a real one looks like:
+
+```markdown
+---
+path: "**/*.py"
+---
+- Always use type hints for function parameters and return types
+- Use pytest for all tests, never unittest
+- Use Protocol instead of ABC for duck typing
+- Context managers for all resource cleanup (files, connections, locks)
+- Django views: use ViewSets, never function-based views
+```
+
+The `path` frontmatter in the YAML header tells Claude Code when to load this rule. A pattern like `**/*.py` means it only activates when working on Python files. The `common/` rules use a broader path (or no path restriction) so they apply everywhere.
+
+Language-specific rules only load when Claude Code is working on matching files. This keeps your context focused -- Go conventions don't clutter the prompt when you're editing TypeScript, and vice versa.
+
+**Exercise:** Create a `.claude/rules/` directory for your primary language. Add one rule file with 5-10 conventions that matter most to your team. Use the path-scoped frontmatter to scope it to the right file types. Then start a Claude Code session and verify the rules are being followed.
+
+---
+
 ## Hands-On Practice
 
 ### Exercise 1: Python FastAPI Project
@@ -385,6 +514,9 @@ Build a system with:
 - [ ] Can work with Java/Spring Boot
 - [ ] Can handle polyglot projects
 - [ ] Know language-specific best practices
+- [ ] Know language-specific standards for Python, TypeScript, Go
+- [ ] Can set up Claude Code rules for a specific language
+- [ ] Understand Swift/iOS development with Claude Code
 
 ---
 

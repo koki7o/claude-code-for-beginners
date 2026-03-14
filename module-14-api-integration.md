@@ -520,6 +520,7 @@ Before moving to Module 15, make sure you can:
 - Log API interactions
 - Validate all inputs
 - Use TypeScript for type safety
+- Encode API patterns in a CLAUDE.md or rules file so Claude Code generates consistent client code
 
 **Security:**
 - Never commit API keys
@@ -545,6 +546,28 @@ Before moving to Module 15, make sure you can:
 - Exposing sensitive data in logs
 - Not caching expensive requests
 - Blindly trusting API responses without validation
+
+---
+
+## Pro Tip: API Integration Rules
+
+If you're building multiple API integrations, create a rules file to keep them consistent:
+
+```markdown
+<!-- .claude/rules/api-integration.md -->
+---
+description: API integration standards
+globs: ["src/services/**/*.ts", "src/api/**/*.ts"]
+---
+
+- All API clients use axios with interceptors
+- Environment variables for all API keys (never hardcoded)
+- Retry with exponential backoff on 5xx errors
+- Cache GET responses with configurable TTL
+- TypeScript interfaces for all request/response types
+```
+
+Once this is in place, every API integration Claude Code builds will follow the same patterns automatically.
 
 ---
 

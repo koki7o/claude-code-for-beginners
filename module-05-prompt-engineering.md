@@ -377,6 +377,35 @@ Aim for 100% code coverage
 
 ---
 
+### Pattern 6: The Persistence Pattern
+
+Use this when you want Claude Code to remember your preferences across a whole project.
+
+**Template:**
+```
+Create a CLAUDE.md for this project that encodes:
+- How to build, test, and lint
+- Code style preferences
+- Architecture patterns to follow
+- Things to avoid
+```
+
+**Example:**
+```
+Create a CLAUDE.md that says:
+- Use async/await, never callbacks
+- All API responses use { data: T } or { error: { status, message } }
+- Tests go next to source files, named *.test.ts
+- Use Zod for input validation, not manual checks
+- Never use console.log -- use the logger utility
+- Run tests with: npm test
+- Run linter with: npm run lint
+```
+
+**Why this works:** CLAUDE.md is loaded automatically every session. Instead of repeating your preferences, you write them once and Claude Code follows them forever. This is one of the highest-leverage things you can do as your projects grow.
+
+---
+
 ## Lesson 6: Asking Claude Code for Clarification
 
 ### When to Ask Questions

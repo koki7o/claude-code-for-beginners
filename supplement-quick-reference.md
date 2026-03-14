@@ -316,6 +316,75 @@ claude config set [key] [value]
 
 ---
 
+## CLAUDE.md and Rules
+
+### Creating CLAUDE.md
+```
+Create a CLAUDE.md for this project with:
+- Build/test/lint commands
+- Code style preferences
+- Architecture patterns to follow
+- Common pitfalls to avoid
+```
+
+### Rules Directory
+```
+.claude/rules/
+├── code-style.md        # Formatting conventions
+├── error-handling.md    # Error handling standards
+├── testing.md           # Testing requirements
+└── security.md          # Security rules
+```
+
+### Rule File Format
+```markdown
+---
+description: What this rule enforces
+globs: ["src/**/*.ts"]
+---
+
+Your rules here as bullet points
+```
+
+### Skills and Hooks
+
+**Create a skill:**
+```
+.claude/skills/skill-name.md with frontmatter:
+---
+name: skill-name
+description: What it does
+---
+```
+
+**Common hooks:**
+```json
+{
+  "hooks": {
+    "PreCommit": [{ "command": "npm run lint && npm test" }],
+    "PostCommit": [{ "command": "echo 'Committed!'" }]
+  }
+}
+```
+
+---
+
+## Model Routing
+
+| Task Type | Best Model | Why |
+|-----------|-----------|-----|
+| Quick scans, formatting | Haiku | Fast, cheap |
+| Daily coding, reviews | Sonnet | Good balance |
+| Architecture, complex bugs | Opus | Deep reasoning |
+
+```
+Use a Haiku agent to scan for unused imports
+Use a Sonnet agent to review the auth module
+Use an Opus agent to plan the database migration
+```
+
+---
+
 ## Best Practices
 
 ### Do's

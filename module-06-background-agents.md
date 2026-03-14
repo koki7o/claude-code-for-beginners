@@ -345,6 +345,43 @@ Then summarize findings
 
 ---
 
+### Real-World Agent Roster
+
+In production projects, teams often maintain a roster of specialized agents, each tuned for a specific job. Here's what a mature agent setup looks like:
+
+| Agent | Purpose | Model Tier | Why This Tier |
+|-------|---------|-----------|---------------|
+| `planner` | Architecture decisions | Opus | Needs deep reasoning |
+| `implementer` | Write feature code | Sonnet | Good balance of speed and quality |
+| `test-writer` | Generate test suites | Sonnet | Reliable pattern matching |
+| `reviewer` | Code review and feedback | Opus | Catches subtle issues |
+| `doc-writer` | Generate documentation | Haiku | Fast, straightforward task |
+| `explorer` | Codebase navigation | Haiku | Speed matters most |
+| `debugger` | Trace and fix bugs | Sonnet | Needs code understanding |
+| `refactorer` | Clean up code | Sonnet | Balances quality and cost |
+| `security-scanner` | Find vulnerabilities | Opus | Catches subtle security issues |
+| `migrator` | Database migrations | Sonnet | Reliable schema work |
+| `api-designer` | Design API contracts | Opus | Architectural decisions |
+| `dependency-checker` | Audit dependencies | Haiku | Fast scanning task |
+| `formatter` | Code style fixes | Haiku | Simple, mechanical task |
+| `changelog-writer` | Generate changelogs | Haiku | Summarization task |
+| `perf-analyzer` | Performance profiling | Sonnet | Needs analytical depth |
+| `error-handler` | Add error handling | Sonnet | Pattern-aware changes |
+
+**The pattern:** Opus for decisions that require deep thinking. Sonnet for tasks that need good judgment and code understanding. Haiku for fast, mechanical, or straightforward tasks. Matching the model to the task saves money and time without sacrificing quality where it matters.
+
+**Using this in practice:**
+```
+Run these agents in parallel:
+- Haiku agent: Scan for unused dependencies
+- Sonnet agent: Review the authentication flow for bugs
+- Opus agent: Plan the migration from REST to GraphQL
+```
+
+Each agent gets the model tier that matches the complexity of its job.
+
+---
+
 ## Lesson 6: Working with Agent Results
 
 ### Understanding Agent Output
@@ -589,6 +626,7 @@ Fair warning: if agents modify the same files, you can end up with conflicts. Ke
 | Explore | Understanding code | Fast | High |
 | Plan | Designing implementations | Medium | High |
 | General | Complex multi-step tasks | Varies | Very High |
+| Specialized | Domain-specific jobs (security, docs, testing) | Varies | High |
 | Regular Chat | Simple tasks, learning | Fastest | Low |
 
 ---

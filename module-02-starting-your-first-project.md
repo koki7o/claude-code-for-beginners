@@ -140,6 +140,19 @@ Claude Code will:
 - Start the server
 - Show you how to access it
 
+#### Step 7: Set Up Project Memory
+
+Once your project is working, give Claude Code some context about your preferences:
+
+```
+Create a CLAUDE.md file for this project with:
+- The language and framework we're using
+- Our coding conventions
+- How to run and test the project
+```
+
+This file lives in your project root and helps Claude Code maintain consistency across sessions. It's optional at this stage, but gets more valuable as your project grows. We'll go deep on this in Module 12.
+
 ---
 
 ## Lesson 2: Working with Existing Codebases
@@ -603,6 +616,8 @@ Next up: Module 3, where we dig into Claude Code's tools -- what each one does a
 6. Use Git from the start -- we'll cover this in Module 7, but getting into the habit early pays off.
 
 7. Test frequently. Run your code often to catch issues before they pile up.
+
+8. **Set up a CLAUDE.md file** -- even a few lines about your project's conventions will make Claude Code more consistent across sessions
 
 ---
 

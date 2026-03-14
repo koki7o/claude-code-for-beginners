@@ -611,6 +611,7 @@ Before moving to Module 5, make sure you can:
 - Keep functions focused and small
 - Validate inputs
 - Handle errors properly
+- Encode conventions in CLAUDE.md or rules files so Claude Code follows them automatically
 
 ### Editing Code
 - Review changes before applying
@@ -655,6 +656,7 @@ Be specific about *what* to change, but let Claude Code handle the implementatio
 5. **Ask Claude Code to explain** -- learn from the code you're working with
 6. **Test incrementally** -- verify changes work before moving on
 7. **Git commit frequently** -- it's your safety net for experiments
+8. **Codify your standards** -- if you find yourself repeating the same conventions to Claude Code, put them in a CLAUDE.md file or in `.claude/rules/`. Once written, Claude Code follows them automatically in every session.
 
 ---
 

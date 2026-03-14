@@ -631,6 +631,16 @@ Before moving to Module 8, make sure you can:
 
 7. **Never commit broken code to a shared branch** -- run your tests first.
 
+8. **Automate quality checks with hooks** -- You can set up hooks that run linting and tests automatically before every commit. This catches problems before they hit your git history:
+   ```json
+   {
+     "hooks": {
+       "PreCommit": [{ "command": "npm run lint && npm test" }]
+     }
+   }
+   ```
+   We'll cover hooks in detail in Module 12, but getting into the habit of automated checks early will save you a lot of "fix lint" commits.
+
 ---
 
 Next up: Module 8 -- debugging and testing with Claude Code, where things get really practical.
