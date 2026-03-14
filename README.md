@@ -53,7 +53,8 @@ By the end of this course, you'll be able to:
 - Debug and fix errors with AI assistance
 - Navigate and understand unfamiliar codebases
 - Integrate Claude Code into your development workflow
-- Use advanced features like background agents and MCP servers
+- Configure CLAUDE.md, rules, skills, and hooks for consistent project behavior
+- Use advanced features like background agents, model routing, and MCP servers
 - Work with version control and Git operations
 - Deploy applications with Claude Code's help
 
@@ -146,6 +147,7 @@ By the end of this course, you'll be able to:
 - **Providing context:** Why details matter for coding tasks
 - **Iterative development:** Refining your requests for better results
 - **Common prompt patterns:** Templates that work well for coding
+- **The Persistence Pattern:** Encoding preferences into CLAUDE.md for lasting consistency
 - **Asking questions:** Let Claude Code clarify requirements
 
 **Hands-on:** Practice writing effective prompts for different coding tasks
@@ -243,7 +245,8 @@ By the end of this course, you'll be able to:
 - **Code review:** Reviewing changes before committing
 - **Documentation:** Writing clear docs with AI help
 - **Error handling:** Implementing robust error handling
-- **Logging:** Adding meaningful logs
+- **Rules and standards:** Codifying conventions in `.claude/rules/` for automatic enforcement
+- **Automated pipelines:** Pre-flight checks, research-first development, quality gates
 - **Code organization:** Structuring projects well
 
 **Hands-on:** Build a feature following best practices
@@ -405,6 +408,7 @@ After completing this course, you will:
 - Feel confident using Claude Code for development tasks
 - Understand how to communicate effectively with AI for coding
 - Be able to build complete applications with AI assistance
+- Know how to configure CLAUDE.md, rules, and hooks for professional workflows
 - Know how to debug and test code efficiently
 - Have deployed at least one complete project
 - Understand version control workflows with Git
@@ -558,6 +562,6 @@ Claude Code makes it possible for anyone to create professional software. This c
 
 ---
 
-*Last updated: February 2026*
+*Last updated: March 2026*
 
 </div>
