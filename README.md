@@ -257,7 +257,7 @@ By the end of this course, you'll be able to:
 
 *These modules are for learners who want to go deeper after completing the core course.*
 
-> **Want even more?** After completing this free course, check out the [**Real Projects Pack**](https://devfounder.gumroad.com/l/claude-code-real-projects) (11 hands-on project templates) and [**Advanced Modules**](https://devfounder.gumroad.com/l/claude-code-advanced-modules) (8 enterprise-level training modules). Or get the [**Complete Bundle**](https://devfounder.gumroad.com/l/claude-code-advanced-modules+real-projects-bundle) and save $10!
+> **Want even more?** After completing this free course, check out the [**Real Projects Pack**](https://payhip.com/b/dFXWO) (11 hands-on project templates) and [**Advanced Modules**](https://payhip.com/b/8E107) (8 enterprise-level training modules). Or get the [**Complete Bundle**](https://payhip.com/b/S8nU1) and save $10!
 
 ---
 
@@ -477,7 +477,7 @@ Once you've completed this course, you can:
 
 **Ready to go from beginner to professional?** Continue your journey with our premium resources:
 
-### 📦 [Real Projects Pack - $39.99](https://devfounder.gumroad.com/l/claude-code-real-projects)
+### 📦 [Real Projects Pack - $39.99](https://payhip.com/b/dFXWO)
 
 **11 complete project templates with step-by-step Claude Code workflows:**
 
@@ -497,7 +497,7 @@ Once you've completed this course, you can:
 
 ---
 
-### 🎓 [Advanced Modules - $29.99](https://devfounder.gumroad.com/l/claude-code-advanced)
+### 🎓 [Advanced Modules - $29.99](https://payhip.com/b/8E107)
 
 **8 enterprise-level training modules for professional developers:**
 
@@ -514,7 +514,7 @@ Once you've completed this course, you can:
 
 ---
 
-### 🔥 [Complete Bundle - $59.99 (Save $10!)](https://devfounder.gumroad.com/l/claude-code-advanced-modules-real-projects-bundle)
+### 🔥 [Complete Bundle - $59.99 (Save $10!)](https://payhip.com/b/S8nU1)
 
 **Get everything: 8 Advanced Modules + 11 Real Projects**
 
