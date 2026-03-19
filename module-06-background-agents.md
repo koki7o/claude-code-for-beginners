@@ -645,6 +645,8 @@ Fair warning: if agents modify the same files, you can end up with conflicts. Ke
 
 Next up: Module 7 -- where you'll learn to handle Git operations and version control through Claude Code.
 
+> **Agents are just the beginning.** The [Advanced Modules](https://devfounder.gumroad.com/l/claude-code-advanced-modules) cover multi-agent orchestration (Module 17) and building custom agents with autonomous loops and safety safeguards (Module 21).
+
 ---
 
 *Module 6 Complete*

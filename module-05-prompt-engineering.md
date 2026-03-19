@@ -700,4 +700,6 @@ Before moving to Module 6, make sure you can:
 
 That covers prompt engineering -- honestly the skill that makes the biggest difference in how productive you'll be with Claude Code. Trust me on this: time spent writing a clear prompt is never wasted.
 
+> **Take your prompting further.** The [Advanced Modules](https://devfounder.gumroad.com/l/claude-code-advanced-modules) cover professional prompt workflows including the RPI methodology (Research-Plan-Implement) and token-efficient session management (Module 23).
+
 Next up: Module 6 -- where we'll get into background agents for handling complex tasks and codebase exploration.

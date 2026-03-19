@@ -729,3 +729,5 @@ Or just start building. Apply these skills to real projects, contribute to open 
 *Module 10 Complete -- Core Course Finished!*
 
 Next up: if you're ready for more, the advanced modules start with Module 11 -- MCP Servers, which opens up a whole new layer of what Claude Code can do.
+
+> **Ready to go professional?** The [Advanced Modules](https://devfounder.gumroad.com/l/claude-code-advanced-modules) cover production deployment at scale, enterprise integration, performance optimization, and custom agent orchestration. Or grab the [Real Projects Pack](https://devfounder.gumroad.com/l/claude-code-real-projects) to practice these workflows on 11 real builds. [Bundle both and save $10.](https://devfounder.gumroad.com/l/claude-code-advanced-modules+real-projects-bundle)

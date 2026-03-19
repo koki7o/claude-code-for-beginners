@@ -473,58 +473,41 @@ Once you've completed this course, you can:
 
 ---
 
-## 🚀 Take Your Skills Further (Premium Content)
+## Keep Building (Premium Content)
 
-**Ready to go from beginner to professional?** Continue your journey with our premium resources:
+The free course teaches you how to work with Claude Code. The paid content is about applying those skills to real builds and professional workflows.
 
-### 📦 [Real Projects Pack - $39.99](https://devfounder.gumroad.com/l/claude-code-real-projects)
+### You've learned the tools — now build something real
 
-**11 complete project templates with step-by-step Claude Code workflows:**
+In Module 9 you built one complete project. The **[Real Projects Pack ($39.99)](https://devfounder.gumroad.com/l/claude-code-real-projects)** gives you 11 more — each designed around skills from this course:
 
-- AI-Powered Todo App (Claude API integration)
-- Code Review Automation Tool
-- Documentation Generator
-- Bug Finder Assistant
-- Test Case Generator
-- API Client Builder
-- Database Schema Designer
-- CLI Tool Starter Kit
-- Microservice Template
-- Full-Stack SaaS Boilerplate (Auth, Stripe, Multi-tenancy)
-- **NEW:** Claude Code Power Configuration (Build a complete `.claude/` setup with skills, agents, hooks, and permissions)
+- **Modules 3-4** (tools + files) → Code Review Tool, Documentation Generator, Bug Finder Assistant
+- **Module 5** (prompting) → AI-Powered Todo App with Claude API integration
+- **Module 8** (testing) → Test Case Generator with TDD workflows
+- **Module 11** (MCP) → Claude Code Power Configuration (build a full `.claude/` setup)
+- **Module 14** (APIs) → API Client Builder that generates type-safe clients from OpenAPI specs
+- **Module 15** (deployment) → Microservice Template, Full-Stack SaaS Boilerplate (Auth, Stripe, Multi-tenancy)
+- Plus: Database Schema Designer, CLI Tool Starter Kit
 
-*Each project includes 3-5 hours of content, production code examples, and copy-paste prompts.*
+Every project includes CLAUDE.md templates, rules files, and copy-paste prompts — so you're practicing the configuration patterns from Module 12 on every build.
 
 ---
 
-### 🎓 [Advanced Modules - $29.99](https://devfounder.gumroad.com/l/claude-code-advanced)
+### You've deployed one app — now do it at scale
 
-**8 enterprise-level training modules for professional developers:**
+Module 15 covers deployment basics. The **[Advanced Modules ($29.99)](https://devfounder.gumroad.com/l/claude-code-advanced)** take you from "it works on my machine" to production infrastructure:
 
-- **Module 16:** Production Deployment at Scale (Kubernetes, auto-scaling, multi-region)
-- **Module 17:** Multi-Agent Systems (Complex AI workflows, agent orchestration)
-- **Module 18:** Custom MCP Server Development (Build production-grade MCP servers)
-- **Module 19:** Enterprise Integration Patterns (SSO, RBAC, audit logging, compliance)
-- **Module 20:** Performance Optimization & Profiling (Advanced profiling, caching, token optimization)
-- **NEW Module 21:** Custom Agents & Orchestration (Agent frontmatter, memory scopes, Command→Agent→Skills architecture)
-- **NEW Module 22:** Sandbox, Plugins & Advanced Config (Permission wildcards, plugins, marketplaces, CLI flags)
-- **NEW Module 23:** Professional Development Workflows (RPI methodology, token optimization, git worktrees, monorepo patterns)
-
-*Each module includes 3-4 hours of detailed content, production code examples, and best practices.*
+- **Loved Module 6 (agents)?** → Module 17 covers multi-agent orchestration, and Module 21 covers building custom agents with autonomous loops
+- **Outgrown Module 11 (MCP)?** → Module 18 walks you through building production MCP servers from protocol internals to npm publishing
+- **Ready for enterprise?** → Module 19 covers SSO, RBAC, audit logging, and GDPR compliance
+- **Want to optimize costs?** → Module 20 covers three-tier model routing (Haiku/Sonnet/Opus) and strategic compaction
+- **Going professional?** → Modules 22-23 cover plugin architecture, permission systems, the RPI methodology, and monorepo patterns
 
 ---
 
-### 🔥 [Complete Bundle - $59.99 (Save $10!)](https://devfounder.gumroad.com/l/claude-code-advanced-modules-real-projects-bundle)
+### [Get both — Complete Bundle $59.99 (Save $10)](https://devfounder.gumroad.com/l/claude-code-advanced-modules+real-projects-bundle)
 
-**Get everything: 8 Advanced Modules + 11 Real Projects**
-
-- ✅ **55+ hours** of comprehensive content
-- ✅ **19 complete modules** covering theory and practice
-- ✅ **Production-ready code** for real-world applications
-- ✅ **AI prompt workflows** for every scenario
-- ✅ **Save $10** compared to buying separately
-
-**Perfect for:** Developers building enterprise applications, freelancers expanding services, anyone serious about mastering Claude Code.
+8 advanced modules + 11 project templates. The modules teach the patterns, the projects let you practice them.
 
 ---
 

@@ -660,4 +660,6 @@ Be specific about *what* to change, but let Claude Code handle the implementatio
 
 ---
 
+> **Want to build a real code analysis tool?** The [Real Projects Pack](https://devfounder.gumroad.com/l/claude-code-real-projects) includes a Code Review Tool and Bug Finder Assistant that put these file and code skills to work.
+
 Next up: Module 5 -- where you'll learn prompt engineering techniques to communicate coding tasks more effectively and get better results from Claude Code.

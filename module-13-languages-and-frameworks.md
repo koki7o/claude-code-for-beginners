@@ -589,4 +589,6 @@ cargo test
 
 ## What's Next?
 
+> **Build real projects in any language.** The [Real Projects Pack](https://devfounder.gumroad.com/l/claude-code-real-projects) includes multi-language projects -- from TypeScript microservices to Python-powered code analysis tools -- each with Claude Code workflows tailored to the language.
+
 Next up: Module 14 -- API integration and working with external services. You'll connect Claude Code to real-world APIs, which is where a lot of practical development happens.

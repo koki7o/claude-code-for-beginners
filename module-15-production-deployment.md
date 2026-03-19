@@ -709,6 +709,8 @@ You've made it through the entire Claude Code for Beginners course. You now know
 
 The short version of what comes next: build things. Real projects -- not just tutorials -- are where this all clicks. Contribute to open source if that interests you. Share what you've learned. And keep going.
 
+> **Keep going.** The [Advanced Modules](https://devfounder.gumroad.com/l/claude-code-advanced-modules) pick up right where this course ends -- production Kubernetes deployments, multi-agent systems, enterprise integration, and performance optimization. The [Real Projects Pack](https://devfounder.gumroad.com/l/claude-code-real-projects) gives you 11 complete project templates to practice on. [Bundle both and save $10.](https://devfounder.gumroad.com/l/claude-code-advanced-modules+real-projects-bundle)
+
 ---
 
 *Course complete. Go build something.*

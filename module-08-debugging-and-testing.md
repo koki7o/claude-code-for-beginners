@@ -729,4 +729,6 @@ Add tests when you modify that code. Don't spend weeks retroactively testing thi
 
 ---
 
+> **Want to build your own debugging tools?** The [Real Projects Pack](https://devfounder.gumroad.com/l/claude-code-real-projects) includes a Bug Finder Assistant and Test Case Generator -- both powered by the techniques you learned here.
+
 Next up: Module 9 -- where you'll pull everything together and build a complete, real-world project from scratch.
