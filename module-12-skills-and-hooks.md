@@ -954,7 +954,7 @@ You now know how to customize every aspect of Claude Code. Between CLAUDE.md, ru
 
 Next up: Module 13 -- using Claude Code with different programming languages and frameworks.
 
-Want to go deeper? The [Advanced Modules](https://devfounder.gumroad.com/l/claude-code-advanced-modules) cover custom agents in depth (Module 21), sandbox and plugins (Module 22), and professional development workflows (Module 23).
+Want to go deeper? The [Advanced Modules](https://payhip.com/b/8E107) cover custom agents in depth (Module 21), sandbox and plugins (Module 22), and professional development workflows (Module 23).
 
 ---
 

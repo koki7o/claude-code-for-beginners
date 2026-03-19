@@ -686,6 +686,6 @@ Next up: Module 4 -- working with files and code. We'll cover reading codebases,
 
 ---
 
-> **Want to master Claude Code's full toolset?** The [Advanced Modules](https://devfounder.gumroad.com/l/claude-code-advanced-modules) go deep on custom MCP servers (Module 18), multi-agent orchestration (Module 17), and performance optimization (Module 20).
+> **Want to master Claude Code's full toolset?** The [Advanced Modules](https://payhip.com/b/8E107) go deep on custom MCP servers (Module 18), multi-agent orchestration (Module 17), and performance optimization (Module 20).
 
 *Module 3 Complete*

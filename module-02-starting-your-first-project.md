@@ -621,6 +621,6 @@ Next up: Module 3, where we dig into Claude Code's tools -- what each one does a
 
 ---
 
-> **Looking for project ideas?** The [Real Projects Pack](https://devfounder.gumroad.com/l/claude-code-real-projects) has 11 ready-to-build projects -- from CLI tools to a full-stack SaaS boilerplate -- each with step-by-step Claude Code workflows.
+> **Looking for project ideas?** The [Real Projects Pack](https://payhip.com/b/dFXWO) has 11 ready-to-build projects -- from CLI tools to a full-stack SaaS boilerplate -- each with step-by-step Claude Code workflows.
 
 *Module 2 Complete*

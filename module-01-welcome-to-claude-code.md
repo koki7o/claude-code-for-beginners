@@ -351,6 +351,6 @@ Type `/exit` or press Ctrl+C. Your files are already saved.
 
 ---
 
-> **Curious what full projects built with Claude Code look like?** The [Real Projects Pack](https://devfounder.gumroad.com/l/claude-code-real-projects) walks you through 11 complete builds -- from todo apps to full-stack SaaS.
+> **Curious what full projects built with Claude Code look like?** The [Real Projects Pack](https://payhip.com/b/dFXWO) walks you through 11 complete builds -- from todo apps to full-stack SaaS.
 
 *Next up: Module 2 -- different ways to start projects with Claude Code.*

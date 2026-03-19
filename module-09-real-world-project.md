@@ -752,7 +752,7 @@ A few ideas if you want to keep building on this:
 3. **Actually deploy it** -- getting code running on a real server teaches you things nothing else will
 4. **Ask for code review** -- have someone else read your code and give feedback
 5. **Contribute to open source** -- you've got the workflow down now
-6. **Build from the [Real Projects Pack](https://devfounder.gumroad.com/l/claude-code-real-projects)** -- 11 more project templates including a microservice architecture, full-stack SaaS boilerplate, and API client builder
+6. **Build from the [Real Projects Pack](https://payhip.com/b/dFXWO)** -- 11 more project templates including a microservice architecture, full-stack SaaS boilerplate, and API client builder
 
 ---
 

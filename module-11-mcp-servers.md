@@ -664,4 +664,4 @@ You now know how to extend Claude Code with MCP servers, which means you're no l
 
 Next up: Module 12 -- Customizing Claude Code. That one covers CLAUDE.md, Skills, Commands, Hooks, and Agents, which is where you really make Claude Code your own.
 
-> **Ready to build production-grade MCP servers?** The [Advanced Modules](https://devfounder.gumroad.com/l/claude-code-advanced-modules) dedicate an entire module (Module 18) to custom MCP server development -- protocol internals, testing, performance tuning, and publishing to npm.
+> **Ready to build production-grade MCP servers?** The [Advanced Modules](https://payhip.com/b/8E107) dedicate an entire module (Module 18) to custom MCP server development -- protocol internals, testing, performance tuning, and publishing to npm.

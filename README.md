@@ -257,7 +257,7 @@ By the end of this course, you'll be able to:
 
 *These modules are for learners who want to go deeper after completing the core course.*
 
-> **Want even more?** After completing this free course, check out the [**Real Projects Pack**](https://devfounder.gumroad.com/l/claude-code-real-projects) (11 hands-on project templates) and [**Advanced Modules**](https://devfounder.gumroad.com/l/claude-code-advanced-modules) (8 enterprise-level training modules). Or get the [**Complete Bundle**](https://devfounder.gumroad.com/l/claude-code-advanced-modules+real-projects-bundle) and save $10!
+> **Want even more?** After completing this free course, check out the [**Real Projects Pack**](https://payhip.com/b/dFXWO) (11 hands-on project templates) and [**Advanced Modules**](https://payhip.com/b/8E107) (8 enterprise-level training modules). Or get the [**Complete Bundle**](https://payhip.com/b/S8nU1) and save $10!
 
 ---
 
@@ -479,7 +479,7 @@ The free course teaches you how to work with Claude Code. The paid content is ab
 
 ### You've learned the tools — now build something real
 
-In Module 9 you built one complete project. The **[Real Projects Pack ($39.99)](https://devfounder.gumroad.com/l/claude-code-real-projects)** gives you 11 more — each designed around skills from this course:
+In Module 9 you built one complete project. The **[Real Projects Pack ($39.99)](https://payhip.com/b/dFXWO)** gives you 11 more — each designed around skills from this course:
 
 - **Modules 3-4** (tools + files) → Code Review Tool, Documentation Generator, Bug Finder Assistant
 - **Module 5** (prompting) → AI-Powered Todo App with Claude API integration
@@ -495,7 +495,7 @@ Every project includes CLAUDE.md templates, rules files, and copy-paste prompts 
 
 ### You've deployed one app — now do it at scale
 
-Module 15 covers deployment basics. The **[Advanced Modules ($29.99)](https://devfounder.gumroad.com/l/claude-code-advanced)** take you from "it works on my machine" to production infrastructure:
+Module 15 covers deployment basics. The **[Advanced Modules ($29.99)](https://payhip.com/b/8E107)** take you from "it works on my machine" to production infrastructure:
 
 - **Loved Module 6 (agents)?** → Module 17 covers multi-agent orchestration, and Module 21 covers building custom agents with autonomous loops
 - **Outgrown Module 11 (MCP)?** → Module 18 walks you through building production MCP servers from protocol internals to npm publishing
@@ -505,7 +505,7 @@ Module 15 covers deployment basics. The **[Advanced Modules ($29.99)](https://de
 
 ---
 
-### [Get both — Complete Bundle $59.99 (Save $10)](https://devfounder.gumroad.com/l/claude-code-advanced-modules+real-projects-bundle)
+### [Get both — Complete Bundle $59.99 (Save $10)](https://payhip.com/b/S8nU1)
 
 8 advanced modules + 11 project templates. The modules teach the patterns, the projects let you practice them.
 

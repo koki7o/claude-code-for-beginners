@@ -575,6 +575,6 @@ Next up: Module 15 -- deploying your applications to production. You've built th
 
 ---
 
-> **Build it for real.** The [Real Projects Pack](https://devfounder.gumroad.com/l/claude-code-real-projects) includes an API Client Builder that auto-generates type-safe clients from OpenAPI specs -- a hands-on way to apply everything from this module.
+> **Build it for real.** The [Real Projects Pack](https://payhip.com/b/dFXWO) includes an API Client Builder that auto-generates type-safe clients from OpenAPI specs -- a hands-on way to apply everything from this module.
 
 *Module 14 Complete*
