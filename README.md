@@ -10,11 +10,16 @@ All content is freely available for everyone.
 
 > **Note:** This course content is generated with the help of Claude Code itself, but created under the strict guidance and verification of an experienced Claude Code power user who uses it as a daily driver. I've  built production projects including [gitscroll.dev](https://gitscroll.dev), [mcp-framework](https://github.com/koki7o/mcp-framework) 🦀 (Rust MCP framework for building AI agents), [time-portal.vercel.app](https://time-portal.vercel.app) (Doom scroll back in time), and [childrenbooks.vercel.app](https://childrenbooks.vercel.app) (Children's books), and currently building [aicofounders.co](https://aicofounders.co) (6 AI co-founders) and [moltplace.net](https://www.moltplace.net) (Moltbot marketplace), all using Claude Code.
 
+[![Stars](https://img.shields.io/github/stars/koki7o/claude-code-for-beginners?style=for-the-badge&color=f5c542)](https://github.com/koki7o/claude-code-for-beginners/stargazers)
 ![AI Powered](https://img.shields.io/badge/AI%20Powered-0066FF?style=for-the-badge&logoColor=ffffff)
 ![Beginner Friendly](https://img.shields.io/badge/Beginner%20Friendly-32CD32?style=for-the-badge&logoColor=ffffff)
 ![Terminal Based](https://img.shields.io/badge/Terminal%20Based-6A0DAD?style=for-the-badge&logoColor=ffffff)
+![Modules](https://img.shields.io/badge/15%20Modules-FF6B35?style=for-the-badge)
+![Self Paced](https://img.shields.io/badge/Self%20Paced-00CED1?style=for-the-badge)
 
 ![Claude Code Banner](claude_code.png)
+
+[Quick Start](#-quick-start) · [Course Map](#-course-map) · [Challenges](#-challenges) · [Resources](#-need-help) · [Keep Building](#-keep-building-premium-content)
 
 [![Buy Me A Coffee](https://img.buymeacoffee.com/button-api/?text=Buy%20me%20a%20coffee&emoji=&slug=koki7o&button_colour=FFDD00&font_colour=000000&font_family=Cookie&outline_colour=000000&coffee_colour=ffffff)](https://buymeacoffee.com/koki7o)
 
@@ -28,19 +33,71 @@ All content is freely available for everyone.
 
 **Claude Code is an AI-powered command-line tool that acts as your pair programmer, helping you build, debug, and improve code through natural conversation.**
 
+```
+You: "Create a REST API with authentication and PostgreSQL"
+Claude Code: *creates files, installs deps, writes code, runs tests* Done. ✅
+```
+
 Instead of manually writing every line of code, you describe what you want to accomplish, and Claude Code helps you implement it. It can read your files, make edits, run commands, search the web, and much more - all while explaining what it's doing.
 
 **[Get Started with Claude Code](https://github.com/anthropics/claude-code)**
 
 ---
 
-## Who is This Course For?
+## 🚀 Quick Start
 
-- **Complete Beginners** - New to programming? Claude Code can help you learn while building!
-- **Experienced Developers** - Speed up your workflow and tackle complex tasks faster
-- **Students** - Learn programming concepts with an AI tutor by your side
-- **Open Source Contributors** - Navigate unfamiliar codebases with ease
-- **Technical Writers** - Understand code to write better documentation
+```bash
+# 1. Install Claude Code
+npm install -g claude-code
+
+# 2. Set your API key
+export ANTHROPIC_API_KEY="sk-ant-..."
+
+# 3. Start building
+cd my-project && claude
+```
+
+Then open **[Module 1](module-01-welcome-to-claude-code.md)** and follow along.
+
+> **Need detailed setup help?** Module 1 covers installation step-by-step, including Node.js setup, API key configuration, and troubleshooting.
+
+---
+
+## 🎯 Who is This Course For?
+
+<table>
+<tr>
+<td width="50%">
+
+**Complete Beginners** — New to programming? Claude Code can help you learn while building! No experience required.
+
+</td>
+<td width="50%">
+
+**Experienced Developers** — Speed up your workflow and tackle complex tasks faster. Skip to [Module 6](module-06-background-agents.md) or [Module 12](module-12-skills-and-hooks.md).
+
+</td>
+</tr>
+<tr>
+<td>
+
+**Students** — Learn programming concepts with an AI tutor by your side. Build projects for your portfolio.
+
+</td>
+<td>
+
+**Open Source Contributors** — Navigate unfamiliar codebases with ease. [Module 4](module-04-working-with-files.md) + [Module 7](module-07-git-operations.md) are your starting point.
+
+</td>
+</tr>
+<tr>
+<td colspan="2" align="center">
+
+**Technical Writers** — Understand code to write better documentation.
+
+</td>
+</tr>
+</table>
 
 ---
 
@@ -48,7 +105,7 @@ Instead of manually writing every line of code, you describe what you want to ac
 
 By the end of this course, you'll be able to:
 
-- Use Claude Code to build applications from scratch
+- Build complete applications from idea to deployment
 - Effectively communicate coding tasks to AI
 - Debug and fix errors with AI assistance
 - Navigate and understand unfamiliar codebases
@@ -57,287 +114,66 @@ By the end of this course, you'll be able to:
 - Use advanced features like background agents, model routing, and MCP servers
 - Work with version control and Git operations
 - Deploy applications with Claude Code's help
+- Have a portfolio of projects to showcase
 
 ---
 
-## Course Structure
+## 🗺️ Course Map
 
-**10 Core Modules + 5 Advanced Modules | Self-Paced Learning | Project-Based**
+**Self-paced · Project-based · Progressive · Flexible**
 
----
+### Foundation (Modules 1–5)
 
-### [Module 1: Welcome to Claude Code - Your First Steps](module-01-welcome-to-claude-code.md)
+> *Install, explore, and learn to communicate effectively with Claude Code.*
 
-**Goal:** Get comfortable with Claude Code and understand what it can do
+| # | Module | What You'll Learn | Time |
+|:-:|--------|-------------------|:----:|
+| 1 | [**Welcome to Claude Code**](module-01-welcome-to-claude-code.md) | AI pair programming, installation, CLI interface, terminology, CLAUDE.md | ~20 min |
+| 2 | [**Starting Your First Project**](module-02-starting-your-first-project.md) | From scratch, existing code, templates, cloning repos, project memory | ~30 min |
+| 3 | [**Understanding Tools**](module-03-understanding-tools.md) | Read, Write, Edit, Bash, Grep, Glob, agents, web search, LSP | ~30 min |
+| 4 | [**Working with Files and Code**](module-04-working-with-files.md) | Reading, writing, editing, refactoring, navigating, pattern recognition | ~40 min |
+| 5 | [**Effective Prompting**](module-05-prompt-engineering.md) | Prompt patterns, iteration, the Persistence Pattern (CLAUDE.md) | ~35 min |
 
-**What you'll learn:**
-- What is "AI Pair Programming" and why it's revolutionary
-- How to install Claude Code
-- Understanding the CLI interface
-- Your first conversation with Claude Code
-- Basic terminology you need to know
+### Core Skills (Modules 6–10)
 
-**Hands-on:** Run your first Claude Code session and create a simple program
+> *Build real things — agents, Git workflows, debugging, testing, and professional practices.*
 
----
+| # | Module | What You'll Learn | Time |
+|:-:|--------|-------------------|:----:|
+| 6 | [**Background Agents**](module-06-background-agents.md) | Explore, Plan, general-purpose agents, parallel execution, model routing | ~35 min |
+| 7 | [**Git Operations**](module-07-git-operations.md) | Commits, branches, PRs, merge conflicts, GitHub CLI, pre-commit hooks | ~40 min |
+| 8 | [**Debugging and Testing**](module-08-debugging-and-testing.md) | Error messages, debugging strategies, TDD, testing rules | ~45 min |
+| 9 | [**Real-World Project**](module-09-real-world-project.md) | Full build: planning → structure → coding → testing → deploying | ~90 min |
+| 10 | [**Workflow Best Practices**](module-10-workflow-best-practices.md) | Rules, automated pipelines, code review, documentation, quality gates | ~40 min |
 
-### [Module 2: Starting Your First Project](module-02-starting-your-first-project.md)
+### Going Deeper (Modules 11–15)
 
-**Goal:** Learn different ways to begin building with Claude Code
+> *Extend Claude Code with MCP, skills, hooks, multi-language support, APIs, and deployment.*
 
-**What you'll learn:**
-- **Starting from scratch:** Describe your project and let Claude Code scaffold it
-- **Working with existing code:** Navigate and modify existing projects
-- **Using templates:** Quick-start with common project structures
-- **Cloning and understanding:** Learn from existing repositories
+| # | Module | What You'll Learn | Time |
+|:-:|--------|-------------------|:----:|
+| 11 | [**MCP Servers**](module-11-mcp-servers.md) | Protocol basics, essential servers (Context7, Playwright, DeepWiki), custom MCP | ~45 min |
+| 12 | [**Skills, Hooks & Customization**](module-12-skills-and-hooks.md) | CLAUDE.md, rules, settings hierarchy, skills, commands, hooks, agents | ~50 min |
+| 13 | [**Languages & Frameworks**](module-13-languages-and-frameworks.md) | Python, TypeScript, Go, Rust, Swift, polyglot projects, language rules | ~40 min |
+| 14 | [**API Integration**](module-14-api-integration.md) | WebSearch, WebFetch, REST APIs, auth, rate limiting, API rules | ~45 min |
+| 15 | [**Production Deployment**](module-15-production-deployment.md) | Docker, CI/CD, monitoring, security, database migrations, deploy hooks | ~60 min |
 
-**Hands-on:** Try each method and see which works best for you
-
----
-
-### [Module 3: Understanding Claude Code's Tools](module-03-understanding-tools.md)
-
-**Goal:** Master the different capabilities Claude Code has
-
-**What you'll learn:**
-
-#### File Operations
-- Reading files with the Read tool
-- Writing new files with the Write tool
-- Editing existing files with the Edit tool
-- Finding files with Glob
-- Searching code with Grep
-
-#### Command Execution
-- Running terminal commands with Bash
-- Background processes
-- Managing long-running tasks
-
-#### AI Capabilities
-- Using specialized agents (Task tool)
-- Web search and web fetch
-- LSP (Language Server Protocol) for code intelligence
-
-**Hands-on:** Practice using each tool for different scenarios
+> **Total estimated time: ~9 hours** — but go at your own pace. Skip what you know, spend extra time on what challenges you.
 
 ---
 
-### [Module 4: Working with Files and Code](module-04-working-with-files.md)
+## 🏆 Challenges
 
-**Goal:** Learn how to effectively read, write, and modify code
+Each module includes hands-on challenges at four levels:
 
-**What you'll learn:**
-- **Reading code:** Understanding existing codebases
-- **Writing new code:** Creating files and functions
-- **Editing code:** Making precise changes without breaking things
-- **Refactoring:** Improving code structure
-- **Finding code:** Navigating large codebases
-- **Understanding patterns:** Learning from existing code
+| Level | Description |
+|-------|-------------|
+| 🟢 **Beginner** | Basic concepts and single tasks |
+| 🟡 **Intermediate** | Combining concepts and multiple steps |
+| 🟠 **Advanced** | Complex features and best practices |
+| 🔴 **Expert** | Production-ready implementations |
 
-**Hands-on:** Take a project and improve it using these techniques
-
----
-
-### [Module 5: Effective Prompting for Coding Tasks](module-05-prompt-engineering.md)
-
-**Goal:** Master the art of communicating coding tasks to AI
-
-**What you'll learn:**
-- **Being specific:** How to describe technical requirements clearly
-- **Providing context:** Why details matter for coding tasks
-- **Iterative development:** Refining your requests for better results
-- **Common prompt patterns:** Templates that work well for coding
-- **The Persistence Pattern:** Encoding preferences into CLAUDE.md for lasting consistency
-- **Asking questions:** Let Claude Code clarify requirements
-
-**Hands-on:** Practice writing effective prompts for different coding tasks
-
----
-
-### [Module 6: Using Background Agents](module-06-background-agents.md)
-
-**Goal:** Learn to use specialized agents for complex tasks
-
-**What you'll learn:**
-
-#### Agent Types
-- **Explore agent:** Navigate and understand codebases
-- **Plan agent:** Design implementation strategies
-- **General-purpose agent:** Handle multi-step tasks
-- **Custom agents:** Task-specific problem solving
-
-#### When to Use Agents
-- Complex multi-step tasks
-- Codebase exploration
-- Research and investigation
-- Parallel task execution
-
-**Hands-on:** Use agents to explore a codebase and plan a feature
-
----
-
-### [Module 7: Git Operations and Version Control](module-07-git-operations.md)
-
-**Goal:** Master Git workflows with Claude Code
-
-**What you'll learn:**
-- **Creating commits:** Let Claude Code write meaningful commit messages
-- **Working with branches:** Create and manage branches
-- **Creating pull requests:** Generate PR descriptions automatically
-- **Reviewing code:** Understand changes before committing
-- **Resolving conflicts:** Handle merge conflicts with AI help
-- **GitHub integration:** Work with GitHub CLI (gh)
-
-**Hands-on:** Complete a full Git workflow from changes to PR
-
----
-
-### [Module 8: Debugging and Testing](module-08-debugging-and-testing.md)
-
-**Goal:** Learn how to find and fix problems with AI assistance
-
-**What you'll learn:**
-- **Reading error messages:** Understanding what went wrong
-- **Debugging strategies:** Systematic problem-solving
-- **Writing tests:** Create unit and integration tests
-- **Test-driven development:** Write tests first, then code
-- **Performance debugging:** Find and fix bottlenecks
-- **Common debugging scenarios:** Real-world problem solving
-
-**Hands-on:** Debug a broken application and add tests
-
----
-
-### [Module 9: Real-World Project - Building a Complete Application](module-09-real-world-project.md)
-
-**Goal:** Apply everything you've learned in a full project
-
-**Project Options:**
-- **CLI Tool:** Build a command-line utility
-- **Web API:** Create a REST API with database
-- **Full-Stack App:** Build a complete web application
-- **Data Pipeline:** Create a data processing system
-- **Automation Tool:** Build a workflow automation script
-
-**What you'll build:**
-- Complete project structure
-- Multiple modules and files
-- Tests and documentation
-- Version control history
-- Deployed and working application
-
-**Step-by-step process:**
-1. Planning your application
-2. Setting up the project structure
-3. Building core functionality
-4. Adding features incrementally
-5. Testing and debugging
-6. Deployment
-
----
-
-### [Module 10: Development Workflow Best Practices](module-10-workflow-best-practices.md)
-
-**Goal:** Learn professional development workflows with Claude Code
-
-**What you'll learn:**
-- **Task management:** Using the TodoWrite tool effectively
-- **Code review:** Reviewing changes before committing
-- **Documentation:** Writing clear docs with AI help
-- **Error handling:** Implementing robust error handling
-- **Rules and standards:** Codifying conventions in `.claude/rules/` for automatic enforcement
-- **Automated pipelines:** Pre-flight checks, research-first development, quality gates
-- **Code organization:** Structuring projects well
-
-**Hands-on:** Build a feature following best practices
-
----
-
-## Advanced Modules (Optional)
-
-*These modules are for learners who want to go deeper after completing the core course.*
-
-> **Want even more?** After completing this free course, check out the [**Real Projects Pack**](https://payhip.com/b/dFXWO) (11 hands-on project templates) and [**Advanced Modules**](https://payhip.com/b/8E107) (8 enterprise-level training modules). Or get the [**Complete Bundle**](https://payhip.com/b/S8nU1) and save $10!
-
----
-
-### [Module 11: MCP Servers - Extending Claude Code](module-11-mcp-servers.md)
-
-**Goal:** Learn to use Model Context Protocol servers to give Claude Code new capabilities
-
-**What you'll learn:**
-- **What is MCP:** Understanding the protocol and why it matters
-- **Essential MCP servers:** The daily-driver servers that actually matter (Context7, Playwright, DeepWiki)
-- **Installing and configuring:** Project-level `.mcp.json` and user-level settings
-- **Common MCP servers:** Filesystem, database, GitHub, and more
-- **Creating custom MCP servers:** Build your own extensions with the current SDK
-
-**Hands-on:** Set up essential MCP servers and build a custom one
-
----
-
-### [Module 12: Customizing Claude Code - Making It Yours](module-12-skills-and-hooks.md)
-
-**Goal:** Learn every way to customize Claude Code's behavior
-
-**What you'll learn:**
-- **CLAUDE.md & Memory:** Project memory files, auto memory, `@imports`
-- **Rules:** Modular `.claude/rules/` files with path-scoping
-- **Settings:** The 5-tier hierarchy, permissions, and modes
-- **Skills:** Custom slash commands with `.claude/skills/<name>/SKILL.md`
-- **Commands:** The simpler `.claude/commands/` format
-- **Hooks:** 17 hook events for automation (auto-format, security checks, notifications)
-- **Custom Agents:** Introduction to `.claude/agents/` files
-
-**Hands-on:** Set up project memory, create a skill, and write a hook
-
----
-
-### [Module 13: Working with Different Languages and Frameworks](module-13-languages-and-frameworks.md)
-
-**Goal:** Use Claude Code across different tech stacks
-
-**What you'll learn:**
-- **Python:** Flask, Django, FastAPI projects
-- **JavaScript/TypeScript:** Node.js, React, Next.js
-- **Go:** Building Go applications
-- **Rust:** Rust development with Claude Code
-- **Other languages:** Java, Ruby, PHP, and more
-- **Polyglot projects:** Working with multiple languages
-
-**Hands-on:** Build projects in different languages
-
----
-
-### [Module 14: API Integration and Web Tasks](module-14-api-integration.md)
-
-**Goal:** Master working with external APIs and web resources
-
-**What you'll learn:**
-- **Web search:** Finding documentation and solutions
-- **Web fetch:** Accessing API documentation
-- **API integration:** Connecting to third-party services
-- **Authentication:** Handling API keys and OAuth
-- **Rate limiting:** Managing API quotas
-- **Error handling:** Dealing with API failures
-
-**Hands-on:** Build a project that integrates multiple APIs
-
----
-
-### [Module 15: Production Deployment](module-15-production-deployment.md)
-
-**Goal:** Take your applications to production
-
-**What you'll learn:**
-- **Containerization:** Docker with Claude Code
-- **CI/CD:** Setting up automated pipelines
-- **Monitoring:** Adding observability
-- **Security:** Best practices for secure code
-- **Performance:** Optimization techniques
-- **Scaling:** Handling growth
-
-**Hands-on:** Deploy a production-ready application
+**[View Challenge Solutions →](supplement-challenge-solutions.md)** *(try each challenge yourself first!)*
 
 ---
 
@@ -353,26 +189,19 @@ By the end of this course, you'll be able to:
 
 ---
 
-## Learning Resources
+## 📚 Need Help?
 
-### Official Claude Code Resources
-
-- **Documentation:** [Claude Code Docs](https://github.com/anthropics/claude-code)
-- **GitHub Repository:** Source code and issues
-- **Claude API Docs:** Understanding the underlying API
-- **Community:** Discord and forums for support
-
-### Key Documentation Pages
-
-- Installation Guide
-- Getting Started
-- Tool Reference
-- Configuration Options
-- MCP Server Guide
+| Resource | What It's For |
+|----------|---------------|
+| [**Troubleshooting Guide**](supplement-troubleshooting.md) | Common errors and solutions (CLAUDE.md, rules, MCP, permissions) |
+| [**Quick Reference**](supplement-quick-reference.md) | Cheat sheet for commands, CLAUDE.md, rules, hooks, model routing |
+| [**Official Docs**](https://github.com/anthropics/claude-code) | Claude Code documentation and installation guide |
+| [**GitHub Issues**](https://github.com/anthropics/claude-code/issues) | Report bugs or request features |
 
 ---
 
-## Key Concepts for Beginners
+<details>
+<summary><h2>Key Concepts for Beginners</h2></summary>
 
 ### What is "AI Pair Programming"?
 
@@ -392,71 +221,38 @@ Claude Code runs in your terminal. Don't be intimidated! We'll teach you everyth
 
 ### Tools Explained Simply
 
-- **Read** → "Show me this file"
-- **Write** → "Create this new file"
-- **Edit** → "Change this specific part"
-- **Bash** → "Run this command"
-- **Task** → "Handle this complex task"
-- **Grep** → "Find this text in my code"
+| Tool | What It Does |
+|------|-------------|
+| **Read** | "Show me this file" |
+| **Write** | "Create this new file" |
+| **Edit** | "Change this specific part" |
+| **Bash** | "Run this command" |
+| **Task** | "Handle this complex task" |
+| **Grep** | "Find this text in my code" |
+
+</details>
 
 ---
 
-## Course Outcomes
+<details>
+<summary><h2>Learning Resources</h2></summary>
 
-After completing this course, you will:
+### Official Claude Code Resources
 
-- Feel confident using Claude Code for development tasks
-- Understand how to communicate effectively with AI for coding
-- Be able to build complete applications with AI assistance
-- Know how to configure CLAUDE.md, rules, and hooks for professional workflows
-- Know how to debug and test code efficiently
-- Have deployed at least one complete project
-- Understand version control workflows with Git
-- Have a portfolio of projects to showcase
+- **Documentation:** [Claude Code Docs](https://github.com/anthropics/claude-code)
+- **GitHub Repository:** Source code and issues
+- **Claude API Docs:** Understanding the underlying API
+- **Community:** Discord and forums for support
 
----
+### Key Documentation Pages
 
-## Getting Started
+- Installation Guide
+- Getting Started
+- Tool Reference
+- Configuration Options
+- MCP Server Guide
 
-**Ready to Begin Your Journey?**
-
-1. **[Install Claude Code](https://github.com/anthropics/claude-code):** Follow the installation guide
-2. **Run your first session:** Start with `claude`
-3. **[Complete Module 1](module-01-welcome-to-claude-code.md):** Begin with the basics
-
----
-
-## Course Structure Notes
-
-- **Self-paced:** Learn at your own speed
-- **Project-based:** Each module includes hands-on practice
-- **Progressive:** Each module builds on the previous one
-- **Flexible:** Skip ahead if you're comfortable, or spend extra time on challenging topics
-
----
-
-## Module Challenges
-
-**Practice and consolidate your learning with progressive challenges!**
-
-Each module includes hands-on challenges that get progressively harder:
-- **Beginner challenges** - Basic concepts and single tasks
-- **Intermediate challenges** - Combining concepts and multiple steps
-- **Advanced challenges** - Complex features and best practices
-- **Expert challenges** - Production-ready implementations
-
-**[Challenge Solutions](supplement-challenge-solutions.md)** - Suggested solutions and hints for self-assessment
-
-**Tip:** Try each challenge yourself first, then check the solutions to compare approaches!
-
----
-
-## Need Help?
-
-- **[Documentation](https://github.com/anthropics/claude-code):** Check official docs for detailed guides
-- **[Troubleshooting Guide](supplement-troubleshooting.md):** Common issues and solutions
-- **[Quick Reference](supplement-quick-reference.md):** Cheat sheet for common tasks
-- **[GitHub Issues](https://github.com/anthropics/claude-code/issues):** Report bugs or request features
+</details>
 
 ---
 
@@ -473,45 +269,63 @@ Once you've completed this course, you can:
 
 ---
 
-## Keep Building (Premium Content)
+## 🔨 Keep Building (Premium Content)
 
 The free course teaches you how to work with Claude Code. The paid content is about applying those skills to real builds and professional workflows.
 
-### You've learned the tools — now build something real
+<details open>
+<summary><h3>You've learned the tools — now build something real</h3></summary>
 
 In Module 9 you built one complete project. The **[Real Projects Pack ($39.99)](https://payhip.com/b/dFXWO)** gives you 11 more — each designed around skills from this course:
 
-- **Modules 3-4** (tools + files) → Code Review Tool, Documentation Generator, Bug Finder Assistant
-- **Module 5** (prompting) → AI-Powered Todo App with Claude API integration
-- **Module 8** (testing) → Test Case Generator with TDD workflows
-- **Module 11** (MCP) → Claude Code Power Configuration (build a full `.claude/` setup)
-- **Module 14** (APIs) → API Client Builder that generates type-safe clients from OpenAPI specs
-- **Module 15** (deployment) → Microservice Template, Full-Stack SaaS Boilerplate (Auth, Stripe, Multi-tenancy)
-- Plus: Database Schema Designer, CLI Tool Starter Kit
+| Free Module | Project You'll Build |
+|-------------|---------------------|
+| **Modules 3-4** (tools + files) | Code Review Tool, Documentation Generator, Bug Finder Assistant |
+| **Module 5** (prompting) | AI-Powered Todo App with Claude API integration |
+| **Module 8** (testing) | Test Case Generator with TDD workflows |
+| **Module 11** (MCP) | Claude Code Power Configuration (build a full `.claude/` setup) |
+| **Module 14** (APIs) | API Client Builder that generates type-safe clients from OpenAPI specs |
+| **Module 15** (deployment) | Microservice Template, Full-Stack SaaS Boilerplate (Auth, Stripe, Multi-tenancy) |
+| Bonus | Database Schema Designer, CLI Tool Starter Kit |
 
 Every project includes CLAUDE.md templates, rules files, and copy-paste prompts — so you're practicing the configuration patterns from Module 12 on every build.
 
----
+**[Get the Projects Pack →](https://payhip.com/b/dFXWO)**
 
-### You've deployed one app — now do it at scale
+</details>
+
+<details>
+<summary><h3>You've deployed one app — now do it at scale</h3></summary>
 
 Module 15 covers deployment basics. The **[Advanced Modules ($29.99)](https://payhip.com/b/8E107)** take you from "it works on my machine" to production infrastructure:
 
-- **Loved Module 6 (agents)?** → Module 17 covers multi-agent orchestration, and Module 21 covers building custom agents with autonomous loops
-- **Outgrown Module 11 (MCP)?** → Module 18 walks you through building production MCP servers from protocol internals to npm publishing
-- **Ready for enterprise?** → Module 19 covers SSO, RBAC, audit logging, and GDPR compliance
-- **Want to optimize costs?** → Module 20 covers three-tier model routing (Haiku/Sonnet/Opus) and strategic compaction
-- **Going professional?** → Modules 22-23 cover plugin architecture, permission systems, the RPI methodology, and monorepo patterns
+| You Liked... | Go Deeper With... |
+|-------------|-------------------|
+| **Module 6** (agents) | Module 17: multi-agent orchestration · Module 21: custom agents with autonomous loops |
+| **Module 11** (MCP) | Module 18: production MCP servers, protocol internals to npm publishing |
+| **Module 12** (customization) | Module 22: plugin architecture, permission systems, write-time quality |
+| **Module 15** (deployment) | Module 16: Kubernetes, auto-scaling, multi-region, disaster recovery |
+| Working in teams | Module 19: SSO, RBAC, audit logging, GDPR compliance |
+| Cost management | Module 20: three-tier model routing (Haiku/Sonnet/Opus), strategic compaction |
+| Professional workflows | Module 23: RPI methodology, session management, monorepo patterns |
 
----
+**[Get the Advanced Modules →](https://payhip.com/b/8E107)**
 
-### [Get both — Complete Bundle $59.99 (Save $10)](https://payhip.com/b/S8nU1)
+</details>
+
+<details>
+<summary><h3>Get both — Complete Bundle $59.99 (Save $10)</h3></summary>
 
 8 advanced modules + 11 project templates. The modules teach the patterns, the projects let you practice them.
 
+**[Get the Bundle →](https://payhip.com/b/S8nU1)**
+
+</details>
+
 ---
 
-## Additional Learning Paths
+<details>
+<summary><h2>Learning Paths by Role</h2></summary>
 
 ### For Aspiring Developers
 - Building CLI tools
@@ -531,6 +345,8 @@ Module 15 covers deployment basics. The **[Advanced Modules ($29.99)](https://pa
 - Understanding complex algorithms
 - Debugging homework
 
+</details>
+
 ---
 
 <div align="center">
@@ -542,6 +358,8 @@ Module 15 covers deployment basics. The **[Advanced Modules ($29.99)](https://pa
 Claude Code makes it possible for anyone to create professional software. This course will guide you every step of the way, from your first terminal command to your first deployed application.
 
 **Let's build something amazing together!**
+
+**[Start with Module 1 →](module-01-welcome-to-claude-code.md)**
 
 ---
 
