@@ -54,64 +54,56 @@ Make sure you have write access to the install location. The install script will
 
 ---
 
-### Problem: Node.js version too old
+### Problem: Node.js version errors
 
-**Symptoms:**
-```
-Error: Claude Code requires Node.js 18 or higher
-```
+Claude Code's native installer bundles its own runtime — you don't need Node.js installed separately. If you see a Node.js version error, you may be using the old npm-based install method.
 
-**Solution:**
+**Solution:** Reinstall using the native installer:
 
-You need Node.js 18+.
-
-**Using nvm (recommended):**
 ```bash
-# Install nvm first if needed
-curl -o- https://raw.githubusercontent.com/nvm-sh/nvm/v0.39.0/install.sh | bash
+# macOS/Linux
+curl -fsSL https://claude.ai/install.sh | bash
 
-# Install latest Node.js
-nvm install node
-nvm use node
+# Windows PowerShell
+irm https://claude.ai/install.ps1 | iex
 ```
 
-**Or download from nodejs.org:**
-Grab the LTS version from [nodejs.org](https://nodejs.org).
+> **Note:** Node.js may still be needed for your own projects (running `npm`, MCP servers, etc.) — but Claude Code itself does not require it.
 
 ---
 
-## API Key Issues
+## Authentication Issues
 
-### Problem: "API key not found"
+### Problem: Can't log in or authenticate
 
-**Symptoms:**
-```
-Error: ANTHROPIC_API_KEY environment variable not set
-```
+Claude Code supports two authentication methods:
 
-**Solutions:**
+1. **Claude subscription** (Pro/Max/Teams/Enterprise) -- log in via browser
+2. **Anthropic API key** -- set as environment variable
 
-**Solution 1: Set environment variable (current session only)**
+**If using a subscription:**
+
+Run `claude` and it will open a browser window to log in. If the browser doesn't open, press `c` to copy the login URL. Make sure you have an active Pro, Max, Teams, or Enterprise plan — the free Claude.ai plan does **not** include Claude Code.
+
+To log out and re-authenticate: type `/logout` in Claude Code.
+
+**If using an API key:**
+
+Set the environment variable before starting Claude Code:
+
 ```bash
+# macOS/Linux (current session)
 export ANTHROPIC_API_KEY="your-api-key-here"
+
+# macOS/Linux (persistent — add to ~/.bashrc or ~/.zshrc)
+echo 'export ANTHROPIC_API_KEY="your-api-key-here"' >> ~/.zshrc
+source ~/.zshrc  # Reloads your shell config so the change takes effect
+
+# Windows PowerShell
+$env:ANTHROPIC_API_KEY="your-api-key-here"
 ```
 
-**Solution 2: Set in shell profile (persistent)**
-
-Add to `~/.bashrc`, `~/.zshrc`, or `~/.bash_profile`:
-```bash
-export ANTHROPIC_API_KEY="your-api-key-here"
-```
-
-Then reload:
-```bash
-source ~/.zshrc  # or ~/.bashrc
-```
-
-**Solution 3: Use Claude Code config**
-```bash
-claude config set apiKey "your-api-key-here"
-```
+Get your API key from [console.anthropic.com](https://console.anthropic.com) — it starts with `sk-ant-`.
 
 ---
 
@@ -122,49 +114,25 @@ claude config set apiKey "your-api-key-here"
 Error: Invalid API key
 ```
 
-**Causes:**
-- Typo in API key
-- API key revoked or expired
-- Wrong API key format
-
 **Solutions:**
 
-1. **Get a fresh API key:**
-   - Go to [console.anthropic.com](https://console.anthropic.com)
-   - Create a new API key
-   - Copy the entire key (starts with `sk-ant-`)
-
-2. **Check for typos:**
-   - Keys should start with `sk-ant-`
-   - No spaces before/after
-   - No quote marks inside the key
-
-3. **Verify it's set correctly:**
-   ```bash
-   echo $ANTHROPIC_API_KEY
-   ```
+1. **Get a fresh API key** from [console.anthropic.com](https://console.anthropic.com)
+2. **Check for typos:** keys start with `sk-ant-`, no spaces or extra quotes
+3. **Verify it's set:** `echo $ANTHROPIC_API_KEY`
+4. **Consider switching to subscription login** — run `unset ANTHROPIC_API_KEY` then `claude` to log in via browser instead
 
 ---
 
-### Problem: "Insufficient credits"
+### Problem: "Insufficient credits" or usage limits
 
-**Symptoms:**
-```
-Error: Insufficient credits in your account
-```
+**If using an API key:**
+- Check your balance at [console.anthropic.com](https://console.anthropic.com) under "Usage"
+- Add a payment method and purchase credits
 
-**Solutions:**
-
-1. **Check your balance:**
-   - Visit [console.anthropic.com](https://console.anthropic.com)
-   - Check the "Usage" section
-
-2. **Add credits:**
-   - Add a payment method
-   - Purchase credits
-
-3. **Wait for monthly reset:**
-   - Free tier credits reset monthly
+**If using a subscription:**
+- Claude Pro has usage limits that reset over time
+- Claude Max ($100/month) has significantly higher limits
+- Check `/status` inside Claude Code to see your current usage
 
 ---
 
@@ -547,7 +515,7 @@ ps aux | grep mcp
 ```
 
 **Solution 2: Verify configuration**
-Check `~/.config/claude/config.json`:
+Check your MCP config in `.mcp.json` (project-level) or `~/.claude/settings.json` (user-level):
 ```json
 {
   "mcpServers": {
@@ -566,7 +534,7 @@ Check `~/.config/claude/config.json`:
 ```
 
 **Solution 4: Check server logs**
-Look in `~/.config/claude/logs/` for error messages.
+Run `claude doctor` to check for issues, or look in `~/.claude/` for error logs.
 
 ---
 
@@ -673,16 +641,12 @@ When reporting issues, grab this info:
 # Claude Code version
 claude --version
 
-# Node.js version
-node --version
-
-# npm version
-npm --version
+# Run diagnostics
+claude doctor
 
 # Operating system
 uname -a  # macOS/Linux
-# or
-systeminfo  # Windows
+# or: systeminfo  (Windows)
 ```
 
 ---

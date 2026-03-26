@@ -297,16 +297,34 @@ Please [specific request].
 
 ---
 
-## Configuration
+## Authentication
 
-### Set API Key
+### Option 1: Claude Subscription (Pro/Max/Teams/Enterprise)
 ```bash
-export ANTHROPIC_API_KEY="your-key"
+# Just run claude — it opens a browser to log in
+claude
 ```
+
+### Option 2: API Key
+```bash
+# macOS/Linux
+export ANTHROPIC_API_KEY="your-key"
+
+# Windows PowerShell
+$env:ANTHROPIC_API_KEY="your-key"
+```
+
+### Check auth status
+```bash
+# Inside Claude Code, type:
+/status
+```
+
+## Configuration
 
 ### Config file location
 ```
-~/.config/claude/config.json
+~/.claude/settings.json
 ```
 
 ### Set config values
@@ -350,19 +368,28 @@ Your rules here as bullet points
 
 **Create a skill:**
 ```
-.claude/skills/skill-name.md with frontmatter:
+.claude/skills/skill-name/SKILL.md with frontmatter:
 ---
 name: skill-name
 description: What it does
 ---
 ```
 
-**Common hooks:**
+**Common hooks** (add to `.claude/settings.json`):
 ```json
 {
   "hooks": {
-    "PreCommit": [{ "command": "npm run lint && npm test" }],
-    "PostCommit": [{ "command": "echo 'Committed!'" }]
+    "PostToolUse": [
+      {
+        "matcher": "Edit|Write",
+        "hooks": [{ "type": "command", "command": "npm run lint --quiet 2>/dev/null || true" }]
+      }
+    ],
+    "Stop": [
+      {
+        "hooks": [{ "type": "command", "command": "echo 'Session complete'" }]
+      }
+    ]
   }
 }
 ```
@@ -449,20 +476,27 @@ class\s+\w+          # Class definitions
 # Check version
 claude --version
 
-# Check if Node.js is installed
-node --version
+# Run diagnostics
+claude doctor
 
-# Reinstall
+# Reinstall (macOS/Linux)
 curl -fsSL https://claude.ai/install.sh | bash
+
+# Reinstall (Windows PowerShell)
+irm https://claude.ai/install.ps1 | iex
 ```
 
-### API key not working
+### Authentication not working
 ```bash
-# Set it again
+# If using subscription: log out and log back in
+# Inside Claude Code, type: /logout
+# Then restart: claude
+
+# If using API key: set it again
 export ANTHROPIC_API_KEY="your-key"
 
-# Or use config
-claude config set apiKey "your-key"
+# Check current auth status inside Claude Code:
+# /status
 ```
 
 ### Changes not applying

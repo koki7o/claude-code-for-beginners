@@ -48,39 +48,56 @@ Claude Code creates the file, writes the code, explains what it did, and can run
 ### What You Need
 
 Before installing:
-- A computer running macOS, Linux, or Windows (WSL)
+- A computer running macOS 13+, Windows 10+, or Linux (Ubuntu 20.04+, Debian 10+)
 - Internet connection
 - Terminal/command-line access
-- A Claude API key (we'll get this below)
-
-If you're on Windows, you'll need WSL (Windows Subsystem for Linux). It sounds intimidating, but it's just a quick setup.
+- A Claude account (see Step 1 below)
+- **Windows only:** [Git for Windows](https://git-scm.com/downloads/win) must be installed first
 
 ### Step-by-Step Installation
 
-#### Step 1: Get Your Claude API Key
+#### Step 1: Get a Claude Account
 
-1. Go to [console.anthropic.com](https://console.anthropic.com)
-2. Sign up or log in
-3. Navigate to "API Keys"
-4. Click "Create Key"
-5. Copy your API key (starts with `sk-ant-...`)
-6. Keep this safe -- treat it like a password. Don't share it, don't commit it to Git.
+You need one of these to use Claude Code:
+
+- **Claude Pro or Max subscription** ($20/month or $100/month at [claude.ai](https://claude.ai)) -- the easiest option. Subscribe, and you're ready.
+- **Claude for Teams or Enterprise** -- if your company has a plan, ask your admin for an invite.
+- **Anthropic API key** -- pay-per-use via [console.anthropic.com](https://console.anthropic.com). Sign up, create an API key (starts with `sk-ant-...`), and keep it safe.
+
+> **Note:** The free Claude.ai plan does **not** include Claude Code access. You need at least a Pro subscription or an API key.
 
 #### Step 2: Install Claude Code
 
-Open your terminal and run:
-
+**On macOS or Linux:**
 ```bash
 curl -fsSL https://claude.ai/install.sh | bash
 ```
 
-The install script handles everything -- it downloads Claude Code and sets it up on your system. Wait for it to finish.
+**On Windows (PowerShell):**
+```powershell
+irm https://claude.ai/install.ps1 | iex
+```
 
-#### Step 3: Set Up Your API Key
+**On Windows (CMD):**
+```batch
+curl -fsSL https://claude.ai/install.cmd -o install.cmd && install.cmd && del install.cmd
+```
 
-You need to tell Claude Code your API key. Two options:
+The install script handles everything -- no Node.js required. It downloads Claude Code and sets it up on your system.
 
-**Option A: Environment variable (recommended)**
+> **Alternative install methods:** You can also install via `brew install --cask claude-code` (macOS/Linux) or `winget install Anthropic.ClaudeCode` (Windows).
+
+#### Step 3: Log In
+
+Start Claude Code for the first time:
+
+```bash
+claude
+```
+
+**If you have a Claude subscription** (Pro/Max/Teams/Enterprise): A browser window opens automatically. Log in with your Claude account and you're done.
+
+**If you're using an API key:** Set it as an environment variable before starting:
 
 On macOS/Linux:
 ```bash
@@ -92,12 +109,7 @@ On Windows (PowerShell):
 $env:ANTHROPIC_API_KEY="your-api-key-here"
 ```
 
-To make it permanent, add that line to your shell config file (`.bashrc`, `.zshrc`, etc.).
-
-**Option B: Config file**
-```bash
-claude config set apiKey "your-api-key-here"
-```
+To make it permanent, add that line to your shell config file (`.bashrc`, `.zshrc`, `.profile`, etc.).
 
 #### Step 4: Verify Installation
 
@@ -105,7 +117,7 @@ claude config set apiKey "your-api-key-here"
 claude --version
 ```
 
-You should see a version number. If you get an error, restart your terminal and try again.
+You should see a version number. If you get an error, restart your terminal and try again. You can also run `claude doctor` to check your setup.
 
 ---
 
@@ -289,7 +301,7 @@ Before moving on, make sure you can:
 No, but some basic understanding helps you guide Claude Code better. You'll pick things up as you go.
 
 **Is Claude Code free?**
-Claude Code itself is free. You need a Claude API key, which has usage costs. New users typically get free credits to start.
+Claude Code itself is free to install. To use it, you need either a Claude Pro/Max subscription ($20-$100/month) or an Anthropic API key (pay-per-use). The free Claude.ai plan does not include Claude Code access.
 
 **What if I make a mistake in my request?**
 Just clarify, ask to undo changes, or make a new request. Nothing is permanent.
@@ -321,9 +333,9 @@ Type `/exit` or press Ctrl+C. Your files are already saved.
 
 **"Command not found: claude"** -- Make sure the install script finished successfully and restart your terminal.
 
-**"API key not found"** -- Set your `ANTHROPIC_API_KEY` environment variable.
+**"API key not found"** -- Either log in with your Claude subscription (`claude` opens a browser), or set `ANTHROPIC_API_KEY` as an environment variable.
 
-**"Permission denied"** -- Run the install script with `sudo` or check your file permissions.
+**"Permission denied"** -- On macOS/Linux, try `curl -fsSL https://claude.ai/install.sh | sudo bash`. On Windows, make sure you have [Git for Windows](https://git-scm.com/downloads/win) installed.
 
 **Claude Code seems slow** -- Normal. AI processing takes time, especially for complex requests.
 

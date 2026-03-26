@@ -46,20 +46,24 @@ Instead of manually writing every line of code, you describe what you want to ac
 
 ## 🚀 Quick Start
 
+**macOS / Linux:**
 ```bash
-# 1. Install Claude Code
 curl -fsSL https://claude.ai/install.sh | bash
+```
 
-# 2. Set your API key
-export ANTHROPIC_API_KEY="sk-ant-..."
+**Windows (PowerShell):**
+```powershell
+irm https://claude.ai/install.ps1 | iex
+```
 
-# 3. Start building
+Then start building:
+```bash
 cd my-project && claude
 ```
 
-Then open **[Module 1](module-01-welcome-to-claude-code.md)** and follow along.
+Claude Code works with a **Claude Pro/Max subscription** or an **Anthropic API key**. On first launch, it opens a browser to log in — or you can set `ANTHROPIC_API_KEY` for API-based usage.
 
-> **Need detailed setup help?** Module 1 covers installation step-by-step, including Node.js setup, API key configuration, and troubleshooting.
+> **Need detailed setup help?** Module 1 covers installation step-by-step for all platforms, authentication options, and troubleshooting.
 
 ---
 

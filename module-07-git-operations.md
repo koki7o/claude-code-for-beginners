@@ -631,15 +631,18 @@ Before moving to Module 8, make sure you can:
 
 7. **Never commit broken code to a shared branch** -- run your tests first.
 
-8. **Automate quality checks with hooks** -- You can set up hooks that run linting and tests automatically before every commit. This catches problems before they hit your git history:
+8. **Automate quality checks with hooks** -- You can set up hooks that auto-lint your code every time Claude Code edits a file. Add this to `.claude/settings.json`:
    ```json
    {
      "hooks": {
-       "PreCommit": [{ "command": "npm run lint && npm test" }]
+       "PostToolUse": [{
+         "matcher": "Edit|Write",
+         "hooks": [{ "type": "command", "command": "npm run lint --quiet 2>/dev/null || true" }]
+       }]
      }
    }
    ```
-   We'll cover hooks in detail in Module 12, but getting into the habit of automated checks early will save you a lot of "fix lint" commits.
+   This catches lint issues immediately rather than at commit time. We'll cover hooks in detail in Module 12.
 
 ---
 

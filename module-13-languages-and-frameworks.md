@@ -420,7 +420,8 @@ Each rule file is a short Markdown document that states conventions directly. He
 
 ```markdown
 ---
-path: "**/*.py"
+description: Python coding standards
+globs: ["**/*.py"]
 ---
 - Always use type hints for function parameters and return types
 - Use pytest for all tests, never unittest
@@ -529,6 +530,12 @@ python -m venv venv
 
 # Activate (Linux/Mac)
 source venv/bin/activate
+
+# Activate (Windows PowerShell)
+.\venv\Scripts\Activate.ps1
+
+# Activate (Windows CMD)
+venv\Scripts\activate.bat
 
 # Install dependencies
 pip install -r requirements.txt

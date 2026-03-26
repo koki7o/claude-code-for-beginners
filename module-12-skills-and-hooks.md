@@ -183,8 +183,8 @@ This is where rules get interesting. You can scope them to specific files using 
 
 ```markdown
 ---
-paths:
-  - "src/api/**/*.ts"
+description: API development standards
+globs: ["src/api/**/*.ts"]
 ---
 
 # API Development Rules

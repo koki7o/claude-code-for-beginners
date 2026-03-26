@@ -20,10 +20,14 @@ Fair warning: spoilers below. These are suggested solutions -- not the only way 
 
 1. **Installation:**
    ```bash
-   # Install Claude Code
+   # Install Claude Code (macOS/Linux)
    curl -fsSL https://claude.ai/install.sh | bash
+   # Windows PowerShell: irm https://claude.ai/install.ps1 | iex
 
-   # Set API key
+   # Log in (opens browser for Pro/Max/Teams subscribers)
+   claude
+
+   # Or set API key for API-based usage
    export ANTHROPIC_API_KEY="your-key-here"
 
    # Verify installation
@@ -786,7 +790,7 @@ I want to be able to:
 Create a skill that generates boilerplate for a new API endpoint:
 
 ```
-Create a skill at .claude/skills/new-endpoint.md that:
+Create a skill at .claude/skills/new-endpoint/SKILL.md that:
 - Takes an entity name as input
 - Generates route file, controller, service, and test
 - Follows our project's existing patterns
@@ -825,19 +829,31 @@ Follow the patterns in the existing user module for consistency.
 ```
 Set up these hooks in .claude/settings.json:
 
-1. PreCommit hook: Run linting and tests before any commit
-2. PostCommit hook: Log the commit hash and message
-3. Notification hook: Alert when a long-running task finishes
+1. PostToolUse hook on Edit|Write: Auto-lint after file changes
+2. Notification hook: Alert when a permission prompt appears
+3. Stop hook: Run cleanup when session ends
 ```
 
 **Example configuration:**
 ```json
 {
   "hooks": {
-    "PreCommit": [
+    "PostToolUse": [
       {
-        "command": "npm run lint && npm test",
-        "description": "Run lint and tests before commit"
+        "matcher": "Edit|Write",
+        "hooks": [{
+          "type": "command",
+          "command": "npm run lint --quiet 2>/dev/null || true"
+        }]
+      }
+    ],
+    "Notification": [
+      {
+        "matcher": "permission_prompt",
+        "hooks": [{
+          "type": "command",
+          "command": "echo 'Permission requested' >> ~/.claude/hook-log.txt"
+        }]
       }
     ]
   }

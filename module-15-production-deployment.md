@@ -686,14 +686,17 @@ As your deployment process matures, you can codify it in a CLAUDE.md and use hoo
 - Tag releases with semantic versioning
 ```
 
-You can also create a PreCommit hook to catch issues before they reach your deployment pipeline:
+You can also set up a hook that automatically runs linting after Claude Code edits files, catching issues before they ever reach your deployment pipeline:
 
 ```json
 {
   "hooks": {
-    "PreCommit": [{
-      "command": "npm run lint && npm test",
-      "description": "Run lint and tests before commit"
+    "PostToolUse": [{
+      "matcher": "Edit|Write",
+      "hooks": [{
+        "type": "command",
+        "command": "npm run lint --quiet 2>/dev/null || true"
+      }]
     }]
   }
 }
