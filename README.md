@@ -48,7 +48,7 @@ Instead of manually writing every line of code, you describe what you want to ac
 
 ```bash
 # 1. Install Claude Code
-npm install -g claude-code
+curl -fsSL https://claude.ai/install.sh | bash
 
 # 2. Set your API key
 export ANTHROPIC_API_KEY="sk-ant-..."

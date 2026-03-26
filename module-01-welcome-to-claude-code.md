@@ -57,21 +57,7 @@ If you're on Windows, you'll need WSL (Windows Subsystem for Linux). It sounds i
 
 ### Step-by-Step Installation
 
-#### Step 1: Install Node.js (if you don't have it)
-
-Claude Code requires Node.js version 18 or higher.
-
-Check if you already have it:
-```bash
-node --version
-```
-
-If you see `v18.x.x` or higher, you're set. If not:
-1. Go to [nodejs.org](https://nodejs.org)
-2. Download the LTS (Long Term Support) version
-3. Run the installer and follow the prompts
-
-#### Step 2: Get Your Claude API Key
+#### Step 1: Get Your Claude API Key
 
 1. Go to [console.anthropic.com](https://console.anthropic.com)
 2. Sign up or log in
@@ -80,23 +66,17 @@ If you see `v18.x.x` or higher, you're set. If not:
 5. Copy your API key (starts with `sk-ant-...`)
 6. Keep this safe -- treat it like a password. Don't share it, don't commit it to Git.
 
-#### Step 3: Install Claude Code
+#### Step 2: Install Claude Code
 
 Open your terminal and run:
 
 ```bash
-npm install -g claude-code
+curl -fsSL https://claude.ai/install.sh | bash
 ```
 
-Quick breakdown of that command:
-- `npm` = Node Package Manager (installs software)
-- `install` = install something
-- `-g` = globally (available everywhere on your system)
-- `claude-code` = the package name
+The install script handles everything -- it downloads Claude Code and sets it up on your system. Wait for it to finish.
 
-Wait for it to finish. You'll see a progress indicator.
-
-#### Step 4: Set Up Your API Key
+#### Step 3: Set Up Your API Key
 
 You need to tell Claude Code your API key. Two options:
 
@@ -119,7 +99,7 @@ To make it permanent, add that line to your shell config file (`.bashrc`, `.zshr
 claude config set apiKey "your-api-key-here"
 ```
 
-#### Step 5: Verify Installation
+#### Step 4: Verify Installation
 
 ```bash
 claude --version
@@ -339,11 +319,11 @@ Type `/exit` or press Ctrl+C. Your files are already saved.
 
 ## Troubleshooting
 
-**"Command not found: claude"** -- Make sure you installed with `-g` and restarted your terminal.
+**"Command not found: claude"** -- Make sure the install script finished successfully and restart your terminal.
 
-**"API key not found"** -- Set your `ANTHROPIC_API_KEY` environment variable or use `claude config set apiKey`.
+**"API key not found"** -- Set your `ANTHROPIC_API_KEY` environment variable.
 
-**"Permission denied"** -- Try `sudo npm install -g claude-code` on macOS/Linux.
+**"Permission denied"** -- Run the install script with `sudo` or check your file permissions.
 
 **Claude Code seems slow** -- Normal. AI processing takes time, especially for complex requests.
 

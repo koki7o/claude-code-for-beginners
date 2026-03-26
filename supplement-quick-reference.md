@@ -453,7 +453,7 @@ claude --version
 node --version
 
 # Reinstall
-npm install -g claude-code
+curl -fsSL https://claude.ai/install.sh | bash
 ```
 
 ### API key not working

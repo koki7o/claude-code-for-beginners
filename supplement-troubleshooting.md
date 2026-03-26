@@ -15,29 +15,22 @@ zsh: command not found: claude
 ```
 
 **Causes:**
-- Claude Code not installed globally
+- Claude Code not installed or install script didn't finish
 - Terminal not restarted after installation
-- npm global bin path not in PATH
+- Install path not in PATH
 
 **Solutions:**
 
-**Solution 1: Install globally**
+**Solution 1: Run the install script**
 ```bash
-npm install -g claude-code
+curl -fsSL https://claude.ai/install.sh | bash
 ```
 
 **Solution 2: Restart your terminal**
 Close and reopen your terminal application.
 
-**Solution 3: Check npm global path**
-```bash
-npm config get prefix
-```
-
-Add to your PATH in `.bashrc`, `.zshrc`, or similar:
-```bash
-export PATH="$PATH:$(npm config get prefix)/bin"
-```
+**Solution 3: Check your PATH**
+The install script will tell you where Claude Code was installed. Make sure that directory is in your PATH. Add it to `.bashrc`, `.zshrc`, or similar if needed.
 
 ---
 
@@ -45,30 +38,19 @@ export PATH="$PATH:$(npm config get prefix)/bin"
 
 **Symptoms:**
 ```bash
-npm install -g claude-code
+curl -fsSL https://claude.ai/install.sh | bash
 # Error: EACCES: permission denied
 ```
 
 **Solutions:**
 
-**Solution 1: Use npx (recommended)**
+**Solution 1: Run with sudo**
 ```bash
-npx claude-code
+curl -fsSL https://claude.ai/install.sh | sudo bash
 ```
 
-**Solution 2: Fix npm permissions**
-```bash
-mkdir ~/.npm-global
-npm config set prefix '~/.npm-global'
-export PATH=~/.npm-global/bin:$PATH
-```
-
-Add that export line to your shell profile so it sticks.
-
-**Solution 3: Use sudo (not recommended)**
-```bash
-sudo npm install -g claude-code
-```
+**Solution 2: Check directory permissions**
+Make sure you have write access to the install location. The install script will tell you where it's trying to write.
 
 ---
 

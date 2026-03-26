@@ -20,9 +20,8 @@ Fair warning: spoilers below. These are suggested solutions -- not the only way 
 
 1. **Installation:**
    ```bash
-   # Install Node.js from nodejs.org (v18+)
-   # Then install Claude Code
-   npm install -g claude-code
+   # Install Claude Code
+   curl -fsSL https://claude.ai/install.sh | bash
 
    # Set API key
    export ANTHROPIC_API_KEY="your-key-here"
