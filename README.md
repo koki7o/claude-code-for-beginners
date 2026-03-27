@@ -251,45 +251,76 @@ Navigate unfamiliar codebases with ease. Start at [Module 4](module-04-working-w
 
 <br/>
 
+<div align="center">
+
 ### 🟢 Foundation (Modules 1–5)
 
-> *Install, explore, and learn to communicate effectively with Claude Code.*
+*Install, explore, and learn to communicate effectively with Claude Code.*
 
-| | Module | What You'll Learn | ⏱ |
-|:-:|--------|-------------------|:----:|
-| ![M1](https://img.shields.io/badge/01-1a1a2e?style=flat-square) | [**Welcome to Claude Code**](module-01-welcome-to-claude-code.md) | AI pair programming, installation, CLI interface, terminology, CLAUDE.md | 20 min |
-| ![M2](https://img.shields.io/badge/02-1a1a2e?style=flat-square) | [**Starting Your First Project**](module-02-starting-your-first-project.md) | From scratch, existing code, templates, cloning repos, project memory | 30 min |
-| ![M3](https://img.shields.io/badge/03-1a1a2e?style=flat-square) | [**Understanding Tools**](module-03-understanding-tools.md) | Read, Write, Edit, Bash, Grep, Glob, agents, web search, LSP | 30 min |
-| ![M4](https://img.shields.io/badge/04-1a1a2e?style=flat-square) | [**Working with Files and Code**](module-04-working-with-files.md) | Reading, writing, editing, refactoring, navigating, pattern recognition | 40 min |
-| ![M5](https://img.shields.io/badge/05-1a1a2e?style=flat-square) | [**Effective Prompting**](module-05-prompt-engineering.md) | Prompt patterns, iteration, the Persistence Pattern (CLAUDE.md) | 35 min |
+<table width="100%">
+<tr>
+<td align="center" width="20%"><a href="module-01-welcome-to-claude-code.md"><img src="https://img.shields.io/badge/01-32CD32?style=for-the-badge&labelColor=1a1a2e" alt="01"/><br/><b>Welcome to<br/>Claude Code</b></a><br/><sub>20 min</sub></td>
+<td align="center" width="20%"><a href="module-02-starting-your-first-project.md"><img src="https://img.shields.io/badge/02-32CD32?style=for-the-badge&labelColor=1a1a2e" alt="02"/><br/><b>Starting Your<br/>First Project</b></a><br/><sub>30 min</sub></td>
+<td align="center" width="20%"><a href="module-03-understanding-tools.md"><img src="https://img.shields.io/badge/03-32CD32?style=for-the-badge&labelColor=1a1a2e" alt="03"/><br/><b>Understanding<br/>Tools</b></a><br/><sub>30 min</sub></td>
+<td align="center" width="20%"><a href="module-04-working-with-files.md"><img src="https://img.shields.io/badge/04-32CD32?style=for-the-badge&labelColor=1a1a2e" alt="04"/><br/><b>Working with<br/>Files & Code</b></a><br/><sub>40 min</sub></td>
+<td align="center" width="20%"><a href="module-05-prompt-engineering.md"><img src="https://img.shields.io/badge/05-32CD32?style=for-the-badge&labelColor=1a1a2e" alt="05"/><br/><b>Effective<br/>Prompting</b></a><br/><sub>35 min</sub></td>
+</tr>
+<tr>
+<td align="center"><sub>Installation, CLI,<br/>terminology, CLAUDE.md</sub></td>
+<td align="center"><sub>From scratch, templates,<br/>cloning, project memory</sub></td>
+<td align="center"><sub>Read, Write, Edit, Bash,<br/>Grep, Glob, web tools</sub></td>
+<td align="center"><sub>Reading, writing, editing,<br/>refactoring, navigating</sub></td>
+<td align="center"><sub>Prompt patterns, iteration,<br/>Persistence Pattern</sub></td>
+</tr>
+</table>
 
 <br/>
 
 ### 🔵 Core Skills (Modules 6–10)
 
-> *Build real things — agents, Git workflows, debugging, testing, and professional practices.*
+*Build real things — agents, Git workflows, debugging, testing, and professional practices.*
 
-| | Module | What You'll Learn | ⏱ |
-|:-:|--------|-------------------|:----:|
-| ![M6](https://img.shields.io/badge/06-0066FF?style=flat-square) | [**Background Agents**](module-06-background-agents.md) | Exploration, planning, multi-step tasks, parallel execution, model routing | 35 min |
-| ![M7](https://img.shields.io/badge/07-0066FF?style=flat-square) | [**Git Operations**](module-07-git-operations.md) | Commits, branches, PRs, merge conflicts, GitHub CLI, hooks | 40 min |
-| ![M8](https://img.shields.io/badge/08-0066FF?style=flat-square) | [**Debugging and Testing**](module-08-debugging-and-testing.md) | Error messages, debugging strategies, TDD, testing rules | 45 min |
-| ![M9](https://img.shields.io/badge/09-0066FF?style=flat-square) | [**Real-World Project**](module-09-real-world-project.md) | Full build: planning → structure → coding → testing → deploying | 90 min |
-| ![M10](https://img.shields.io/badge/10-0066FF?style=flat-square) | [**Workflow Best Practices**](module-10-workflow-best-practices.md) | Rules, automated pipelines, code review, documentation, quality gates | 40 min |
+<table width="100%">
+<tr>
+<td align="center" width="20%"><a href="module-06-background-agents.md"><img src="https://img.shields.io/badge/06-0066FF?style=for-the-badge&labelColor=1a1a2e" alt="06"/><br/><b>Background<br/>Agents</b></a><br/><sub>35 min</sub></td>
+<td align="center" width="20%"><a href="module-07-git-operations.md"><img src="https://img.shields.io/badge/07-0066FF?style=for-the-badge&labelColor=1a1a2e" alt="07"/><br/><b>Git<br/>Operations</b></a><br/><sub>40 min</sub></td>
+<td align="center" width="20%"><a href="module-08-debugging-and-testing.md"><img src="https://img.shields.io/badge/08-0066FF?style=for-the-badge&labelColor=1a1a2e" alt="08"/><br/><b>Debugging<br/>& Testing</b></a><br/><sub>45 min</sub></td>
+<td align="center" width="20%"><a href="module-09-real-world-project.md"><img src="https://img.shields.io/badge/09-0066FF?style=for-the-badge&labelColor=1a1a2e" alt="09"/><br/><b>Real-World<br/>Project</b></a><br/><sub>90 min</sub></td>
+<td align="center" width="20%"><a href="module-10-workflow-best-practices.md"><img src="https://img.shields.io/badge/10-0066FF?style=for-the-badge&labelColor=1a1a2e" alt="10"/><br/><b>Workflow<br/>Best Practices</b></a><br/><sub>40 min</sub></td>
+</tr>
+<tr>
+<td align="center"><sub>Exploration, planning,<br/>multi-step, model routing</sub></td>
+<td align="center"><sub>Commits, branches, PRs,<br/>conflicts, GitHub CLI</sub></td>
+<td align="center"><sub>Error messages, TDD,<br/>debugging strategies</sub></td>
+<td align="center"><sub>Full build: plan → code<br/>→ test → deploy</sub></td>
+<td align="center"><sub>Rules, pipelines, review,<br/>documentation, quality</sub></td>
+</tr>
+</table>
 
 <br/>
 
 ### 🟣 Going Deeper (Modules 11–15)
 
-> *Extend Claude Code with MCP, skills, hooks, multi-language support, APIs, and deployment.*
+*Extend Claude Code with MCP, skills, hooks, multi-language support, APIs, and deployment.*
 
-| | Module | What You'll Learn | ⏱ |
-|:-:|--------|-------------------|:----:|
-| ![M11](https://img.shields.io/badge/11-6A0DAD?style=flat-square) | [**MCP Servers**](module-11-mcp-servers.md) | Protocol basics, essential servers (Context7, Playwright, DeepWiki), custom MCP | 45 min |
-| ![M12](https://img.shields.io/badge/12-6A0DAD?style=flat-square) | [**Skills, Hooks & Customization**](module-12-skills-and-hooks.md) | CLAUDE.md, rules, settings hierarchy, skills, commands, hooks, agents | 50 min |
-| ![M13](https://img.shields.io/badge/13-6A0DAD?style=flat-square) | [**Languages & Frameworks**](module-13-languages-and-frameworks.md) | Python, TypeScript, Go, Rust, Swift, polyglot projects, language rules | 40 min |
-| ![M14](https://img.shields.io/badge/14-6A0DAD?style=flat-square) | [**API Integration**](module-14-api-integration.md) | WebSearch, WebFetch, REST APIs, auth, rate limiting, API rules | 45 min |
-| ![M15](https://img.shields.io/badge/15-6A0DAD?style=flat-square) | [**Production Deployment**](module-15-production-deployment.md) | Docker, CI/CD, monitoring, security, database migrations, deploy hooks | 60 min |
+<table width="100%">
+<tr>
+<td align="center" width="20%"><a href="module-11-mcp-servers.md"><img src="https://img.shields.io/badge/11-6A0DAD?style=for-the-badge&labelColor=1a1a2e" alt="11"/><br/><b>MCP<br/>Servers</b></a><br/><sub>45 min</sub></td>
+<td align="center" width="20%"><a href="module-12-skills-and-hooks.md"><img src="https://img.shields.io/badge/12-6A0DAD?style=for-the-badge&labelColor=1a1a2e" alt="12"/><br/><b>Skills, Hooks &<br/>Customization</b></a><br/><sub>50 min</sub></td>
+<td align="center" width="20%"><a href="module-13-languages-and-frameworks.md"><img src="https://img.shields.io/badge/13-6A0DAD?style=for-the-badge&labelColor=1a1a2e" alt="13"/><br/><b>Languages &<br/>Frameworks</b></a><br/><sub>40 min</sub></td>
+<td align="center" width="20%"><a href="module-14-api-integration.md"><img src="https://img.shields.io/badge/14-6A0DAD?style=for-the-badge&labelColor=1a1a2e" alt="14"/><br/><b>API<br/>Integration</b></a><br/><sub>45 min</sub></td>
+<td align="center" width="20%"><a href="module-15-production-deployment.md"><img src="https://img.shields.io/badge/15-6A0DAD?style=for-the-badge&labelColor=1a1a2e" alt="15"/><br/><b>Production<br/>Deployment</b></a><br/><sub>60 min</sub></td>
+</tr>
+<tr>
+<td align="center"><sub>Context7, Playwright,<br/>DeepWiki, custom MCP</sub></td>
+<td align="center"><sub>CLAUDE.md, rules, settings,<br/>skills, commands, hooks</sub></td>
+<td align="center"><sub>Python, TypeScript, Go,<br/>Rust, Swift, polyglot</sub></td>
+<td align="center"><sub>WebSearch, REST APIs,<br/>auth, rate limiting</sub></td>
+<td align="center"><sub>Docker, CI/CD, monitoring,<br/>security, migrations</sub></td>
+</tr>
+</table>
+
+</div>
 
 <br/>
 
@@ -576,15 +607,18 @@ Integrate Claude Code into professional workflows and level up
 
 In Module 9 you built one complete project. The **[Real Projects Pack ($39.99)](https://payhip.com/b/dFXWO)** gives you **11 more** — each designed around skills from this course:
 
-| Free Module You Completed | 🔨 Project You'll Build |
-|--------------------------|------------------------|
-| Modules 3-4 *(tools + files)* | Code Review Tool · Documentation Generator · Bug Finder |
-| Module 5 *(prompting)* | AI-Powered Todo App with Claude API |
-| Module 8 *(testing)* | Test Case Generator with TDD workflows |
-| Module 11 *(MCP)* | Claude Code Power Config (full `.claude/` setup) |
-| Module 14 *(APIs)* | API Client Builder from OpenAPI specs |
-| Module 15 *(deployment)* | Microservice Template · Full-Stack SaaS Boilerplate |
-| 🎁 Bonus | Database Schema Designer · CLI Tool Starter Kit |
+<div align="center">
+<table width="100%">
+<tr><th>Free Module You Completed</th><th>🔨 Project You'll Build</th></tr>
+<tr><td>Modules 3-4 <em>(tools + files)</em></td><td>Code Review Tool · Documentation Generator · Bug Finder</td></tr>
+<tr><td>Module 5 <em>(prompting)</em></td><td>AI-Powered Todo App with Claude API</td></tr>
+<tr><td>Module 8 <em>(testing)</em></td><td>Test Case Generator with TDD workflows</td></tr>
+<tr><td>Module 11 <em>(MCP)</em></td><td>Claude Code Power Config (full <code>.claude/</code> setup)</td></tr>
+<tr><td>Module 14 <em>(APIs)</em></td><td>API Client Builder from OpenAPI specs</td></tr>
+<tr><td>Module 15 <em>(deployment)</em></td><td>Microservice Template · Full-Stack SaaS Boilerplate</td></tr>
+<tr><td>🎁 Bonus</td><td>Database Schema Designer · CLI Tool Starter Kit</td></tr>
+</table>
+</div>
 
 Every project includes CLAUDE.md templates, rules files, and copy-paste prompts.
 
@@ -607,15 +641,18 @@ Every project includes CLAUDE.md templates, rules files, and copy-paste prompts.
 
 The **[Advanced Modules ($29.99)](https://payhip.com/b/8E107)** take you from "it works on my machine" to production infrastructure:
 
-| You Liked... | Go Deeper With... |
-|-------------|-------------------|
-| Module 6 *(agents)* | **M17:** Multi-agent orchestration · **M21:** Custom agents |
-| Module 11 *(MCP)* | **M18:** Production MCP servers, npm publishing |
-| Module 12 *(customization)* | **M22:** Plugins, permissions, write-time quality |
-| Module 15 *(deployment)* | **M16:** Kubernetes, auto-scaling, multi-region |
-| Working in teams | **M19:** SSO, RBAC, audit logging, GDPR |
-| Cost management | **M20:** Model routing, strategic compaction |
-| Professional workflows | **M23:** RPI methodology, monorepo patterns |
+<div align="center">
+<table width="100%">
+<tr><th>You Liked...</th><th>Go Deeper With...</th></tr>
+<tr><td>Module 6 <em>(agents)</em></td><td><b>M17:</b> Multi-agent orchestration · <b>M21:</b> Custom agents</td></tr>
+<tr><td>Module 11 <em>(MCP)</em></td><td><b>M18:</b> Production MCP servers, npm publishing</td></tr>
+<tr><td>Module 12 <em>(customization)</em></td><td><b>M22:</b> Plugins, permissions, write-time quality</td></tr>
+<tr><td>Module 15 <em>(deployment)</em></td><td><b>M16:</b> Kubernetes, auto-scaling, multi-region</td></tr>
+<tr><td>Working in teams</td><td><b>M19:</b> SSO, RBAC, audit logging, GDPR</td></tr>
+<tr><td>Cost management</td><td><b>M20:</b> Model routing, strategic compaction</td></tr>
+<tr><td>Professional workflows</td><td><b>M23:</b> RPI methodology, monorepo patterns</td></tr>
+</table>
+</div>
 
 <div align="center">
 
