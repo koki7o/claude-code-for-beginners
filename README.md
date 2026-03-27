@@ -103,6 +103,7 @@ Instead of manually writing every line, you describe what you want and Claude Co
 
 <br/>
 
+<div align="center">
 <table width="100%">
 <tr>
 <td width="50%">
@@ -125,6 +126,7 @@ irm https://claude.ai/install.ps1 | iex
 </td>
 </tr>
 </table>
+</div>
 
 Then start building:
 ```bash
@@ -153,6 +155,7 @@ claude              # Start Claude Code
 
 <br/>
 
+<div align="center">
 <table width="100%">
 <tr>
 <td width="50%" align="center">
@@ -187,6 +190,7 @@ Navigate unfamiliar codebases with ease. Start at [Module 4](module-04-working-w
 </td>
 </tr>
 </table>
+</div>
 
 <br/>
 
@@ -204,6 +208,7 @@ Navigate unfamiliar codebases with ease. Start at [Module 4](module-04-working-w
 
 <br/>
 
+<div align="center">
 <table width="100%">
 <tr>
 <td width="50%">
@@ -226,6 +231,7 @@ Navigate unfamiliar codebases with ease. Start at [Module 4](module-04-working-w
 </td>
 </tr>
 </table>
+</div>
 
 <br/>
 
@@ -311,6 +317,7 @@ Navigate unfamiliar codebases with ease. Start at [Module 4](module-04-working-w
 
 <br/>
 
+<div align="center">
 <table width="100%">
 <tr>
 <td align="center" width="25%">
@@ -347,6 +354,7 @@ Production-ready<br/>Full implementations<br/>Professional quality
 </td>
 </tr>
 </table>
+</div>
 
 <br/>
 
@@ -374,6 +382,7 @@ Production-ready<br/>Full implementations<br/>Professional quality
 
 <br/>
 
+<div align="center">
 <table width="100%">
 <tr>
 <td width="50%">
@@ -396,6 +405,7 @@ Production-ready<br/>Full implementations<br/>Professional quality
 </td>
 </tr>
 </table>
+</div>
 
 <br/>
 
@@ -413,6 +423,7 @@ Production-ready<br/>Full implementations<br/>Professional quality
 
 <br/>
 
+<div align="center">
 <table width="100%">
 <tr>
 <td align="center" width="25%">
@@ -449,6 +460,7 @@ Bugs and<br/>feature requests
 </td>
 </tr>
 </table>
+</div>
 
 <br/>
 
@@ -510,6 +522,7 @@ Claude Code runs in your terminal. Don't be intimidated! We'll teach you everyth
 
 <br/>
 
+<div align="center">
 <table width="100%">
 <tr>
 <td align="center" width="33%">
@@ -532,6 +545,7 @@ Integrate Claude Code into professional workflows and level up
 </td>
 </tr>
 </table>
+</div>
 
 <br/>
 
@@ -643,6 +657,7 @@ The **[Advanced Modules ($29.99)](https://payhip.com/b/8E107)** take you from "i
 
 <br/>
 
+<div align="center">
 <table width="100%">
 <tr>
 <td width="33%">
@@ -674,6 +689,7 @@ The **[Advanced Modules ($29.99)](https://payhip.com/b/8E107)** take you from "i
 </td>
 </tr>
 </table>
+</div>
 
 </details>
 
