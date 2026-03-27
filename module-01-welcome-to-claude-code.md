@@ -1,8 +1,16 @@
-# Module 1: Welcome to Claude Code - Your First Steps
+<div align="center">
 
-**Goal:** Get comfortable with Claude Code and understand what it can do
+![Module 1](https://img.shields.io/badge/Module_1-32CD32?style=for-the-badge&labelColor=1a1a2e)
+![Time](https://img.shields.io/badge/⏱_20_min-555555?style=for-the-badge&labelColor=1a1a2e)
+![Difficulty](https://img.shields.io/badge/Beginner-32CD32?style=for-the-badge&labelColor=1a1a2e)
 
-**Estimated Time:** 20-30 minutes
+# Welcome to Claude Code
+
+**Get comfortable with Claude Code and understand what it can do**
+
+[Home](README.md) · [Next →](module-02-starting-your-first-project.md)
+
+</div>
 
 ---
 
@@ -348,4 +356,10 @@ Type `/exit` or press Ctrl+C. Your files are already saved.
 
 > **Curious what full projects built with Claude Code look like?** The [Real Projects Pack](https://payhip.com/b/dFXWO) walks you through 11 complete builds -- from todo apps to full-stack SaaS.
 
-*Next up: Module 2 -- different ways to start projects with Claude Code.*
+---
+
+<div align="center">
+
+[🏠 Home](README.md) · [Next Module →](module-02-starting-your-first-project.md)
+
+</div>

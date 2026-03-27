@@ -1,8 +1,16 @@
-# Module 9: Real-World Project - Building a Complete Application
+<div align="center">
 
-**Goal:** Apply everything you've learned by building a complete, production-ready application
+![Module 9](https://img.shields.io/badge/Module_9-0066FF?style=for-the-badge&labelColor=1a1a2e)
+![Time](https://img.shields.io/badge/⏱_90_min-555555?style=for-the-badge&labelColor=1a1a2e)
+![Difficulty](https://img.shields.io/badge/Intermediate-0066FF?style=for-the-badge&labelColor=1a1a2e)
 
-**Estimated Time:** 3-6 hours (can be done over multiple sessions)
+# Real-World Project
+
+**Apply everything you've learned in a full project**
+
+[← Previous](module-08-debugging-and-testing.md) · [🏠 Home](README.md) · [Next →](module-10-workflow-best-practices.md)
+
+</div>
 
 ---
 
@@ -763,3 +771,11 @@ Next up: Module 10 -- professional workflow and best practices that'll make ever
 ---
 
 *Module 9 Complete*
+
+---
+
+<div align="center">
+
+[← Previous Module](module-08-debugging-and-testing.md) · [🏠 Home](README.md) · [Next Module →](module-10-workflow-best-practices.md)
+
+</div>

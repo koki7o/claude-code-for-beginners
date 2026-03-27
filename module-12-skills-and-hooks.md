@@ -1,8 +1,16 @@
-# Module 12: Customizing Claude Code - Making It Yours
+<div align="center">
 
-**Goal:** Learn every way to customize Claude Code's behavior, from project memory to custom skills and automation hooks
+![Module 12](https://img.shields.io/badge/Module_12-6A0DAD?style=for-the-badge&labelColor=1a1a2e)
+![Time](https://img.shields.io/badge/⏱_50_min-555555?style=for-the-badge&labelColor=1a1a2e)
+![Difficulty](https://img.shields.io/badge/Advanced-FF6B35?style=for-the-badge&labelColor=1a1a2e)
 
-**Estimated Time:** 45-60 minutes
+# Customizing Claude Code - Making It Yours
+
+**Learn every way to customize Claude Code's behavior**
+
+[← Previous](module-11-mcp-servers.md) · [🏠 Home](README.md) · [Next →](module-13-languages-and-frameworks.md)
+
+</div>
 
 ---
 
@@ -952,3 +960,11 @@ Want to go deeper? The [Advanced Modules](https://payhip.com/b/8E107) cover cust
 ---
 
 *Module 12 Complete*
+
+---
+
+<div align="center">
+
+[← Previous Module](module-11-mcp-servers.md) · [🏠 Home](README.md) · [Next Module →](module-13-languages-and-frameworks.md)
+
+</div>

@@ -1,8 +1,16 @@
-# Module 5: Effective Prompting for Coding Tasks
+<div align="center">
 
-**Goal:** Master the art of communicating coding tasks to AI effectively
+![Module 5](https://img.shields.io/badge/Module_5-32CD32?style=for-the-badge&labelColor=1a1a2e)
+![Time](https://img.shields.io/badge/⏱_35_min-555555?style=for-the-badge&labelColor=1a1a2e)
+![Difficulty](https://img.shields.io/badge/Beginner-32CD32?style=for-the-badge&labelColor=1a1a2e)
 
-**Estimated Time:** 30-40 minutes
+# Effective Prompting for Coding Tasks
+
+**Master the art of communicating coding tasks to AI**
+
+[← Previous](module-04-working-with-files.md) · [Home](README.md) · [Next →](module-06-background-agents.md)
+
+</div>
 
 ---
 
@@ -702,4 +710,10 @@ That covers prompt engineering -- honestly the skill that makes the biggest diff
 
 > **Take your prompting further.** The [Advanced Modules](https://payhip.com/b/8E107) cover professional prompt workflows including the RPI methodology (Research-Plan-Implement) and token-efficient session management (Module 23).
 
-Next up: Module 6 -- where we'll get into background agents for handling complex tasks and codebase exploration.
+---
+
+<div align="center">
+
+[← Previous Module](module-04-working-with-files.md) · [🏠 Home](README.md) · [Next Module →](module-06-background-agents.md)
+
+</div>

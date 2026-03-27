@@ -1,8 +1,16 @@
-# Module 10: Development Workflow Best Practices
+<div align="center">
 
-**Goal:** Learn professional development workflows to maximize productivity with Claude Code
+![Module 10](https://img.shields.io/badge/Module_10-0066FF?style=for-the-badge&labelColor=1a1a2e)
+![Time](https://img.shields.io/badge/⏱_40_min-555555?style=for-the-badge&labelColor=1a1a2e)
+![Difficulty](https://img.shields.io/badge/Intermediate-0066FF?style=for-the-badge&labelColor=1a1a2e)
 
-**Estimated Time:** 35-45 minutes
+# Development Workflow Best Practices
+
+**Learn professional development workflows with Claude Code**
+
+[← Previous](module-09-real-world-project.md) · [🏠 Home](README.md) · [Next →](module-11-mcp-servers.md)
+
+</div>
 
 ---
 
@@ -733,3 +741,11 @@ Or just start building. Apply these skills to real projects, contribute to open 
 Next up: if you're ready for more, the advanced modules start with Module 11 -- MCP Servers, which opens up a whole new layer of what Claude Code can do.
 
 > **Ready to go professional?** The [Advanced Modules](https://payhip.com/b/8E107) cover production deployment at scale, enterprise integration, performance optimization, and custom agent orchestration. Or grab the [Real Projects Pack](https://payhip.com/b/dFXWO) to practice these workflows on 11 real builds. [Bundle both and save $10.](https://payhip.com/b/8E107+real-projects-bundle)
+
+---
+
+<div align="center">
+
+[← Previous Module](module-09-real-world-project.md) · [🏠 Home](README.md) · [Next Module →](module-11-mcp-servers.md)
+
+</div>

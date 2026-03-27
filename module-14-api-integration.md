@@ -1,8 +1,16 @@
-# Module 14: API Integration and Web Tasks
+<div align="center">
 
-**Goal:** Master working with external APIs and web resources using Claude Code
+![Module 14](https://img.shields.io/badge/Module_14-6A0DAD?style=for-the-badge&labelColor=1a1a2e)
+![Time](https://img.shields.io/badge/⏱_45_min-555555?style=for-the-badge&labelColor=1a1a2e)
+![Difficulty](https://img.shields.io/badge/Advanced-FF6B35?style=for-the-badge&labelColor=1a1a2e)
 
-**Estimated Time:** 40-50 minutes
+# API Integration and Web Tasks
+
+**Master working with external APIs and web resources**
+
+[← Previous](module-13-languages-and-frameworks.md) · [🏠 Home](README.md) · [Next →](module-15-production-deployment.md)
+
+</div>
 
 ---
 
@@ -578,3 +586,11 @@ Next up: Module 15 -- deploying your applications to production. You've built th
 > **Build it for real.** The [Real Projects Pack](https://payhip.com/b/dFXWO) includes an API Client Builder that auto-generates type-safe clients from OpenAPI specs -- a hands-on way to apply everything from this module.
 
 *Module 14 Complete*
+
+---
+
+<div align="center">
+
+[← Previous Module](module-13-languages-and-frameworks.md) · [🏠 Home](README.md) · [Next Module →](module-15-production-deployment.md)
+
+</div>

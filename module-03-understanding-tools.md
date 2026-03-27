@@ -1,8 +1,16 @@
-# Module 3: Understanding Claude Code's Tools
+<div align="center">
 
-**Goal:** Master the different capabilities and tools Claude Code has access to
+![Module 3](https://img.shields.io/badge/Module_3-32CD32?style=for-the-badge&labelColor=1a1a2e)
+![Time](https://img.shields.io/badge/⏱_30_min-555555?style=for-the-badge&labelColor=1a1a2e)
+![Difficulty](https://img.shields.io/badge/Beginner-32CD32?style=for-the-badge&labelColor=1a1a2e)
 
-**Estimated Time:** 40-50 minutes
+# Understanding Claude Code's Tools
+
+**Master the different capabilities Claude Code has**
+
+[← Previous](module-02-starting-your-first-project.md) · [Home](README.md) · [Next →](module-04-working-with-files.md)
+
+</div>
 
 ---
 
@@ -689,4 +697,10 @@ Next up: Module 4 -- working with files and code. We'll cover reading codebases,
 
 > **Want to master Claude Code's full toolset?** The [Advanced Modules](https://payhip.com/b/8E107) go deep on custom MCP servers (Module 18), multi-agent orchestration (Module 17), and performance optimization (Module 20).
 
-*Module 3 Complete*
+---
+
+<div align="center">
+
+[← Previous Module](module-02-starting-your-first-project.md) · [🏠 Home](README.md) · [Next Module →](module-04-working-with-files.md)
+
+</div>

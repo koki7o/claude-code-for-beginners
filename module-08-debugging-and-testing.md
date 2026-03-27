@@ -1,8 +1,16 @@
-# Module 8: Debugging and Testing
+<div align="center">
 
-**Goal:** Learn how to find and fix problems with AI assistance and write comprehensive tests
+![Module 8](https://img.shields.io/badge/Module_8-0066FF?style=for-the-badge&labelColor=1a1a2e)
+![Time](https://img.shields.io/badge/⏱_45_min-555555?style=for-the-badge&labelColor=1a1a2e)
+![Difficulty](https://img.shields.io/badge/Intermediate-0066FF?style=for-the-badge&labelColor=1a1a2e)
 
-**Estimated Time:** 45-55 minutes
+# Debugging and Testing
+
+**Learn how to find and fix problems with AI assistance**
+
+[← Previous](module-07-git-operations.md) · [🏠 Home](README.md) · [Next →](module-09-real-world-project.md)
+
+</div>
 
 ---
 
@@ -736,3 +744,11 @@ Add tests when you modify that code. Don't spend weeks retroactively testing thi
 > **Want to build your own debugging tools?** The [Real Projects Pack](https://payhip.com/b/dFXWO) includes a Bug Finder Assistant and Test Case Generator -- both powered by the techniques you learned here.
 
 Next up: Module 9 -- where you'll pull everything together and build a complete, real-world project from scratch.
+
+---
+
+<div align="center">
+
+[← Previous Module](module-07-git-operations.md) · [🏠 Home](README.md) · [Next Module →](module-09-real-world-project.md)
+
+</div>

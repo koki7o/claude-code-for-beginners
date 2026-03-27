@@ -1,8 +1,16 @@
-# Module 13: Working with Different Languages and Frameworks
+<div align="center">
 
-**Goal:** Use Claude Code across different tech stacks and languages
+![Module 13](https://img.shields.io/badge/Module_13-6A0DAD?style=for-the-badge&labelColor=1a1a2e)
+![Time](https://img.shields.io/badge/⏱_40_min-555555?style=for-the-badge&labelColor=1a1a2e)
+![Difficulty](https://img.shields.io/badge/Advanced-FF6B35?style=for-the-badge&labelColor=1a1a2e)
 
-**Estimated Time:** 45-60 minutes
+# Working with Different Languages and Frameworks
+
+**Use Claude Code across different tech stacks**
+
+[← Previous](module-12-skills-and-hooks.md) · [🏠 Home](README.md) · [Next →](module-14-api-integration.md)
+
+</div>
 
 ---
 
@@ -599,3 +607,11 @@ cargo test
 > **Build real projects in any language.** The [Real Projects Pack](https://payhip.com/b/dFXWO) includes multi-language projects -- from TypeScript microservices to Python-powered code analysis tools -- each with Claude Code workflows tailored to the language.
 
 Next up: Module 14 -- API integration and working with external services. You'll connect Claude Code to real-world APIs, which is where a lot of practical development happens.
+
+---
+
+<div align="center">
+
+[← Previous Module](module-12-skills-and-hooks.md) · [🏠 Home](README.md) · [Next Module →](module-14-api-integration.md)
+
+</div>

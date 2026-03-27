@@ -1,8 +1,16 @@
-# Module 15: Production Deployment
+<div align="center">
 
-**Goal:** Deploy your applications to production with Claude Code's assistance
+![Module 15](https://img.shields.io/badge/Module_15-6A0DAD?style=for-the-badge&labelColor=1a1a2e)
+![Time](https://img.shields.io/badge/⏱_60_min-555555?style=for-the-badge&labelColor=1a1a2e)
+![Difficulty](https://img.shields.io/badge/Advanced-FF6B35?style=for-the-badge&labelColor=1a1a2e)
 
-**Estimated Time:** 60-90 minutes
+# Production Deployment
+
+**Deploy your applications to production with Claude Code's assistance**
+
+[← Previous](module-14-api-integration.md) · [🏠 Home](README.md)
+
+</div>
 
 ---
 
@@ -717,3 +725,11 @@ The short version of what comes next: build things. Real projects -- not just tu
 ---
 
 *Course complete. Go build something.*
+
+---
+
+<div align="center">
+
+[← Previous Module](module-14-api-integration.md) · [🏠 Home](README.md) · [🏆 Course Complete!]
+
+</div>

@@ -1,8 +1,16 @@
-# Module 2: Starting Your First Project
+<div align="center">
 
-**Goal:** Learn all the different ways to begin building with Claude Code
+![Module 2](https://img.shields.io/badge/Module_2-32CD32?style=for-the-badge&labelColor=1a1a2e)
+![Time](https://img.shields.io/badge/⏱_30_min-555555?style=for-the-badge&labelColor=1a1a2e)
+![Difficulty](https://img.shields.io/badge/Beginner-32CD32?style=for-the-badge&labelColor=1a1a2e)
 
-**Estimated Time:** 30-40 minutes
+# Starting Your First Project
+
+**Learn different ways to begin building with Claude Code**
+
+[← Previous](module-01-welcome-to-claude-code.md) · [Home](README.md) · [Next →](module-03-understanding-tools.md)
+
+</div>
 
 ---
 
@@ -630,4 +638,10 @@ Next up: Module 3, where we dig into Claude Code's tools -- what each one does a
 
 > **Looking for project ideas?** The [Real Projects Pack](https://payhip.com/b/dFXWO) has 11 ready-to-build projects -- from CLI tools to a full-stack SaaS boilerplate -- each with step-by-step Claude Code workflows.
 
-*Module 2 Complete*
+---
+
+<div align="center">
+
+[← Previous Module](module-01-welcome-to-claude-code.md) · [🏠 Home](README.md) · [Next Module →](module-03-understanding-tools.md)
+
+</div>

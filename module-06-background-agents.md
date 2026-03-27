@@ -1,8 +1,16 @@
-# Module 6: Using Background Agents
+<div align="center">
 
-**Goal:** Learn to delegate complex, multi-step tasks to Claude Code
+![Module 6](https://img.shields.io/badge/Module_6-0066FF?style=for-the-badge&labelColor=1a1a2e)
+![Time](https://img.shields.io/badge/⏱_35_min-555555?style=for-the-badge&labelColor=1a1a2e)
+![Difficulty](https://img.shields.io/badge/Intermediate-0066FF?style=for-the-badge&labelColor=1a1a2e)
 
-**Estimated Time:** 35-45 minutes
+# Using Background Agents
+
+**Learn to use specialized agents for complex tasks**
+
+[← Previous](module-05-custom-instructions.md) · [🏠 Home](README.md) · [Next →](module-07-git-operations.md)
+
+</div>
 
 ---
 
@@ -650,3 +658,11 @@ Next up: Module 7 -- where you'll learn to handle Git operations and version con
 ---
 
 *Module 6 Complete*
+
+---
+
+<div align="center">
+
+[← Previous Module](module-05-custom-instructions.md) · [🏠 Home](README.md) · [Next Module →](module-07-git-operations.md)
+
+</div>

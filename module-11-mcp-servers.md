@@ -1,8 +1,16 @@
-# Module 11: MCP Servers - Extending Claude Code
+<div align="center">
 
-**Goal:** Learn to use and create Model Context Protocol (MCP) servers to extend Claude Code's capabilities
+![Module 11](https://img.shields.io/badge/Module_11-6A0DAD?style=for-the-badge&labelColor=1a1a2e)
+![Time](https://img.shields.io/badge/⏱_45_min-555555?style=for-the-badge&labelColor=1a1a2e)
+![Difficulty](https://img.shields.io/badge/Advanced-FF6B35?style=for-the-badge&labelColor=1a1a2e)
 
-**Estimated Time:** 45-55 minutes
+# MCP Servers - Extending Claude Code
+
+**Learn to use Model Context Protocol servers to give Claude Code new capabilities**
+
+[← Previous](module-10-testing-and-debugging.md) · [🏠 Home](README.md) · [Next →](module-12-skills-and-hooks.md)
+
+</div>
 
 ---
 
@@ -667,3 +675,11 @@ You now know how to extend Claude Code with MCP servers, which means you're no l
 Next up: Module 12 -- Customizing Claude Code. That one covers CLAUDE.md, Skills, Commands, Hooks, and Agents, which is where you really make Claude Code your own.
 
 > **Ready to build production-grade MCP servers?** The [Advanced Modules](https://payhip.com/b/8E107) dedicate an entire module (Module 18) to custom MCP server development -- protocol internals, testing, performance tuning, and publishing to npm.
+
+---
+
+<div align="center">
+
+[← Previous Module](module-10-testing-and-debugging.md) · [🏠 Home](README.md) · [Next Module →](module-12-skills-and-hooks.md)
+
+</div>

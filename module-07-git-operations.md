@@ -1,8 +1,16 @@
-# Module 7: Git Operations and Version Control
+<div align="center">
 
-**Goal:** Master Git workflows with Claude Code's assistance
+![Module 7](https://img.shields.io/badge/Module_7-0066FF?style=for-the-badge&labelColor=1a1a2e)
+![Time](https://img.shields.io/badge/⏱_40_min-555555?style=for-the-badge&labelColor=1a1a2e)
+![Difficulty](https://img.shields.io/badge/Intermediate-0066FF?style=for-the-badge&labelColor=1a1a2e)
 
-**Estimated Time:** 40-50 minutes
+# Git Operations and Version Control
+
+**Master Git workflows with Claude Code**
+
+[← Previous](module-06-background-agents.md) · [🏠 Home](README.md) · [Next →](module-08-debugging-and-testing.md)
+
+</div>
 
 ---
 
@@ -649,3 +657,11 @@ Before moving to Module 8, make sure you can:
 > **Level up your git workflow.** The [Advanced Modules](https://payhip.com/b/8E107) cover enterprise git patterns including automated PR pipelines, git worktree isolation, and monorepo strategies (Module 23).
 
 Next up: Module 8 -- debugging and testing with Claude Code, where things get really practical.
+
+---
+
+<div align="center">
+
+[← Previous Module](module-06-background-agents.md) · [🏠 Home](README.md) · [Next Module →](module-08-debugging-and-testing.md)
+
+</div>

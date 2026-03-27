@@ -1,8 +1,16 @@
-# Module 4: Working with Files and Code
+<div align="center">
 
-**Goal:** Learn how to effectively read, write, and modify code with Claude Code
+![Module 4](https://img.shields.io/badge/Module_4-32CD32?style=for-the-badge&labelColor=1a1a2e)
+![Time](https://img.shields.io/badge/⏱_40_min-555555?style=for-the-badge&labelColor=1a1a2e)
+![Difficulty](https://img.shields.io/badge/Beginner-32CD32?style=for-the-badge&labelColor=1a1a2e)
 
-**Estimated Time:** 40-50 minutes
+# Working with Files and Code
+
+**Learn how to effectively read, write, and modify code**
+
+[← Previous](module-03-understanding-tools.md) · [Home](README.md) · [Next →](module-05-prompt-engineering.md)
+
+</div>
 
 ---
 
@@ -662,4 +670,10 @@ Be specific about *what* to change, but let Claude Code handle the implementatio
 
 > **Want to build a real code analysis tool?** The [Real Projects Pack](https://payhip.com/b/dFXWO) includes a Code Review Tool and Bug Finder Assistant that put these file and code skills to work.
 
-Next up: Module 5 -- where you'll learn prompt engineering techniques to communicate coding tasks more effectively and get better results from Claude Code.
+---
+
+<div align="center">
+
+[← Previous Module](module-03-understanding-tools.md) · [🏠 Home](README.md) · [Next Module →](module-05-prompt-engineering.md)
+
+</div>
