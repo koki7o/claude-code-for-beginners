@@ -103,7 +103,7 @@ Instead of manually writing every line, you describe what you want and Claude Co
 
 <br/>
 
-<table>
+<table width="100%">
 <tr>
 <td width="50%">
 
@@ -153,7 +153,7 @@ claude              # Start Claude Code
 
 <br/>
 
-<table>
+<table width="100%">
 <tr>
 <td width="50%" align="center">
 
@@ -204,7 +204,7 @@ Navigate unfamiliar codebases with ease. Start at [Module 4](module-04-working-w
 
 <br/>
 
-<table>
+<table width="100%">
 <tr>
 <td width="50%">
 
@@ -311,7 +311,7 @@ Navigate unfamiliar codebases with ease. Start at [Module 4](module-04-working-w
 
 <br/>
 
-<table>
+<table width="100%">
 <tr>
 <td align="center" width="25%">
 
@@ -374,7 +374,7 @@ Production-ready<br/>Full implementations<br/>Professional quality
 
 <br/>
 
-<table>
+<table width="100%">
 <tr>
 <td width="50%">
 
@@ -413,7 +413,7 @@ Production-ready<br/>Full implementations<br/>Professional quality
 
 <br/>
 
-<table>
+<table width="100%">
 <tr>
 <td align="center" width="25%">
 
@@ -510,7 +510,7 @@ Claude Code runs in your terminal. Don't be intimidated! We'll teach you everyth
 
 <br/>
 
-<table>
+<table width="100%">
 <tr>
 <td align="center" width="33%">
 
@@ -643,7 +643,7 @@ The **[Advanced Modules ($29.99)](https://payhip.com/b/8E107)** take you from "i
 
 <br/>
 
-<table>
+<table width="100%">
 <tr>
 <td width="33%">
 
