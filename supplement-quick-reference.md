@@ -18,7 +18,7 @@ claude
 ```
 
 ### Exit Claude Code
-```
+```text
 /exit
 ```
 Or press `Ctrl+C`
@@ -43,25 +43,25 @@ Or press `Ctrl+C`
 ### File Operations
 
 **Create a new file:**
-```
+```text
 Create a file called [filename] that [does what]
 ```
 
 **Read a file:**
-```
+```text
 Show me [filename]
 What's in [filename]?
 ```
 
 **Edit a file:**
-```
+```text
 In [filename], change [X] to [Y]
 Add [feature] to [filename]
 Fix the [issue] in [filename]
 ```
 
 **Find files:**
-```
+```text
 Find all [type] files
 Show me all files containing [text]
 List all test files
@@ -72,27 +72,27 @@ List all test files
 ### Code Operations
 
 **Understand code:**
-```
+```text
 Explain what [filename/function] does
 How does [feature] work in this codebase?
 What does this code do?
 ```
 
 **Write new code:**
-```
+```text
 Create a [function/class/component] that [does what]
 Write a [type] function for [purpose]
 ```
 
 **Fix issues:**
-```
+```text
 Fix the bug in [filename]
 Debug why [issue] is happening
 The app crashes when [scenario], help me fix it
 ```
 
 **Refactor:**
-```
+```text
 Refactor [code/file] to [improvement]
 Improve the structure of [file]
 Make this code more readable
@@ -103,21 +103,21 @@ Make this code more readable
 ### Project Operations
 
 **Initialize project:**
-```
+```text
 Create a new [project type] project
 Set up a [framework] application with [features]
 Initialize a [language] project with [dependencies]
 ```
 
 **Install dependencies:**
-```
+```text
 Install [package name]
 Add [library] to this project
 Install all dependencies
 ```
 
 **Run commands:**
-```
+```text
 Run the application
 Start the development server
 Execute the tests
@@ -129,26 +129,26 @@ Build the project
 ### Git Operations
 
 **Status and changes:**
-```
+```text
 Show me git status
 What files have changed?
 Show me the diff
 ```
 
 **Commit:**
-```
+```text
 Create a commit with these changes
 Write a commit message for my changes
 ```
 
 **Pull Request:**
-```
+```text
 Create a pull request for these changes
 Write a PR description
 ```
 
 **Branches:**
-```
+```text
 Create a new branch called [name]
 Switch to [branch]
 ```
@@ -158,21 +158,21 @@ Switch to [branch]
 ### Understanding Codebases
 
 **Explore:**
-```
+```text
 Help me understand this codebase
 Explain the project structure
 What does this project do?
 ```
 
 **Find code:**
-```
+```text
 Where is [feature] implemented?
 Find all uses of [function/class]
 Show me where [X] is defined
 ```
 
 **Dependencies:**
-```
+```text
 What dependencies does this use?
 What version of [package] is installed?
 ```
@@ -182,21 +182,21 @@ What version of [package] is installed?
 ### Testing and Debugging
 
 **Run tests:**
-```
+```text
 Run all tests
 Run tests for [file/feature]
 Create tests for [code]
 ```
 
 **Debug:**
-```
+```text
 Help me debug [issue]
 Why is [error] happening?
 This code isn't working: [description]
 ```
 
 **Errors:**
-```
+```text
 Explain this error message: [error]
 Fix this error: [error]
 ```
@@ -206,14 +206,14 @@ Fix this error: [error]
 ### Documentation
 
 **Create docs:**
-```
+```text
 Write a README for this project
 Document this function
 Add comments to this code
 ```
 
 **Generate:**
-```
+```text
 Create API documentation
 Write usage examples
 Generate a changelog
@@ -226,40 +226,40 @@ Generate a changelog
 You don't usually need to name tools directly -- Claude Code picks the right one. But if you want to steer it, here's how.
 
 **Read tool:**
-```
+```text
 Read [filename] and show me [specific part]
 ```
 
 **Write tool:**
-```
+```text
 Write a new file [filename] with [content]
 ```
 
 **Edit tool:**
-```
+```text
 Edit [filename] to add [feature]
 ```
 
 **Grep tool:**
-```
+```text
 Search for [text] in all files
 Find all [pattern] occurrences
 ```
 
 **Glob tool:**
-```
+```text
 Find all files matching [pattern]
 List all *.js files
 ```
 
 **Bash tool:**
-```
+```text
 Run [command]
 Execute [script]
 ```
 
 **Task/Agent:**
-```
+```text
 Explore this codebase thoroughly
 Plan the implementation for [feature]
 Research and implement [solution]
@@ -272,24 +272,24 @@ Research and implement [solution]
 These are reusable shapes for prompts. Fill in the blanks and you're good.
 
 ### The Specific Pattern
-```
+```text
 In [file], add a [feature] that [does X] when [condition]
 ```
 
 ### The Exploratory Pattern
-```
+```text
 Help me understand [concept/code], then [action]
 ```
 
 ### The Iterative Pattern
-```
+```text
 Create a basic [thing]
 [After reviewing] Now add [enhancement]
 [After testing] Fix [issue]
 ```
 
 ### The Context Pattern
-```
+```text
 I'm building [project]. I need to [goal].
 The current structure is [description].
 Please [specific request].
@@ -323,7 +323,7 @@ $env:ANTHROPIC_API_KEY="your-key"
 ## Configuration
 
 ### Config file location
-```
+```text
 ~/.claude/settings.json
 ```
 
@@ -337,7 +337,7 @@ claude config set [key] [value]
 ## CLAUDE.md and Rules
 
 ### Creating CLAUDE.md
-```
+```text
 Create a CLAUDE.md for this project with:
 - Build/test/lint commands
 - Code style preferences
@@ -346,7 +346,7 @@ Create a CLAUDE.md for this project with:
 ```
 
 ### Rules Directory
-```
+```text
 .claude/rules/
 ├── code-style.md        # Formatting conventions
 ├── error-handling.md    # Error handling standards
@@ -367,11 +367,10 @@ Your rules here as bullet points
 ### Skills and Hooks
 
 **Create a skill:**
-```
+```text
 .claude/skills/skill-name/SKILL.md with frontmatter:
 ---
-name: skill-name
-description: What it does
+description: What this skill does
 ---
 ```
 
@@ -404,7 +403,7 @@ description: What it does
 | Daily coding, reviews | Sonnet | Good balance |
 | Architecture, complex bugs | Opus | Deep reasoning |
 
-```
+```text
 Use a Haiku agent to scan for unused imports
 Use a Sonnet agent to review the auth module
 Use an Opus agent to plan the database migration
@@ -439,8 +438,8 @@ Use an Opus agent to plan the database migration
 
 | Shortcut | Action |
 |----------|--------|
-| `Ctrl+C` | Exit Claude Code |
-| `Ctrl+D` | End input |
+| `Ctrl+C` | Cancel current operation (press again at idle prompt to exit) |
+| `Ctrl+D` | Exit Claude Code |
 | `Up Arrow` | Previous command |
 | `Down Arrow` | Next command |
 
@@ -450,7 +449,7 @@ Use an Opus agent to plan the database migration
 
 ### Glob Patterns
 
-```
+```text
 *.js                 # All .js files in current directory
 **/*.py              # All .py files recursively
 src/**/*.tsx         # All .tsx files in src/
@@ -460,7 +459,7 @@ src/**/*.tsx         # All .tsx files in src/
 
 ### Grep Patterns (Regex)
 
-```
+```text
 function.*login      # Functions containing 'login'
 import.*from         # Import statements
 TODO|FIXME           # TODO or FIXME comments
@@ -500,12 +499,12 @@ export ANTHROPIC_API_KEY="your-key"
 ```
 
 ### Changes not applying
-```
+```text
 Please show me the file to verify the changes
 ```
 
 ### Command failed
-```
+```text
 Can you explain the error and try a different approach?
 ```
 
@@ -514,7 +513,7 @@ Can you explain the error and try a different approach?
 ## Project-Specific Templates
 
 ### React Component
-```
+```text
 Create a React functional component called [Name] that:
 - Accepts props: [list props]
 - Displays [UI elements]
@@ -522,7 +521,7 @@ Create a React functional component called [Name] that:
 ```
 
 ### API Endpoint
-```
+```text
 Add a new [HTTP method] endpoint at [path] that:
 - Accepts [parameters]
 - Returns [data]
@@ -530,7 +529,7 @@ Add a new [HTTP method] endpoint at [path] that:
 ```
 
 ### Database Model
-```
+```text
 Create a [ORM] model for [entity] with fields:
 - [field]: [type]
 - [field]: [type]
@@ -538,7 +537,7 @@ Include validation and relationships.
 ```
 
 ### Test Suite
-```
+```text
 Create tests for [function/component] that verify:
 - [test case 1]
 - [test case 2]
@@ -550,21 +549,21 @@ Create tests for [function/component] that verify:
 ## Language-Specific Patterns
 
 ### Python
-```
+```text
 Create a Python script that [purpose]
 Use [libraries]
 Include error handling and logging
 ```
 
 ### JavaScript/Node
-```
+```text
 Create a Node.js [type] using [framework]
 Use ES6+ syntax
 Include async/await for async operations
 ```
 
 ### TypeScript
-```
+```text
 Create a TypeScript [type] with proper types
 Use interfaces for [data structures]
 Enable strict mode

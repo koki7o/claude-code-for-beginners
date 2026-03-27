@@ -22,19 +22,19 @@ Here's the deal: about 80% of programming is reading code, not writing it. You r
 
 Ask Claude Code to read and explain a file:
 
-```
+```text
 Read server.js and explain what it does
 ```
 
 It'll show you the file contents, explain its main purpose, highlight key functions, and point out important patterns.
 
 You can also zero in on specific parts:
-```
+```text
 Read the login function in auth.js and explain how it works
 ```
 
 Or ask about structure:
-```
+```text
 Read package.json and tell me:
 - What dependencies are used
 - What scripts are available
@@ -47,7 +47,7 @@ Read package.json and tell me:
 
 When you need to understand how a feature works across several files, just tell Claude Code which files to look at:
 
-```
+```text
 I want to understand how user authentication works.
 Please read:
 - routes/auth.js
@@ -64,7 +64,7 @@ Claude Code will read all of them, trace the execution flow, explain how they co
 
 To get the big picture of a project:
 
-```
+```text
 Help me understand this project's structure.
 Show me:
 - The directory layout
@@ -74,7 +74,7 @@ Show me:
 ```
 
 Or use the Explore agent for a deeper dive:
-```
+```text
 Use the Explore agent to analyze this codebase and give me:
 1. Overall architecture
 2. Main components
@@ -88,7 +88,7 @@ Use the Explore agent to analyze this codebase and give me:
 
 This is one of the most underrated things you can do. Before you write anything, learn how the codebase already does things:
 
-```
+```text
 Show me how error handling is done in this project
 Find examples of API endpoints and show me the pattern
 How are database queries organized?
@@ -104,7 +104,7 @@ You'll learn the project's conventions, follow existing patterns, maintain consi
 
 Before writing new code, understand the conventions first:
 
-```
+```text
 Before I add a new feature, show me:
 - How routes are structured
 - How controllers are organized
@@ -113,7 +113,7 @@ Before I add a new feature, show me:
 ```
 
 Then write code that follows those patterns:
-```
+```text
 Add a new route for /api/products following the same pattern as /api/users
 ```
 
@@ -123,7 +123,7 @@ Add a new route for /api/products following the same pattern as /api/users
 
 Be explicit about what you want. The more specific your request, the better the output:
 
-```
+```text
 Create a function to validate email addresses with:
 - Clear variable names
 - Input validation
@@ -156,7 +156,7 @@ function validateEmail(email) {
 
 Ask for separation of concerns upfront:
 
-```
+```text
 Create a user service module that handles:
 - Creating users
 - Finding users
@@ -168,7 +168,7 @@ Export all functions
 ```
 
 Result:
-```
+```text
 services/
   └── userService.js  (business logic)
 database/
@@ -181,7 +181,7 @@ database/
 
 Get in the habit of requesting docs as you write -- it's much easier than going back later:
 
-```
+```text
 Create a calculateTax function and include:
 - JSDoc comments
 - Parameter descriptions
@@ -198,7 +198,7 @@ Create a calculateTax function and include:
 The Edit tool is where Claude Code really shines for modifications.
 
 A simple change:
-```
+```text
 In config.js, change the database port from 5432 to 3306
 ```
 
@@ -212,12 +212,12 @@ const DB_PORT = 3306;
 ```
 
 Adding to existing code:
-```
+```text
 In the login function, add validation to check if the password is at least 8 characters
 ```
 
 Removing code:
-```
+```text
 Remove the console.log statements from auth.js
 ```
 
@@ -227,7 +227,7 @@ Remove the console.log statements from auth.js
 
 Trust me on this -- always tell Claude Code to follow existing style:
 
-```
+```text
 Add a new endpoint for deleting users.
 Follow the same pattern as the existing endpoints in routes/users.js
 ```
@@ -240,12 +240,12 @@ Claude Code will read the existing endpoints, match their structure, use the sam
 
 Fair warning: you should review changes before they land. Ask Claude Code to show you the plan first:
 
-```
+```text
 Show me what you would change to add error handling to the database connection, but don't make the changes yet
 ```
 
 Once you've looked it over:
-```
+```text
 That looks good, please apply the changes
 ```
 
@@ -255,7 +255,7 @@ That looks good, please apply the changes
 
 For changes that span several files:
 
-```
+```text
 Add TypeScript types for the User model.
 Update:
 - models/user.js (rename to user.ts)
@@ -278,18 +278,18 @@ Refactoring means improving code structure without changing what it does. The go
 ### Removing Code Duplication
 
 First, find the duplication:
-```
+```text
 Look for duplicate code in the routes files and suggest refactoring
 ```
 
 Then refactor it:
-```
+```text
 I see the validation logic is duplicated in routes/users.js and routes/posts.js.
 Extract it into a reusable validation module.
 ```
 
 Result:
-```
+```text
 Before:
 routes/users.js - validation logic
 routes/posts.js - same validation logic
@@ -306,7 +306,7 @@ routes/posts.js - uses validation middleware
 
 Long functions are hard to read and harder to debug. Ask Claude Code to break them apart:
 
-```
+```text
 The processOrder function is 150 lines long.
 Refactor it into smaller, focused functions.
 ```
@@ -317,7 +317,7 @@ It'll identify logical sections, extract them into separate functions with clear
 
 ### Renaming for Clarity
 
-```
+```text
 The variable 'x' in calculateTotal is unclear.
 Rename it to something descriptive.
 ```
@@ -341,7 +341,7 @@ function calculateTotal(subtotal) {
 
 If you're working with older code, ask Claude Code to bring it up to date:
 
-```
+```text
 Refactor auth.js to use:
 - async/await instead of callbacks
 - const/let instead of var
@@ -353,7 +353,7 @@ Refactor auth.js to use:
 
 ### Optimizing Performance
 
-```
+```text
 The search function is slow with large datasets.
 Optimize it for better performance.
 ```
@@ -368,15 +368,15 @@ Claude Code might add caching, swap in a more efficient algorithm, suggest index
 
 Use Grep to search for code:
 
-```
+```text
 Find all places where the sendEmail function is called
 ```
 
-```
+```text
 Search for all TODO comments in the codebase
 ```
 
-```
+```text
 Find all database queries that use the users table
 ```
 
@@ -386,15 +386,15 @@ Find all database queries that use the users table
 
 Use Glob to find files by name or pattern:
 
-```
+```text
 Find all test files
 ```
 
-```
+```text
 Find all TypeScript files in the src directory
 ```
 
-```
+```text
 Show me all configuration files
 ```
 
@@ -404,7 +404,7 @@ Show me all configuration files
 
 This can be tricky in large projects, but Claude Code handles it well. Ask it to trace execution:
 
-```
+```text
 Trace the execution flow when a user logs in.
 Start from the API endpoint and show me each step.
 ```
@@ -417,16 +417,16 @@ It'll find the endpoint, show the middleware chain, follow function calls throug
 
 Understanding what depends on what is crucial for safe changes:
 
-```
+```text
 What files depend on the User model?
 ```
 
-```
+```text
 Show me all components that import the API service
 ```
 
 With the LSP tool:
-```
+```text
 Find all references to the authenticateUser function
 ```
 
@@ -438,12 +438,12 @@ Find all references to the authenticateUser function
 
 One of the best ways to learn is by studying existing code:
 
-```
+```text
 Show me 3 examples of how API endpoints are structured in this project
 ```
 
 Then apply what you've learned:
-```
+```text
 Now create a new endpoint following that same pattern
 ```
 
@@ -451,7 +451,7 @@ Now create a new endpoint following that same pattern
 
 ### Understanding Best Practices
 
-```
+```text
 Analyze the error handling in this codebase and explain:
 - What patterns are used
 - Why they work well
@@ -462,7 +462,7 @@ Analyze the error handling in this codebase and explain:
 
 ### Code Review for Learning
 
-```
+```text
 Review the authentication module and teach me:
 - What security measures are in place
 - Why each is important
@@ -477,7 +477,7 @@ Review the authentication module and teach me:
 
 When starting a new project, ask Claude Code to set up the structure:
 
-```
+```text
 I'm building a REST API.
 Create a project structure with:
 - Clear separation of concerns
@@ -490,7 +490,7 @@ Create a project structure with:
 
 ### Organizing by Feature
 
-```
+```text
 Reorganize this codebase from:
 - Files by type (all controllers together)
 To:
@@ -501,7 +501,7 @@ To:
 
 ### Managing Large Files
 
-```
+```text
 This server.js file is 500 lines.
 Help me split it into logical modules.
 ```
@@ -527,7 +527,7 @@ Choose any open source project and:
 
 **Task:** Create a well-structured module
 
-```
+```text
 Create a blog post service module with:
 - createPost(title, content, authorId)
 - getPostById(id)
@@ -550,13 +550,13 @@ Requirements:
 **Task:** Improve existing code
 
 First, create messy code on purpose:
-```
+```text
 Create a function that calculates shipping cost.
 Make it poorly structured with unclear variable names.
 ```
 
 Then refactor it:
-```
+```text
 Refactor the calculateShipping function to:
 - Use descriptive variable names
 - Extract magic numbers to constants

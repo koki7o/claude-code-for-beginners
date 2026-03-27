@@ -37,7 +37,7 @@ When you make a request, Claude Code goes through a straightforward process:
 
 Here's what that looks like in practice:
 
-```
+```text
 You: "Create a Python file that prints Hello World"
 
 Claude Code thinks:
@@ -65,14 +65,14 @@ Claude Code uses this when:
 - To verify changes were made correctly
 
 **Example requests:**
-```
+```text
 Show me the contents of app.js
 What's in the package.json file?
 Can you read the README and summarize it?
 ```
 
 **What you'll see:**
-```
+```text
 Reading app.js...
 
 [File contents displayed with line numbers]
@@ -93,14 +93,14 @@ Claude Code uses this when:
 - Creating test files
 
 **Example requests:**
-```
+```text
 Create a new file called config.js with database settings
 Write a README.md for this project
 Generate a .gitignore file for Node.js
 ```
 
 **What you'll see:**
-```
+```text
 Writing config.js...
 
 Created config.js with:
@@ -109,7 +109,7 @@ Created config.js with:
 - Environment variables
 ```
 
-One thing to know: Write creates NEW files. If a file already exists, Claude Code will use Edit instead.
+One thing to know: Write replaces an entire file's contents. For existing files, Claude Code usually prefers Edit (which only changes specific parts) unless a complete rewrite is needed.
 
 ---
 
@@ -124,14 +124,14 @@ Claude Code uses this when:
 - Refactoring code
 
 **Example requests:**
-```
+```text
 Add error handling to the login function
 Change the port from 3000 to 8080
 Add a new route to the API
 ```
 
 **What you'll see:**
-```
+```text
 Editing server.js...
 
 Old:
@@ -158,7 +158,7 @@ Claude Code uses this when:
 - Finding files by name pattern
 
 **Example searches:**
-```
+```text
 *.js → All JavaScript files
 src/**/*.py → All Python files in src and subdirectories
 **/*test* → All files with "test" in the name
@@ -166,14 +166,14 @@ components/**/*.tsx → All TypeScript React components
 ```
 
 **Example requests:**
-```
+```text
 Find all Python files in this project
 Show me all the test files
 List all configuration files
 ```
 
 **What you'll see:**
-```
+```text
 Finding *.py files...
 
 Found:
@@ -196,7 +196,7 @@ Claude Code uses this when:
 - Finding TODO comments
 
 **Example searches:**
-```
+```text
 function login → Find the login function
 TODO → Find all TODO comments
 import.*express → Find Express imports
@@ -204,7 +204,7 @@ class.*User → Find User class definitions
 ```
 
 **Example requests:**
-```
+```text
 Find all places where the User model is imported
 Search for TODO comments
 Find the login function
@@ -212,7 +212,7 @@ Show me where the database is connected
 ```
 
 **What you'll see:**
-```
+```text
 Searching for "function login"...
 
 Found in auth.js:15
@@ -241,7 +241,7 @@ Claude Code uses this for:
 - Really, any terminal command
 
 **Example requests:**
-```
+```text
 Install the dependencies
 Run the server
 Execute the tests
@@ -250,7 +250,7 @@ Build the project
 ```
 
 **What you'll see:**
-```
+```text
 Running: npm install
 
 [Installation progress...]
@@ -268,7 +268,7 @@ git status           # Check Git status
 docker build .       # Build Docker image
 ```
 
-Claude Code will explain commands before running them, so you won't be caught off guard.
+Claude Code will show you the command it wants to run and ask for your permission before executing it, so you stay in control.
 
 ---
 
@@ -283,7 +283,7 @@ This is useful for:
 - Any long-running process
 
 **Example:**
-```
+```text
 You: "Start the dev server"
 
 Claude Code:
@@ -294,7 +294,7 @@ Claude Code:
 ```
 
 **Managing background processes:**
-```
+```text
 Start the server in the background
 Stop the background server
 Show me running processes
@@ -304,7 +304,7 @@ Show me running processes
 
 ## Lesson 4: AI-Powered Tools
 
-### The Task Tool (Specialized Agents)
+### The Task Tool
 
 **Purpose:** Handle complex, multi-step tasks autonomously
 
@@ -315,52 +315,53 @@ Claude Code uses this for:
 - Research tasks
 - Complex analysis
 
-There are a few different agent types worth knowing about:
+The Task tool is a single capability, but it shines with different kinds of prompts. Here are a few prompt strategies worth knowing about:
 
-#### 1. Explore Agent
-```
-Purpose: Understand and navigate codebases
-Use for:
+#### 1. Exploration Tasks
+```text
+Prompt strategy: Ask Claude Code to analyze and navigate a codebase
+Example prompts:
 - "Explain how this codebase works"
 - "Find all API endpoints"
 - "How is authentication implemented?"
 ```
 
-#### 2. Plan Agent
-```
-Purpose: Design implementation strategies
-Use for:
+#### 2. Planning Tasks
+```text
+Prompt strategy: Ask Claude Code to design an implementation approach
+Example prompts:
 - "Plan how to add user authentication"
 - "Design the database schema for this feature"
 - "Create an implementation plan for [feature]"
 ```
 
-#### 3. General-Purpose Agent
-```
-Purpose: Complex multi-step tasks
-Use for:
+#### 3. Multi-Step Tasks
+```text
+Prompt strategy: Ask Claude Code to research, analyze, and act across many files
+Example prompts:
 - "Research and implement best practices for error handling"
 - "Find and fix all security vulnerabilities"
 - "Optimize this codebase for performance"
 ```
 
 **Example:**
-```
+```text
 You: "Help me understand how the authentication works in this codebase"
 
 Claude Code:
-- Launches Explore agent
-- Agent searches for auth-related files
+- Searches for auth-related files
 - Reads relevant code
 - Analyzes the flow
 - Returns comprehensive explanation
 ```
 
-The key advantage of agents is that they work autonomously -- they handle multiple steps, make decisions along the way, and come back with thorough results. You don't need to hold their hand through each step.
+The key advantage here is that Claude Code works autonomously -- it handles multiple steps, makes decisions along the way, and comes back with thorough results. You don't need to hold its hand through each step.
 
 ---
 
 ### The WebSearch Tool
+
+> **Note:** WebSearch and WebFetch are extended tools. If they're not available in your setup, Claude Code will let you know. You can always search manually and paste relevant information into the conversation.
 
 **Purpose:** Search the internet for information
 
@@ -372,7 +373,7 @@ Claude Code uses this when:
 - Checking compatibility
 
 **Example requests:**
-```
+```text
 Search for the latest React best practices
 Look up this error message
 Find documentation for the Stripe API
@@ -380,8 +381,8 @@ Check if this package is still maintained
 ```
 
 **What you'll see:**
-```
-Searching: "React useEffect best practices 2025"
+```text
+Searching: "React useEffect best practices 2026"
 
 Found:
 - React documentation on useEffect
@@ -402,7 +403,7 @@ Claude Code uses this when:
 - Reading specific articles
 
 **Example requests:**
-```
+```text
 Fetch the documentation from [URL]
 Read this GitHub README: [URL]
 Get the API docs from [URL]
@@ -421,7 +422,7 @@ Claude Code uses this when:
 - Navigating code relationships
 
 **Capabilities:**
-```
+```text
 goToDefinition → Find where something is defined
 findReferences → Find all uses of a symbol
 hover → Get type/documentation info
@@ -429,7 +430,7 @@ documentSymbol → List all symbols in a file
 ```
 
 **Example:**
-```
+```text
 You: "Find all places where the User class is used"
 
 Claude Code:
@@ -449,35 +450,35 @@ Claude Code:
 Here's what Claude Code actually does behind the scenes:
 
 **Step 1: Understand the codebase**
-```
+```text
 Tool: Glob
 Action: Find all route files
 Result: Located routes/index.js
 ```
 
 **Step 2: Read existing code**
-```
+```text
 Tool: Read
 Action: Read routes/index.js
 Result: Understands current route structure
 ```
 
 **Step 3: Find similar patterns**
-```
+```text
 Tool: Grep
 Action: Search for other endpoint examples
 Result: Finds pattern to follow
 ```
 
 **Step 4: Make the changes**
-```
+```text
 Tool: Edit
 Action: Add new route to routes/index.js
 Result: Route added following existing patterns
 ```
 
 **Step 5: Test it**
-```
+```text
 Tool: Bash
 Action: Restart server and test endpoint
 Result: Confirms it works
@@ -488,35 +489,35 @@ Result: Confirms it works
 **Request:** "The app is crashing with 'Cannot find module'. Help me fix it"
 
 **Step 1: Check the error**
-```
+```text
 Tool: Bash
 Action: Run the app to see full error
 Result: Gets complete stack trace
 ```
 
 **Step 2: Find the problem**
-```
+```text
 Tool: Grep
 Action: Search for the missing import
 Result: Finds which file has the issue
 ```
 
 **Step 3: Read the file**
-```
+```text
 Tool: Read
 Action: Read the problematic file
 Result: Sees the incorrect import
 ```
 
 **Step 4: Fix it**
-```
+```text
 Tool: Edit
 Action: Correct the import statement
 Result: Fixed!
 ```
 
 **Step 5: Verify**
-```
+```text
 Tool: Bash
 Action: Run app again
 Result: No more error!
@@ -531,17 +532,17 @@ Result: No more error!
 Claude Code chooses tools automatically, but you can absolutely steer it.
 
 **Be general** -- let Claude Code decide:
-```
+```text
 Fix the bug in app.js
 ```
 
 **Be specific about approach:**
-```
+```text
 Search for all places where the database is connected, then show me the config file
 ```
 
 **Request specific tools:**
-```
+```text
 Use grep to find all TODO comments
 Read all test files
 Run the linter
@@ -610,21 +611,21 @@ In a Node.js project:
 
 ---
 
-### Practice 4: Complex Task with Agents
+### Practice 4: Complex Task with Multi-Step Analysis
 
-**Task:** Use the Explore agent
+**Task:** Let Claude Code explore your codebase
 
 In a larger codebase:
 
-```
-Please explore this codebase and answer:
+```text
+Analyze this codebase and answer:
 1. What is the overall architecture?
 2. What are the main components?
 3. How is the data flow organized?
 4. Where should I start if I want to add a new feature?
 ```
 
-This is where agents really shine -- they'll autonomously dig through the codebase instead of needing you to point them at individual files.
+This is where Claude Code really shines -- it'll autonomously dig through the codebase instead of needing you to point it at individual files.
 
 ---
 
@@ -636,7 +637,7 @@ Before moving to Module 4, make sure you understand:
 - [ ] The difference between Read, Write, and Edit
 - [ ] When to use Glob vs Grep
 - [ ] How the Bash tool executes commands
-- [ ] What specialized agents do
+- [ ] How the Task tool handles complex, multi-step work
 - [ ] How tools work together
 - [ ] How to request specific tool usage
 - [ ] When to let Claude Code choose vs when to be specific
@@ -678,7 +679,7 @@ Next up: Module 4 -- working with files and code. We'll cover reading codebases,
 
 3. **Use Grep for code search** -- It's faster than reading through multiple files yourself.
 
-4. **Let agents handle complexity** -- If you find yourself micromanaging a task across many files, that's a sign you should let an agent handle it.
+4. **Let Claude Code handle complexity** -- If you find yourself micromanaging a task across many files, that's a sign you should step back and let Claude Code work through it autonomously.
 
 5. **Think in tool sequences** -- Before asking, consider what combination of tools the task probably needs. This helps you write better prompts.
 

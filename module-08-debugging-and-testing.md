@@ -26,8 +26,8 @@ Error messages tell you four things:
 
 ### Example Error Message
 
-```
-TypeError: Cannot read property 'name' of undefined
+```text
+TypeError: Cannot read properties of undefined (reading 'name')
     at getUser (/app/services/userService.js:15:24)
     at /app/routes/users.js:42:18
     at Layer.handle [as handle_request] (/app/node_modules/express/lib/router/layer.js:95:5)
@@ -37,7 +37,7 @@ Here's how to read it:
 
 **Error Type:** `TypeError` -- the category of error.
 
-**Error Message:** `Cannot read property 'name' of undefined` -- you're trying to access `.name` on something that's `undefined`.
+**Error Message:** `Cannot read properties of undefined (reading 'name')` -- you're trying to access `.name` on something that's `undefined`.
 
 **Stack Trace:**
 - Line 1: Error occurred in `userService.js` at line 15
@@ -50,9 +50,9 @@ Here's how to read it:
 
 Paste the error directly into Claude Code and ask about it:
 
-```
+```text
 I'm getting this error:
-TypeError: Cannot read property 'name' of undefined
+TypeError: Cannot read properties of undefined (reading 'name')
     at getUser (/app/services/userService.js:15:24)
 
 Can you explain what this means and how to fix it?
@@ -69,29 +69,29 @@ Claude Code will explain the error in plain English, show you the problematic co
 There's a temptation to just start changing things at random when something breaks. Resist that. Follow a process instead.
 
 **1. Reproduce the Error**
-```
+```text
 The app crashes sometimes when users log in.
 Help me create a reliable way to reproduce this error.
 ```
 
 **2. Isolate the Problem**
-```
+```text
 The error happens in the login flow.
 Show me the login function and let's trace through it step by step.
 ```
 
 **3. Identify the Cause**
-```
+```text
 Read the login function and tell me what could cause it to crash.
 ```
 
 **4. Fix the Issue**
-```
+```text
 Add validation to check if the user object exists before accessing properties.
 ```
 
 **5. Verify the Fix**
-```
+```text
 Run the tests to make sure the fix works and doesn't break anything else.
 ```
 
@@ -101,7 +101,7 @@ Run the tests to make sure the fix works and doesn't break anything else.
 
 This is the oldest trick in the book, and it still works great. Ask Claude Code to add debug logs:
 
-```
+```text
 Add console.log statements to the login function to show:
 - When the function is called
 - What the input parameters are
@@ -111,7 +111,7 @@ Add console.log statements to the login function to show:
 
 And when you're done debugging, clean up after yourself:
 
-```
+```text
 Remove all the debug console.log statements I added
 ```
 
@@ -121,7 +121,7 @@ Remove all the debug console.log statements I added
 
 For more control, you can drop a `debugger` statement into your code:
 
-```
+```text
 Add a debugger statement in the calculateTotal function
 right before it calculates the tax.
 ```
@@ -143,9 +143,11 @@ Unit tests verify that individual functions and components work correctly in iso
 
 ### Writing Your First Test with Claude Code
 
+Jest is a popular JavaScript testing framework. If you don't have it yet, Claude Code can install it for you -- just ask: "Set up Jest for testing in this project."
+
 Tell Claude Code what you want to test and what cases matter:
 
-```
+```text
 Write unit tests for the calculateTotal function using Jest.
 
 Test cases:
@@ -191,7 +193,7 @@ describe('calculateTotal', () => {
 
 ### Running Tests
 
-```
+```text
 Run the Jest tests
 ```
 
@@ -201,7 +203,7 @@ npm test
 ```
 
 And shows you the results:
-```
+```text
 PASS  ./calculateTotal.test.js
   calculateTotal
     ✓ calculates correctly with positive numbers (3ms)
@@ -219,7 +221,7 @@ Tests:       4 passed, 4 total
 
 The happy path is easy. Edge cases are where bugs hide. Ask for them explicitly:
 
-```
+```text
 Add tests for edge cases to the calculateTotal tests:
 - Very large numbers
 - Floating point precision
@@ -240,7 +242,9 @@ Integration tests verify that different parts of your application work together 
 
 ### Writing API Integration Tests
 
-```
+Supertest is a library for testing HTTP endpoints. If you need it, ask Claude Code: "Install Supertest for API testing."
+
+```text
 Create integration tests for the /api/users endpoint using Supertest.
 
 Test:
@@ -328,7 +332,7 @@ It feels backwards at first. Stick with it -- it gets natural fast, and it force
 ### TDD Example with Claude Code
 
 **Step 1: Write the test first**
-```
+```text
 I want to create a password validator function.
 First, write tests for it that check:
 - Password is at least 8 characters
@@ -340,26 +344,26 @@ Don't write the function yet, just the tests.
 ```
 
 **Step 2: Watch it fail**
-```
+```text
 Run the tests
 ```
 
 Tests fail because the function doesn't exist yet. That's exactly what you want.
 
 **Step 3: Implement**
-```
+```text
 Now create the validatePassword function that makes all the tests pass.
 ```
 
 **Step 4: Verify**
-```
+```text
 Run the tests again
 ```
 
 Tests pass.
 
 **Step 5: Refactor**
-```
+```text
 The validatePassword function works but is hard to read.
 Refactor it to be more clear while keeping tests passing.
 ```
@@ -370,7 +374,7 @@ Refactor it to be more clear while keeping tests passing.
 
 Once you're comfortable with the TDD loop, you can speed it up by telling Claude Code to handle the full cycle:
 
-```
+```text
 Using TDD, add an email validation utility:
 
 1. Write tests for: valid emails, invalid emails, edge cases (empty string,
@@ -386,7 +390,7 @@ Do all steps in sequence, showing me the test results at each stage.
 
 **The power move:** You can also set up a continuous TDD workflow where Claude Code watches for test failures and implements fixes automatically:
 
-```
+```text
 Watch the test suite. Every time a test fails:
 1. Read the failing test to understand what's expected
 2. Find the relevant source code
@@ -402,14 +406,14 @@ This is how TDD becomes second nature -- the tests drive the implementation, and
 
 ### Scenario 1: Null/Undefined Errors
 
-```
-TypeError: Cannot read property 'x' of undefined
+```text
+TypeError: Cannot read properties of undefined (reading 'x')
 ```
 
 You'll see this one constantly. Debug it with Claude Code:
 
-```
-I'm getting "Cannot read property 'name' of undefined" in the getUser function.
+```text
+I'm getting "Cannot read properties of undefined (reading 'name')" in the getUser function.
 Help me:
 1. Find where the undefined value comes from
 2. Add proper null checking
@@ -420,14 +424,14 @@ Help me:
 
 ### Scenario 2: Async/Await Issues
 
-```
+```text
 Promise rejection: Database query failed
 UnhandledPromiseRejectionWarning
 ```
 
 These can be tricky because the error often surfaces far from where the actual problem is. Try:
 
-```
+```text
 I have an unhandled promise rejection in the database query.
 Show me:
 1. Where the promise is rejected
@@ -441,7 +445,7 @@ Show me:
 
 Code runs without crashing but gives wrong results. These are the sneaky ones -- no error message to guide you.
 
-```
+```text
 The shopping cart total is calculating incorrectly.
 It should be $25 but shows $30.
 
@@ -457,7 +461,7 @@ Help me debug the calculateTotal function:
 
 Code works, but it's painfully slow.
 
-```
+```text
 The user dashboard takes 5 seconds to load.
 
 Help me:
@@ -469,11 +473,11 @@ Help me:
 
 Claude Code might come back with something like:
 
-```
+```text
 Performance Analysis:
 
 Found issues:
-1. N+1 query: Loading user's posts one at a time (100 queries!)
+1. N+1 query (where loading a list of N items triggers N additional database queries instead of fetching everything in one query): Loading user's posts one at a time (100 queries!)
    Fix: Use JOIN to load in 1 query
 
 2. Missing database index on user_id
@@ -487,7 +491,7 @@ Estimated improvement: 5s → 0.5s
 
 **Pro tip: The build-error-resolver pattern.** When your build breaks and the error is cryptic, try this approach:
 
-```
+```text
 My build is failing with this error: [paste error]
 
 Don't just fix the immediate error. Instead:
@@ -506,7 +510,7 @@ This catches the whole class of bug, not just the one instance you happened to n
 
 ### Checking Test Coverage
 
-```
+```text
 Run tests with coverage report
 ```
 
@@ -516,7 +520,7 @@ npm test -- --coverage
 ```
 
 And shows coverage:
-```
+```text
 File             | % Stmts | % Branch | % Funcs | % Lines |
 -----------------|---------|----------|---------|---------|
 userService.js   |   85.71 |    75.00 |   100.0 |   85.71 |
@@ -527,7 +531,7 @@ authService.js   |   60.00 |    50.00 |    66.67|   60.00 |
 
 ### Improving Coverage
 
-```
+```text
 The authService.js only has 60% coverage.
 Write additional tests to cover:
 - The error handling branches
@@ -567,7 +571,7 @@ When Claude Code writes or modifies tests, it automatically follows these rules 
 
 You don't want your tests actually sending emails or hitting third-party APIs. That's where mocking comes in.
 
-```
+```text
 Create tests for the sendEmail function, but mock the actual email sending.
 The tests should verify the function is called with correct parameters
 without actually sending emails.
@@ -604,7 +608,7 @@ test('sends welcome email with correct content', async () => {
 
 **Task:** Find and fix bugs
 
-```
+```text
 Create a broken calculateShipping function that has 3 bugs:
 1. Doesn't handle zero weight
 2. Calculates wrong total for international shipping
@@ -619,7 +623,7 @@ Then help me debug it step by step.
 
 **Task:** Add test coverage
 
-```
+```text
 I have an existing authentication module with no tests.
 Create comprehensive unit tests for:
 - login function
@@ -636,7 +640,7 @@ Aim for 100% coverage.
 
 **Task:** Build feature test-first
 
-```
+```text
 Using TDD, create a shopping cart module.
 
 Step 1: Write tests for addItem, removeItem, getTotal, applyDiscount
@@ -650,7 +654,7 @@ Step 3: Refactor for better code quality
 
 **Task:** Find and fix slow code
 
-```
+```text
 Create a slow function that loads user data inefficiently.
 Then help me:
 1. Measure performance

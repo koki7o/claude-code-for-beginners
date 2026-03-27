@@ -18,15 +18,15 @@ This module is all about connecting your projects to the outside world. You'll u
 
 You can point Claude Code at the web to find official docs for just about anything:
 
-```
+```text
 Search for the latest Stripe API documentation
 ```
 
-```
+```text
 Find the React official docs for hooks
 ```
 
-```
+```text
 Search for Node.js Express middleware best practices
 ```
 
@@ -36,15 +36,15 @@ Search for Node.js Express middleware best practices
 
 Same idea works when you're stuck on a specific problem:
 
-```
+```text
 Search for how to fix "CORS error in Express API"
 ```
 
-```
+```text
 Find solutions for "JWT token expiration handling"
 ```
 
-```
+```text
 Search for "preventing SQL injection in Node.js"
 ```
 
@@ -52,7 +52,7 @@ Search for "preventing SQL injection in Node.js"
 
 ### Researching Libraries
 
-```
+```text
 Search for the best npm packages for:
 - Sending emails
 - Generating PDFs
@@ -68,12 +68,12 @@ Search for the best npm packages for:
 
 WebFetch goes a step further -- it actually pulls down a page and lets Claude Code reason about the contents. This is incredibly useful for API docs.
 
-```
+```text
 Fetch the documentation from https://docs.stripe.com/api/customers/create
 and create a TypeScript function to create a customer
 ```
 
-```
+```text
 Fetch https://api.github.com docs
 and show me how to list repositories for a user
 ```
@@ -84,7 +84,7 @@ and show me how to list repositories for a user
 
 Here's where things get interesting. You can have Claude Code read the docs and produce a full implementation in one shot:
 
-```
+```text
 Fetch the SendGrid API documentation
 and create a complete email service class with:
 - Send email method
@@ -101,7 +101,7 @@ and create a complete email service class with:
 
 **Example: Weather API**
 
-```
+```text
 Create a weather service that integrates with OpenWeatherMap API:
 - Accept city name as input
 - Call the weather API
@@ -185,7 +185,7 @@ export default WeatherService;
 
 ### Complex API Integration
 
-```
+```text
 Create a GitHub API client with:
 - OAuth authentication
 - Methods for:
@@ -209,7 +209,7 @@ Authentication is one of those things that sounds simple until you're three hour
 
 The simplest approach -- just a key in a header:
 
-```
+```text
 Create a SendGrid email client that:
 - Uses API key from environment variable
 - Has method to send email
@@ -224,7 +224,7 @@ Create a SendGrid email client that:
 
 OAuth is more involved. There are multiple steps, and getting them wrong means silent failures that are annoying to debug.
 
-```
+```text
 Implement GitHub OAuth flow:
 1. Generate authorization URL
 2. Handle callback with auth code
@@ -242,7 +242,7 @@ Claude Code will generate the complete OAuth flow with security best practices b
 
 JWTs are everywhere in modern APIs. The tricky part isn't using them -- it's managing their lifecycle properly.
 
-```
+```text
 Create an API client for our internal service that:
 - Logs in to get JWT token
 - Stores token securely (not in plain text)
@@ -260,7 +260,7 @@ Create an API client for our internal service that:
 
 This matters more than you think. Hit a rate limit in production and your whole integration falls over. Build the limiter upfront.
 
-```
+```text
 Create a rate limiter class that:
 - Limits API calls to X per second
 - Queues requests when limit is reached
@@ -336,7 +336,7 @@ class APIRateLimiter {
 
 Fair warning: if you skip error handling on API calls, you'll regret it the first time a third-party service goes down. And they all go down eventually.
 
-```
+```text
 Create comprehensive error handling for API calls that:
 - Distinguishes between error types:
   * Network errors (no connection)
@@ -410,7 +410,7 @@ function sleep(ms: number): Promise<void> {
 
 This is where everything comes together. A real API wrapper needs all the pieces -- auth, retries, rate limiting, types, tests. Trust me on this: getting the infrastructure right upfront saves enormous pain later.
 
-```
+```text
 Build a complete Stripe API wrapper with:
 
 Core Features:
@@ -442,7 +442,7 @@ Security:
 
 Build a weather command-line tool:
 
-```
+```text
 Create a CLI weather app that:
 1. Takes city name as argument
 2. Calls OpenWeatherMap API
@@ -462,7 +462,7 @@ node weather.js "San Francisco"
 
 Build a GitHub client:
 
-```
+```text
 Create a GitHub CLI tool that:
 - Authenticates with personal access token
 - Lists your repositories
@@ -479,7 +479,7 @@ Create a GitHub CLI tool that:
 
 This one's a step up -- you're combining multiple APIs into a single service, and each one can fail independently. That's the real challenge.
 
-```
+```text
 Build a daily digest service that fetches:
 - Weather from OpenWeatherMap
 - Top news from NewsAPI

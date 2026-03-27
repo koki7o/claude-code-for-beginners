@@ -36,6 +36,8 @@ mkdir my-awesome-project
 cd my-awesome-project
 ```
 
+`mkdir` creates a new folder; `cd` moves into it. (These were covered in Module 1.)
+
 This keeps your code organized and isolated from everything else on your machine.
 
 #### Step 2: Start Claude Code
@@ -98,7 +100,7 @@ Honestly, starting simple is almost always the right call. You can layer on feat
 After you send your request, Claude Code will:
 1. Ask clarifying questions if needed
 2. Create the project structure
-3. Set up configuration files (package.json, etc.)
+3. Set up configuration files (these describe your project and its dependencies)
 4. Write initial code
 5. Explain what it created
 
@@ -106,6 +108,8 @@ Watch as it uses different tools:
 - **Write** -- creating new files
 - **Bash** -- running commands like `npm init`
 - **Read** -- checking what it created
+
+Don't worry about understanding these tools in detail yet -- Module 3 covers them thoroughly.
 
 #### Step 5: Review the Structure
 
@@ -118,9 +122,9 @@ Can you show me the project structure?
 You'll see something like:
 ```
 my-awesome-project/
-├── package.json
-├── src/
-│   ├── index.js
+├── package.json          ← project info and dependencies
+├── src/                  ← your source code
+│   ├── index.js          ← entry point (where the app starts)
 │   ├── app.js
 │   └── routes/
 │       └── todos.js
@@ -129,6 +133,8 @@ my-awesome-project/
 └── README.md
 ```
 
+Your structure may look different depending on the technologies Claude Code chooses. That's fine.
+
 #### Step 6: Test It
 
 ```
@@ -136,9 +142,9 @@ Can you run the application?
 ```
 
 Claude Code will:
-- Install dependencies (`npm install`)
-- Start the server
-- Show you how to access it
+- Install the libraries your project needs (its "dependencies")
+- Start the application
+- Show you how to open it in your browser
 
 #### Step 7: Set Up Project Memory
 
@@ -193,7 +199,7 @@ Start by asking Claude Code to explore:
 Can you help me understand what this project does? Please explore the codebase and give me an overview.
 ```
 
-Claude Code will use the Task tool with the Explore agent, read key files like the README and package.json, analyze the structure, and come back with a summary covering what the project does, the technology stack, main components, entry points, and dependencies.
+Claude Code will read key files, analyze the project structure, and come back with a summary covering what the project does, the technologies it uses, its main components, and how to run it. (You'll learn more about the specific tools it uses in Module 3.)
 
 #### Step 4: Find Specific Code
 
@@ -209,7 +215,7 @@ Or:
 Find all files that handle database operations
 ```
 
-Claude Code will use Grep and Glob to search your codebase.
+Claude Code will search through your files to find the relevant code.
 
 #### Step 5: Make Changes
 
@@ -237,11 +243,12 @@ Templates are pre-built project structures that give you a head start -- basical
 
 ### Common Templates
 
-- **create-react-app** -- React applications
+- **Vite** -- React, Vue, and other frontend projects (recommended for new React apps)
 - **express-generator** -- Express servers
-- **vite** -- Modern frontend projects
 - **nest-cli** -- NestJS applications
 - **create-next-app** -- Next.js projects
+
+Don't worry if you don't recognize these names. They're popular tools in the JavaScript ecosystem. Claude Code can help you pick the right one for your project.
 
 ### How to Use Templates
 
@@ -299,7 +306,7 @@ Add a Docker configuration
 
 ### What is Cloning?
 
-Cloning means downloading a copy of a Git repository from GitHub, GitLab, or wherever it's hosted.
+Cloning means downloading a copy of a project from the internet. Projects are typically stored on hosting platforms like GitHub or GitLab. Don't worry about the details of Git yet -- Module 7 covers that. For now, just think of cloning as "downloading a project to your computer."
 
 ### When to Clone
 
@@ -411,7 +418,7 @@ Example usage: node weather.js "New York"
 ```
 
 **Steps:**
-1. Create directory: `mkdir weather-cli && cd weather-cli`
+1. Create directory and move into it: `mkdir weather-cli && cd weather-cli` (the `&&` runs both commands in sequence)
 2. Start Claude Code: `claude`
 3. Send the prompt above
 4. Test the application
@@ -435,7 +442,7 @@ Use Vite as the build tool
 ```
 
 **Steps:**
-1. Create directory: `mkdir my-react-app && cd my-react-app`
+1. Create directory and move into it: `mkdir my-react-app && cd my-react-app` (the `&&` runs both commands in sequence)
 2. Start Claude Code: `claude`
 3. Send the prompt above
 4. Explore the generated structure
@@ -586,7 +593,7 @@ Ask Claude Code. Seriously -- just say "What's the best way to start a [type of 
 Ask Claude Code to explain it. This is honestly one of the things it's best at -- walking you through unfamiliar codebases piece by piece.
 
 ### Q: Can Claude Code help with non-JavaScript projects?
-Absolutely. It works with Python, Go, Rust, Java, and many other languages.
+Absolutely. It works with Python, Go, Rust, Java, and many other languages. This module used JavaScript examples because they're common for web projects, but you can use any language -- or ask Claude Code to pick one for you.
 
 ### Q: How detailed should my initial prompt be?
 Start with the basics, then add details as you go. You can always refine -- and iterating is usually faster than trying to write the perfect prompt on your first try.

@@ -110,7 +110,7 @@ Get your API key from [console.anthropic.com](https://console.anthropic.com) —
 ### Problem: "Invalid API key"
 
 **Symptoms:**
-```
+```text
 Error: Invalid API key
 ```
 
@@ -152,22 +152,20 @@ Error: Invalid API key
 ping anthropic.com
 ```
 
-**Solution 2: Increase timeout (if available)**
-```bash
-# In your request, specify longer timeout
-claude --timeout 300
-```
+**Solution 2: Wait and retry**
+Network issues or server load can cause delays. Wait a minute and try again.
 
 **Solution 3: Kill and restart**
-Press `Ctrl+C` to stop, then start again.
+Press `Ctrl+C` to cancel the current operation, then try your request again. If Claude Code is unresponsive, press `Ctrl+C` twice to exit and restart with `claude`.
 
 **Solution 4: Check for background processes**
-```bash
-# List background tasks
-/tasks
 
-# Kill if needed
+Inside Claude Code, type:
+```text
+/tasks
 ```
+
+This shows any running background tasks. You can cancel them from there.
 
 ---
 
@@ -216,13 +214,13 @@ chmod u+w [filename]
 ```
 
 **Solution 2: Verify working directory**
-```
+```text
 Show me the current working directory
 List all files here
 ```
 
 **Solution 3: Explicitly save**
-```
+```text
 Please write the changes to [filename]
 Show me [filename] to verify
 ```
@@ -255,7 +253,7 @@ Show me [filename] to verify
 
 **For Bash tool:**
 1. **Check command syntax:**
-   ```
+   ```text
    Please explain this command before running it
    ```
 
@@ -277,14 +275,14 @@ Show me [filename] to verify
 ### Problem: "Module not found" errors
 
 **Symptoms:**
-```
+```text
 Error: Cannot find module 'express'
 ```
 
 **Solutions:**
 
 **Solution 1: Install dependencies**
-```
+```text
 Install all dependencies from package.json
 ```
 
@@ -307,7 +305,7 @@ npm install
 ```
 
 **Solution 3: Check import paths**
-```
+```text
 Check all import statements in [file]
 Fix any incorrect paths
 ```
@@ -317,19 +315,19 @@ Fix any incorrect paths
 ### Problem: Syntax errors after Claude Code changes
 
 **Symptoms:**
-```
+```text
 SyntaxError: Unexpected token
 ```
 
 **Solutions:**
 
 **Solution 1: Review the changes**
-```
+```text
 Show me what you changed in [file]
 ```
 
 **Solution 2: Revert changes**
-```
+```text
 Please undo the changes to [file]
 ```
 
@@ -339,7 +337,7 @@ git checkout [file]
 ```
 
 **Solution 3: Fix the syntax**
-```
+```text
 There's a syntax error in [file] at line [X]. Please fix it.
 ```
 
@@ -354,24 +352,24 @@ There's a syntax error in [file] at line [X]. Please fix it.
 **Solutions:**
 
 **Solution 1: Check what changed**
-```
+```text
 Show me the git diff
 What files did you modify?
 ```
 
 **Solution 2: Review test failures**
-```
+```text
 Run the tests and show me the output
 Explain why these tests are failing
 ```
 
 **Solution 3: Fix the tests**
-```
+```text
 Fix the code to make the tests pass
 ```
 
 Or if the new behavior is intentional:
-```
+```text
 Update the tests to match the new implementation
 ```
 
@@ -382,14 +380,14 @@ Update the tests to match the new implementation
 ### Problem: Git commands failing
 
 **Symptoms:**
-```
+```text
 Error: fatal: not a git repository
 ```
 
 **Solutions:**
 
 **Solution 1: Initialize Git**
-```
+```text
 Initialize a git repository in this directory
 ```
 
@@ -419,7 +417,7 @@ ls -la .git
 ### Problem: Cannot commit changes
 
 **Symptoms:**
-```
+```text
 Error: Please tell me who you are
 ```
 
@@ -433,7 +431,7 @@ git config --global user.email "your.email@example.com"
 ```
 
 Or ask Claude Code:
-```
+```text
 Configure git with my name and email
 ```
 
@@ -460,7 +458,7 @@ speedtest-cli
 - Be more specific -- it cuts down on thinking time
 
 **Solution 3: Use agents for multi-step tasks**
-```
+```text
 Use an agent to [complex task]
 ```
 Agents can handle multi-step work more efficiently.
@@ -480,18 +478,18 @@ Agents can handle multi-step work more efficiently.
 **Solutions:**
 
 **Solution 1: Read specific sections**
-```
+```text
 Read lines 100-200 of [file]
 Show me just the [function/class] in [file]
 ```
 
 **Solution 2: Use search instead**
-```
+```text
 Use grep to find [pattern] in [file]
 ```
 
 **Solution 3: Split large files**
-```
+```text
 Help me refactor this large file into smaller modules
 ```
 
@@ -502,7 +500,7 @@ Help me refactor this large file into smaller modules
 ### Problem: MCP server not connecting
 
 **Symptoms:**
-```
+```text
 Error: Failed to connect to MCP server
 ```
 
@@ -610,12 +608,12 @@ globs: ["pattern"]
 
 You can just ask Claude Code to help you troubleshoot directly:
 
-```
+```text
 I'm getting this error: [error message]
 Can you help me understand and fix it?
 ```
 
-```
+```text
 Something's not working correctly. Can you help me debug?
 ```
 

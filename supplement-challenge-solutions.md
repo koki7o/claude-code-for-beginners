@@ -45,7 +45,7 @@ Fair warning: spoilers below. These are suggested solutions -- not the only way 
    ```
 
    Then prompt:
-   ```
+   ```text
    Create a Python script called greeting.py that:
    - Asks for the user's name
    - Asks for their favorite color
@@ -53,7 +53,7 @@ Fair warning: spoilers below. These are suggested solutions -- not the only way 
    ```
 
 3. **Test it:**
-   ```
+   ```text
    Run the greeting.py script
    ```
 
@@ -73,7 +73,7 @@ Fair warning: spoilers below. These are suggested solutions -- not the only way 
 **Solution Approach:**
 
 **Step 1: Initial Prompt**
-```
+```text
 Create a REST API for notes using Express.js with these requirements:
 - In-memory storage (array of notes)
 - Each note has: id, title, content, createdAt
@@ -84,7 +84,7 @@ Create a REST API for notes using Express.js with these requirements:
 
 **Step 2: Project Structure**
 Claude Code should create something like this:
-```
+```text
 notes-api/
 ├── package.json
 ├── server.js
@@ -96,7 +96,7 @@ notes-api/
 ```
 
 **Step 3: Testing**
-```
+```text
 Install dependencies and start the server
 ```
 
@@ -129,13 +129,13 @@ Instead of one big prompt, you could build it up piece by piece -- start with th
 **Solution Approach:**
 
 **Step 1: Initialize Project**
-```
+```text
 Create a new Next.js project with TypeScript and Tailwind CSS.
 Name it contact-form-app.
 ```
 
 **Step 2: Build UI**
-```
+```text
 Create a contact form page at /contact with:
 - Name field (required, min 2 characters)
 - Email field (required, valid email)
@@ -147,7 +147,7 @@ Create a contact form page at /contact with:
 ```
 
 **Step 3: Add API Route**
-```
+```text
 Create an API route at /api/contact that:
 - Validates the input
 - Returns 400 for invalid data
@@ -156,7 +156,7 @@ Create an API route at /api/contact that:
 ```
 
 **Step 4: Connect Form to API**
-```
+```text
 Update the contact form to:
 - Call the /api/contact endpoint on submit
 - Show loading spinner during request
@@ -166,7 +166,7 @@ Update the contact form to:
 ```
 
 **Expected File Structure:**
-```
+```text
 contact-form-app/
 ├── pages/
 │   ├── contact.tsx
@@ -180,7 +180,7 @@ contact-form-app/
 ```
 
 **Testing:**
-```
+```text
 Start the development server
 Open http://localhost:3000/contact
 Test all validation cases
@@ -210,13 +210,13 @@ Test successful submission
 ```
 
 Example:
-```
+```text
 Clone https://github.com/firstcontributions/first-contributions
 and help me understand the project structure
 ```
 
 **Step 2: Set Up**
-```
+```text
 Help me:
 1. Fork this repository to my GitHub
 2. Clone my fork locally
@@ -225,7 +225,7 @@ Help me:
 ```
 
 **Step 3: Make Changes**
-```
+```text
 I want to add my name to the Contributors.md file.
 Help me:
 1. Find the correct format
@@ -234,13 +234,13 @@ Help me:
 ```
 
 **Step 4: Commit and Push**
-```
+```text
 Create a commit following this project's commit message conventions
 Push to my fork
 ```
 
 **Step 5: Create PR**
-```
+```text
 Help me create a pull request with:
 - A clear title
 - Description of what I added
@@ -264,32 +264,32 @@ Help me create a pull request with:
 **Solution Prompts:**
 
 1. **Read Tool:**
-   ```
+   ```text
    Read the package.json file and tell me what dependencies are installed
    ```
 
 2. **Write Tool:**
-   ```
+   ```text
    Create a new file called config.js that exports database configuration
    ```
 
 3. **Edit Tool:**
-   ```
+   ```text
    In server.js, change the port from 3000 to 8080
    ```
 
 4. **Glob Tool:**
-   ```
+   ```text
    Find all JavaScript files in the src directory
    ```
 
 5. **Grep Tool:**
-   ```
+   ```text
    Search for all TODO comments in the codebase
    ```
 
 6. **Bash Tool:**
-   ```
+   ```text
    Install the express package
    ```
 
@@ -309,7 +309,7 @@ Help me create a pull request with:
 **Solution Approach:**
 
 **Scenario 1: Bug Fix**
-```
+```text
 I'm getting a TypeError in userService.js at line 45.
 The error says "Cannot read property 'email' of undefined".
 This happens when a user tries to log in with an email that doesn't exist in the database.
@@ -319,7 +319,7 @@ Please read the file, identify the issue, and fix it with proper null checking.
 **Why this works:** It specifies the file, error, context, and desired outcome. Compare with the vague version: "fix the bug in my app."
 
 **Scenario 2: New Feature**
-```
+```text
 Add pagination to the GET /api/users endpoint:
 - Accept `page` and `limit` query parameters
 - Default to page 1, limit 20
@@ -330,7 +330,7 @@ Add pagination to the GET /api/users endpoint:
 **Why this works:** Clear requirements, specific parameters, defined edge cases.
 
 **Scenario 3: Refactoring**
-```
+```text
 Refactor the authentication middleware in middleware/auth.js:
 - Extract token validation into a separate function
 - Add proper error messages for expired vs invalid tokens
@@ -353,13 +353,13 @@ Refactor the authentication middleware in middleware/auth.js:
 **Solution Approach:**
 
 **Step 1:** Start with the skeleton
-```
+```text
 Create a basic Express middleware for rate limiting.
 Just the structure -- no implementation yet.
 ```
 
 **Step 2:** Add core logic
-```
+```text
 Now implement the rate limiting logic:
 - Track requests by IP address
 - Allow 100 requests per 15-minute window
@@ -367,14 +367,14 @@ Now implement the rate limiting logic:
 ```
 
 **Step 3:** Add persistence
-```
+```text
 The rate limiter currently uses in-memory storage.
 Add Redis support so it works across multiple server instances.
 Keep the in-memory version as a fallback.
 ```
 
 **Step 4:** Add tests
-```
+```text
 Write tests for the rate limiter covering:
 - Normal requests within limit
 - Requests exceeding limit
@@ -397,7 +397,7 @@ Write tests for the rate limiter covering:
 
 **Solution Approach:**
 
-```
+```text
 Help me create a CLAUDE.md file for this project that includes:
 - Project overview and architecture
 - Key commands for building, testing, and linting
@@ -451,14 +451,14 @@ Help me create a CLAUDE.md file for this project that includes:
 **Solution Approach:**
 
 **Step 1:** Set up project memory
-```
+```text
 Save to project memory: This project uses Express.js with TypeScript,
 PostgreSQL for the database, and Jest for testing.
 The main entry point is src/index.ts.
 ```
 
 **Step 2:** Add coding conventions
-```
+```text
 Save to project memory: Code conventions --
 - All API responses use the ResponseWrapper class
 - Database queries go through the repository layer
@@ -466,7 +466,7 @@ Save to project memory: Code conventions --
 ```
 
 **Step 3:** Verify it works
-```
+```text
 What do you know about this project's conventions?
 ```
 
@@ -488,7 +488,7 @@ Claude Code should recall the saved context without you repeating it.
 **Solution Approach:**
 
 Pick any open-source project and try:
-```
+```text
 Use the Explore agent with medium thoroughness to:
 1. Explain the project architecture
 2. Identify the main entry points
@@ -497,7 +497,7 @@ Use the Explore agent with medium thoroughness to:
 ```
 
 Then go deeper on something specific:
-```
+```text
 The Explore agent mentioned [component]. Use it again to trace
 exactly how [component] handles errors -- from where the error
 occurs to where it's reported to the user.
@@ -516,7 +516,7 @@ occurs to where it's reported to the user.
 
 **Solution Approach:**
 
-```
+```text
 I need to choose a database for a new project.
 Run these agents in parallel:
 
@@ -529,7 +529,7 @@ For each, include real-world examples of when it's the right choice.
 ```
 
 After results come back:
-```
+```text
 Based on the research, I'm building a multi-tenant SaaS app
 with complex queries and strict data integrity requirements.
 Which database fits best and why?
@@ -550,7 +550,7 @@ Which database fits best and why?
 
 **Solution Approach:**
 
-```
+```text
 Help me with a complete git workflow:
 1. Create a new branch called feature/add-search
 2. Make changes (add a search endpoint to the API)
@@ -574,13 +574,13 @@ Help me with a complete git workflow:
 **Solution Approach:**
 
 **Step 1:** Create a conflict scenario
-```
+```text
 Create two branches that modify the same file differently,
 then try to merge them so we get a conflict.
 ```
 
 **Step 2:** Resolve it
-```
+```text
 I have a merge conflict in userService.js.
 Show me what's conflicting and help me resolve it by:
 - Keeping the new validation logic from feature-branch
@@ -603,7 +603,7 @@ Show me what's conflicting and help me resolve it by:
 
 **Solution Approach:**
 
-```
+```text
 Create a user authentication module with these 5 intentional bugs:
 1. Password comparison using == instead of a proper hash check
 2. Missing await on an async database call
@@ -627,7 +627,7 @@ Then walk me through finding and fixing each one.
 
 **Solution Approach:**
 
-```
+```text
 Using TDD, build a URL shortener module:
 
 Round 1 -- Write tests for: createShortUrl(longUrl) returns a short code
@@ -661,7 +661,7 @@ For each round:
 Break it into sessions:
 
 **Session 1: Foundation**
-```
+```text
 Create a task manager API with:
 - Express.js with TypeScript
 - SQLite database
@@ -670,7 +670,7 @@ Create a task manager API with:
 ```
 
 **Session 2: Features**
-```
+```text
 Add to the task manager:
 - Filter tasks by status and priority
 - Sort by any field
@@ -679,7 +679,7 @@ Add to the task manager:
 ```
 
 **Session 3: Polish**
-```
+```text
 Add production touches:
 - Input validation with meaningful errors
 - Request logging
@@ -703,7 +703,7 @@ Add production touches:
 
 **Solution Approach:**
 
-```
+```text
 Review this project and help me bring it up to professional standards:
 
 1. Add a proper .gitignore
@@ -728,7 +728,7 @@ Review this project and help me bring it up to professional standards:
 
 **Solution Approach:**
 
-```
+```text
 Perform a security audit on this Express.js application:
 
 1. Check for SQL injection vulnerabilities
@@ -760,7 +760,7 @@ For each issue found:
 
 **Solution Approach:**
 
-```
+```text
 Help me set up an MCP server that connects Claude Code to a SQLite database.
 I want to be able to:
 - Query tables using natural language
@@ -789,7 +789,7 @@ I want to be able to:
 
 Create a skill that generates boilerplate for a new API endpoint:
 
-```
+```text
 Create a skill at .claude/skills/new-endpoint/SKILL.md that:
 - Takes an entity name as input
 - Generates route file, controller, service, and test
@@ -800,7 +800,6 @@ Create a skill at .claude/skills/new-endpoint/SKILL.md that:
 **Example skill file:**
 ```markdown
 ---
-name: new-endpoint
 description: Generate boilerplate for a new API endpoint
 ---
 
@@ -826,7 +825,7 @@ Follow the patterns in the existing user module for consistency.
 
 **Solution Approach:**
 
-```
+```text
 Set up these hooks in .claude/settings.json:
 
 1. PostToolUse hook on Edit|Write: Auto-lint after file changes
@@ -862,7 +861,7 @@ Set up these hooks in .claude/settings.json:
 
 **What you'll get out of this:**
 - Automating quality checks
-- Preventing bad commits
+- Automating post-edit quality checks
 - Custom workflow automation
 
 ---
@@ -875,7 +874,7 @@ Set up these hooks in .claude/settings.json:
 
 **Solution Approach:**
 
-```
+```text
 Create a project with:
 - A Python FastAPI backend
 - A TypeScript React frontend
@@ -904,7 +903,7 @@ Help me:
 
 **Solution Approach:**
 
-```
+```text
 Integrate the OpenWeatherMap API into our Express app:
 1. Create a weather service that fetches current weather
 2. Add error handling for API failures
@@ -929,7 +928,7 @@ Integrate the OpenWeatherMap API into our Express app:
 
 **Solution Approach:**
 
-```
+```text
 Help me deploy this Express.js app:
 1. Add a Dockerfile
 2. Create docker-compose.yml for local testing
@@ -964,7 +963,7 @@ Help me deploy this Express.js app:
 ### Prompting Tips
 
 **For bigger challenges:**
-```
+```text
 I need to build [X]. Let's break it down:
 1. First, create the basic structure
 2. Then add [feature 1]
@@ -973,13 +972,13 @@ Let's start with step 1.
 ```
 
 **When you're stuck:**
-```
+```text
 I'm trying to [goal] but [problem].
 Can you help me understand what's wrong and suggest a fix?
 ```
 
 **When you want to actually learn what happened:**
-```
+```text
 Please explain what this code does and why you chose this approach
 ```
 

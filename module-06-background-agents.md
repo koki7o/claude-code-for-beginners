@@ -1,6 +1,6 @@
 # Module 6: Using Background Agents
 
-**Goal:** Learn to use specialized agents for complex, multi-step tasks
+**Goal:** Learn to delegate complex, multi-step tasks to Claude Code
 
 **Estimated Time:** 35-45 minutes
 
@@ -8,65 +8,65 @@
 
 ## What You'll Learn
 
-This module covers agents -- specialized AI assistants that can work autonomously on tasks too big or tedious to guide step by step. You'll learn when to reach for them, how to use the Explore and Plan agents effectively, and how to run multiple agents in parallel when you've got a lot of ground to cover.
+This module covers agentic tasks -- prompts where you delegate complex, multi-step work to Claude Code and let it operate autonomously. You'll learn when to reach for this approach, how to write effective exploration and planning prompts, and how to run multiple Claude Code sessions in parallel when you've got a lot of ground to cover.
 
 ---
 
-## Lesson 1: What Are Agents?
+## Lesson 1: What Are Agentic Tasks?
 
-### Understanding Agents
+### Understanding Agentic Tasks
 
-Agents are specialized AI assistants that work autonomously to complete complex tasks. You give them a goal, they figure out the steps, and they report back when they're done.
+Claude Code can work autonomously to complete complex tasks. You give it a goal, it figures out the steps, and it reports back when it's done. There aren't separate "agents" to select -- you just write a prompt that delegates the work, and Claude Code handles the rest.
 
-Here's how they differ from regular Claude Code conversation:
+Here's how agentic delegation differs from regular Claude Code conversation:
 
 **Regular Claude Code:**
 - You guide each step
 - Interactive back-and-forth
 - You make decisions
 
-**Agent Mode:**
+**Agentic Delegation:**
 - Works autonomously
 - Makes its own decisions
 - Completes multi-step tasks independently
 - Reports back when done
 
-The short version: regular mode is a conversation, agent mode is delegation.
+The short version: regular mode is a conversation, agentic mode is delegation.
 
 ---
 
-### When to Use Agents
+### When to Delegate
 
-Agents shine when the task involves multiple steps, exploration, or decision-making. Think: exploring an unfamiliar codebase, planning a feature implementation, doing research that spans many files, or tackling anything where you'd otherwise be saying "now do this... okay now do that..." over and over.
+Agentic prompts shine when the task involves multiple steps, exploration, or decision-making. Think: exploring an unfamiliar codebase, planning a feature implementation, doing research that spans many files, or tackling anything where you'd otherwise be saying "now do this... okay now do that..." over and over.
 
 Stick with regular conversation for simple, single-step tasks, quick modifications, or situations where you actually want to see each tool call happen -- like when you're learning how Claude Code works under the hood.
 
 ---
 
-## Lesson 2: The Explore Agent
+## Lesson 2: Exploration Tasks
 
-### What is the Explore Agent?
+### When to Use Exploration Prompts
 
-The Explore agent is built for navigating and understanding codebases. It's your go-to when you need to figure out how a project works, find where something is implemented, or get a feel for the architecture. It reads files, traces connections, and comes back with a coherent explanation instead of making you piece it together yourself.
+Exploration prompts are your go-to when you need to figure out how a project works, find where something is implemented, or get a feel for the architecture. Claude Code reads files, traces connections, and comes back with a coherent explanation instead of making you piece it together yourself.
 
 ---
 
-### Using the Explore Agent
+### Writing Exploration Prompts
 
 **Basic usage:**
-```
-Use the Explore agent to understand how authentication works in this codebase
+```text
+Explore this codebase and explain how authentication works
 ```
 
-When you send that, the agent searches for auth-related files, reads the relevant code, analyzes the implementation, traces the flow, and returns a comprehensive explanation. All without you lifting a finger.
+When you send that, Claude Code searches for auth-related files, reads the relevant code, analyzes the implementation, traces the flow, and returns a comprehensive explanation. All without you lifting a finger.
 
 ---
 
-### Explore Agent Examples
+### Exploration Examples
 
 **Example 1: Understanding a Feature**
-```
-Use the Explore agent to explain how the payment processing works.
+```text
+Explore how the payment processing works in this codebase.
 I need to know:
 - What payment providers are supported
 - How transactions are stored
@@ -74,12 +74,12 @@ I need to know:
 - The complete flow from checkout to confirmation
 ```
 
-The agent finds all payment-related files, reads configuration, traces the payment flow, analyzes security implementations, and gives you a detailed report.
+Claude Code finds all payment-related files, reads configuration, traces the payment flow, analyzes security implementations, and gives you a detailed report.
 
 ---
 
 **Example 2: Finding API Endpoints**
-```
+```text
 Explore the codebase and list all API endpoints with:
 - HTTP method
 - Route path
@@ -88,7 +88,7 @@ Explore the codebase and list all API endpoints with:
 ```
 
 You'll get back something like:
-```
+```text
 API Endpoints Found:
 
 POST /api/auth/login
@@ -112,8 +112,8 @@ POST /api/users
 ---
 
 **Example 3: Understanding Architecture**
-```
-Use the Explore agent to analyze this codebase and explain:
+```text
+Analyze this codebase and explain:
 - Overall architecture pattern (MVC, layered, etc.)
 - How different parts communicate
 - Database structure
@@ -122,55 +122,55 @@ Use the Explore agent to analyze this codebase and explain:
 
 ---
 
-### Specifying Thoroughness
+### Controlling Depth Through Your Prompt
 
-You can control how deep the agent digs. This matters more than you think -- a quick scan and a thorough analysis produce very different results.
+The depth of Claude Code's analysis depends on how you phrase your request. There aren't formal "thoroughness settings" -- it's about how specific and demanding your prompt is.
 
-**Quick exploration:**
-```
-Use the Explore agent with quick thoroughness to give me an overview of this project
-```
-
-**Medium exploration:**
-```
-Use the Explore agent with medium thoroughness to understand the authentication system
+**Quick pass -- ask for an overview:**
+```text
+Give me a high-level overview of this project
 ```
 
-**Thorough exploration:**
+**Moderate depth -- ask about a specific system:**
+```text
+Walk me through how the authentication system works in this codebase
 ```
-Use the Explore agent with very thorough analysis to document the entire API
+
+**Deep analysis -- ask for exhaustive detail:**
+```text
+Do a thorough analysis of the entire API. Document every endpoint, trace each request through the full stack, and flag any inconsistencies or missing error handling.
 ```
 
 ---
 
-## Lesson 3: The Plan Agent
+## Lesson 3: Planning Tasks
 
-### What is the Plan Agent?
+### When to Ask Claude Code to Plan
 
-The Plan agent designs implementation strategies before you write a single line of code. Use it for planning new features, designing system architecture, thinking through complex changes, and catching problems before they become expensive.
+Asking Claude Code to plan gets you implementation strategies before you write a single line of code. Use planning prompts for new features, system architecture, complex changes, and catching problems before they become expensive.
 
-Trust me on this -- spending five minutes with the Plan agent before a big change can save you hours of backtracking.
+Trust me on this -- spending five minutes asking Claude Code to plan before a big change can save you hours of backtracking.
 
 ---
 
-### Using the Plan Agent
+### Writing Planning Prompts
 
 **Basic usage:**
-```
-Use the Plan agent to create an implementation plan for adding user roles and permissions
+```text
+Create an implementation plan for adding user roles and permissions to this project
 ```
 
-The agent analyzes your current codebase, identifies what needs to change, plans the steps, considers edge cases, and returns a detailed plan you can follow -- or push back on.
+Claude Code analyzes your current codebase, identifies what needs to change, plans the steps, considers edge cases, and returns a detailed plan you can follow -- or push back on.
 
 ---
 
-### Plan Agent Examples
+### Planning Examples
 
 **Example 1: Adding a Feature**
-```
+```text
 I want to add email notifications when users receive messages.
 
-Use the Plan agent to create an implementation plan including:
+Create an implementation plan including:
 - Database changes needed
 - New code to write
 - Existing code to modify
@@ -179,7 +179,7 @@ Use the Plan agent to create an implementation plan including:
 ```
 
 Here's the kind of plan you'll get back:
-```
+```text
 Implementation Plan: Email Notifications for Messages
 
 1. Database Schema Changes
@@ -232,58 +232,53 @@ Estimated time: 4-6 hours for basic implementation
 ---
 
 **Example 2: Refactoring**
-```
-Use the Plan agent to plan refactoring the database queries from callbacks to async/await
+```text
+Plan out a refactor of the database queries from callbacks to async/await
 ```
 
 ---
 
 **Example 3: Performance Optimization**
-```
+```text
 The app is slow when loading the dashboard with lots of data.
 
-Use the Plan agent to create an optimization strategy.
+Create an optimization strategy for improving dashboard load times.
 ```
 
 ---
 
-## Lesson 4: General-Purpose Agent
+## Lesson 4: Multi-Step Tasks
 
-### What is the General-Purpose Agent?
+### Combining Research and Implementation
 
-This one handles complex, multi-step tasks that don't fit neatly into "explore" or "plan." It's best for tasks that combine research and implementation, require web search, involve complex debugging, or need comprehensive updates across a codebase.
+Some tasks don't fit neatly into "explore" or "plan" -- they combine research, implementation, testing, and documentation in a single prompt. Claude Code handles these multi-step workflows autonomously when you lay out the steps clearly.
 
 ---
 
-### General-Purpose Agent Examples
+### Multi-Step Task Examples
 
 **Example 1: Research and Implement**
-```
-Use an agent to:
+```text
 1. Research current best practices for rate limiting APIs
 2. Implement rate limiting on our API endpoints
 3. Add tests for the rate limiting
 4. Document how it works
 ```
 
-The agent searches the web for best practices, reads your current code, implements rate limiting, creates tests, and writes documentation -- all autonomously.
+Claude Code searches the web for best practices, reads your current code, implements rate limiting, creates tests, and writes documentation -- all autonomously.
 
 ---
 
 **Example 2: Find and Fix Issues**
-```
-Use an agent to:
-- Find all potential security vulnerabilities in the authentication system
-- Fix each issue found
-- Add tests to prevent regression
-- Document the changes
+```text
+Find all potential security vulnerabilities in the authentication system,
+fix each issue, add tests to prevent regression, and document the changes.
 ```
 
 ---
 
 **Example 3: Update Dependencies**
-```
-Use an agent to:
+```text
 1. Check which dependencies are outdated
 2. Research breaking changes for major updates
 3. Update dependencies safely
@@ -293,156 +288,164 @@ Use an agent to:
 
 ---
 
-## Lesson 5: Running Agents in Parallel
+## Lesson 5: Running Tasks in Parallel
 
-### Why Use Parallel Agents?
+### Why Work in Parallel?
 
-Sometimes you've got three independent questions and no reason to ask them one at a time. Parallel agents let multiple tasks run simultaneously, so you get all your answers at once instead of waiting in sequence.
+Sometimes you've got three independent questions and no reason to ask them one at a time. Running parallel Claude Code sessions lets multiple tasks proceed simultaneously, so you get all your answers at once instead of waiting in sequence.
+
+**Important:** A single Claude Code session handles one conversation at a time. To run tasks in parallel, you need to open multiple sessions -- either multiple terminal tabs or use `claude -p "task"` in separate terminals.
 
 ---
 
-### How to Run Agents in Parallel
+### How to Run Tasks in Parallel
 
-**Request parallel execution:**
-```
-Please run these tasks in parallel using agents:
+**Open multiple terminal tabs and run separate commands:**
+```bash
+# Terminal 1
+claude -p "Explore how the authentication system works in this codebase"
 
-Agent 1: Explore the authentication system
-Agent 2: Explore the payment processing
-Agent 3: Create a list of all API endpoints
+# Terminal 2
+claude -p "Explore how the payment processing works in this codebase"
+
+# Terminal 3
+claude -p "List all API endpoints with their HTTP methods and parameters"
 ```
 
-**Or:**
-```
-I need to understand three parts of this codebase simultaneously.
-Use parallel agents to:
-- Explore how data validation works
-- Explore how errors are handled
-- Explore how logging is implemented
-```
+**Or open multiple interactive sessions:**
+Each terminal tab runs its own `claude` session, working on a different part of the codebase at the same time.
 
 ---
 
 ### Practical Parallel Use Cases
 
-**Planning multiple features at once:**
-```
-Run in parallel:
-1. Agent to plan implementing user roles
-2. Agent to plan implementing email notifications
-3. Agent to plan implementing audit logging
+**Planning multiple features at once (each in its own terminal):**
+```bash
+# Terminal 1
+claude -p "Create an implementation plan for adding user roles to this project"
+
+# Terminal 2
+claude -p "Create an implementation plan for adding email notifications"
+
+# Terminal 3
+claude -p "Create an implementation plan for adding audit logging"
 ```
 
 **Research across topics:**
-```
-Research in parallel:
-1. Best practices for REST API design
-2. Best practices for database indexing
-3. Best practices for caching strategies
+```bash
+# Terminal 1
+claude -p "Research best practices for REST API design and summarize"
 
-Then summarize findings
+# Terminal 2
+claude -p "Research best practices for database indexing and summarize"
+
+# Terminal 3
+claude -p "Research best practices for caching strategies and summarize"
 ```
 
 ---
 
-### Real-World Agent Roster
+### Choosing the Right Model for the Task
 
-In production projects, teams often maintain a roster of specialized agents, each tuned for a specific job. Here's what a mature agent setup looks like:
+You can switch which model Claude Code uses with the `/model` command inside a session, or by passing the `--model` flag when starting a session. Different models suit different tasks:
 
-| Agent | Purpose | Model Tier | Why This Tier |
-|-------|---------|-----------|---------------|
-| `planner` | Architecture decisions | Opus | Needs deep reasoning |
-| `implementer` | Write feature code | Sonnet | Good balance of speed and quality |
-| `test-writer` | Generate test suites | Sonnet | Reliable pattern matching |
-| `reviewer` | Code review and feedback | Opus | Catches subtle issues |
-| `doc-writer` | Generate documentation | Haiku | Fast, straightforward task |
-| `explorer` | Codebase navigation | Haiku | Speed matters most |
-| `debugger` | Trace and fix bugs | Sonnet | Needs code understanding |
-| `refactorer` | Clean up code | Sonnet | Balances quality and cost |
-| `security-scanner` | Find vulnerabilities | Opus | Catches subtle security issues |
-| `migrator` | Database migrations | Sonnet | Reliable schema work |
-| `api-designer` | Design API contracts | Opus | Architectural decisions |
-| `dependency-checker` | Audit dependencies | Haiku | Fast scanning task |
-| `formatter` | Code style fixes | Haiku | Simple, mechanical task |
-| `changelog-writer` | Generate changelogs | Haiku | Summarization task |
-| `perf-analyzer` | Performance profiling | Sonnet | Needs analytical depth |
-| `error-handler` | Add error handling | Sonnet | Pattern-aware changes |
+| Task Type | Suggested Model | Why |
+|-----------|----------------|-----|
+| Architecture decisions | Opus | Needs deep reasoning |
+| Writing feature code | Sonnet | Good balance of speed and quality |
+| Generating test suites | Sonnet | Reliable pattern matching |
+| Code review | Opus | Catches subtle issues |
+| Generating documentation | Haiku | Fast, straightforward task |
+| Codebase navigation | Haiku | Speed matters most |
+| Tracing and fixing bugs | Sonnet | Needs code understanding |
+| Cleaning up code | Sonnet | Balances quality and cost |
+| Finding vulnerabilities | Opus | Catches subtle security issues |
+| Database migrations | Sonnet | Reliable schema work |
+| Designing API contracts | Opus | Architectural decisions |
+| Auditing dependencies | Haiku | Fast scanning task |
+| Code style fixes | Haiku | Simple, mechanical task |
+| Generating changelogs | Haiku | Summarization task |
+| Performance profiling | Sonnet | Needs analytical depth |
+| Adding error handling | Sonnet | Pattern-aware changes |
 
 **The pattern:** Opus for decisions that require deep thinking. Sonnet for tasks that need good judgment and code understanding. Haiku for fast, mechanical, or straightforward tasks. Matching the model to the task saves money and time without sacrificing quality where it matters.
 
-**Using this in practice:**
-```
-Run these agents in parallel:
-- Haiku agent: Scan for unused dependencies
-- Sonnet agent: Review the authentication flow for bugs
-- Opus agent: Plan the migration from REST to GraphQL
-```
+**Note:** You can't assign different models to different tasks within a single session. To use different models in parallel, run separate sessions:
 
-Each agent gets the model tier that matches the complexity of its job.
+```bash
+# Terminal 1 -- fast scan with Haiku
+claude --model haiku -p "Scan for unused dependencies in this project"
+
+# Terminal 2 -- thorough review with Sonnet
+claude --model sonnet -p "Review the authentication flow for bugs"
+
+# Terminal 3 -- deep planning with Opus
+claude --model opus -p "Plan the migration from REST to GraphQL"
+```
 
 ---
 
-## Lesson 6: Working with Agent Results
+## Lesson 6: Working with Results
 
-### Understanding Agent Output
+### Understanding the Output
 
-Agents return comprehensive reports -- detailed explanations, file locations, code snippets, recommendations, and warnings about potential issues. The output is meant to be actionable, not just informational.
+Agentic tasks return comprehensive reports -- detailed explanations, file locations, code snippets, recommendations, and warnings about potential issues. The output is meant to be actionable, not just informational.
 
 ---
 
-### Acting on Agent Plans
+### Acting on Plans
 
-Once an agent creates a plan, you've got options.
+Once Claude Code creates a plan, you've got options.
 
 **Implement it:**
-```
+```text
 That plan looks good. Let's implement step 1: database migrations
 ```
 
 **Modify it:**
-```
+```text
 The plan looks good, but instead of using a background job,
 let's send emails synchronously for now. Update the plan.
 ```
 
 **Ask for clarification:**
-```
+```text
 I don't understand step 3. Can you explain in more detail?
 ```
 
 ---
 
-### Using Explore Results
+### Using Exploration Results
 
-After an agent explores your code, put that knowledge to work.
+After Claude Code explores your code, put that knowledge to work.
 
 **Make informed changes:**
-```
+```text
 Now that you've explained how auth works,
 add two-factor authentication following the same patterns
 ```
 
 **Dig deeper:**
-```
+```text
 You mentioned the auth tokens expire after 24 hours.
 Where is that configured?
 ```
 
 ---
 
-## Lesson 7: Agent Best Practices
+## Lesson 7: Best Practices for Agentic Prompts
 
 ### Be Specific About What You Want
 
-This is the single biggest factor in getting good results from agents. Vague prompts produce vague output.
+This is the single biggest factor in getting good results. Vague prompts produce vague output.
 
 ❌ **Vague:**
-```
+```text
 Explore the codebase
 ```
 
 ✅ **Specific:**
-```
+```text
 Explore the codebase to find and explain all database queries,
 focusing on performance and potential N+1 query problems
 ```
@@ -452,12 +455,12 @@ focusing on performance and potential N+1 query problems
 ### Set Clear Goals
 
 ❌ **Unclear:**
-```
+```text
 Plan some improvements
 ```
 
 ✅ **Clear:**
-```
+```text
 Create a plan to add caching to the API to reduce database load,
 targeting the 5 most frequently called endpoints
 ```
@@ -466,8 +469,8 @@ targeting the 5 most frequently called endpoints
 
 ### Specify Constraints
 
-Real projects have real limitations. Tell the agent about yours upfront:
-```
+Real projects have real limitations. State your constraints upfront:
+```text
 Plan implementing real-time notifications, but:
 - Cannot use WebSockets (firewall restrictions)
 - Must work with current database (SQLite)
@@ -478,9 +481,9 @@ Plan implementing real-time notifications, but:
 
 ### Ask for Different Perspectives
 
-When you're weighing options, let the agent do the comparison work:
-```
-Use the Plan agent to create 3 different approaches for adding search:
+When you're weighing options, let Claude Code do the comparison work:
+```text
+Create 3 different approaches for adding search to this project:
 1. Simple SQL LIKE queries
 2. Full-text search with database
 3. External search service (like Elasticsearch)
@@ -494,20 +497,20 @@ For each, list pros, cons, and complexity
 
 ### Exercise 1: Explore a Codebase
 
-**Task:** Use Explore agent to understand a project
+**Task:** Use an exploration prompt to understand a project
 
 Find an open source project (or use one of yours) and try this:
 
-```
-Use the Explore agent to:
-1. Explain what this project does
+```text
+Explore this project and:
+1. Explain what it does
 2. Identify the main components
 3. Show me the data flow
 4. List potential areas for improvement
 ```
 
 Then follow up on something that caught your eye:
-```
+```text
 You mentioned [component]. Can you show me where it's defined?
 ```
 
@@ -515,14 +518,14 @@ You mentioned [component]. Can you show me where it's defined?
 
 ### Exercise 2: Plan a Feature
 
-**Task:** Use Plan agent to design an implementation
+**Task:** Use a planning prompt to design an implementation
 
 In a project:
 
-```
+```text
 I want to add user profile pictures.
 
-Use the Plan agent to create an implementation plan for:
+Create an implementation plan for:
 - Uploading images
 - Storing images
 - Serving images
@@ -537,7 +540,7 @@ Consider:
 ```
 
 Then refine based on what comes back:
-```
+```text
 The plan suggests local storage, but I prefer cloud storage.
 Update the plan to use AWS S3.
 ```
@@ -546,31 +549,28 @@ Update the plan to use AWS S3.
 
 ### Exercise 3: Parallel Research
 
-**Task:** Research multiple topics simultaneously
+**Task:** Research multiple topics simultaneously using separate sessions
 
-```
-I'm deciding how to implement search functionality.
+Open three terminal tabs and run one in each:
 
-Use parallel agents to research:
-1. PostgreSQL full-text search capabilities and setup
-2. Elasticsearch integration with Node.js
-3. Simple LIKE query performance at scale
+```bash
+# Terminal 1
+claude -p "Research PostgreSQL full-text search: setup complexity, performance, maintenance, and costs"
 
-For each, provide:
-- Setup complexity
-- Performance characteristics
-- Maintenance requirements
-- Costs
+# Terminal 2
+claude -p "Research Elasticsearch integration with Node.js: setup complexity, performance, maintenance, and costs"
+
+# Terminal 3
+claude -p "Research simple SQL LIKE query performance at scale: setup complexity, performance, maintenance, and costs"
 ```
 
 ---
 
 ### Exercise 4: Complex Autonomous Task
 
-**Task:** Let an agent complete a complex task
+**Task:** Delegate a complex multi-step task
 
-```
-Use an agent to:
+```text
 1. Find all console.log statements in the codebase
 2. Replace them with a proper logging library (Winston)
 3. Set up log levels (error, warn, info, debug)
@@ -579,7 +579,7 @@ Use an agent to:
 6. Test that logging works
 ```
 
-This would take you hours to do manually. An agent handles it in minutes.
+This would take you hours to do manually. Claude Code handles it in minutes.
 
 ---
 
@@ -587,65 +587,65 @@ This would take you hours to do manually. An agent handles it in minutes.
 
 Before moving to Module 7, make sure you understand:
 
-- [ ] What agents are and when to use them
-- [ ] How to use the Explore agent to navigate codebases
-- [ ] How to use the Plan agent to design implementations
-- [ ] When to use general-purpose agents
-- [ ] How to run agents in parallel
-- [ ] How to interpret and act on agent results
-- [ ] Best practices for working with agents
+- [ ] What agentic tasks are and when to use them
+- [ ] How to write exploration prompts to navigate codebases
+- [ ] How to write planning prompts to design implementations
+- [ ] How to delegate complex multi-step tasks
+- [ ] How to run tasks in parallel using multiple sessions
+- [ ] How to interpret and act on results
+- [ ] Best practices for agentic prompts
 
 ---
 
 ## Common Questions (FAQ)
 
-**Q: How long do agents take?**
+**Q: How long do these tasks take?**
 Depends on the task. A simple exploration might take 30 seconds; complex planning can run 1-2 minutes.
 
-**Q: Can I stop an agent mid-task?**
-Yes -- press Ctrl+C or use the /tasks command to manage running agents.
+**Q: Can I stop a task mid-run?**
+Yes -- press Ctrl+C. You can also use /tasks to see background task status.
 
-**Q: Do agents make changes to my code?**
-Only if you ask them to implement something. Explore and Plan agents just analyze and suggest.
+**Q: Does Claude Code make changes to my code during these tasks?**
+Only if you ask it to implement something. Exploration and planning prompts just analyze and suggest.
 
-**Q: Can agents make mistakes?**
-Absolutely. Like any AI, they can get things wrong. Always review agent output before acting on it.
+**Q: Can Claude Code make mistakes on these tasks?**
+Absolutely. Like any AI, it can get things wrong. Always review the output before acting on it.
 
-**Q: Should I use agents for simple tasks?**
-No. Agents add overhead. For quick, straightforward tasks, regular conversation is faster.
+**Q: Should I use agentic prompts for simple tasks?**
+No. They add overhead. For quick, straightforward tasks, regular conversation is faster.
 
-**Q: Can multiple agents work on the same files?**
-Fair warning: if agents modify the same files, you can end up with conflicts. Keep parallel agents pointed at different parts of the codebase.
+**Q: Can multiple parallel sessions work on the same files?**
+Fair warning: if parallel sessions modify the same files, you can end up with conflicts. Keep parallel sessions pointed at different parts of the codebase.
 
 ---
 
-## Agent Comparison Table
+## Prompting Approach Comparison
 
-| Agent Type | Best For | Speed | Autonomy |
-|------------|----------|-------|----------|
-| Explore | Understanding code | Fast | High |
-| Plan | Designing implementations | Medium | High |
-| General | Complex multi-step tasks | Varies | Very High |
-| Specialized | Domain-specific jobs (security, docs, testing) | Varies | High |
-| Regular Chat | Simple tasks, learning | Fastest | Low |
+| Approach | Best For | Speed | Autonomy |
+|----------|----------|-------|----------|
+| Exploration prompts | Understanding code | Fast | High |
+| Planning prompts | Designing implementations | Medium | High |
+| Multi-step prompts | Complex tasks combining research and implementation | Varies | Very High |
+| Specialized prompts | Domain-specific jobs (security, docs, testing) | Varies | High |
+| Regular conversation | Simple tasks, learning | Fastest | Low |
 
 ---
 
 ## Pro Tips
 
-1. **Use Explore before modifying** -- understand the code first
-2. **Use Plan for complex features** -- think before coding
+1. **Explore before modifying** -- understand the code first
+2. **Plan before complex features** -- think before coding
 3. **Be specific** -- clear goals produce better results
-4. **Review agent output** -- verify, don't blindly trust
-5. **Parallel for independent tasks** -- save time when tasks don't overlap
-6. **Ask follow-up questions** -- agents can clarify their own findings
+4. **Review the output** -- verify, don't blindly trust
+5. **Parallel sessions for independent tasks** -- save time when tasks don't overlap
+6. **Ask follow-up questions** -- Claude Code can clarify its own findings
 7. **Iterate on plans** -- refine until you're confident
 
 ---
 
 Next up: Module 7 -- where you'll learn to handle Git operations and version control through Claude Code.
 
-> **Agents are just the beginning.** The [Advanced Modules](https://payhip.com/b/8E107) cover multi-agent orchestration (Module 17) and building custom agents with autonomous loops and safety safeguards (Module 21).
+> **Agentic workflows are just the beginning.** The [Advanced Modules](https://payhip.com/b/8E107) cover multi-session orchestration (Module 17) and building custom agentic workflows with autonomous loops and safety safeguards (Module 21).
 
 ---
 

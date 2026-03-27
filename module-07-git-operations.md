@@ -42,7 +42,7 @@ There are a few core concepts you'll need to know before we go further.
 ### Checking Status
 
 To see what's changed in your project:
-```
+```text
 Show me git status
 What files have I modified?
 ```
@@ -59,7 +59,7 @@ The output tells you which files have been modified, which are new (untracked), 
 ### Viewing Changes
 
 To see the actual code differences:
-```
+```text
 Show me the git diff
 What changes have I made to auth.js?
 ```
@@ -85,14 +85,14 @@ git commit -m "Updated the thing"  # Vague, unhelpful
 ```
 
 **With Claude Code:**
-```
+```text
 Please create a commit with my current changes
 ```
 
 When you ask for a commit, Claude Code runs `git status` and `git diff` to understand what changed, analyzes the differences, writes a descriptive commit message, and creates the commit with proper formatting.
 
 **Example commit message Claude Code might write:**
-```
+```text
 Add user authentication with JWT tokens
 
 - Implement login and register endpoints
@@ -113,7 +113,7 @@ A lot better than "fixed stuff."
 Claude Code follows standard conventions automatically, but it's worth knowing what good looks like:
 
 **Structure:**
-```
+```text
 Brief summary (50 chars or less)
 
 Longer description if needed:
@@ -127,7 +127,7 @@ Issue references: #123
 **Good vs Bad:**
 
 Bad:
-```
+```text
 - "fixed bug"
 - "updated code"
 - "changes"
@@ -135,7 +135,7 @@ Bad:
 ```
 
 Good:
-```
+```text
 - "Fix login error when password is empty"
 - "Add email validation to user registration"
 - "Refactor database connection for better error handling"
@@ -153,7 +153,7 @@ Branches let you work on features without breaking the main codebase, try experi
 ### Creating Branches with Claude Code
 
 **Create a new branch:**
-```
+```text
 Create a new branch called feature/user-dashboard
 ```
 
@@ -163,7 +163,7 @@ git checkout -b feature/user-dashboard
 ```
 
 You can also be more descriptive and let Claude Code pick a sensible name:
-```
+```text
 Create a feature branch for adding password reset
 ```
 
@@ -175,7 +175,7 @@ git checkout -b feature/password-reset
 ### Branch Naming Conventions
 
 **Common patterns:**
-```
+```text
 feature/feature-name    # New features
 bugfix/bug-description  # Bug fixes
 hotfix/critical-fix     # Urgent fixes
@@ -184,7 +184,7 @@ docs/what-documentation # Documentation
 ```
 
 **Examples:**
-```
+```text
 feature/user-authentication
 bugfix/login-validation-error
 hotfix/security-vulnerability
@@ -195,7 +195,7 @@ docs/api-endpoints
 ### Switching Branches
 
 **Switch to existing branch:**
-```
+```text
 Switch to the main branch
 ```
 
@@ -204,7 +204,7 @@ git checkout main
 ```
 
 **Or:**
-```
+```text
 Switch back to my feature branch
 ```
 
@@ -213,7 +213,7 @@ Switch back to my feature branch
 ### Merging Branches
 
 **Merge feature into main:**
-```
+```text
 Merge the feature/user-dashboard branch into main
 ```
 
@@ -232,7 +232,7 @@ A pull request is how you propose merging your code into another branch. It's a 
 This matters more than you think. Writing good PR descriptions is tedious, and Claude Code handles it really well.
 
 **Simple request:**
-```
+```text
 Create a pull request for my changes
 ```
 
@@ -317,7 +317,7 @@ That would take you 20 minutes to write by hand. Claude Code does it in seconds.
 
 You can be specific about what you want:
 
-```
+```text
 Create a pull request with:
 - Title: "Add user authentication"
 - Target branch: develop (not main)
@@ -336,18 +336,18 @@ Reviewing your own changes before committing catches mistakes early, helps you u
 ### Review Workflow with Claude Code
 
 **Step 1: See what changed**
-```
+```text
 Show me all the changes I'm about to commit
 ```
 
 **Step 2: Review specific files**
-```
+```text
 Show me the diff for auth.js
 Explain what changed in the database schema
 ```
 
 **Step 3: Check for issues**
-```
+```text
 Review my changes and check for:
 - Security vulnerabilities
 - Code quality issues
@@ -356,12 +356,12 @@ Review my changes and check for:
 ```
 
 **Step 4: Make fixes if needed**
-```
+```text
 Fix the security issue you found in login.js
 ```
 
 **Step 5: Commit when ready**
-```
+```text
 Now create a commit with these changes
 ```
 
@@ -385,14 +385,14 @@ const PORT = 8080;
 ### Resolving Conflicts with Claude Code
 
 When you hit a conflict:
-```
+```text
 I have a merge conflict in server.js. Help me resolve it.
 ```
 
 Claude Code will show you the conflict, explain both versions, ask which to keep -- or suggest combining them -- then resolve it and mark the file as resolved.
 
 **Example dialogue:**
-```
+```text
 Claude Code: I see a conflict in server.js with the PORT value.
 - HEAD (main branch): PORT = 3000
 - feature/new-port: PORT = 8080
@@ -415,25 +415,25 @@ Claude Code: I'll update it to use process.env.PORT with 8080 as default.
 ### Common gh Operations
 
 **View PRs:**
-```
+```text
 Show me all open pull requests
 ```
 
 **Create issue:**
-```
+```text
 Create a GitHub issue for the bug I just found:
 Title: Login fails with empty password
 Description: [your description]
 ```
 
 **Check PR status:**
-```
+```text
 What's the status of PR #42?
 Has it passed all checks?
 ```
 
 **Merge PR:**
-```
+```text
 Merge pull request #42
 ```
 
@@ -446,12 +446,12 @@ Merge pull request #42
 Here's the full lifecycle of a feature, from branch to merge. This is the workflow you'll use over and over.
 
 **Step 1: Create feature branch**
-```
+```text
 Create a new branch for adding password reset feature
 ```
 
 **Step 2: Make changes**
-```
+```text
 Implement password reset functionality with:
 - Request reset endpoint
 - Reset token generation
@@ -460,28 +460,28 @@ Implement password reset functionality with:
 ```
 
 **Step 3: Test your changes**
-```
+```text
 Run the tests
 ```
 
 **Step 4: Review changes**
-```
+```text
 Show me all changes I made
 Review for any security issues
 ```
 
 **Step 5: Commit**
-```
+```text
 Create a commit for the password reset feature
 ```
 
 **Step 6: Push to remote**
-```
+```text
 Push this branch to GitHub
 ```
 
 **Step 7: Create PR**
-```
+```text
 Create a pull request for this feature
 Target: main branch
 Include:
@@ -491,24 +491,24 @@ Include:
 ```
 
 **Step 8: Address review comments**
-```
+```text
 The PR review asked to add rate limiting to prevent abuse.
 Add rate limiting to the reset endpoints.
 ```
 
 **Step 9: Update PR**
-```
+```text
 Add a commit with the rate limiting changes
 Push the update
 ```
 
 **Step 10: Merge**
-```
+```text
 Merge the pull request
 ```
 
 **Step 11: Clean up**
-```
+```text
 Delete the feature branch locally and remotely
 Switch back to main
 Pull the latest changes

@@ -18,7 +18,7 @@ Claude Code doesn't care what language you're writing in. Python, TypeScript, Go
 
 Here's a solid starting prompt for spinning up a new Python project from scratch:
 
-```
+```text
 Create a new Python project with:
 - Virtual environment
 - requirements.txt
@@ -26,14 +26,14 @@ Create a new Python project with:
 - pytest for testing
 - black for formatting
 - pylint for linting
-- setup.py for package management
+- pyproject.toml for package configuration
 ```
 
 ---
 
 ### Flask Web Application
 
-```
+```text
 Create a Flask API with:
 - Application factory pattern
 - Blueprints for routes
@@ -47,7 +47,7 @@ Create a Flask API with:
 
 ### Django Project
 
-```
+```text
 Create a Django project for a blog with:
 - Custom user model
 - Blog app with posts and comments
@@ -63,7 +63,7 @@ Create a Django project for a blog with:
 
 FastAPI is where Claude Code really shines with Python -- the type hints and Pydantic models give it a lot to work with.
 
-```
+```text
 Create a FastAPI application with:
 - Automatic API documentation
 - Pydantic models for validation
@@ -100,7 +100,7 @@ You can make these standards persistent by encoding them into `.claude/rules/pyt
 
 Express with TypeScript is one of the most common stacks you'll encounter. Claude Code handles the boilerplate well, which is good because there's a lot of it.
 
-```
+```text
 Create an Express TypeScript API with:
 - TypeScript strict mode
 - Express routing with types
@@ -115,7 +115,7 @@ Create an Express TypeScript API with:
 
 ### React Frontend
 
-```
+```text
 Create a React app with:
 - TypeScript
 - React Router for navigation
@@ -130,7 +130,7 @@ Create a React app with:
 
 ### Next.js Full-Stack
 
-```
+```text
 Create a Next.js application with:
 - App Router (latest)
 - Server Components
@@ -167,7 +167,7 @@ Encode these into `.claude/rules/typescript/` files so they apply automatically.
 
 ### Go CLI Application
 
-```
+```text
 Create a Go CLI tool that:
 - Uses Cobra for commands
 - Handles flags and arguments
@@ -182,7 +182,7 @@ Create a Go CLI tool that:
 
 ### Go Web Server
 
-```
+```text
 Create a Go web server with:
 - Chi router
 - Middleware (logging, recovery, CORS)
@@ -216,7 +216,7 @@ Encode these into `.claude/rules/golang/` files so they're enforced automaticall
 
 Fair warning: Rust projects involve more back-and-forth with Claude Code than most languages. The borrow checker is strict, and sometimes the generated code won't compile on the first pass. That's normal. Just feed the compiler errors back and Claude Code will sort it out.
 
-```
+```text
 Create a Rust CLI application with:
 - Clap for argument parsing
 - Error handling with thiserror or anyhow
@@ -230,7 +230,7 @@ Create a Rust CLI application with:
 
 ### Rust Web API
 
-```
+```text
 Create a Rust web API with Actix-web:
 - RESTful routes
 - Database with SQLx
@@ -249,7 +249,7 @@ Create a Rust web API with Actix-web:
 
 Spring Boot projects tend to be verbose. Claude Code is genuinely useful here because it'll generate all the annotation-heavy boilerplate that nobody wants to type by hand.
 
-```
+```text
 Create a Spring Boot application with:
 - Maven or Gradle build
 - Spring Data JPA
@@ -269,7 +269,7 @@ Create a Spring Boot application with:
 
 Swift and iOS development is another area where Claude Code pulls its weight. The framework APIs are extensive, and having Claude Code generate the boilerplate for views, data models, and persistence saves real time.
 
-```
+```text
 Create a SwiftUI application with:
 - Core Data persistence layer
 - async/await for all network calls
@@ -304,7 +304,7 @@ Encode Swift-specific conventions into `.claude/rules/swift/` files to keep them
 
 This is where things get interesting. Real-world projects often mix languages -- a Python ML service talking to a Go gateway, fronted by a Node.js app. Claude Code can context-switch between them in the same session.
 
-```
+```text
 I have a project with:
 - Python ML service (FastAPI)
 - Go API gateway
@@ -325,7 +325,7 @@ Help me:
 
 You can tell Claude Code to adjust its style based on what file you're working in. Trust me on this -- it makes polyglot work way smoother.
 
-```
+```text
 I'm working in a polyglot codebase.
 When I ask you to add features:
 - In .py files: Use Python best practices
@@ -342,7 +342,7 @@ Each language has its own set of conventions, and Claude Code can enforce them f
 
 ### Python Best Practices
 
-```
+```text
 Review this Python code and ensure it follows:
 - PEP 8 style guide
 - Type hints where appropriate
@@ -356,7 +356,7 @@ Review this Python code and ensure it follows:
 
 ### JavaScript/TypeScript Best Practices
 
-```
+```text
 Review this TypeScript code for:
 - Proper type annotations
 - Avoid 'any' types
@@ -370,7 +370,7 @@ Review this TypeScript code for:
 
 ### Go Best Practices
 
-```
+```text
 Review this Go code for:
 - Proper error handling
 - Effective use of goroutines
@@ -384,7 +384,7 @@ Review this Go code for:
 
 ### Rust Best Practices
 
-```
+```text
 Review this Rust code for:
 - Ownership and borrowing
 - Error handling with Result
@@ -402,7 +402,7 @@ Everything in this module -- the standards, the patterns, the idioms -- is only 
 
 Here's the recommended directory structure:
 
-```
+```text
 .claude/rules/
 ├── common/
 │   ├── coding-style.md    # Universal: naming, file length, DRY
@@ -430,7 +430,7 @@ globs: ["**/*.py"]
 - Django views: use ViewSets, never function-based views
 ```
 
-The `path` frontmatter in the YAML header tells Claude Code when to load this rule. A pattern like `**/*.py` means it only activates when working on Python files. The `common/` rules use a broader path (or no path restriction) so they apply everywhere.
+The `globs` field in the YAML header tells Claude Code when to load this rule. A pattern like `**/*.py` means it only activates when working on Python files. The `common/` rules use a broader glob (or no glob restriction) so they apply everywhere.
 
 Language-specific rules only load when Claude Code is working on matching files. This keeps your context focused -- Go conventions don't clutter the prompt when you're editing TypeScript, and vice versa.
 
@@ -444,7 +444,7 @@ Language-specific rules only load when Claude Code is working on matching files.
 
 Build a complete FastAPI application from scratch:
 
-```
+```text
 Create a FastAPI task management API with:
 - Users and authentication
 - CRUD operations for tasks
@@ -452,7 +452,7 @@ Create a FastAPI task management API with:
 - Async operations
 - Input validation with Pydantic
 - Tests with pytest
-- Documen in README
+- Documentation in README
 ```
 
 ---
@@ -461,7 +461,7 @@ Create a FastAPI task management API with:
 
 Build a Next.js + API application:
 
-```
+```text
 Create a Next.js blog application with:
 - Server components for listing posts
 - Client components for interactions
@@ -477,7 +477,7 @@ Create a Next.js blog application with:
 
 Build a production-style Go service:
 
-```
+```text
 Create a Go microservice that:
 - Serves a REST API
 - Connects to PostgreSQL
@@ -494,7 +494,7 @@ Create a Go microservice that:
 
 This one's the most ambitious -- connect services written in different languages into a working system:
 
-```
+```text
 Build a system with:
 - Python ML model service
 - Node.js API that calls the ML service
@@ -524,7 +524,7 @@ Build a system with:
 ## Language-Specific Commands
 
 ### Python
-```
+```bash
 # Create virtual environment
 python -m venv venv
 
@@ -545,7 +545,7 @@ pytest
 ```
 
 ### Node.js/TypeScript
-```
+```bash
 # Install dependencies
 npm install
 
@@ -560,9 +560,9 @@ npm run build
 ```
 
 ### Go
-```
+```bash
 # Initialize module
-go mod init
+go mod init github.com/yourname/yourproject
 
 # Install dependencies
 go mod tidy
@@ -578,7 +578,7 @@ go build
 ```
 
 ### Rust
-```
+```bash
 # Create new project
 cargo new myproject
 

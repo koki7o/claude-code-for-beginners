@@ -16,7 +16,7 @@ This module covers the habits and practices that separate throwaway scripts from
 
 ### What is TodoWrite?
 
-TodoWrite is Claude Code's built-in task management system. It tracks what you're working on, shows progress at a glance, and keeps you organized when a task has more moving parts than you can hold in your head. If you've ever lost track of where you were halfway through a feature, this is the fix.
+When you give Claude Code a complex, multi-step task, it automatically creates an internal todo list to track its own progress. You'll see a checklist appear showing what Claude plans to do, what it's working on, and what's done. You don't need to manage this list yourself -- just give Claude a clear breakdown of what you need.
 
 ---
 
@@ -30,7 +30,7 @@ Skip it for single simple tasks, trivial changes, and quick fixes. Not everythin
 
 ### Creating a Todo List
 
-```
+```text
 I need to add user authentication to the app.
 
 Create a todo list for:
@@ -45,7 +45,7 @@ Create a todo list for:
 ```
 
 Claude Code creates something like this:
-```
+```text
 ✓ Set up database tables for users
 → Create registration endpoint (in progress)
 ○ Create login endpoint
@@ -63,10 +63,10 @@ Claude Code creates something like this:
 Claude Code automatically marks tasks as in_progress when it starts them and completed when it finishes. Only one task shows as in_progress at a time, so you always know exactly where things stand.
 
 You can ask things like:
-```
-Show me the current todo list
+```text
 What's left to do?
-Mark task 3 as completed
+What have you completed so far?
+What's the next step?
 ```
 
 ---
@@ -77,7 +77,7 @@ Mark task 3 as completed
 
 Always review changes before committing. Trust me on this -- it's the single easiest way to catch mistakes before they become permanent.
 
-```
+```text
 Before I commit, show me:
 1. All files that changed
 2. What changed in each file
@@ -91,7 +91,7 @@ Before I commit, show me:
 
 Ask Claude Code to run through the common pitfalls:
 
-```
+```text
 Review my changes and check for:
 - Security vulnerabilities
 - Performance issues
@@ -108,7 +108,7 @@ Review my changes and check for:
 
 When you're reviewing a pull request, Claude Code can help you get up to speed quickly:
 
-```
+```text
 I need to review this pull request.
 Help me:
 1. Understand what it does
@@ -147,7 +147,7 @@ If your comment just restates the code in English, delete it.
 
 You can ask Claude Code to add JSDoc comments across a whole file:
 
-```
+```text
 Add JSDoc comments to all functions in userService.js with:
 - Description of what the function does
 - Parameter types and descriptions
@@ -162,7 +162,7 @@ Add JSDoc comments to all functions in userService.js with:
 
 A solid README is the front door to your project. Ask Claude Code to scaffold one:
 
-```
+```text
 Create a README.md for this project with:
 - Project description
 - Features list
@@ -178,7 +178,7 @@ Create a README.md for this project with:
 
 ### API Documentation
 
-```
+```text
 Generate API documentation for all endpoints in routes/:
 - For each endpoint list:
   * HTTP method and path
@@ -197,7 +197,7 @@ Generate API documentation for all endpoints in routes/:
 
 This matters more than you think. Unhandled errors are how apps crash in production at 2 AM.
 
-```
+```text
 Add error handling to the database queries in userService.js:
 - Try/catch blocks for all async operations
 - Specific error messages for different failures
@@ -214,7 +214,7 @@ That last point is important -- your users should get a clean "something went wr
 
 Custom error classes make your error handling way more precise:
 
-```
+```text
 Create custom error classes for:
 - ValidationError (400)
 - AuthenticationError (401)
@@ -234,7 +234,7 @@ Each should:
 
 Keep your error responses consistent. Pick a format and stick with it across every endpoint:
 
-```
+```text
 Create error response middleware that returns:
 {
   "error": {
@@ -272,7 +272,7 @@ Getting this balance right is an underrated skill.
 
 ### Implement Logging
 
-```
+```text
 Add logging throughout the application:
 
 1. Create logger utility with levels:
@@ -300,7 +300,7 @@ Add logging throughout the application:
 
 Structured logs -- JSON format -- are far easier to search and filter than plain text, especially once you're running in production:
 
-```
+```text
 Configure logger to output:
 {
   "timestamp": "2025-01-15T10:30:00.000Z",
@@ -320,7 +320,7 @@ Configure logger to output:
 
 Organizing by feature instead of by type makes a huge difference as your project grows. When everything related to "users" lives in one folder, you don't have to jump between five different directories to understand one feature.
 
-```
+```text
 Help me reorganize from:
 src/
   ├── routes/       (all routes together)
@@ -347,7 +347,7 @@ src/
 
 Duplication is how bugs multiply. Fix it in one place, forget about the other three copies, and now you've got inconsistent behavior.
 
-```
+```text
 Find duplicate code in this project and refactor:
 1. Search for repeated logic
 2. Extract into shared functions
@@ -362,7 +362,7 @@ Find duplicate code in this project and refactor:
 
 If a file is doing too many things, it's time to split it up:
 
-```
+```text
 The userController.js file is doing too much.
 Refactor so that:
 - Controller only handles HTTP requests/responses
@@ -378,7 +378,7 @@ Refactor so that:
 Instead of relying on memory or hoping everyone follows the same conventions, you can encode your project's standards into rules files that Claude Code follows automatically.
 
 **Create a rules directory:**
-```
+```text
 .claude/rules/
 ├── code-style.md        # Formatting and naming conventions
 ├── error-handling.md    # How errors should be handled
@@ -413,7 +413,7 @@ globs: ["src/**/*.ts", "src/**/*.js"]
 
 Fair warning: this is one of those areas where cutting corners will come back to bite you.
 
-```
+```text
 Add comprehensive input validation:
 - Validate all user input
 - Sanitize data before database queries
@@ -427,7 +427,7 @@ Add comprehensive input validation:
 
 ### Authentication & Authorization
 
-```
+```text
 Review and improve authentication security:
 - Use bcrypt for password hashing (salt rounds 10+)
 - Implement rate limiting on login
@@ -444,7 +444,7 @@ Review and improve authentication security:
 
 Hardcoded secrets in source code are one of the most common -- and most preventable -- security mistakes.
 
-```
+```text
 Ensure no secrets in code:
 1. Find any hardcoded secrets
 2. Move to environment variables
@@ -457,7 +457,7 @@ Ensure no secrets in code:
 
 ### Security Headers
 
-```
+```text
 Add security headers using helmet.js:
 - Content Security Policy
 - X-Frame-Options
@@ -474,7 +474,7 @@ Add security headers using helmet.js:
 
 Slow queries are the most common performance bottleneck in web apps, and they're usually the easiest to fix:
 
-```
+```text
 Optimize database queries:
 1. Add indexes on frequently queried columns
 2. Fix N+1 query problems
@@ -487,7 +487,7 @@ Optimize database queries:
 
 ### Caching
 
-```
+```text
 Implement caching for expensive operations:
 - Cache database queries that rarely change
 - Cache external API responses
@@ -501,10 +501,12 @@ Cache invalidation is one of the famously hard problems in computer science, so 
 
 ### Async Operations
 
-```
+```text
 Optimize with async operations:
 - Use Promise.all for parallel operations
-- Don't await in loops (use Promise.all or for...of)
+- Use Promise.all when loop iterations are independent and can run in parallel
+- Use for...of with await when operations must run sequentially
+- Avoid forEach with async callbacks (it doesn't await properly)
 - Move slow operations to background jobs
 - Implement job queues for heavy tasks
 ```
@@ -518,17 +520,17 @@ Optimize with async operations:
 Here's what a professional feature development cycle looks like end to end:
 
 **Step 1: Plan**
-```
+```text
 Create a todo list for adding password reset feature
 ```
 
 **Step 2: Create branch**
-```
+```text
 Create a new git branch: feature/password-reset
 ```
 
 **Step 3: Write tests first (TDD)**
-```
+```text
 Write tests for password reset:
 - Request reset token
 - Verify token
@@ -536,7 +538,7 @@ Write tests for password reset:
 ```
 
 **Step 4: Implement**
-```
+```text
 Implement password reset following the plan:
 - Add database column for reset tokens
 - Create request reset endpoint
@@ -547,7 +549,7 @@ Implement password reset following the plan:
 ```
 
 **Step 5: Review**
-```
+```text
 Review all changes before committing:
 - Check for security issues
 - Verify error handling
@@ -556,12 +558,12 @@ Review all changes before committing:
 ```
 
 **Step 6: Commit**
-```
+```text
 Create a commit with meaningful message
 ```
 
 **Step 7: Create PR**
-```
+```text
 Create a pull request with:
 - Summary of changes
 - Testing steps
@@ -577,7 +579,7 @@ This flow might feel like a lot of overhead at first, but it catches problems ea
 Once you're comfortable with the manual workflow above, you can automate chunks of it. Here's a professional pipeline that handles quality checks automatically:
 
 **Step 1: Pre-flight checks**
-```
+```text
 Before I start working on this feature, run these checks:
 1. Are all tests passing?
 2. Is the linter clean?
@@ -586,7 +588,7 @@ Before I start working on this feature, run these checks:
 ```
 
 **Step 2: Research-first development**
-```
+```text
 Before writing any code for this feature:
 1. Explore how similar features are implemented in this codebase
 2. Check if there are existing utilities or patterns I should reuse
@@ -597,7 +599,7 @@ Before writing any code for this feature:
 This "research before coding" approach prevents the common mistake of reimplementing something that already exists or breaking patterns the rest of the codebase follows.
 
 **Step 3: Automated quality gate**
-```
+```text
 After implementing, run the full quality check:
 1. Run the linter -- fix any issues
 2. Run the test suite -- fix any failures
@@ -616,7 +618,7 @@ After implementing, run the full quality check:
 
 Take an existing messy file and clean it up:
 
-```
+```text
 Take an existing messy file and refactor it:
 1. Add proper error handling
 2. Add logging
@@ -632,7 +634,7 @@ Take an existing messy file and refactor it:
 
 Find and fix security issues in an application:
 
-```
+```text
 Review this application for security issues:
 1. Check input validation
 2. Check authentication
@@ -648,7 +650,7 @@ Review this application for security issues:
 
 Take a slow endpoint and make it faster:
 
-```
+```text
 This endpoint is slow. Optimize it:
 1. Find the bottleneck
 2. Add database indexes

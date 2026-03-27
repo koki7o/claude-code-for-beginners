@@ -20,7 +20,7 @@ Here's the deal: the single most impactful thing you can do with Claude Code is 
 
 You can bootstrap one quickly:
 
-```
+```text
 /init
 ```
 
@@ -33,23 +33,23 @@ Or create it manually in your project root.
 There are several locations, each with a different scope:
 
 **Project memory** (shared with your team via version control):
-```
+```text
 ./CLAUDE.md              # Project root
 ./.claude/CLAUDE.md      # Alternative location
 ```
 
 **Project memory (personal)** -- automatically gitignored:
-```
+```text
 ./CLAUDE.local.md        # Your personal project preferences
 ```
 
 **User memory** (applies to all your projects):
-```
+```text
 ~/.claude/CLAUDE.md      # Global personal preferences
 ```
 
 **Managed policy** (organization-wide, admin-deployed):
-```
+```text
 # macOS: /Library/Application Support/ClaudeCode/CLAUDE.md
 # Linux: /etc/claude-code/CLAUDE.md
 ```
@@ -163,7 +163,7 @@ The first 200 lines of `MEMORY.md` in that directory are loaded every session. U
 
 For larger projects, one CLAUDE.md file isn't enough. Rules let you organize instructions into focused files:
 
-```
+```text
 your-project/
 ├── .claude/
 │   ├── CLAUDE.md
@@ -194,7 +194,7 @@ globs: ["src/api/**/*.ts"]
 - Include OpenAPI documentation comments
 ```
 
-Rules without a `paths` field load unconditionally. Rules with paths only activate when Claude is working with matching files.
+Rules without a `globs` field load unconditionally. Rules with globs only activate when Claude is working with matching files.
 
 Supported glob patterns:
 
@@ -207,7 +207,7 @@ Supported glob patterns:
 
 Organize rules into subdirectories if you want -- they're discovered recursively:
 
-```
+```text
 .claude/rules/
 ├── frontend/
 │   ├── react.md
@@ -220,7 +220,7 @@ Organize rules into subdirectories if you want -- they're discovered recursively
 
 For polyglot projects -- where you have multiple languages in one repo -- organizing rules by language keeps things clean and avoids cross-contamination of conventions:
 
-```
+```text
 .claude/rules/
 ├── common/
 │   ├── coding-style.md
@@ -238,7 +238,7 @@ For polyglot projects -- where you have multiple languages in one repo -- organi
     └── concurrency.md
 ```
 
-The `common/` directory holds rules that apply regardless of language -- things like commit message format, testing philosophy, and security requirements. Language-specific directories contain rules scoped to their respective file types using `paths` frontmatter (e.g., `paths: ["**/*.ts", "**/*.tsx"]` for the TypeScript rules). Language-specific rules can reference common ones with `@imports`, so your Go error-handling rules can point to `@../common/coding-style.md` for the shared conventions they build on. This structure mirrors how your codebase is actually organized and makes it obvious where new rules belong.
+The `common/` directory holds rules that apply regardless of language -- things like commit message format, testing philosophy, and security requirements. Language-specific directories contain rules scoped to their respective file types using `globs` frontmatter (e.g., `globs: ["**/*.ts", "**/*.tsx"]` for the TypeScript rules). Language-specific rules can reference common ones with `@imports`, so your Go error-handling rules can point to `@../common/coding-style.md` for the shared conventions they build on. This structure mirrors how your codebase is actually organized and makes it obvious where new rules belong.
 
 ---
 
@@ -313,7 +313,7 @@ Most people stick with `default` and use allow/deny rules for fine-tuning. The `
 Skills are custom slash commands that extend what Claude can do. Forget TypeScript files in `~/.config/` -- that's not how it works. Skills are Markdown files with YAML frontmatter.
 
 Every skill needs:
-```
+```text
 .claude/skills/<skill-name>/SKILL.md
 ```
 
@@ -325,7 +325,7 @@ That's it. A directory with a `SKILL.md` file inside.
 
 Here's a skill that reviews code:
 
-```
+```bash
 mkdir -p .claude/skills/review-code
 ```
 
@@ -333,7 +333,6 @@ Create `.claude/skills/review-code/SKILL.md`:
 
 ```yaml
 ---
-name: review-code
 description: Reviews code for quality, security, and best practices. Use when the user asks for a code review or after significant changes.
 ---
 
@@ -355,7 +354,7 @@ Provide feedback organized by priority:
 ```
 
 Use it:
-```
+```text
 /review-code
 ```
 
@@ -410,7 +409,6 @@ Skills would be pretty limited if you couldn't pass data into them. These placeh
 Example:
 ```yaml
 ---
-name: fix-issue
 description: Fix a GitHub issue
 disable-model-invocation: true
 ---
@@ -434,7 +432,6 @@ The `` !`command` `` syntax runs shell commands before the skill content reaches
 
 ```yaml
 ---
-name: pr-summary
 description: Summarize the current pull request
 context: fork
 agent: Explore
@@ -456,7 +453,7 @@ The commands execute first, their output replaces the placeholders, and Claude o
 
 Skills can include extra files in their directory:
 
-```
+```text
 review-code/
 ├── SKILL.md           # Main instructions (required)
 ├── checklist.md       # Detailed review checklist
@@ -504,7 +501,7 @@ Each of these follows the same SKILL.md format you already know -- the differenc
 
 Before skills existed, there were commands. They still work and they're simpler:
 
-```
+```text
 .claude/commands/review.md
 ```
 
@@ -776,7 +773,6 @@ Agent files live in `.claude/agents/`:
 
 ```markdown
 ---
-name: code-reviewer
 description: Reviews code for quality and best practices. Use proactively after code changes.
 tools: Read, Grep, Glob, Bash
 model: sonnet
@@ -823,7 +819,6 @@ To make agents concrete, here are three production agents with different design 
 **1. Planner Agent** -- deep reasoning, zero side effects:
 ```yaml
 ---
-name: planner
 description: Analyzes codebases and creates detailed implementation plans. Use when the user needs architecture decisions or multi-step plans.
 tools: Read, Grep, Glob
 model: opus
@@ -837,7 +832,6 @@ Why opus? Planning requires deep reasoning and long-horizon thinking. Why only R
 **2. Security Reviewer Agent** -- specialized checklist, moderate cost:
 ```yaml
 ---
-name: security-reviewer
 description: Reviews code for security vulnerabilities using OWASP guidelines. Use after code changes that touch auth, input handling, or data access.
 tools: Read, Grep, Glob, Bash
 model: sonnet
@@ -853,7 +847,6 @@ Why sonnet? Security review needs good reasoning but runs frequently -- opus wou
 **3. Documentation Updater Agent** -- routine work, high volume:
 ```yaml
 ---
-name: doc-updater
 description: Updates documentation to reflect code changes. Use after features are merged.
 tools: Read, Grep, Glob, Edit, Write
 model: haiku
@@ -874,7 +867,7 @@ Module 21 goes deep into agent architecture, including multi-agent coordination,
 
 **Task:** Create a CLAUDE.md for a project you're working on (or a sample project)
 
-```
+```text
 1. Create CLAUDE.md in your project root
 2. Add: project description, architecture overview
 3. Add: common commands (build, test, lint)
@@ -891,7 +884,7 @@ Module 21 goes deep into agent architecture, including multi-agent coordination,
 
 **Task:** Build a skill that generates a changelog entry
 
-```
+```text
 1. Create .claude/skills/changelog/SKILL.md
 2. Add frontmatter: name, description, disable-model-invocation: true
 3. Add instructions to:
@@ -907,7 +900,7 @@ Module 21 goes deep into agent architecture, including multi-agent coordination,
 
 **Task:** Create a PostToolUse hook that runs your linter after file edits
 
-```
+```text
 1. Create .claude/hooks/lint-check.sh
 2. Make it executable (chmod +x)
 3. Read tool_input.file_path from stdin JSON

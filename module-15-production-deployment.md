@@ -132,7 +132,7 @@ heroku login
 heroku create my-app-name
 
 # Add PostgreSQL
-heroku addons:create heroku-postgresql:hobby-dev
+heroku addons:create heroku-postgresql:essential-0
 
 # Set environment variables
 heroku config:set NODE_ENV=production
@@ -175,7 +175,7 @@ Claude Code will generate a deployment guide. On the server:
 sudo apt update && sudo apt upgrade -y
 
 # Install Node.js
-curl -fsSL https://deb.nodesource.com/setup_18.x | sudo -E bash -
+curl -fsSL https://deb.nodesource.com/setup_22.x | sudo -E bash -
 sudo apt install -y nodejs
 
 # Install PM2
@@ -250,7 +250,7 @@ Create Docker configuration for this Node.js API:
 **Dockerfile:**
 ```dockerfile
 # Build stage
-FROM node:18-alpine AS builder
+FROM node:22-alpine AS builder
 WORKDIR /app
 COPY package*.json ./
 RUN npm ci
@@ -258,10 +258,10 @@ COPY . .
 RUN npm run build
 
 # Production stage
-FROM node:18-alpine
+FROM node:22-alpine
 WORKDIR /app
 COPY package*.json ./
-RUN npm ci --only=production
+RUN npm ci --omit=dev
 COPY --from=builder /app/dist ./dist
 
 # Security: run as non-root
@@ -290,7 +290,7 @@ coverage
 
 **docker-compose.yml:**
 ```yaml
-version: '3.8'
+# docker-compose.yml (Compose V2 — no version key needed)
 
 services:
   app:
@@ -350,12 +350,12 @@ jobs:
   test:
     runs-on: ubuntu-latest
     steps:
-      - uses: actions/checkout@v3
+      - uses: actions/checkout@v4
 
       - name: Setup Node.js
-        uses: actions/setup-node@v3
+        uses: actions/setup-node@v4
         with:
-          node-version: '18'
+          node-version: '22'
 
       - name: Install dependencies
         run: npm ci
@@ -374,7 +374,7 @@ jobs:
     runs-on: ubuntu-latest
     if: github.ref == 'refs/heads/main'
     steps:
-      - uses: actions/checkout@v3
+      - uses: actions/checkout@v4
 
       - name: Deploy to production
         env:

@@ -95,7 +95,7 @@ For this module, we'll walk through Option 1 step by step. The process applies t
 
 ### Step 1: Define Requirements
 
-```
+```text
 I want to build a Task Management API.
 
 Help me create a complete requirements document including:
@@ -110,7 +110,7 @@ Help me create a complete requirements document including:
 
 ### Step 2: Project Structure Planning
 
-```
+```text
 For this Task Management API, help me plan:
 - Project folder structure
 - File organization
@@ -123,23 +123,23 @@ For this Task Management API, help me plan:
 
 ### Step 3: Initialize Project
 
-```
+```text
 Initialize a new Node.js project for the Task Management API with:
 - package.json with appropriate metadata
 - Express.js
 - SQLite with better-sqlite3
-- JWT for authentication
-- bcrypt for password hashing
-- Jest for testing
-- ESLint and Prettier for code quality
-- nodemon for development
+- JWT (JSON Web Tokens) for authentication -- tokens that prove a user is logged in
+- bcrypt for password hashing -- securely stores passwords so they can't be read
+- Jest for testing -- a JavaScript test runner
+- ESLint and Prettier for code quality -- auto-detect problems and auto-format code
+- nodemon for development -- auto-restarts your server when files change
 ```
 
 ---
 
 ### Step 4: Set Up Project Structure
 
-```
+```text
 Create the following folder structure:
 src/
   ├── routes/       (API routes)
@@ -163,7 +163,7 @@ README.md
 
 Before diving into implementation, set up a CLAUDE.md so Claude Code follows your project's conventions from the start:
 
-```
+```text
 Create a CLAUDE.md for this Task Management API that includes:
 
 ## Quick Commands
@@ -200,7 +200,7 @@ This file gets loaded automatically every time you start Claude Code in this pro
 
 ### Step 5: Design Database Schema
 
-```
+```text
 Design the database schema for:
 
 Users table:
@@ -222,7 +222,7 @@ Create the SQL schema with:
 
 ### Step 6: Create Database Connection
 
-```
+```text
 Create a database connection module at src/config/database.js that:
 - Connects to SQLite database
 - Creates tables if they don't exist
@@ -235,7 +235,7 @@ Create a database connection module at src/config/database.js that:
 
 ### Step 7: Create Database Models
 
-```
+```text
 Create model files for User, Project, and Task with methods:
 
 User model:
@@ -266,7 +266,7 @@ Task model:
 
 ### Step 8: Create Authentication Middleware
 
-```
+```text
 Create authentication middleware at src/middleware/auth.js that:
 - Extracts JWT token from Authorization header
 - Verifies the token
@@ -278,7 +278,7 @@ Create authentication middleware at src/middleware/auth.js that:
 
 ### Step 9: Create Auth Routes
 
-```
+```text
 Create authentication routes at src/routes/auth.js:
 
 POST /api/auth/register
@@ -301,7 +301,7 @@ GET /api/auth/me
 
 ### Step 10: Implement Password Hashing
 
-```
+```text
 Create a utility module for password hashing at src/utils/password.js with:
 - hash(password) - returns hashed password
 - verify(password, hash) - returns boolean
@@ -314,7 +314,7 @@ Use bcrypt with salt rounds of 10
 
 ### Step 11: Project Routes
 
-```
+```text
 Create project routes at src/routes/projects.js:
 
 GET /api/projects
@@ -343,7 +343,7 @@ DELETE /api/projects/:id
 
 ### Step 12: Task Routes
 
-```
+```text
 Create task routes at src/routes/tasks.js:
 
 GET /api/tasks
@@ -377,7 +377,7 @@ DELETE /api/tasks/:id
 
 ### Step 13: Add Input Validation
 
-```
+```text
 Create validation middleware using express-validator for:
 - Email format
 - Password strength (min 8 chars)
@@ -397,7 +397,7 @@ Return clear error messages
 
 This matters more than you think. A good error handler is the difference between an app that's debuggable and one that's a nightmare when something goes wrong in production.
 
-```
+```text
 Create error handling middleware at src/middleware/errorHandler.js that:
 - Catches all errors
 - Logs errors to console (with stack trace in development)
@@ -415,7 +415,7 @@ Create error handling middleware at src/middleware/errorHandler.js that:
 
 ### Step 15: Add Logging
 
-```
+```text
 Set up logging using a simple logger at src/utils/logger.js:
 - Log requests (method, path, status, duration)
 - Log errors with stack traces
@@ -429,7 +429,7 @@ Set up logging using a simple logger at src/utils/logger.js:
 
 ### Step 16: Unit Tests
 
-```
+```text
 Create unit tests for:
 
 src/utils/password.test.js
@@ -450,7 +450,7 @@ src/models/task.test.js
 
 ### Step 17: Integration Tests
 
-```
+```text
 Create integration tests for all API endpoints:
 
 tests/integration/auth.test.js
@@ -477,7 +477,7 @@ tests/integration/tasks.test.js
 
 ### Step 18: Run Tests and Fix Issues
 
-```
+```text
 Run all tests with coverage:
 npm test -- --coverage
 
@@ -494,7 +494,7 @@ Fair warning: you'll almost certainly have failing tests on the first run. That'
 
 ### Step 19: API Documentation
 
-```
+```text
 Create comprehensive API documentation in README.md:
 
 For each endpoint, document:
@@ -510,7 +510,7 @@ For each endpoint, document:
 
 ### Step 20: Setup Instructions
 
-```
+```text
 Add to README.md:
 - Project description
 - Prerequisites (Node.js version, etc.)
@@ -527,7 +527,7 @@ Add to README.md:
 
 ### Step 21: Initialize Git
 
-```
+```text
 Initialize git repository
 Create a good .gitignore file for Node.js
 Create initial commit with project structure
@@ -539,7 +539,7 @@ Create initial commit with project structure
 
 Trust me on this -- small, meaningful commits will save you later. If you break something, you can roll back to a working state instead of starting over.
 
-```
+```text
 Create meaningful commits for each major feature:
 - "Add database schema and models"
 - "Implement authentication"
@@ -555,7 +555,7 @@ Create meaningful commits for each major feature:
 
 ### Step 23: Create Repository on GitHub
 
-```
+```text
 Create a new repository on GitHub
 Add remote origin
 Push your code
@@ -568,7 +568,7 @@ Create a good README with badges
 
 ### Step 24: Environment Configuration
 
-```
+```text
 Create proper environment variable handling:
 - .env.example with all required variables
 - config/env.js to load and validate env vars
@@ -579,7 +579,7 @@ Create proper environment variable handling:
 
 ### Step 25: Production Readiness
 
-```
+```text
 Add production optimizations:
 - Compression middleware
 - Rate limiting
@@ -593,7 +593,7 @@ Add production optimizations:
 
 ### Step 26: Create Start Scripts
 
-```
+```text
 Add scripts to package.json:
 - "start": Production server
 - "dev": Development with nodemon
@@ -612,7 +612,7 @@ Add scripts to package.json:
 If you want to keep going, here are some directions to take it:
 
 **More features:**
-```
+```text
 - Task due date reminders
 - Task comments
 - File attachments to tasks
@@ -624,7 +624,7 @@ If you want to keep going, here are some directions to take it:
 ```
 
 **Code quality improvements:**
-```
+```text
 - Add TypeScript
 - Add API versioning
 - Add request caching
@@ -687,7 +687,9 @@ Before considering your project complete:
 
 ### Option 1: Deploy to Heroku
 
-```
+> **Note:** Heroku no longer offers a free tier. If you want a free option, consider Railway, Render, or Fly.io instead.
+
+```text
 Help me deploy this application to Heroku:
 1. Create Heroku app
 2. Add PostgreSQL database
@@ -700,7 +702,7 @@ Help me deploy this application to Heroku:
 
 ### Option 2: Deploy with Docker
 
-```
+```text
 Create a Dockerfile for this application:
 - Use Node.js Alpine image
 - Copy and install dependencies
@@ -715,7 +717,7 @@ Also create docker-compose.yml for local development
 
 ### Option 3: Deploy to VPS
 
-```
+```text
 Create deployment guide for Ubuntu VPS:
 - Install Node.js
 - Set up process manager (PM2)

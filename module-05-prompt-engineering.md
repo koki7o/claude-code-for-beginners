@@ -25,17 +25,17 @@ That sounds obvious, but it's easy to underestimate. Let's look at some real exa
 #### Example 1: Creating a Function
 
 **Bad:**
-```
+```text
 Make a function
 ```
 
 **Better:**
-```
+```text
 Create a JavaScript function that adds two numbers
 ```
 
 **Best:**
-```
+```text
 Create a JavaScript function called addNumbers that:
 - Takes two parameters (a and b)
 - Returns their sum
@@ -46,17 +46,17 @@ Create a JavaScript function called addNumbers that:
 #### Example 2: Fixing a Bug
 
 **Bad:**
-```
+```text
 Fix the bug
 ```
 
 **Better:**
-```
+```text
 Fix the login bug
 ```
 
 **Best:**
-```
+```text
 The login function in auth.js is not handling empty passwords correctly.
 When a user submits an empty password, the app crashes with "Cannot read property 'length' of undefined".
 Please add validation to check for empty passwords and return an appropriate error message.
@@ -71,17 +71,17 @@ The difference between "fix the bug" and that last version is night and day. The
 ### Specify Technologies
 
 **Vague:**
-```
+```text
 Create a web server
 ```
 
 **Specific:**
-```
+```text
 Create an Express.js web server using TypeScript
 ```
 
 **Very Specific:**
-```
+```text
 Create an Express.js web server using TypeScript with:
 - CORS enabled
 - JSON body parsing
@@ -93,17 +93,17 @@ Create an Express.js web server using TypeScript with:
 ### Specify Architecture
 
 **Vague:**
-```
+```text
 Add a database
 ```
 
 **Specific:**
-```
+```text
 Add SQLite database using better-sqlite3
 ```
 
 **Very Specific:**
-```
+```text
 Add SQLite database with:
 - better-sqlite3 library
 - Database file at ./data/app.db
@@ -115,12 +115,12 @@ Add SQLite database with:
 ### Specify Code Style
 
 **Basic:**
-```
+```text
 Write a React component
 ```
 
 **With Style Preferences:**
-```
+```text
 Write a React functional component using:
 - Hooks (useState, useEffect)
 - TypeScript for prop types
@@ -140,12 +140,12 @@ This matters more than you think. If you don't specify, Claude Code will make re
 When you're working on an existing project, context is everything:
 
 **Without Context:**
-```
+```text
 Add a new route
 ```
 
 **With Context:**
-```
+```text
 This is an Express.js API with routes in /routes folder.
 Each route file exports a router with the route handlers.
 Add a new route for /api/users that returns all users from the database.
@@ -159,12 +159,12 @@ That last line -- "Follow the pattern used in /routes/posts.js" -- is especially
 When modifying specific code:
 
 **Without Context:**
-```
+```text
 Add error handling
 ```
 
 **With Context:**
-```
+```text
 In the login function (auth.js, line 45),
 add try-catch error handling that:
 - Catches any database errors
@@ -178,12 +178,12 @@ add try-catch error handling that:
 For features that need domain knowledge:
 
 **Without Context:**
-```
+```text
 Add validation to the form
 ```
 
 **With Context:**
-```
+```text
 Add validation to the user registration form:
 - Email must be valid format and not already exist
 - Password must be 8+ characters with 1 number and 1 special char
@@ -203,7 +203,7 @@ The parenthetical about being a financial services app? That kind of detail chan
 Here's the deal: trying to describe an entire feature in one massive prompt usually doesn't work well. Build it up in layers instead.
 
 **Step 1: Basic Version**
-```
+```text
 Create a simple todo list CLI that can:
 - Add a task
 - List all tasks
@@ -211,19 +211,19 @@ Create a simple todo list CLI that can:
 ```
 
 **Step 2: Add Features**
-```
+```text
 Now add the ability to:
 - Mark tasks as complete
 - Delete tasks
 ```
 
 **Step 3: Persist Data**
-```
+```text
 Now save tasks to a JSON file so they persist between runs
 ```
 
 **Step 4: Improve UX**
-```
+```text
 Now add:
 - Colors for completed vs incomplete tasks
 - Numbered list for easy reference
@@ -243,7 +243,7 @@ Each step is small enough to understand, test, and fix on its own. When somethin
 Use this when starting a new project.
 
 **Template:**
-```
+```text
 Create a [project type] with this structure:
 - [folder/file 1]
 - [folder/file 2]
@@ -254,7 +254,7 @@ Include [configurations]
 ```
 
 **Example:**
-```
+```text
 Create a React TypeScript project with this structure:
 - src/components (for React components)
 - src/hooks (for custom hooks)
@@ -273,7 +273,7 @@ Add Tailwind CSS
 Use this when adding new functionality.
 
 **Template:**
-```
+```text
 Add a [feature name] feature that:
 - [Capability 1]
 - [Capability 2]
@@ -283,7 +283,7 @@ It should work by [describe behavior]
 ```
 
 **Example:**
-```
+```text
 Add a user authentication feature that:
 - Allows users to register with email and password
 - Allows users to login
@@ -301,7 +301,7 @@ Store users in the database
 Use this when debugging issues.
 
 **Template:**
-```
+```text
 [Symptom/Error message]
 This happens when [steps to reproduce]
 The expected behavior is [what should happen]
@@ -309,7 +309,7 @@ Please [investigate/fix/explain]
 ```
 
 **Example:**
-```
+```text
 Error: "Cannot POST /api/login"
 This happens when I submit the login form
 The expected behavior is a 200 response with a token
@@ -323,7 +323,7 @@ Please investigate why the route isn't working
 Use this when improving existing code.
 
 **Template:**
-```
+```text
 Refactor [code/file/function] to:
 - [Improvement 1]
 - [Improvement 2]
@@ -333,7 +333,7 @@ Maintain current functionality
 ```
 
 **Example:**
-```
+```text
 Refactor the user validation functions to:
 - Reduce code duplication
 - Make them more reusable
@@ -352,7 +352,7 @@ That last line is critical. Always tell Claude Code what shouldn't change -- oth
 Use this when writing tests.
 
 **Template:**
-```
+```text
 Create tests for [function/component/feature] that verify:
 - [Test case 1]
 - [Test case 2]
@@ -363,7 +363,7 @@ Use [testing framework]
 ```
 
 **Example:**
-```
+```text
 Create tests for the calculateTotal function that verify:
 - Correctly sums positive numbers
 - Handles negative numbers
@@ -382,7 +382,7 @@ Aim for 100% code coverage
 Use this when you want Claude Code to remember your preferences across a whole project.
 
 **Template:**
-```
+```text
 Create a CLAUDE.md for this project that encodes:
 - How to build, test, and lint
 - Code style preferences
@@ -391,7 +391,7 @@ Create a CLAUDE.md for this project that encodes:
 ```
 
 **Example:**
-```
+```text
 Create a CLAUDE.md that says:
 - Use async/await, never callbacks
 - All API responses use { data: T } or { error: { status, message } }
@@ -413,21 +413,21 @@ Create a CLAUDE.md that says:
 Instead of guessing, just ask. Seriously -- Claude Code is great at helping you think through decisions before you commit to them.
 
 **Scenario 1: Technology Choice**
-```
+```text
 I need to add real-time notifications to my app.
 What would you recommend: WebSockets, Server-Sent Events, or polling?
 What are the tradeoffs?
 ```
 
 **Scenario 2: Architecture Decision**
-```
+```text
 I'm building a blog platform.
 Should I use a SQL or NoSQL database?
 What would work best for storing posts, comments, and user data?
 ```
 
 **Scenario 3: Best Practices**
-```
+```text
 I'm about to add user authentication.
 What are the current best practices for:
 - Password storage
@@ -439,7 +439,7 @@ What are the current best practices for:
 
 This is one of my favorite patterns. Try this:
 
-```
+```text
 Create a user dashboard for my app.
 Ask me any questions you need to fully understand what I want.
 ```
@@ -462,22 +462,22 @@ This is surprisingly effective. It surfaces requirements you hadn't thought abou
 For complex tasks, don't try to do it all at once. Chain simple prompts together:
 
 **Prompt 1:**
-```
+```text
 Analyze this codebase and tell me how the routing is structured
 ```
 
 **Prompt 2 (after understanding):**
-```
+```text
 Now add a new route for user profiles following the same pattern
 ```
 
 **Prompt 3:**
-```
+```text
 Add validation middleware to that route
 ```
 
 **Prompt 4:**
-```
+```text
 Write tests for the new route
 ```
 
@@ -487,7 +487,7 @@ Each prompt builds on the previous one. Claude Code retains context within a con
 
 Showing is better than telling:
 
-```
+```text
 I want to add more API endpoints.
 Here's the pattern I'm using:
 
@@ -506,7 +506,7 @@ Please create similar endpoints for:
 
 Sometimes it's just as important to say what you don't want:
 
-```
+```text
 Add user authentication but:
 - Don't use any external libraries (implement from scratch)
 - Don't store passwords in plain text
@@ -517,7 +517,7 @@ Add user authentication but:
 
 Be explicit about non-functional requirements -- these are the things that often get missed:
 
-```
+```text
 Create a data processing script that:
 - Reads a CSV file
 - Transforms the data
@@ -540,19 +540,19 @@ Without those requirements, you'd probably get a script that reads the entire fi
 ### Exercise 1: Improve These Prompts
 
 **Bad Prompt 1:**
-```
+```text
 Make an API
 ```
 
 **Your improved version:**
-```
+```text
 [Your answer here]
 ```
 
 <details>
 <summary>Suggested Answer</summary>
 
-```
+```text
 Create a REST API using Express.js with TypeScript that manages a library system:
 
 Endpoints:
@@ -579,14 +579,14 @@ Include:
 **Scenario 1:** You need to add password reset functionality to an existing authentication system
 
 **Your prompt:**
-```
+```text
 [Your answer here]
 ```
 
 <details>
 <summary>Suggested Answer</summary>
 
-```
+```text
 Add password reset functionality to the existing authentication system:
 
 Flow:
@@ -618,14 +618,14 @@ Security:
 You have an error: `TypeError: Cannot read property 'map' of undefined` in your React component
 
 **Your debugging prompt:**
-```
+```text
 [Your answer here]
 ```
 
 <details>
 <summary>Suggested Answer</summary>
 
-```
+```text
 I'm getting this error in my UserList component:
 "TypeError: Cannot read property 'map' of undefined"
 

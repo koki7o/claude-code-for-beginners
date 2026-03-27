@@ -37,12 +37,12 @@ With MCP, Claude can reach directly into your databases, talk to your APIs, pull
 MCP servers live in simple JSON config files. There are two places they can go:
 
 Project-level (shared with your team via version control):
-```
+```text
 .mcp.json    # in your project root
 ```
 
 User-level (your personal global config):
-```
+```text
 ~/.claude/settings.json    # under the "mcpServers" key
 ```
 
@@ -80,7 +80,7 @@ User-level (`~/.claude/settings.json`):
 
 The easiest way to get started is to just ask Claude Code for help:
 
-```
+```text
 Help me install the filesystem MCP server.
 I want to give you access to my /home/user/projects directory.
 ```
@@ -120,7 +120,7 @@ This one gives Claude direct access to files and directories outside the current
 
 Then just ask naturally:
 
-```
+```text
 Using the filesystem MCP server, list all Python files in my projects directory
 ```
 
@@ -135,16 +135,13 @@ If your app talks to Postgres, this server lets Claude query it directly. No mor
   "mcpServers": {
     "postgres": {
       "command": "npx",
-      "args": ["-y", "@modelcontextprotocol/server-postgres"],
-      "env": {
-        "POSTGRES_URL": "postgresql://user:pass@localhost:5432/dbname"
-      }
+      "args": ["-y", "@modelcontextprotocol/server-postgres", "postgresql://user:pass@localhost:5432/dbname"]
     }
   }
 }
 ```
 
-```
+```text
 Using the postgres MCP server, show me all tables in the database
 Query the users table and show me the schema
 ```
@@ -166,7 +163,7 @@ Same idea as the Postgres server, but for SQLite. Great for local dev databases 
 }
 ```
 
-```
+```text
 Using the sqlite MCP server, analyze the database schema
 Find all tables with user data
 ```
@@ -191,7 +188,7 @@ This one connects Claude to the GitHub API. Listing repos, reading issues, creat
 }
 ```
 
-```
+```text
 Using the GitHub MCP server:
 - List my repositories
 - Show open issues in my-repo
@@ -213,7 +210,7 @@ This matters more than you think. Context7 pulls live, version-specific document
   "mcpServers": {
     "context7": {
       "command": "npx",
-      "args": ["-y", "@context7/mcp-server"]
+      "args": ["-y", "@upstash/context7-mcp"]
     }
   }
 }
@@ -232,7 +229,7 @@ Need to test a web app? Scrape a page? Verify that your frontend changes actuall
   "mcpServers": {
     "playwright": {
       "command": "npx",
-      "args": ["-y", "@anthropic/mcp-server-playwright"]
+      "args": ["-y", "@playwright/mcp"]
     }
   }
 }
@@ -256,6 +253,8 @@ This is different from Playwright, and most people skip it but shouldn't. Instea
   }
 }
 ```
+
+> **Note:** MCP server package names change frequently. Check the [Claude Code docs](https://docs.anthropic.com/en/docs/claude-code/mcp) for current package names.
 
 ---
 
@@ -325,8 +324,9 @@ server.tool(
   { city: z.string().describe("City name") },
   async ({ city }) => {
     // Call weather API
+    // Using OpenWeatherMap as an example -- sign up at openweathermap.org for a free API key
     const response = await fetch(
-      `https://api.weather.com/...?city=${encodeURIComponent(city)}`
+      `https://api.openweathermap.org/data/2.5/weather?q=${encodeURIComponent(city)}&appid=${process.env.WEATHER_API_KEY}`
     );
     const data = await response.json();
 
@@ -375,7 +375,7 @@ Once your server file exists, point Claude Code at it in your `.mcp.json`:
 
 Now just talk to Claude like normal:
 
-```
+```text
 Using the weather MCP server, what's the weather in San Francisco?
 ```
 
@@ -391,6 +391,7 @@ Resources let you expose data that Claude can pull in on demand -- think of them
 
 ```javascript
 server.resource(
+  "employees",
   "company://employees",
   async (uri) => {
     const employees = await db.query('SELECT * FROM employees');
@@ -415,6 +416,7 @@ Prompts are predefined templates that standardize how Claude approaches certain 
 ```javascript
 server.prompt(
   "code_review",
+  "Review code against company standards",
   { filename: z.string() },
   async ({ filename }) => {
     const standards = await loadCompanyStandards();
@@ -581,7 +583,7 @@ Nobody wants Claude sitting there spinning for 30 seconds while your MCP server 
 
 **Task:** Get your first MCP servers running
 
-```
+```text
 1. Install the filesystem MCP server by adding it to .mcp.json
 2. Configure it for your projects directory
 3. Use it to analyze your code
@@ -597,7 +599,7 @@ This should take about 10 minutes and will immediately show you the value of MCP
 
 **Task:** Build your first custom MCP server
 
-```
+```text
 Create an MCP server that:
 - Connects to a JSON file of notes
 - Provides tools to:
@@ -649,8 +651,8 @@ Official servers:
 - @modelcontextprotocol/server-slack
 
 Essential community servers:
-- @context7/mcp-server -- live documentation
-- @anthropic/mcp-server-playwright -- browser automation
+- @upstash/context7-mcp -- live documentation
+- @playwright/mcp -- browser automation
 - @anthropic/claude-in-chrome-mcp-server -- browser debugging
 - @anthropic/mcp-server-deepwiki -- GitHub repo docs
 

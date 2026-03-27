@@ -8,7 +8,7 @@
 
 ## What You'll Learn
 
-This module covers the basics: what Claude Code actually is, how to install it, how to talk to it, and the jargon you'll run into along the way. We'll also build a small Python script together so you can see the whole workflow in action.
+This module covers the basics: what Claude Code actually is, how to install it, how to talk to it, and the jargon you'll run into along the way. We'll also build a small Python script together (You'll need Python installed -- most Macs and Linux systems have it already. If not, grab it from [python.org](https://python.org).) so you can see the whole workflow in action.
 
 ---
 
@@ -50,9 +50,10 @@ Claude Code creates the file, writes the code, explains what it did, and can run
 Before installing:
 - A computer running macOS 13+, Windows 10+, or Linux (Ubuntu 20.04+, Debian 10+)
 - Internet connection
-- Terminal/command-line access
+- Terminal/command-line access (on macOS: open **Terminal** from Applications > Utilities. On Windows: open **PowerShell** from the Start menu. On Linux: look for **Terminal** in your applications menu)
 - A Claude account (see Step 1 below)
-- **Windows only:** [Git for Windows](https://git-scm.com/downloads/win) must be installed first
+- **Windows only:** [Git for Windows](https://git-scm.com/downloads/win) must be installed first -- this provides the terminal environment that Claude Code needs on Windows
+- **For this module's exercises:** [Python](https://python.org/downloads) (most macOS and Linux systems have it pre-installed; Windows users may need to install it)
 
 ### Step-by-Step Installation
 
@@ -83,6 +84,8 @@ irm https://claude.ai/install.ps1 | iex
 curl -fsSL https://claude.ai/install.cmd -o install.cmd && install.cmd && del install.cmd
 ```
 
+> **What does this command do?** `curl` downloads the install script from the internet, and `| bash` (or `| iex` on Windows) runs it. This is the standard way to install command-line tools.
+
 The install script handles everything -- no Node.js required. It downloads Claude Code and sets it up on your system.
 
 > **Alternative install methods:** You can also install via `brew install --cask claude-code` (macOS/Linux) or `winget install Anthropic.ClaudeCode` (Windows).
@@ -109,7 +112,7 @@ On Windows (PowerShell):
 $env:ANTHROPIC_API_KEY="your-api-key-here"
 ```
 
-To make it permanent, add that line to your shell config file (`.bashrc`, `.zshrc`, `.profile`, etc.).
+> **Note:** These commands only last until you close your terminal. To make the key available permanently, you can ask Claude Code itself: just say "Help me set up my API key permanently" and it will walk you through it for your specific system.
 
 #### Step 4: Verify Installation
 
@@ -184,13 +187,13 @@ Here are the key terms you'll encounter. You don't need to memorize these -- jus
 
 **Tool Use / Tool Call** -- When Claude actually does something with one of its tools. You'll see this in the output -- something like "Using Write tool" or "Using Bash tool."
 
-**Agent** -- A specialized helper for complex tasks. Think of it as delegating a specific job to an expert. The "Explore" agent, for instance, helps you understand large codebases.
+**Agent** -- A specialized helper for complex tasks. Think of it as delegating a specific job to an expert. For instance, Claude Code can spin up a sub-agent to research part of your codebase while the main conversation continues.
 
 **Context** -- What Claude knows about your project so far. Every file it reads, every command it runs -- that all becomes context for the conversation.
 
-**MCP Server** -- An extension that gives Claude Code new capabilities, like connecting to databases or external services. Think plugins.
+**MCP (Model Context Protocol) Server** -- An extension that gives Claude Code new capabilities, like connecting to databases or external services. Think of them as plugins. We'll cover these in Module 11.
 
-**CLAUDE.md** -- A special file you can put in your project root that tells Claude Code how to work with your project. Think of it as a briefing document -- coding conventions, preferred patterns, project-specific instructions. We'll cover this in detail in later modules.
+**CLAUDE.md** -- A special file you can put in your project's main folder that tells Claude Code how to work with your project. Think of it as a briefing document -- coding conventions, preferred patterns, project-specific instructions. We'll cover this in detail in later modules.
 
 ---
 
@@ -249,7 +252,7 @@ Type:
 Run the hello.py script
 ```
 
-Claude Code uses the Bash tool to run `python hello.py`. The script asks for your name, you type it, and you see the greeting.
+Claude Code uses the Bash tool to run the script (usually `python hello.py` or `python3 hello.py`, depending on your system). The script asks for your name, you type it, and you see the greeting.
 
 #### Step 6: Make a Change
 
@@ -325,7 +328,7 @@ Type `/exit` or press Ctrl+C. Your files are already saved.
 4. **Review changes** -- always look at what changed so you actually learn
 5. **Experiment** -- try different requests. You can't break anything.
 6. **Read the output** -- Claude Code explains what it's doing, and that's how you learn
-7. **Create a CLAUDE.md early** -- even a simple one with your preferred language and conventions helps Claude Code give you better results from the start
+7. **Create a CLAUDE.md early** -- even a simple one helps. For example, ask Claude Code: "Create a CLAUDE.md file that says I prefer Python and clear variable names." We'll cover this in depth in a later module.
 
 ---
 
