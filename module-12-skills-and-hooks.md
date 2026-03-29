@@ -68,7 +68,24 @@ More specific files take precedence over broader ones. So your project `CLAUDE.m
 
 ### What Goes in a Good CLAUDE.md
 
-Keep it under 150 lines. Seriously. Claude loads this into context every session, so bloated files waste tokens and dilute the important stuff.
+Keep it under 200 lines. Seriously. Claude loads this into context every session, so bloated files waste tokens and dilute the important stuff. Going past 200 lines measurably reduces how well Claude follows your instructions.
+
+**What to include vs. what to leave out:**
+
+| Include | Exclude |
+|---------|---------|
+| Build/test/lint commands Claude can't guess | What Claude can infer from reading your code |
+| Style rules that differ from defaults | Standard language conventions |
+| Test instructions and runners | Detailed API docs (link with @imports instead) |
+| Repo etiquette (branch naming, PR format) | Frequently changing info |
+| Architecture decisions and key files | File-by-file codebase descriptions |
+| Environment quirks and gotchas | Tutorials or long explanations |
+
+Use emphasis ("IMPORTANT:", "NEVER", "ALWAYS") for critical rules — Claude pays more attention to them.
+
+**Key fact:** CLAUDE.md survives compaction. After `/compact`, Claude re-reads CLAUDE.md from disk. Anything you only said in conversation is summarized and may lose detail. If something matters across sessions, put it in CLAUDE.md.
+
+**Tip:** You can add `<!-- maintainer notes here -->` in CLAUDE.md — HTML comments are stripped before injection into context, so they're invisible to Claude but useful for your team.
 
 A solid CLAUDE.md includes something like:
 

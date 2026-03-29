@@ -410,7 +410,55 @@ Create a CLAUDE.md that says:
 - Run linter with: npm run lint
 ```
 
-**Why this works:** CLAUDE.md is loaded automatically every session. Instead of repeating your preferences, you write them once and Claude Code follows them forever. This is one of the highest-leverage things you can do as your projects grow.
+**Why this works:** CLAUDE.md is loaded automatically every session when placed in your project's root directory. Instead of repeating your preferences, you write them once and Claude Code follows them forever. This is one of the highest-leverage things you can do as your projects grow.
+
+---
+
+### Pattern 7: The Interview Pattern
+
+Instead of guessing what Claude Code needs to know, let it ask you.
+
+**Template:**
+```text
+Interview me about [feature/requirement]. Ask me questions one at a time
+to understand the requirements fully. When you have enough information,
+write a spec to SPEC.md.
+```
+
+**Example:**
+```text
+Interview me about the notification system I want to build. Ask about
+user preferences, delivery channels, retry logic, and anything else
+you need. Then write a spec.
+```
+
+**Why this works:** You don't always know what details matter. Claude Code will ask about edge cases, error handling, and constraints you might not have thought of. The result is a much more complete specification than what you'd write from scratch.
+
+---
+
+### Pattern 8: The Verification Target Pattern
+
+This is the single highest-leverage prompting tip: always tell Claude Code how to verify its work.
+
+**Template:**
+```text
+[Your request]
+
+Verify by: [how to check it worked]
+```
+
+**Example:**
+```text
+Add input validation to the registration form.
+
+Verify by:
+- Run the existing tests (npm test)
+- Try submitting with an empty email — should show an error
+- Try submitting with a password under 8 characters — should show an error
+- All existing tests should still pass
+```
+
+**Why this works:** Without verification targets, Claude Code guesses when it's done. With them, it has a concrete definition of "done" and will keep working until the criteria are met.
 
 ---
 
@@ -701,6 +749,10 @@ Before moving to Module 6, make sure you can:
 6. **Verify understanding** -- "Can you summarize what you're going to build?" catches misunderstandings early.
 
 7. **Pay attention to how Claude Code interprets your prompts.** If it misunderstands something, that's feedback on how to write the next prompt better.
+
+8. **Course-correct early** -- If Claude goes down the wrong path, don't keep piling on corrections. After 2 failed attempts, use `/clear` and start fresh with a better prompt. It's faster than fighting accumulated context.
+
+9. **Use @file references** -- Instead of asking Claude to "find the auth file", reference it directly: "Explain the logic in @src/utils/auth.js". The `@` prefix includes the file directly without Claude searching for it.
 
 ---
 

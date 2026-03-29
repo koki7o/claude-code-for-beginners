@@ -611,7 +611,7 @@ Before moving to Module 7, make sure you understand:
 Depends on the task. A simple exploration might take 30 seconds; complex planning can run 1-2 minutes.
 
 **Q: Can I stop a task mid-run?**
-Yes -- press Ctrl+C. You can also use /tasks to see background task status.
+Yes -- press `Esc` to stop, or `Ctrl+C` to cancel. You can also press `Ctrl+B` to send a running task to the background and continue working in the same session. Background tasks auto-deny any permissions that weren't pre-approved.
 
 **Q: Does Claude Code make changes to my code during these tasks?**
 Only if you ask it to implement something. Exploration and planning prompts just analyze and suggest.
@@ -623,7 +623,10 @@ Absolutely. Like any AI, it can get things wrong. Always review the output befor
 No. They add overhead. For quick, straightforward tasks, regular conversation is faster.
 
 **Q: Can multiple parallel sessions work on the same files?**
-Fair warning: if parallel sessions modify the same files, you can end up with conflicts. Keep parallel sessions pointed at different parts of the codebase.
+Fair warning: if parallel sessions modify the same files, you can end up with conflicts. Keep parallel sessions pointed at different parts of the codebase, or use worktree isolation: `claude --worktree feature-name` gives each session its own copy of the repo.
+
+**Q: Can I resume a previous session?**
+Yes. Use `claude --resume` to pick up where you left off, or `claude --resume auth-refactor` to resume a named session. You can name sessions with `/rename`.
 
 ---
 
@@ -648,6 +651,9 @@ Fair warning: if parallel sessions modify the same files, you can end up with co
 5. **Parallel sessions for independent tasks** -- save time when tasks don't overlap
 6. **Ask follow-up questions** -- Claude Code can clarify its own findings
 7. **Iterate on plans** -- refine until you're confident
+8. **Use `Ctrl+B` to background long tasks** -- keep working while Claude finishes in the background
+9. **Use worktrees for parallel work** -- `claude -w` gives each session an isolated repo copy
+10. **Name and resume sessions** -- `/rename` + `claude --resume name` for continuity across days
 
 ---
 

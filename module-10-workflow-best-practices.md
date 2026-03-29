@@ -620,6 +620,51 @@ After implementing, run the full quality check:
 
 ---
 
+## Lesson 10: Session Management
+
+These commands and shortcuts will save you significant time and tokens. Learn them early.
+
+### Essential Commands
+
+| Command | What It Does | When to Use It |
+|---------|-------------|----------------|
+| `/clear` | Reset context completely | Between unrelated tasks — stale context wastes tokens |
+| `/compact [focus]` | Summarize context | At ~50% context usage. Add focus: `/compact Focus on API changes` |
+| `/cost` | Show token usage | Anytime you want to check spending |
+| `/btw` | Side question in overlay | Quick questions that don't need to stay in history |
+| `/effort low\|high\|max` | Adjust reasoning depth | `low` for simple lookups, `max` for architecture decisions |
+| `/rewind` | Open checkpoint menu | Undo a wrong turn — restore conversation, code, or both |
+| `/context` | Visualize context usage | See what's taking up space |
+| `/rename` | Name the current session | Makes it easy to resume later with `claude --resume name` |
+
+### Essential Keyboard Shortcuts
+
+| Shortcut | Action |
+|----------|--------|
+| `Esc` | Stop current generation |
+| `Esc + Esc` | Open rewind/checkpoint menu |
+| `Shift+Tab` | Cycle permission modes (Default → AcceptEdits → Plan → Auto) |
+| `Ctrl+G` | Open plan in your external editor |
+| `Ctrl+O` | Toggle verbose mode (see Claude's thinking) |
+| `Ctrl+B` | Send current task to background — you can keep working |
+| `Alt+T` | Toggle thinking on/off |
+
+### The `/clear` Habit
+
+This is the single easiest way to reduce token usage. When you finish a task and start something unrelated, type `/clear`. Otherwise, Claude Code carries forward all the context from the previous task -- every file it read, every command it ran -- and processes it on every subsequent message. That adds up fast.
+
+### Proactive `/compact`
+
+Don't wait for auto-compact at 95% context. By that point, Claude may lose important details. Instead, compact proactively around 50% with instructions about what to keep:
+
+```text
+/compact Focus on the database migration changes and the test failures
+```
+
+One thing to remember: CLAUDE.md survives compaction (it's re-read from disk), but anything you only said in conversation is summarized and may lose detail. If something is important enough to survive compaction, put it in CLAUDE.md.
+
+---
+
 ## Hands-On Practice
 
 ### Exercise 1: Refactor for Quality
