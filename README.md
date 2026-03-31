@@ -1,7 +1,7 @@
 <div align="center">
 
 <!-- HEADER -->
-<img src="assets/claude-code-demo.gif" alt="Claude Code Demo" width="800"/>
+<img src="assets/banner.webp" alt="Claude Code for Beginners" width="800"/>
 
 <br/>
 <br/>
@@ -64,7 +64,7 @@
 <br/>
 
 <div align="center">
-<img src="assets/terminal-demo.svg" width="780" alt="Claude Code in action"/>
+<img src="assets/claude-code-demo.gif" width="780" alt="Claude Code in action"/>
 </div>
 
 <br/>
