@@ -52,7 +52,7 @@
 
 <br/>
 
-<img src="https://capsule-render.vercel.app/api?type=rect&color=gradient&customColorList=2,3,12&height=2" width="100%"/>
+<img src="https://capsule-render.vercel.app/api?type=soft&color=gradient&customColorList=2,3,12&height=6&section=header" width="100%"/>
 
 <br/>
 
@@ -91,7 +91,7 @@ Instead of manually writing every line, you describe what you want and Claude Co
 
 <br/>
 
-<img src="https://capsule-render.vercel.app/api?type=rect&color=gradient&customColorList=2,3,12&height=2" width="100%"/>
+<img src="https://capsule-render.vercel.app/api?type=soft&color=gradient&customColorList=2,3,12&height=6&section=header" width="100%"/>
 
 <br/>
 
@@ -110,23 +110,13 @@ Instead of manually writing every line, you describe what you want and Claude Co
 <div align="center">
 <table width="100%">
 <tr>
-<td width="50%">
-
-### 🍎 macOS / 🐧 Linux
-
-```bash
-curl -fsSL https://claude.ai/install.sh | bash
-```
-
+<td align="center" width="50%">
+<h3>🍎 macOS / 🐧 Linux</h3>
+<code>curl -fsSL https://claude.ai/install.sh | bash</code>
 </td>
-<td width="50%">
-
-### 🪟 Windows (PowerShell)
-
-```powershell
-irm https://claude.ai/install.ps1 | iex
-```
-
+<td align="center" width="50%">
+<h3>🪟 Windows (PowerShell)</h3>
+<code>irm https://claude.ai/install.ps1 | iex</code>
 </td>
 </tr>
 </table>
@@ -145,7 +135,7 @@ claude              # Start Claude Code
 
 <br/>
 
-<img src="https://capsule-render.vercel.app/api?type=rect&color=gradient&customColorList=2,3,12&height=2" width="100%"/>
+<img src="https://capsule-render.vercel.app/api?type=soft&color=gradient&customColorList=2,3,12&height=6&section=header" width="100%"/>
 
 <br/>
 
@@ -162,14 +152,14 @@ claude              # Start Claude Code
 <div align="center">
 <table width="100%">
 <tr>
-<td width="50%" align="center">
+<td width="50%" align="center" valign="top">
 
 ### 🌱 Complete Beginners
 
 New to programming? Claude Code can help you learn while building! **No experience required.**
 
 </td>
-<td width="50%" align="center">
+<td width="50%" align="center" valign="top">
 
 ### 💼 Experienced Developers
 
@@ -178,14 +168,14 @@ Speed up your workflow and tackle complex tasks faster. Skip to [Module 6](modul
 </td>
 </tr>
 <tr>
-<td align="center">
+<td align="center" valign="top">
 
 ### 🎒 Students
 
 Learn programming concepts with an AI tutor by your side. Build projects for your portfolio.
 
 </td>
-<td align="center">
+<td align="center" valign="top">
 
 ### 🌍 Open Source Contributors
 
@@ -198,7 +188,7 @@ Navigate unfamiliar codebases with ease. Start at [Module 4](module-04-working-w
 
 <br/>
 
-<img src="https://capsule-render.vercel.app/api?type=rect&color=gradient&customColorList=2,3,12&height=2" width="100%"/>
+<img src="https://capsule-render.vercel.app/api?type=soft&color=gradient&customColorList=2,3,12&height=6&section=header" width="100%"/>
 
 <br/>
 
@@ -215,22 +205,22 @@ Navigate unfamiliar codebases with ease. Start at [Module 4](module-04-working-w
 <div align="center">
 <table width="100%">
 <tr>
-<td width="50%">
+<td valign="top" width="50%">
 
-✅ Build complete applications from idea to deployment<br/>
-✅ Communicate coding tasks to AI effectively<br/>
-✅ Debug and fix errors with AI assistance<br/>
-✅ Navigate unfamiliar codebases with confidence<br/>
-✅ Work with version control and Git operations<br/>
+- ✅ Build complete applications from idea to deployment
+- ✅ Communicate coding tasks to AI effectively
+- ✅ Debug and fix errors with AI assistance
+- ✅ Navigate unfamiliar codebases with confidence
+- ✅ Work with version control and Git operations
 
 </td>
-<td width="50%">
+<td valign="top" width="50%">
 
-✅ Configure CLAUDE.md, rules, skills, and hooks<br/>
-✅ Use background agents and model routing<br/>
-✅ Extend Claude Code with MCP servers<br/>
-✅ Deploy applications to production<br/>
-✅ Build a portfolio of projects to showcase<br/>
+- ✅ Configure CLAUDE.md, rules, skills, and hooks
+- ✅ Use background agents and model routing
+- ✅ Extend Claude Code with MCP servers
+- ✅ Deploy applications to production
+- ✅ Build a portfolio of projects to showcase
 
 </td>
 </tr>
@@ -239,7 +229,7 @@ Navigate unfamiliar codebases with ease. Start at [Module 4](module-04-working-w
 
 <br/>
 
-<img src="https://capsule-render.vercel.app/api?type=rect&color=gradient&customColorList=2,3,12&height=2" width="100%"/>
+<img src="https://capsule-render.vercel.app/api?type=soft&color=gradient&customColorList=2,3,12&height=6&section=header" width="100%"/>
 
 <br/>
 
@@ -273,7 +263,7 @@ Navigate unfamiliar codebases with ease. Start at [Module 4](module-04-working-w
 
 <br/>
 
-<img src="https://capsule-render.vercel.app/api?type=rect&color=gradient&customColorList=2,3,12&height=2" width="100%"/>
+<img src="https://capsule-render.vercel.app/api?type=soft&color=gradient&customColorList=2,3,12&height=6&section=header" width="100%"/>
 
 <br/>
 
@@ -363,7 +353,7 @@ Navigate unfamiliar codebases with ease. Start at [Module 4](module-04-working-w
 
 <br/>
 
-<img src="https://capsule-render.vercel.app/api?type=rect&color=gradient&customColorList=2,3,12&height=2" width="100%"/>
+<img src="https://capsule-render.vercel.app/api?type=soft&color=gradient&customColorList=2,3,12&height=6&section=header" width="100%"/>
 
 <br/>
 
@@ -430,7 +420,7 @@ Production-ready<br/>Full implementations<br/>Professional quality
 
 <br/>
 
-<img src="https://capsule-render.vercel.app/api?type=rect&color=gradient&customColorList=2,3,12&height=2" width="100%"/>
+<img src="https://capsule-render.vercel.app/api?type=soft&color=gradient&customColorList=2,3,12&height=6&section=header" width="100%"/>
 
 <br/>
 
@@ -447,18 +437,20 @@ Production-ready<br/>Full implementations<br/>Professional quality
 <div align="center">
 <table width="100%">
 <tr>
-<td width="50%">
+<td valign="top" width="50%">
 
-**What you need:**
+<div align="center"><b>What you need:</b></div>
+
 - 💻 A computer (macOS, Windows, or Linux)
 - 🌐 Internet connection
 - ⌨️ Terminal access (we'll show you how)
 - 🔑 Claude account (Pro/Max subscription or API key)
 
 </td>
-<td width="50%">
+<td valign="top" width="50%">
 
-**What you DON'T need:**
+<div align="center"><b>What you DON'T need:</b></div>
+
 - ❌ Prior programming experience
 - ❌ Computer science degree
 - ❌ Expensive software
@@ -471,7 +463,7 @@ Production-ready<br/>Full implementations<br/>Professional quality
 
 <br/>
 
-<img src="https://capsule-render.vercel.app/api?type=rect&color=gradient&customColorList=2,3,12&height=2" width="100%"/>
+<img src="https://capsule-render.vercel.app/api?type=soft&color=gradient&customColorList=2,3,12&height=6&section=header" width="100%"/>
 
 <br/>
 
@@ -526,7 +518,7 @@ Bugs and<br/>feature requests
 
 <br/>
 
-<img src="https://capsule-render.vercel.app/api?type=rect&color=gradient&customColorList=2,3,12&height=2" width="100%"/>
+<img src="https://capsule-render.vercel.app/api?type=soft&color=gradient&customColorList=2,3,12&height=6&section=header" width="100%"/>
 
 <br/>
 
@@ -570,7 +562,7 @@ Claude Code runs in your terminal. Don't be intimidated! We'll teach you everyth
 
 <br/>
 
-<img src="https://capsule-render.vercel.app/api?type=rect&color=gradient&customColorList=2,3,12&height=2" width="100%"/>
+<img src="https://capsule-render.vercel.app/api?type=soft&color=gradient&customColorList=2,3,12&height=6&section=header" width="100%"/>
 
 <br/>
 
@@ -611,7 +603,7 @@ Integrate Claude Code into professional workflows and level up
 
 <br/>
 
-<img src="https://capsule-render.vercel.app/api?type=rect&color=gradient&customColorList=2,3,12&height=2" width="100%"/>
+<img src="https://capsule-render.vercel.app/api?type=soft&color=gradient&customColorList=2,3,12&height=6&section=header" width="100%"/>
 
 <br/>
 
@@ -674,7 +666,7 @@ Integrate Claude Code into professional workflows and level up
 
 <br/>
 
-<img src="https://capsule-render.vercel.app/api?type=rect&color=gradient&customColorList=2,3,12&height=2" width="100%"/>
+<img src="https://capsule-render.vercel.app/api?type=soft&color=gradient&customColorList=2,3,12&height=6&section=header" width="100%"/>
 
 <br/>
 
@@ -777,7 +769,7 @@ The **[Advanced Modules ($29.99)](https://payhip.com/b/8E107)** take you from "i
 
 <br/>
 
-<img src="https://capsule-render.vercel.app/api?type=rect&color=gradient&customColorList=2,3,12&height=2" width="100%"/>
+<img src="https://capsule-render.vercel.app/api?type=soft&color=gradient&customColorList=2,3,12&height=6&section=header" width="100%"/>
 
 <br/>
 
@@ -826,7 +818,7 @@ The **[Advanced Modules ($29.99)](https://payhip.com/b/8E107)** take you from "i
 
 <br/>
 
-<img src="https://capsule-render.vercel.app/api?type=rect&color=gradient&customColorList=2,3,12&height=2" width="100%"/>
+<img src="https://capsule-render.vercel.app/api?type=soft&color=gradient&customColorList=2,3,12&height=6&section=header" width="100%"/>
 
 <br/>
 
@@ -852,7 +844,7 @@ The **[Advanced Modules ($29.99)](https://payhip.com/b/8E107)** take you from "i
 
 <br/>
 
-<img src="https://capsule-render.vercel.app/api?type=rect&color=gradient&customColorList=2,3,12&height=2" width="100%"/>
+<img src="https://capsule-render.vercel.app/api?type=soft&color=gradient&customColorList=2,3,12&height=6&section=header" width="100%"/>
 
 <br/>
 
