@@ -52,8 +52,25 @@
 
 <img src="https://capsule-render.vercel.app/api?type=soft&color=gradient&customColorList=2,3,12&height=6&section=header" width="100%"/>
 
-<br/>
+<div align="center">
 
+## 📢 Latest Updates
+
+</div>
+
+> **March 2026:**
+> - ⭐ 130+ stars — thank you!
+> - 🔧 Massive quality pass — 900+ fixes across all modules
+> - 🪟 Full Windows support added (PowerShell install + commands in every module)
+> - 🔑 Claude Pro/Max subscription login — not just API keys anymore
+> - 🎨 Beautiful new README with SVG module cards and visual course map
+> - 📦 **NEW:** [Real Projects Pack](https://payhip.com/b/dFXWO) — 11 hands-on builds ($39.99)
+> - 🎓 **NEW:** [Advanced Modules](https://payhip.com/b/8E107) — 8 enterprise-level modules ($29.99)
+> - ☕ Love it? [Buy me a coffee](https://buymeacoffee.com/koki7o) or give it a ⭐
+
+<img src="https://capsule-render.vercel.app/api?type=soft&color=gradient&customColorList=2,3,12&height=6&section=header" width="100%"/>
+
+<br/>
 
 <!-- WHAT IS CLAUDE CODE -->
 
