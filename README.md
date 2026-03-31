@@ -32,6 +32,11 @@
 <a href="#-need-help"><img src="https://img.shields.io/badge/📚_Resources-7B1FA2?style=for-the-badge&logoColor=white" alt="Resources"/></a>
 
 <br/>
+
+![Learners](https://img.shields.io/github/watchers/koki7o/claude-code-for-beginners?style=flat-square&label=Learners%20watching&color=32CD32&labelColor=1a1a2e)
+![Last Commit](https://img.shields.io/github/last-commit/koki7o/claude-code-for-beginners?style=flat-square&label=Last%20updated&color=0066FF&labelColor=1a1a2e)
+![Repo Size](https://img.shields.io/github/repo-size/koki7o/claude-code-for-beginners?style=flat-square&label=Course%20size&color=6A0DAD&labelColor=1a1a2e)
+
 <br/>
 
 > 💡 Created by an experienced Claude Code power user who ships production apps with it daily —
@@ -72,6 +77,11 @@
 <div align="center">
 
 Instead of manually writing every line, you describe what you want and Claude Code builds it — reading files, making edits, running commands, and explaining what it's doing along the way.
+
+<br/>
+
+<img src="assets/how-it-works.svg" width="760" alt="How Claude Code works"/>
+
 
 <br/>
 
@@ -548,7 +558,7 @@ Claude Code runs in your terminal. Don't be intimidated! We'll teach you everyth
 ### Tools Explained Simply
 
 | Tool | What It Does | In Plain English |
-|<img src="https://capsule-render.vercel.app/api?type=rect&color=gradient&customColorList=2,3,12&height=2" width="100%"/><img src="https://capsule-render.vercel.app/api?type=rect&color=gradient&customColorList=2,3,12&height=2" width="100%"/>|<img src="https://capsule-render.vercel.app/api?type=rect&color=gradient&customColorList=2,3,12&height=2" width="100%"/><img src="https://capsule-render.vercel.app/api?type=rect&color=gradient&customColorList=2,3,12&height=2" width="100%"/><img src="https://capsule-render.vercel.app/api?type=rect&color=gradient&customColorList=2,3,12&height=2" width="100%"/><img src="https://capsule-render.vercel.app/api?type=rect&color=gradient&customColorList=2,3,12&height=2" width="100%"/>-|<img src="https://capsule-render.vercel.app/api?type=rect&color=gradient&customColorList=2,3,12&height=2" width="100%"/><img src="https://capsule-render.vercel.app/api?type=rect&color=gradient&customColorList=2,3,12&height=2" width="100%"/><img src="https://capsule-render.vercel.app/api?type=rect&color=gradient&customColorList=2,3,12&height=2" width="100%"/><img src="https://capsule-render.vercel.app/api?type=rect&color=gradient&customColorList=2,3,12&height=2" width="100%"/><img src="https://capsule-render.vercel.app/api?type=rect&color=gradient&customColorList=2,3,12&height=2" width="100%"/>--|
+|------|-------------|-----------------|
 | **Read** | Opens files | *"Show me this file"* |
 | **Write** | Creates files | *"Create this new file"* |
 | **Edit** | Modifies files | *"Change this specific part"* |
@@ -597,6 +607,69 @@ Integrate Claude Code into professional workflows and level up
 </td>
 </tr>
 </table>
+</div>
+
+<br/>
+
+<img src="https://capsule-render.vercel.app/api?type=rect&color=gradient&customColorList=2,3,12&height=2" width="100%"/>
+
+<br/>
+
+<!-- BUILT WITH CLAUDE CODE -->
+
+<div align="center">
+
+## 🏗️ Built with Claude Code
+
+*Real production apps built by the course creator using Claude Code daily*
+
+<br/>
+
+<div align="center">
+<table width="100%">
+<tr>
+<td align="center" width="33%">
+
+<a href="https://gitscroll.dev"><img src="https://img.shields.io/badge/gitscroll.dev-000?style=for-the-badge&logo=github&logoColor=white" alt="GitScroll"/></a><br/>
+<sub>Developer portfolio platform</sub>
+
+</td>
+<td align="center" width="33%">
+
+<a href="https://github.com/koki7o/mcp-framework"><img src="https://img.shields.io/badge/mcp--framework-000?style=for-the-badge&logo=rust&logoColor=orange" alt="MCP Framework"/></a><br/>
+<sub>🦀 Rust MCP framework for AI agents</sub>
+
+</td>
+<td align="center" width="33%">
+
+<a href="https://aicofounders.co"><img src="https://img.shields.io/badge/aicofounders.co-000?style=for-the-badge&logo=openai&logoColor=white" alt="AI Co-Founders"/></a><br/>
+<sub>6 AI co-founders platform</sub>
+
+</td>
+</tr>
+<tr>
+<td align="center">
+
+<a href="https://time-portal.vercel.app"><img src="https://img.shields.io/badge/time--portal-000?style=for-the-badge&logo=vercel&logoColor=white" alt="Time Portal"/></a><br/>
+<sub>Doom scroll back in time</sub>
+
+</td>
+<td align="center">
+
+<a href="https://childrenbooks.vercel.app"><img src="https://img.shields.io/badge/childrenbooks-000?style=for-the-badge&logo=vercel&logoColor=white" alt="Children Books"/></a><br/>
+<sub>AI children's books</sub>
+
+</td>
+<td align="center">
+
+<a href="https://www.moltplace.net"><img src="https://img.shields.io/badge/moltplace.net-000?style=for-the-badge&logo=robot&logoColor=white" alt="MoltPlace"/></a><br/>
+<sub>Moltbot marketplace</sub>
+
+</td>
+</tr>
+</table>
+</div>
+
 </div>
 
 <br/>
@@ -757,6 +830,32 @@ The **[Advanced Modules ($29.99)](https://payhip.com/b/8E107)** take you from "i
 
 <br/>
 
+<!-- STAR HISTORY -->
+
+<div align="center">
+
+## ⭐ Star History
+
+<a href="https://star-history.com/#koki7o/claude-code-for-beginners&Date">
+  <picture>
+    <source media="(prefers-color-scheme: dark)" srcset="https://api.star-history.com/svg?repos=koki7o/claude-code-for-beginners&type=Date&theme=dark"/>
+    <source media="(prefers-color-scheme: light)" srcset="https://api.star-history.com/svg?repos=koki7o/claude-code-for-beginners&type=Date"/>
+    <img alt="Star History Chart" src="https://api.star-history.com/svg?repos=koki7o/claude-code-for-beginners&type=Date" width="600"/>
+  </picture>
+</a>
+
+<br/>
+
+*If this course helped you, give it a ⭐ — it helps others find it!*
+
+</div>
+
+<br/>
+
+<img src="https://capsule-render.vercel.app/api?type=rect&color=gradient&customColorList=2,3,12&height=2" width="100%"/>
+
+<br/>
+
 <!-- FOOTER -->
 
 <div align="center">
@@ -775,12 +874,14 @@ This course will guide you from your first terminal command to your first deploy
 <br/>
 <br/>
 
-<img src="https://capsule-render.vercel.app/api?type=rect&color=gradient&customColorList=2,3,12&height=2" width="100%"/>
+[![Buy Me A Coffee](https://img.buymeacoffee.com/button-api/?text=Buy%20me%20a%20coffee&emoji=☕&slug=koki7o&button_colour=FFDD00&font_colour=000000&font_family=Cookie&outline_colour=000000&coffee_colour=ffffff)](https://buymeacoffee.com/koki7o)
+
+<br/>
 
 *Last updated: March 2026*
 
 <br/>
 
-[![Buy Me A Coffee](https://img.buymeacoffee.com/button-api/?text=Buy%20me%20a%20coffee&emoji=☕&slug=koki7o&button_colour=FFDD00&font_colour=000000&font_family=Cookie&outline_colour=000000&coffee_colour=ffffff)](https://buymeacoffee.com/koki7o)
-
 </div>
+
+<img src="https://capsule-render.vercel.app/api?type=wave&color=gradient&customColorList=2,3,12&height=120&section=footer" width="100%"/>

@@ -1,0 +1,47 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="760" height="140" viewBox="0 0 760 140">
+  <rect width="760" height="140" rx="16" fill="#1a1a2e"/>
+
+  <!-- Step 1: You Describe -->
+  <rect x="20" y="30" width="130" height="80" rx="12" fill="#1e3a5f"/>
+  <text x="85" y="62" font-family="'Segoe UI', Helvetica, sans-serif" font-size="22" fill="#7aa2f7" text-anchor="middle">💬</text>
+  <text x="85" y="84" font-family="'Segoe UI', Helvetica, sans-serif" font-size="12" fill="#c0caf5" text-anchor="middle" font-weight="600">You Describe</text>
+  <text x="85" y="100" font-family="'Segoe UI', Helvetica, sans-serif" font-size="10" fill="#565a6e" text-anchor="middle">what to build</text>
+
+  <!-- Arrow 1 -->
+  <path d="M155,70 L185,70" stroke="#565a6e" stroke-width="2" fill="none" marker-end="url(#arrow)"/>
+
+  <!-- Step 2: Claude Thinks -->
+  <rect x="190" y="30" width="130" height="80" rx="12" fill="#1e3a5f"/>
+  <text x="255" y="62" font-family="'Segoe UI', Helvetica, sans-serif" font-size="22" fill="#9d7cd8" text-anchor="middle">🧠</text>
+  <text x="255" y="84" font-family="'Segoe UI', Helvetica, sans-serif" font-size="12" fill="#c0caf5" text-anchor="middle" font-weight="600">Claude Plans</text>
+  <text x="255" y="100" font-family="'Segoe UI', Helvetica, sans-serif" font-size="10" fill="#565a6e" text-anchor="middle">the approach</text>
+
+  <!-- Arrow 2 -->
+  <path d="M325,70 L355,70" stroke="#565a6e" stroke-width="2" fill="none" marker-end="url(#arrow)"/>
+
+  <!-- Step 3: Tools Execute -->
+  <rect x="360" y="30" width="130" height="80" rx="12" fill="#1e3a5f"/>
+  <text x="425" y="62" font-family="'Segoe UI', Helvetica, sans-serif" font-size="22" fill="#e0af68" text-anchor="middle">⚡</text>
+  <text x="425" y="84" font-family="'Segoe UI', Helvetica, sans-serif" font-size="12" fill="#c0caf5" text-anchor="middle" font-weight="600">Tools Execute</text>
+  <text x="425" y="100" font-family="'Segoe UI', Helvetica, sans-serif" font-size="10" fill="#565a6e" text-anchor="middle">read, write, run</text>
+
+  <!-- Arrow 3 -->
+  <path d="M495,70 L525,70" stroke="#565a6e" stroke-width="2" fill="none" marker-end="url(#arrow)"/>
+
+  <!-- Step 4: You Review -->
+  <rect x="530" y="30" width="130" height="80" rx="12" fill="#1e3a5f"/>
+  <text x="595" y="62" font-family="'Segoe UI', Helvetica, sans-serif" font-size="22" fill="#9ece6a" text-anchor="middle">👀</text>
+  <text x="595" y="84" font-family="'Segoe UI', Helvetica, sans-serif" font-size="12" fill="#c0caf5" text-anchor="middle" font-weight="600">You Review</text>
+  <text x="595" y="100" font-family="'Segoe UI', Helvetica, sans-serif" font-size="10" fill="#565a6e" text-anchor="middle">and iterate</text>
+
+  <!-- Arrow 4: loop back -->
+  <path d="M665,70 L700,70 Q720,70 720,50 L720,20 Q720,10 710,10 L80,10 Q60,10 60,20 L60,28" stroke="#565a6e" stroke-width="1.5" stroke-dasharray="4,3" fill="none" marker-end="url(#arrow)"/>
+  <text x="390" y="20" font-family="'Segoe UI', Helvetica, sans-serif" font-size="9" fill="#565a6e" text-anchor="middle">iterate until perfect</text>
+
+  <!-- Arrow marker -->
+  <defs>
+    <marker id="arrow" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="6" markerHeight="6" orient="auto-start-auto">
+      <path d="M 0 0 L 10 5 L 0 10 z" fill="#565a6e"/>
+    </marker>
+  </defs>
+</svg>
