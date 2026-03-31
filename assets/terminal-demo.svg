@@ -1,56 +1,88 @@
-<svg xmlns="http://www.w3.org/2000/svg" width="720" height="340" viewBox="0 0 720 340">
+<svg xmlns="http://www.w3.org/2000/svg" width="760" height="460" viewBox="0 0 760 460">
   <defs>
     <linearGradient id="tbg" x1="0%" y1="0%" x2="0%" y2="100%">
-      <stop offset="0%" stop-color="#1e1e2e"/>
-      <stop offset="100%" stop-color="#11111b"/>
+      <stop offset="0%" stop-color="#1a1b26"/>
+      <stop offset="100%" stop-color="#16161e"/>
     </linearGradient>
   </defs>
 
   <!-- Terminal window -->
-  <rect width="720" height="340" rx="12" fill="#11111b"/>
-  <rect width="720" height="340" rx="12" fill="url(#tbg)"/>
+  <rect width="760" height="460" rx="10" fill="#16161e"/>
+  <rect width="760" height="460" rx="10" fill="url(#tbg)"/>
 
   <!-- Title bar -->
-  <rect width="720" height="36" rx="12" fill="#181825"/>
-  <rect y="24" width="720" height="12" fill="#181825"/>
-  <circle cx="20" cy="18" r="6" fill="#f38ba8"/>
-  <circle cx="40" cy="18" r="6" fill="#f9e2af"/>
-  <circle cx="60" cy="18" r="6" fill="#a6e3a1"/>
-  <text x="360" y="22" font-family="'SF Mono', 'Fira Code', monospace" font-size="12" fill="#6c7086" text-anchor="middle">claude — ~/my-project</text>
+  <rect width="760" height="38" rx="10" fill="#1e1f2b"/>
+  <rect y="28" width="760" height="10" fill="#1e1f2b"/>
+  <circle cx="18" cy="19" r="6" fill="#ff5f57"/>
+  <circle cx="38" cy="19" r="6" fill="#febc2e"/>
+  <circle cx="58" cy="19" r="6" fill="#28c840"/>
+  <text x="380" y="23" font-family="'SF Mono', 'Fira Code', 'Cascadia Code', Consolas, monospace" font-size="12" fill="#565a6e" text-anchor="middle">claude — ~/my-project</text>
 
-  <!-- Prompt line -->
-  <text x="20" y="68" font-family="'SF Mono', 'Fira Code', Consolas, monospace" font-size="13" fill="#89b4fa" font-weight="700">&gt;</text>
-  <text x="36" y="68" font-family="'SF Mono', 'Fira Code', Consolas, monospace" font-size="13" fill="#cdd6f4">Create a REST API with user authentication, PostgreSQL</text>
-  <text x="36" y="86" font-family="'SF Mono', 'Fira Code', Consolas, monospace" font-size="13" fill="#cdd6f4">database, and JWT tokens. Include tests.</text>
+  <!-- Init banner area -->
+  <text x="20" y="65" font-family="'SF Mono', monospace" font-size="12" fill="#565a6e">╭──────────────────────────────────────────────────╮</text>
+  <text x="20" y="81" font-family="'SF Mono', monospace" font-size="12" fill="#565a6e">│</text>
+  <text x="50" y="81" font-family="'SF Mono', monospace" font-size="13" fill="#7aa2f7" font-weight="700">Claude Code</text>
+  <text x="170" y="81" font-family="'SF Mono', monospace" font-size="12" fill="#565a6e">v2.1.88</text>
+  <text x="700" y="81" font-family="'SF Mono', monospace" font-size="12" fill="#565a6e">│</text>
+  <text x="20" y="97" font-family="'SF Mono', monospace" font-size="12" fill="#565a6e">╰──────────────────────────────────────────────────╯</text>
 
-  <!-- Claude response -->
-  <text x="20" y="116" font-family="'SF Mono', 'Fira Code', Consolas, monospace" font-size="13" fill="#a6adc8">I'll build that for you. Let me set up the project:</text>
+  <!-- User prompt -->
+  <text x="20" y="126" font-family="'SF Mono', monospace" font-size="13" fill="#7aa2f7" font-weight="700">&gt;</text>
+  <text x="36" y="126" font-family="'SF Mono', monospace" font-size="13" fill="#c0caf5"> Create a REST API with user auth, PostgreSQL, and tests</text>
 
-  <!-- Tool uses with icons -->
-  <rect x="20" y="132" width="680" height="28" rx="6" fill="#313244" opacity="0.6"/>
-  <text x="36" y="150" font-family="'SF Mono', 'Fira Code', Consolas, monospace" font-size="12" fill="#a6e3a1">✓ Write</text>
-  <text x="110" y="150" font-family="'SF Mono', 'Fira Code', Consolas, monospace" font-size="12" fill="#6c7086">package.json, tsconfig.json, .env.example</text>
+  <!-- Claude thinking -->
+  <text x="20" y="156" font-family="'SF Mono', monospace" font-size="12" fill="#9d7cd8">Claude</text>
+  <text x="80" y="156" font-family="'SF Mono', monospace" font-size="12" fill="#565a6e">I'll set up a complete project for you.</text>
 
-  <rect x="20" y="164" width="680" height="28" rx="6" fill="#313244" opacity="0.6"/>
-  <text x="36" y="182" font-family="'SF Mono', 'Fira Code', Consolas, monospace" font-size="12" fill="#a6e3a1">✓ Bash</text>
-  <text x="110" y="182" font-family="'SF Mono', 'Fira Code', Consolas, monospace" font-size="12" fill="#6c7086">npm install express pg jsonwebtoken bcrypt jest</text>
+  <!-- Tool use: Write -->
+  <rect x="20" y="172" width="720" height="26" rx="4" fill="#1e1f2b"/>
+  <text x="32" y="189" font-family="'SF Mono', monospace" font-size="11" fill="#9ece6a">✓</text>
+  <text x="48" y="189" font-family="'SF Mono', monospace" font-size="11" fill="#7aa2f7">Write</text>
+  <text x="96" y="189" font-family="'SF Mono', monospace" font-size="11" fill="#565a6e">package.json</text>
 
-  <rect x="20" y="196" width="680" height="28" rx="6" fill="#313244" opacity="0.6"/>
-  <text x="36" y="214" font-family="'SF Mono', 'Fira Code', Consolas, monospace" font-size="12" fill="#a6e3a1">✓ Write</text>
-  <text x="110" y="214" font-family="'SF Mono', 'Fira Code', Consolas, monospace" font-size="12" fill="#6c7086">src/server.ts, src/routes/auth.ts, src/middleware/jwt.ts</text>
+  <!-- Tool use: Bash -->
+  <rect x="20" y="202" width="720" height="26" rx="4" fill="#1e1f2b"/>
+  <text x="32" y="219" font-family="'SF Mono', monospace" font-size="11" fill="#9ece6a">✓</text>
+  <text x="48" y="219" font-family="'SF Mono', monospace" font-size="11" fill="#e0af68">Bash</text>
+  <text x="96" y="219" font-family="'SF Mono', monospace" font-size="11" fill="#565a6e">npm install express pg jsonwebtoken bcrypt jest supertest</text>
 
-  <rect x="20" y="228" width="680" height="28" rx="6" fill="#313244" opacity="0.6"/>
-  <text x="36" y="246" font-family="'SF Mono', 'Fira Code', Consolas, monospace" font-size="12" fill="#a6e3a1">✓ Write</text>
-  <text x="110" y="246" font-family="'SF Mono', 'Fira Code', Consolas, monospace" font-size="12" fill="#6c7086">src/models/user.ts, src/db/migrations/001_users.sql</text>
+  <!-- Tool use: Write multiple -->
+  <rect x="20" y="232" width="720" height="26" rx="4" fill="#1e1f2b"/>
+  <text x="32" y="249" font-family="'SF Mono', monospace" font-size="11" fill="#9ece6a">✓</text>
+  <text x="48" y="249" font-family="'SF Mono', monospace" font-size="11" fill="#7aa2f7">Write</text>
+  <text x="96" y="249" font-family="'SF Mono', monospace" font-size="11" fill="#565a6e">src/server.ts — Express app with middleware</text>
 
-  <rect x="20" y="260" width="680" height="28" rx="6" fill="#313244" opacity="0.6"/>
-  <text x="36" y="278" font-family="'SF Mono', 'Fira Code', Consolas, monospace" font-size="12" fill="#a6e3a1">✓ Bash</text>
-  <text x="110" y="278" font-family="'SF Mono', 'Fira Code', Consolas, monospace" font-size="12" fill="#6c7086">npm test — 12 tests passed</text>
+  <rect x="20" y="262" width="720" height="26" rx="4" fill="#1e1f2b"/>
+  <text x="32" y="279" font-family="'SF Mono', monospace" font-size="11" fill="#9ece6a">✓</text>
+  <text x="48" y="279" font-family="'SF Mono', monospace" font-size="11" fill="#7aa2f7">Write</text>
+  <text x="96" y="279" font-family="'SF Mono', monospace" font-size="11" fill="#565a6e">src/routes/auth.ts — /register, /login endpoints</text>
+
+  <rect x="20" y="292" width="720" height="26" rx="4" fill="#1e1f2b"/>
+  <text x="32" y="309" font-family="'SF Mono', monospace" font-size="11" fill="#9ece6a">✓</text>
+  <text x="48" y="309" font-family="'SF Mono', monospace" font-size="11" fill="#7aa2f7">Write</text>
+  <text x="96" y="309" font-family="'SF Mono', monospace" font-size="11" fill="#565a6e">src/db/schema.sql — users table, indexes</text>
+
+  <rect x="20" y="322" width="720" height="26" rx="4" fill="#1e1f2b"/>
+  <text x="32" y="339" font-family="'SF Mono', monospace" font-size="11" fill="#9ece6a">✓</text>
+  <text x="48" y="339" font-family="'SF Mono', monospace" font-size="11" fill="#7aa2f7">Write</text>
+  <text x="96" y="339" font-family="'SF Mono', monospace" font-size="11" fill="#565a6e">tests/auth.test.ts — 12 tests for auth flow</text>
+
+  <!-- Tool use: Bash test -->
+  <rect x="20" y="352" width="720" height="26" rx="4" fill="#1e1f2b"/>
+  <text x="32" y="369" font-family="'SF Mono', monospace" font-size="11" fill="#9ece6a">✓</text>
+  <text x="48" y="369" font-family="'SF Mono', monospace" font-size="11" fill="#e0af68">Bash</text>
+  <text x="96" y="369" font-family="'SF Mono', monospace" font-size="11" fill="#9ece6a">npm test — 12/12 passed</text>
 
   <!-- Summary -->
-  <text x="20" y="310" font-family="'SF Mono', 'Fira Code', Consolas, monospace" font-size="13" fill="#a6adc8">Done. Created 8 files, installed 5 packages, all 12 tests passing.</text>
-  <text x="20" y="330" font-family="'SF Mono', 'Fira Code', Consolas, monospace" font-size="13" fill="#89b4fa" font-weight="700">&gt;</text>
-  <rect x="36" y="318" width="8" height="16" fill="#89b4fa" opacity="0.7">
-    <animate attributeName="opacity" values="0.7;0;0.7" dur="1.2s" repeatCount="indefinite"/>
+  <text x="20" y="400" font-family="'SF Mono', monospace" font-size="12" fill="#9d7cd8">Claude</text>
+  <text x="80" y="400" font-family="'SF Mono', monospace" font-size="12" fill="#a9b1d6">Your API is ready. Created 8 files:</text>
+  <text x="80" y="416" font-family="'SF Mono', monospace" font-size="11" fill="#565a6e">• Server with JWT auth middleware</text>
+  <text x="80" y="430" font-family="'SF Mono', monospace" font-size="11" fill="#565a6e">• Register/login endpoints with bcrypt</text>
+  <text x="80" y="444" font-family="'SF Mono', monospace" font-size="11" fill="#565a6e">• PostgreSQL schema + connection pool</text>
+
+  <!-- Next prompt with blinking cursor -->
+  <text x="20" y="460" font-family="'SF Mono', monospace" font-size="13" fill="#7aa2f7" font-weight="700">&gt;</text>
+  <rect x="36" y="448" width="8" height="15" rx="1" fill="#7aa2f7" opacity="0.8">
+    <animate attributeName="opacity" values="0.8;0;0.8" dur="1s" repeatCount="indefinite"/>
   </rect>
 </svg>
