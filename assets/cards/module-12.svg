@@ -1,0 +1,22 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="280" height="160" viewBox="0 0 280 160">
+  <defs>
+    <linearGradient id="bg12" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#1a1a2e"/>
+      <stop offset="100%" style="stop-color:#1a0a28"/>
+    </linearGradient>
+    <linearGradient id="accent12" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" style="stop-color:#6A0DAD"/>
+      <stop offset="100%" style="stop-color:#e040fb"/>
+    </linearGradient>
+  </defs>
+  <rect width="280" height="160" rx="16" fill="url(#bg12)"/>
+  <rect x="0" y="0" width="6" height="160" rx="3" fill="url(#accent12)"/>
+  <text x="24" y="32" font-family="system-ui, -apple-system, sans-serif" font-size="11" fill="#8888aa" font-weight="600" letter-spacing="1.5">MODULE 12</text>
+  <text x="24" y="62" font-family="system-ui, -apple-system, sans-serif" font-size="20" fill="#ffffff" font-weight="700">Skills, Hooks &amp;</text>
+  <text x="24" y="88" font-family="system-ui, -apple-system, sans-serif" font-size="20" fill="#ffffff" font-weight="700">Customization</text>
+  <rect x="24" y="108" width="48" height="24" rx="12" fill="url(#accent12)" opacity="0.2"/>
+  <text x="36" y="124" font-family="system-ui, -apple-system, sans-serif" font-size="11" fill="#ce93d8" font-weight="600">50 min</text>
+  <rect x="80" y="108" width="72" height="24" rx="12" fill="url(#accent12)" opacity="0.2"/>
+  <text x="90" y="124" font-family="system-ui, -apple-system, sans-serif" font-size="11" fill="#ce93d8" font-weight="600">Advanced</text>
+  <text x="216" y="80" font-size="48" opacity="0.15">⚙️</text>
+</svg>
