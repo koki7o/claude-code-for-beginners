@@ -50,7 +50,9 @@
 
 </div>
 
-<img src="https://capsule-render.vercel.app/api?type=wave&color=gradient&customColorList=2,3,12&height=80&section=footer&reversal=true" width="100%"/>
+<img src="https://capsule-render.vercel.app/api?type=soft&color=gradient&customColorList=2,3,12&height=6&section=header" width="100%"/>
+
+<br/>
 
 
 <!-- WHAT IS CLAUDE CODE -->
@@ -258,7 +260,9 @@ Navigate unfamiliar codebases with ease. Start at [Module 4](module-04-working-w
 
 <br/>
 
-<img src="https://capsule-render.vercel.app/api?type=wave&color=gradient&customColorList=2,3,12&height=60&section=header" width="100%"/>
+<img src="https://capsule-render.vercel.app/api?type=soft&color=gradient&customColorList=2,3,12&height=6&section=header" width="100%"/>
+
+<br/>
 
 <!-- COURSE MAP -->
 
@@ -655,7 +659,9 @@ Integrate Claude Code into professional workflows and level up
 
 <br/>
 
-<img src="https://capsule-render.vercel.app/api?type=wave&color=gradient&customColorList=2,3,12&height=60&section=header" width="100%"/>
+<img src="https://capsule-render.vercel.app/api?type=soft&color=gradient&customColorList=2,3,12&height=6&section=header" width="100%"/>
+
+<br/>
 
 <!-- PREMIUM CONTENT -->
 
@@ -829,7 +835,9 @@ The **[Advanced Modules ($29.99)](https://payhip.com/b/8E107)** take you from "i
 
 </div>
 
-<img src="https://capsule-render.vercel.app/api?type=wave&color=gradient&customColorList=2,3,12&height=60&section=footer&reversal=true" width="100%"/>
+<img src="https://capsule-render.vercel.app/api?type=soft&color=gradient&customColorList=2,3,12&height=6&section=header" width="100%"/>
+
+<br/>
 
 <!-- FOOTER -->
 
