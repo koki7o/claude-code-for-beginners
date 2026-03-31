@@ -1,88 +1,102 @@
-<svg xmlns="http://www.w3.org/2000/svg" width="760" height="460" viewBox="0 0 760 460">
+<svg xmlns="http://www.w3.org/2000/svg" width="780" height="380" viewBox="0 0 780 380">
   <defs>
-    <linearGradient id="tbg" x1="0%" y1="0%" x2="0%" y2="100%">
-      <stop offset="0%" stop-color="#1a1b26"/>
-      <stop offset="100%" stop-color="#16161e"/>
-    </linearGradient>
+    <clipPath id="typing">
+      <rect x="0" y="0" width="0" height="380">
+        <animate attributeName="width" from="0" to="780" dur="2s" begin="1.5s" fill="freeze"/>
+      </rect>
+    </clipPath>
   </defs>
 
-  <!-- Terminal window -->
-  <rect width="760" height="460" rx="10" fill="#16161e"/>
-  <rect width="760" height="460" rx="10" fill="url(#tbg)"/>
+  <!-- Terminal background -->
+  <rect width="780" height="380" rx="10" fill="#2d2d2d"/>
 
   <!-- Title bar -->
-  <rect width="760" height="38" rx="10" fill="#1e1f2b"/>
-  <rect y="28" width="760" height="10" fill="#1e1f2b"/>
-  <circle cx="18" cy="19" r="6" fill="#ff5f57"/>
-  <circle cx="38" cy="19" r="6" fill="#febc2e"/>
-  <circle cx="58" cy="19" r="6" fill="#28c840"/>
-  <text x="380" y="23" font-family="'SF Mono', 'Fira Code', 'Cascadia Code', Consolas, monospace" font-size="12" fill="#565a6e" text-anchor="middle">claude — ~/my-project</text>
+  <rect width="780" height="32" rx="10" fill="#3c3c3c"/>
+  <rect y="22" width="780" height="10" fill="#3c3c3c"/>
+  <circle cx="18" cy="16" r="6" fill="#ff5f56"/>
+  <circle cx="38" cy="16" r="6" fill="#ffbd2e"/>
+  <circle cx="58" cy="16" r="6" fill="#27c93f"/>
 
-  <!-- Init banner area -->
-  <text x="20" y="65" font-family="'SF Mono', monospace" font-size="12" fill="#565a6e">╭──────────────────────────────────────────────────╮</text>
-  <text x="20" y="81" font-family="'SF Mono', monospace" font-size="12" fill="#565a6e">│</text>
-  <text x="50" y="81" font-family="'SF Mono', monospace" font-size="13" fill="#7aa2f7" font-weight="700">Claude Code</text>
-  <text x="170" y="81" font-family="'SF Mono', monospace" font-size="12" fill="#565a6e">v2.1.88</text>
-  <text x="700" y="81" font-family="'SF Mono', monospace" font-size="12" fill="#565a6e">│</text>
-  <text x="20" y="97" font-family="'SF Mono', monospace" font-size="12" fill="#565a6e">╰──────────────────────────────────────────────────╯</text>
+  <!-- Main info box - dashed border -->
+  <rect x="30" y="50" width="720" height="250" rx="8" fill="none" stroke="#666" stroke-width="1.5" stroke-dasharray="6,4"/>
 
-  <!-- User prompt -->
-  <text x="20" y="126" font-family="'SF Mono', monospace" font-size="13" fill="#7aa2f7" font-weight="700">&gt;</text>
-  <text x="36" y="126" font-family="'SF Mono', monospace" font-size="13" fill="#c0caf5"> Create a REST API with user auth, PostgreSQL, and tests</text>
+  <!-- Left panel -->
+  <!-- Title -->
+  <text x="60" y="82" font-family="'SF Mono', 'Fira Code', Consolas, monospace" font-size="15" fill="#e8a065" font-weight="700">Claude Code</text>
+  <text x="185" y="82" font-family="'SF Mono', Consolas, monospace" font-size="13" fill="#e8a065">v2.8.0</text>
 
-  <!-- Claude thinking -->
-  <text x="20" y="156" font-family="'SF Mono', monospace" font-size="12" fill="#9d7cd8">Claude</text>
-  <text x="80" y="156" font-family="'SF Mono', monospace" font-size="12" fill="#565a6e">I'll set up a complete project for you.</text>
+  <text x="100" y="115" font-family="'SF Mono', Consolas, monospace" font-size="13" fill="#d4d4d4">Welcome back Meaghan!</text>
 
-  <!-- Tool use: Write -->
-  <rect x="20" y="172" width="720" height="26" rx="4" fill="#1e1f2b"/>
-  <text x="32" y="189" font-family="'SF Mono', monospace" font-size="11" fill="#9ece6a">✓</text>
-  <text x="48" y="189" font-family="'SF Mono', monospace" font-size="11" fill="#7aa2f7">Write</text>
-  <text x="96" y="189" font-family="'SF Mono', monospace" font-size="11" fill="#565a6e">package.json</text>
+  <!-- Pixel art mascot (simplified cute robot) -->
+  <!-- Head -->
+  <rect x="140" y="130" width="4" height="4" fill="#e8a065"/>
+  <rect x="156" y="130" width="4" height="4" fill="#e8a065"/>
+  <rect x="136" y="134" width="28" height="4" fill="#e8a065"/>
+  <rect x="132" y="138" width="36" height="4" fill="#e8a065"/>
+  <rect x="132" y="142" width="4" height="4" fill="#e8a065"/>
+  <rect x="140" y="142" width="4" height="4" fill="#2d2d2d"/>
+  <rect x="136" y="142" width="4" height="4" fill="#e8a065"/>
+  <rect x="144" y="142" width="12" height="4" fill="#e8a065"/>
+  <rect x="156" y="142" width="4" height="4" fill="#2d2d2d"/>
+  <rect x="160" y="142" width="4" height="4" fill="#e8a065"/>
+  <rect x="164" y="142" width="4" height="4" fill="#e8a065"/>
+  <rect x="132" y="146" width="36" height="4" fill="#e8a065"/>
+  <rect x="132" y="150" width="36" height="4" fill="#e8a065"/>
+  <rect x="136" y="154" width="28" height="4" fill="#e8a065"/>
+  <!-- Body -->
+  <rect x="136" y="158" width="28" height="4" fill="#d4856a"/>
+  <rect x="132" y="162" width="36" height="4" fill="#d4856a"/>
+  <rect x="132" y="166" width="36" height="4" fill="#d4856a"/>
+  <rect x="132" y="170" width="36" height="4" fill="#d4856a"/>
+  <rect x="128" y="166" width="4" height="8" fill="#d4856a"/>
+  <rect x="168" y="166" width="4" height="8" fill="#d4856a"/>
+  <!-- Legs -->
+  <rect x="136" y="174" width="8" height="4" fill="#d4856a"/>
+  <rect x="156" y="174" width="8" height="4" fill="#d4856a"/>
 
-  <!-- Tool use: Bash -->
-  <rect x="20" y="202" width="720" height="26" rx="4" fill="#1e1f2b"/>
-  <text x="32" y="219" font-family="'SF Mono', monospace" font-size="11" fill="#9ece6a">✓</text>
-  <text x="48" y="219" font-family="'SF Mono', monospace" font-size="11" fill="#e0af68">Bash</text>
-  <text x="96" y="219" font-family="'SF Mono', monospace" font-size="11" fill="#565a6e">npm install express pg jsonwebtoken bcrypt jest supertest</text>
+  <!-- Model info -->
+  <text x="100" y="200" font-family="'SF Mono', Consolas, monospace" font-size="12" fill="#888">Sonnet 4.5 • Max 20k</text>
+  <text x="65" y="218" font-family="'SF Mono', Consolas, monospace" font-size="12" fill="#888">/users/meaghan/code/apps</text>
 
-  <!-- Tool use: Write multiple -->
-  <rect x="20" y="232" width="720" height="26" rx="4" fill="#1e1f2b"/>
-  <text x="32" y="249" font-family="'SF Mono', monospace" font-size="11" fill="#9ece6a">✓</text>
-  <text x="48" y="249" font-family="'SF Mono', monospace" font-size="11" fill="#7aa2f7">Write</text>
-  <text x="96" y="249" font-family="'SF Mono', monospace" font-size="11" fill="#565a6e">src/server.ts — Express app with middleware</text>
+  <!-- Divider line -->
+  <line x1="380" y1="65" x2="380" y2="285" stroke="#555" stroke-width="1"/>
 
-  <rect x="20" y="262" width="720" height="26" rx="4" fill="#1e1f2b"/>
-  <text x="32" y="279" font-family="'SF Mono', monospace" font-size="11" fill="#9ece6a">✓</text>
-  <text x="48" y="279" font-family="'SF Mono', monospace" font-size="11" fill="#7aa2f7">Write</text>
-  <text x="96" y="279" font-family="'SF Mono', monospace" font-size="11" fill="#565a6e">src/routes/auth.ts — /register, /login endpoints</text>
+  <!-- Right panel - Recent activity -->
+  <text x="400" y="82" font-family="'SF Mono', Consolas, monospace" font-size="13" fill="#e8a065" font-weight="700">Recent activity:</text>
 
-  <rect x="20" y="292" width="720" height="26" rx="4" fill="#1e1f2b"/>
-  <text x="32" y="309" font-family="'SF Mono', monospace" font-size="11" fill="#9ece6a">✓</text>
-  <text x="48" y="309" font-family="'SF Mono', monospace" font-size="11" fill="#7aa2f7">Write</text>
-  <text x="96" y="309" font-family="'SF Mono', monospace" font-size="11" fill="#565a6e">src/db/schema.sql — users table, indexes</text>
+  <text x="410" y="105" font-family="'SF Mono', Consolas, monospace" font-size="12" fill="#888">1m ago</text>
+  <text x="490" y="105" font-family="'SF Mono', Consolas, monospace" font-size="12" fill="#d4d4d4">Updated project memory</text>
 
-  <rect x="20" y="322" width="720" height="26" rx="4" fill="#1e1f2b"/>
-  <text x="32" y="339" font-family="'SF Mono', monospace" font-size="11" fill="#9ece6a">✓</text>
-  <text x="48" y="339" font-family="'SF Mono', monospace" font-size="11" fill="#7aa2f7">Write</text>
-  <text x="96" y="339" font-family="'SF Mono', monospace" font-size="11" fill="#565a6e">tests/auth.test.ts — 12 tests for auth flow</text>
+  <text x="410" y="125" font-family="'SF Mono', Consolas, monospace" font-size="12" fill="#888">8m ago</text>
+  <text x="490" y="125" font-family="'SF Mono', Consolas, monospace" font-size="12" fill="#d4d4d4">Updated claude'd feet</text>
 
-  <!-- Tool use: Bash test -->
-  <rect x="20" y="352" width="720" height="26" rx="4" fill="#1e1f2b"/>
-  <text x="32" y="369" font-family="'SF Mono', monospace" font-size="11" fill="#9ece6a">✓</text>
-  <text x="48" y="369" font-family="'SF Mono', monospace" font-size="11" fill="#e0af68">Bash</text>
-  <text x="96" y="369" font-family="'SF Mono', monospace" font-size="11" fill="#9ece6a">npm test — 12/12 passed</text>
+  <text x="410" y="145" font-family="'SF Mono', Consolas, monospace" font-size="12" fill="#888">2d ago</text>
+  <text x="490" y="145" font-family="'SF Mono', Consolas, monospace" font-size="12" fill="#d4d4d4">Add new words to spinner</text>
 
-  <!-- Summary -->
-  <text x="20" y="400" font-family="'SF Mono', monospace" font-size="12" fill="#9d7cd8">Claude</text>
-  <text x="80" y="400" font-family="'SF Mono', monospace" font-size="12" fill="#a9b1d6">Your API is ready. Created 8 files:</text>
-  <text x="80" y="416" font-family="'SF Mono', monospace" font-size="11" fill="#565a6e">• Server with JWT auth middleware</text>
-  <text x="80" y="430" font-family="'SF Mono', monospace" font-size="11" fill="#565a6e">• Register/login endpoints with bcrypt</text>
-  <text x="80" y="444" font-family="'SF Mono', monospace" font-size="11" fill="#565a6e">• PostgreSQL schema + connection pool</text>
+  <text x="410" y="165" font-family="'SF Mono', Consolas, monospace" font-size="12" fill="#888">1w ago</text>
+  <text x="490" y="165" font-family="'SF Mono', Consolas, monospace" font-size="12" fill="#d4d4d4">Update unit tests</text>
 
-  <!-- Next prompt with blinking cursor -->
-  <text x="20" y="460" font-family="'SF Mono', monospace" font-size="13" fill="#7aa2f7" font-weight="700">&gt;</text>
-  <rect x="36" y="448" width="8" height="15" rx="1" fill="#7aa2f7" opacity="0.8">
-    <animate attributeName="opacity" values="0.8;0;0.8" dur="1s" repeatCount="indefinite"/>
+  <text x="410" y="185" font-family="'SF Mono', Consolas, monospace" font-size="12" fill="#666">... /resume for more</text>
+
+  <!-- What's new section -->
+  <text x="400" y="215" font-family="'SF Mono', Consolas, monospace" font-size="13" fill="#e8a065" font-weight="700">What's new:</text>
+
+  <text x="410" y="238" font-family="'SF Mono', Consolas, monospace" font-size="12" fill="#d4d4d4">/agents to create subagents</text>
+  <text x="410" y="256" font-family="'SF Mono', Consolas, monospace" font-size="12" fill="#d4d4d4">/security-review for review agent</text>
+  <text x="410" y="274" font-family="'SF Mono', Consolas, monospace" font-size="12" fill="#d4d4d4">ctrl+b to background bashes</text>
+  <text x="410" y="290" font-family="'SF Mono', Consolas, monospace" font-size="12" fill="#666">... /help for more</text>
+
+  <!-- Prompt area at bottom -->
+  <text x="30" y="340" font-family="'SF Mono', Consolas, monospace" font-size="14" fill="#d4d4d4">&gt;</text>
+
+  <!-- Typing text with clip animation -->
+  <g clip-path="url(#typing)">
+    <text x="46" y="340" font-family="'SF Mono', Consolas, monospace" font-size="14" fill="#888">Try "edit &lt; filepath&gt; to ..."</text>
+  </g>
+
+  <!-- Blinking cursor -->
+  <rect x="46" y="326" width="8" height="18" rx="1" fill="#d4d4d4">
+    <animate attributeName="x" values="46;340" dur="2s" begin="1.5s" fill="freeze"/>
+    <animate attributeName="opacity" values="1;0;1" dur="1s" repeatCount="indefinite"/>
   </rect>
 </svg>
