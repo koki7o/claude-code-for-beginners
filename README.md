@@ -47,7 +47,7 @@
 
 <br/>
 
----
+<img src="https://capsule-render.vercel.app/api?type=rect&color=gradient&customColorList=2,3,12&height=2" width="100%"/>
 
 <br/>
 
@@ -63,15 +63,9 @@
 
 <br/>
 
-```
-  You:         "Create a REST API with authentication and PostgreSQL"
-                                    ⬇️
-  Claude Code:  📁 Creates project structure
-                📦 Installs dependencies
-                💻 Writes application code
-                🧪 Runs tests
-                ✅ Done.
-```
+<div align="center">
+<img src="assets/terminal-demo.svg" width="720" alt="Claude Code in action"/>
+</div>
 
 <br/>
 
@@ -81,13 +75,13 @@ Instead of manually writing every line, you describe what you want and Claude Co
 
 <br/>
 
-<a href="https://github.com/anthropics/claude-code"><img src="https://img.shields.io/badge/Get_Started_with_Claude_Code_→-0066FF?style=for-the-badge&logo=data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSIyNCIgaGVpZ2h0PSIyNCIgdmlld0JveD0iMCAwIDI0IDI0IiBmaWxsPSJub25lIiBzdHJva2U9IndoaXRlIiBzdHJva2Utd2lkdGg9IjIiPjxwYXRoIGQ9Ik0xOCAxM3Y2YTIgMiAwIDAgMS0yIDJINWEyIDIgMCAwIDEtMi0yVjhhMiAyIDAgMCAxIDItMmg2Ii8+PHBvbHlsaW5lIHBvaW50cz0iMTUgMyAyMSAzIDIxIDkiLz48bGluZSB4MT0iMTAiIHkxPSIxNCIgeDI9IjIxIiB5Mj0iMyIvPjwvc3ZnPg==&labelColor=1a1a2e" alt="Get Started"/></a>
+<a href="https://github.com/anthropics/claude-code"><img src="https://img.shields.io/badge/Get_Started_with_Claude_Code_→-0066FF?style=for-the-badge&labelColor=1a1a2e" alt="Get Started"/></a>
 
 </div>
 
 <br/>
 
----
+<img src="https://capsule-render.vercel.app/api?type=rect&color=gradient&customColorList=2,3,12&height=2" width="100%"/>
 
 <br/>
 
@@ -141,7 +135,7 @@ claude              # Start Claude Code
 
 <br/>
 
----
+<img src="https://capsule-render.vercel.app/api?type=rect&color=gradient&customColorList=2,3,12&height=2" width="100%"/>
 
 <br/>
 
@@ -194,7 +188,7 @@ Navigate unfamiliar codebases with ease. Start at [Module 4](module-04-working-w
 
 <br/>
 
----
+<img src="https://capsule-render.vercel.app/api?type=rect&color=gradient&customColorList=2,3,12&height=2" width="100%"/>
 
 <br/>
 
@@ -235,7 +229,41 @@ Navigate unfamiliar codebases with ease. Start at [Module 4](module-04-working-w
 
 <br/>
 
----
+<img src="https://capsule-render.vercel.app/api?type=rect&color=gradient&customColorList=2,3,12&height=2" width="100%"/>
+
+<br/>
+
+<!-- WORKS WITH -->
+
+<div align="center">
+
+## 🌐 Works with Every Language
+
+<br/>
+
+![Python](https://img.shields.io/badge/Python-3776AB?style=for-the-badge&logo=python&logoColor=white)
+![JavaScript](https://img.shields.io/badge/JavaScript-F7DF1E?style=for-the-badge&logo=javascript&logoColor=black)
+![TypeScript](https://img.shields.io/badge/TypeScript-3178C6?style=for-the-badge&logo=typescript&logoColor=white)
+![Go](https://img.shields.io/badge/Go-00ADD8?style=for-the-badge&logo=go&logoColor=white)
+![Rust](https://img.shields.io/badge/Rust-000000?style=for-the-badge&logo=rust&logoColor=white)
+![Java](https://img.shields.io/badge/Java-ED8B00?style=for-the-badge&logo=openjdk&logoColor=white)
+![Swift](https://img.shields.io/badge/Swift-F05138?style=for-the-badge&logo=swift&logoColor=white)
+![Ruby](https://img.shields.io/badge/Ruby-CC342D?style=for-the-badge&logo=ruby&logoColor=white)
+![PHP](https://img.shields.io/badge/PHP-777BB4?style=for-the-badge&logo=php&logoColor=white)
+![C++](https://img.shields.io/badge/C++-00599C?style=for-the-badge&logo=cplusplus&logoColor=white)
+![React](https://img.shields.io/badge/React-61DAFB?style=for-the-badge&logo=react&logoColor=black)
+![Node.js](https://img.shields.io/badge/Node.js-339933?style=for-the-badge&logo=nodedotjs&logoColor=white)
+![Next.js](https://img.shields.io/badge/Next.js-000000?style=for-the-badge&logo=nextdotjs&logoColor=white)
+![Django](https://img.shields.io/badge/Django-092E20?style=for-the-badge&logo=django&logoColor=white)
+![Flask](https://img.shields.io/badge/Flask-000000?style=for-the-badge&logo=flask&logoColor=white)
+
+<sub>...and many more. If it has a file, Claude Code can work with it.</sub>
+
+</div>
+
+<br/>
+
+<img src="https://capsule-render.vercel.app/api?type=rect&color=gradient&customColorList=2,3,12&height=2" width="100%"/>
 
 <br/>
 
@@ -325,7 +353,7 @@ Navigate unfamiliar codebases with ease. Start at [Module 4](module-04-working-w
 
 <br/>
 
----
+<img src="https://capsule-render.vercel.app/api?type=rect&color=gradient&customColorList=2,3,12&height=2" width="100%"/>
 
 <br/>
 
@@ -392,7 +420,7 @@ Production-ready<br/>Full implementations<br/>Professional quality
 
 <br/>
 
----
+<img src="https://capsule-render.vercel.app/api?type=rect&color=gradient&customColorList=2,3,12&height=2" width="100%"/>
 
 <br/>
 
@@ -433,7 +461,7 @@ Production-ready<br/>Full implementations<br/>Professional quality
 
 <br/>
 
----
+<img src="https://capsule-render.vercel.app/api?type=rect&color=gradient&customColorList=2,3,12&height=2" width="100%"/>
 
 <br/>
 
@@ -488,7 +516,7 @@ Bugs and<br/>feature requests
 
 <br/>
 
----
+<img src="https://capsule-render.vercel.app/api?type=rect&color=gradient&customColorList=2,3,12&height=2" width="100%"/>
 
 <br/>
 
@@ -520,7 +548,7 @@ Claude Code runs in your terminal. Don't be intimidated! We'll teach you everyth
 ### Tools Explained Simply
 
 | Tool | What It Does | In Plain English |
-|------|-------------|-----------------|
+|<img src="https://capsule-render.vercel.app/api?type=rect&color=gradient&customColorList=2,3,12&height=2" width="100%"/><img src="https://capsule-render.vercel.app/api?type=rect&color=gradient&customColorList=2,3,12&height=2" width="100%"/>|<img src="https://capsule-render.vercel.app/api?type=rect&color=gradient&customColorList=2,3,12&height=2" width="100%"/><img src="https://capsule-render.vercel.app/api?type=rect&color=gradient&customColorList=2,3,12&height=2" width="100%"/><img src="https://capsule-render.vercel.app/api?type=rect&color=gradient&customColorList=2,3,12&height=2" width="100%"/><img src="https://capsule-render.vercel.app/api?type=rect&color=gradient&customColorList=2,3,12&height=2" width="100%"/>-|<img src="https://capsule-render.vercel.app/api?type=rect&color=gradient&customColorList=2,3,12&height=2" width="100%"/><img src="https://capsule-render.vercel.app/api?type=rect&color=gradient&customColorList=2,3,12&height=2" width="100%"/><img src="https://capsule-render.vercel.app/api?type=rect&color=gradient&customColorList=2,3,12&height=2" width="100%"/><img src="https://capsule-render.vercel.app/api?type=rect&color=gradient&customColorList=2,3,12&height=2" width="100%"/><img src="https://capsule-render.vercel.app/api?type=rect&color=gradient&customColorList=2,3,12&height=2" width="100%"/>--|
 | **Read** | Opens files | *"Show me this file"* |
 | **Write** | Creates files | *"Create this new file"* |
 | **Edit** | Modifies files | *"Change this specific part"* |
@@ -532,7 +560,7 @@ Claude Code runs in your terminal. Don't be intimidated! We'll teach you everyth
 
 <br/>
 
----
+<img src="https://capsule-render.vercel.app/api?type=rect&color=gradient&customColorList=2,3,12&height=2" width="100%"/>
 
 <br/>
 
@@ -573,7 +601,7 @@ Integrate Claude Code into professional workflows and level up
 
 <br/>
 
----
+<img src="https://capsule-render.vercel.app/api?type=rect&color=gradient&customColorList=2,3,12&height=2" width="100%"/>
 
 <br/>
 
@@ -676,7 +704,7 @@ The **[Advanced Modules ($29.99)](https://payhip.com/b/8E107)** take you from "i
 
 <br/>
 
----
+<img src="https://capsule-render.vercel.app/api?type=rect&color=gradient&customColorList=2,3,12&height=2" width="100%"/>
 
 <br/>
 
@@ -725,7 +753,7 @@ The **[Advanced Modules ($29.99)](https://payhip.com/b/8E107)** take you from "i
 
 <br/>
 
----
+<img src="https://capsule-render.vercel.app/api?type=rect&color=gradient&customColorList=2,3,12&height=2" width="100%"/>
 
 <br/>
 
@@ -747,7 +775,7 @@ This course will guide you from your first terminal command to your first deploy
 <br/>
 <br/>
 
----
+<img src="https://capsule-render.vercel.app/api?type=rect&color=gradient&customColorList=2,3,12&height=2" width="100%"/>
 
 *Last updated: March 2026*
 

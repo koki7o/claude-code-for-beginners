@@ -1,0 +1,56 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="720" height="340" viewBox="0 0 720 340">
+  <defs>
+    <linearGradient id="tbg" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" stop-color="#1e1e2e"/>
+      <stop offset="100%" stop-color="#11111b"/>
+    </linearGradient>
+  </defs>
+
+  <!-- Terminal window -->
+  <rect width="720" height="340" rx="12" fill="#11111b"/>
+  <rect width="720" height="340" rx="12" fill="url(#tbg)"/>
+
+  <!-- Title bar -->
+  <rect width="720" height="36" rx="12" fill="#181825"/>
+  <rect y="24" width="720" height="12" fill="#181825"/>
+  <circle cx="20" cy="18" r="6" fill="#f38ba8"/>
+  <circle cx="40" cy="18" r="6" fill="#f9e2af"/>
+  <circle cx="60" cy="18" r="6" fill="#a6e3a1"/>
+  <text x="360" y="22" font-family="'SF Mono', 'Fira Code', monospace" font-size="12" fill="#6c7086" text-anchor="middle">claude — ~/my-project</text>
+
+  <!-- Prompt line -->
+  <text x="20" y="68" font-family="'SF Mono', 'Fira Code', Consolas, monospace" font-size="13" fill="#89b4fa" font-weight="700">&gt;</text>
+  <text x="36" y="68" font-family="'SF Mono', 'Fira Code', Consolas, monospace" font-size="13" fill="#cdd6f4">Create a REST API with user authentication, PostgreSQL</text>
+  <text x="36" y="86" font-family="'SF Mono', 'Fira Code', Consolas, monospace" font-size="13" fill="#cdd6f4">database, and JWT tokens. Include tests.</text>
+
+  <!-- Claude response -->
+  <text x="20" y="116" font-family="'SF Mono', 'Fira Code', Consolas, monospace" font-size="13" fill="#a6adc8">I'll build that for you. Let me set up the project:</text>
+
+  <!-- Tool uses with icons -->
+  <rect x="20" y="132" width="680" height="28" rx="6" fill="#313244" opacity="0.6"/>
+  <text x="36" y="150" font-family="'SF Mono', 'Fira Code', Consolas, monospace" font-size="12" fill="#a6e3a1">✓ Write</text>
+  <text x="110" y="150" font-family="'SF Mono', 'Fira Code', Consolas, monospace" font-size="12" fill="#6c7086">package.json, tsconfig.json, .env.example</text>
+
+  <rect x="20" y="164" width="680" height="28" rx="6" fill="#313244" opacity="0.6"/>
+  <text x="36" y="182" font-family="'SF Mono', 'Fira Code', Consolas, monospace" font-size="12" fill="#a6e3a1">✓ Bash</text>
+  <text x="110" y="182" font-family="'SF Mono', 'Fira Code', Consolas, monospace" font-size="12" fill="#6c7086">npm install express pg jsonwebtoken bcrypt jest</text>
+
+  <rect x="20" y="196" width="680" height="28" rx="6" fill="#313244" opacity="0.6"/>
+  <text x="36" y="214" font-family="'SF Mono', 'Fira Code', Consolas, monospace" font-size="12" fill="#a6e3a1">✓ Write</text>
+  <text x="110" y="214" font-family="'SF Mono', 'Fira Code', Consolas, monospace" font-size="12" fill="#6c7086">src/server.ts, src/routes/auth.ts, src/middleware/jwt.ts</text>
+
+  <rect x="20" y="228" width="680" height="28" rx="6" fill="#313244" opacity="0.6"/>
+  <text x="36" y="246" font-family="'SF Mono', 'Fira Code', Consolas, monospace" font-size="12" fill="#a6e3a1">✓ Write</text>
+  <text x="110" y="246" font-family="'SF Mono', 'Fira Code', Consolas, monospace" font-size="12" fill="#6c7086">src/models/user.ts, src/db/migrations/001_users.sql</text>
+
+  <rect x="20" y="260" width="680" height="28" rx="6" fill="#313244" opacity="0.6"/>
+  <text x="36" y="278" font-family="'SF Mono', 'Fira Code', Consolas, monospace" font-size="12" fill="#a6e3a1">✓ Bash</text>
+  <text x="110" y="278" font-family="'SF Mono', 'Fira Code', Consolas, monospace" font-size="12" fill="#6c7086">npm test — 12 tests passed</text>
+
+  <!-- Summary -->
+  <text x="20" y="310" font-family="'SF Mono', 'Fira Code', Consolas, monospace" font-size="13" fill="#a6adc8">Done. Created 8 files, installed 5 packages, all 12 tests passing.</text>
+  <text x="20" y="330" font-family="'SF Mono', 'Fira Code', Consolas, monospace" font-size="13" fill="#89b4fa" font-weight="700">&gt;</text>
+  <rect x="36" y="318" width="8" height="16" fill="#89b4fa" opacity="0.7">
+    <animate attributeName="opacity" values="0.7;0;0.7" dur="1.2s" repeatCount="indefinite"/>
+  </rect>
+</svg>
