@@ -1,0 +1,36 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="320" height="180" viewBox="0 0 320 180">
+  <defs>
+    <linearGradient id="bg" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#0a1628"/>
+      <stop offset="50%" stop-color="#1a1a3e"/>
+      <stop offset="100%" stop-color="#162050"/>
+    </linearGradient>
+    <linearGradient id="glow" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#0066FF" stop-opacity="0.3"/>
+      <stop offset="100%" stop-color="#00b4d8" stop-opacity="0"/>
+    </linearGradient>
+    <linearGradient id="bar" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" stop-color="#0066FF"/>
+      <stop offset="100%" stop-color="#00b4d8"/>
+    </linearGradient>
+  </defs>
+  <rect width="320" height="180" rx="20" fill="#0a1628"/>
+  <rect width="320" height="180" rx="20" fill="url(#bg)"/>
+  <circle cx="280" cy="40" r="80" fill="url(#glow)"/>
+  <circle cx="260" cy="30" r="2" fill="#0066FF" opacity="0.4"/>
+  <circle cx="280" cy="50" r="1.5" fill="#00b4d8" opacity="0.3"/>
+  <circle cx="300" cy="25" r="1" fill="#0066FF" opacity="0.5"/>
+  <circle cx="270" cy="60" r="1.5" fill="#00b4d8" opacity="0.2"/>
+  <circle cx="290" cy="15" r="1" fill="#0066FF" opacity="0.3"/>
+  <rect x="0" y="0" width="5" height="180" rx="2.5" fill="url(#bar)"/>
+  <rect x="24" y="20" width="36" height="20" rx="10" fill="#0066FF" opacity="0.15"/>
+  <text x="42" y="34" font-family="'Segoe UI', Helvetica, Arial, sans-serif" font-size="10" fill="#4dabf7" font-weight="700" text-anchor="middle" letter-spacing="0.5">07</text>
+  <text x="24" y="72" font-family="'Segoe UI', Helvetica, Arial, sans-serif" font-size="24" fill="#ffffff" font-weight="700">Git</text>
+  <text x="24" y="100" font-family="'Segoe UI', Helvetica, Arial, sans-serif" font-size="24" fill="#ffffff" font-weight="700">Operations</text>
+  <g transform="translate(255, 65)" opacity="0.12"><circle cx="8" cy="8" r="4" fill="#0066FF"/><circle cx="28" cy="8" r="4" fill="#0066FF"/><circle cx="18" cy="28" r="4" fill="#0066FF"/><line x1="8" y1="12" x2="18" y2="24" stroke="#0066FF" stroke-width="2"/><line x1="28" y1="12" x2="18" y2="24" stroke="#0066FF" stroke-width="2"/></g>
+  <rect x="24" y="120" width="60" height="28" rx="14" fill="#0066FF" opacity="0.12"/>
+  <text x="54" y="138" font-family="'Segoe UI', Helvetica, Arial, sans-serif" font-size="11" fill="#4dabf7" font-weight="600" text-anchor="middle">40 min</text>
+  <rect x="92" y="120" width="116" height="28" rx="14" fill="#0066FF" opacity="0.12"/>
+  <text x="150" y="138" font-family="'Segoe UI', Helvetica, Arial, sans-serif" font-size="11" fill="#4dabf7" font-weight="600" text-anchor="middle">Intermediate</text>
+  <rect x="24" y="160" width="272" height="1" fill="#0066FF" opacity="0.1" rx="0.5"/>
+</svg>

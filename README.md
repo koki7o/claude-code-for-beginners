@@ -257,69 +257,62 @@ Navigate unfamiliar codebases with ease. Start at [Module 4](module-04-working-w
 
 *Install, explore, and learn to communicate effectively with Claude Code.*
 
+</div>
+
+<div align="center">
 <table width="100%">
 <tr>
-<td align="center" width="20%"><a href="module-01-welcome-to-claude-code.md"><img src="https://img.shields.io/badge/01-32CD32?style=for-the-badge&labelColor=1a1a2e" alt="01"/><br/><b>Welcome to<br/>Claude Code</b></a><br/><sub>20 min</sub></td>
-<td align="center" width="20%"><a href="module-02-starting-your-first-project.md"><img src="https://img.shields.io/badge/02-32CD32?style=for-the-badge&labelColor=1a1a2e" alt="02"/><br/><b>Starting Your<br/>First Project</b></a><br/><sub>30 min</sub></td>
-<td align="center" width="20%"><a href="module-03-understanding-tools.md"><img src="https://img.shields.io/badge/03-32CD32?style=for-the-badge&labelColor=1a1a2e" alt="03"/><br/><b>Understanding<br/>Tools</b></a><br/><sub>30 min</sub></td>
-<td align="center" width="20%"><a href="module-04-working-with-files.md"><img src="https://img.shields.io/badge/04-32CD32?style=for-the-badge&labelColor=1a1a2e" alt="04"/><br/><b>Working with<br/>Files & Code</b></a><br/><sub>40 min</sub></td>
-<td align="center" width="20%"><a href="module-05-prompt-engineering.md"><img src="https://img.shields.io/badge/05-32CD32?style=for-the-badge&labelColor=1a1a2e" alt="05"/><br/><b>Effective<br/>Prompting</b></a><br/><sub>35 min</sub></td>
-</tr>
-<tr>
-<td align="center"><sub>Installation, CLI,<br/>terminology, CLAUDE.md</sub></td>
-<td align="center"><sub>From scratch, templates,<br/>cloning, project memory</sub></td>
-<td align="center"><sub>Read, Write, Edit, Bash,<br/>Grep, Glob, web tools</sub></td>
-<td align="center"><sub>Reading, writing, editing,<br/>refactoring, navigating</sub></td>
-<td align="center"><sub>Prompt patterns, iteration,<br/>Persistence Pattern</sub></td>
+<td align="center" width="20%"><a href="module-01-welcome-to-claude-code.md"><img src="assets/cards/module-01.svg" width="280" alt="Module 01"/></a></td>
+<td align="center" width="20%"><a href="module-02-starting-your-first-project.md"><img src="assets/cards/module-02.svg" width="280" alt="Module 02"/></a></td>
+<td align="center" width="20%"><a href="module-03-understanding-tools.md"><img src="assets/cards/module-03.svg" width="280" alt="Module 03"/></a></td>
+<td align="center" width="20%"><a href="module-04-working-with-files.md"><img src="assets/cards/module-04.svg" width="280" alt="Module 04"/></a></td>
+<td align="center" width="20%"><a href="module-05-prompt-engineering.md"><img src="assets/cards/module-05.svg" width="280" alt="Module 05"/></a></td>
 </tr>
 </table>
+</div>
 
 <br/>
+
+<div align="center">
 
 ### 🔵 Core Skills (Modules 6–10)
 
 *Build real things — agents, Git workflows, debugging, testing, and professional practices.*
 
+</div>
+
+<div align="center">
 <table width="100%">
 <tr>
-<td align="center" width="20%"><a href="module-06-background-agents.md"><img src="https://img.shields.io/badge/06-0066FF?style=for-the-badge&labelColor=1a1a2e" alt="06"/><br/><b>Background<br/>Agents</b></a><br/><sub>35 min</sub></td>
-<td align="center" width="20%"><a href="module-07-git-operations.md"><img src="https://img.shields.io/badge/07-0066FF?style=for-the-badge&labelColor=1a1a2e" alt="07"/><br/><b>Git<br/>Operations</b></a><br/><sub>40 min</sub></td>
-<td align="center" width="20%"><a href="module-08-debugging-and-testing.md"><img src="https://img.shields.io/badge/08-0066FF?style=for-the-badge&labelColor=1a1a2e" alt="08"/><br/><b>Debugging<br/>& Testing</b></a><br/><sub>45 min</sub></td>
-<td align="center" width="20%"><a href="module-09-real-world-project.md"><img src="https://img.shields.io/badge/09-0066FF?style=for-the-badge&labelColor=1a1a2e" alt="09"/><br/><b>Real-World<br/>Project</b></a><br/><sub>90 min</sub></td>
-<td align="center" width="20%"><a href="module-10-workflow-best-practices.md"><img src="https://img.shields.io/badge/10-0066FF?style=for-the-badge&labelColor=1a1a2e" alt="10"/><br/><b>Workflow<br/>Best Practices</b></a><br/><sub>40 min</sub></td>
-</tr>
-<tr>
-<td align="center"><sub>Exploration, planning,<br/>multi-step, model routing</sub></td>
-<td align="center"><sub>Commits, branches, PRs,<br/>conflicts, GitHub CLI</sub></td>
-<td align="center"><sub>Error messages, TDD,<br/>debugging strategies</sub></td>
-<td align="center"><sub>Full build: plan → code<br/>→ test → deploy</sub></td>
-<td align="center"><sub>Rules, pipelines, review,<br/>documentation, quality</sub></td>
+<td align="center" width="20%"><a href="module-06-background-agents.md"><img src="assets/cards/module-06.svg" width="280" alt="Module 06"/></a></td>
+<td align="center" width="20%"><a href="module-07-git-operations.md"><img src="assets/cards/module-07.svg" width="280" alt="Module 07"/></a></td>
+<td align="center" width="20%"><a href="module-08-debugging-and-testing.md"><img src="assets/cards/module-08.svg" width="280" alt="Module 08"/></a></td>
+<td align="center" width="20%"><a href="module-09-real-world-project.md"><img src="assets/cards/module-09.svg" width="280" alt="Module 09"/></a></td>
+<td align="center" width="20%"><a href="module-10-workflow-best-practices.md"><img src="assets/cards/module-10.svg" width="280" alt="Module 10"/></a></td>
 </tr>
 </table>
+</div>
 
 <br/>
+
+<div align="center">
 
 ### 🟣 Going Deeper (Modules 11–15)
 
 *Extend Claude Code with MCP, skills, hooks, multi-language support, APIs, and deployment.*
 
+</div>
+
+<div align="center">
 <table width="100%">
 <tr>
-<td align="center" width="20%"><a href="module-11-mcp-servers.md"><img src="https://img.shields.io/badge/11-6A0DAD?style=for-the-badge&labelColor=1a1a2e" alt="11"/><br/><b>MCP<br/>Servers</b></a><br/><sub>45 min</sub></td>
-<td align="center" width="20%"><a href="module-12-skills-and-hooks.md"><img src="https://img.shields.io/badge/12-6A0DAD?style=for-the-badge&labelColor=1a1a2e" alt="12"/><br/><b>Skills, Hooks &<br/>Customization</b></a><br/><sub>50 min</sub></td>
-<td align="center" width="20%"><a href="module-13-languages-and-frameworks.md"><img src="https://img.shields.io/badge/13-6A0DAD?style=for-the-badge&labelColor=1a1a2e" alt="13"/><br/><b>Languages &<br/>Frameworks</b></a><br/><sub>40 min</sub></td>
-<td align="center" width="20%"><a href="module-14-api-integration.md"><img src="https://img.shields.io/badge/14-6A0DAD?style=for-the-badge&labelColor=1a1a2e" alt="14"/><br/><b>API<br/>Integration</b></a><br/><sub>45 min</sub></td>
-<td align="center" width="20%"><a href="module-15-production-deployment.md"><img src="https://img.shields.io/badge/15-6A0DAD?style=for-the-badge&labelColor=1a1a2e" alt="15"/><br/><b>Production<br/>Deployment</b></a><br/><sub>60 min</sub></td>
-</tr>
-<tr>
-<td align="center"><sub>Context7, Playwright,<br/>DeepWiki, custom MCP</sub></td>
-<td align="center"><sub>CLAUDE.md, rules, settings,<br/>skills, commands, hooks</sub></td>
-<td align="center"><sub>Python, TypeScript, Go,<br/>Rust, Swift, polyglot</sub></td>
-<td align="center"><sub>WebSearch, REST APIs,<br/>auth, rate limiting</sub></td>
-<td align="center"><sub>Docker, CI/CD, monitoring,<br/>security, migrations</sub></td>
+<td align="center" width="20%"><a href="module-11-mcp-servers.md"><img src="assets/cards/module-11.svg" width="280" alt="Module 11"/></a></td>
+<td align="center" width="20%"><a href="module-12-skills-and-hooks.md"><img src="assets/cards/module-12.svg" width="280" alt="Module 12"/></a></td>
+<td align="center" width="20%"><a href="module-13-languages-and-frameworks.md"><img src="assets/cards/module-13.svg" width="280" alt="Module 13"/></a></td>
+<td align="center" width="20%"><a href="module-14-api-integration.md"><img src="assets/cards/module-14.svg" width="280" alt="Module 14"/></a></td>
+<td align="center" width="20%"><a href="module-15-production-deployment.md"><img src="assets/cards/module-15.svg" width="280" alt="Module 15"/></a></td>
 </tr>
 </table>
-
 </div>
 
 <br/>
