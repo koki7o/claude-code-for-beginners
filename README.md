@@ -205,23 +205,21 @@ Navigate unfamiliar codebases with ease. Start at [Module 4](module-04-working-w
 <div align="center">
 <table width="100%">
 <tr>
-<td valign="top" width="50%">
-
-- ✅ Build complete applications from idea to deployment
-- ✅ Communicate coding tasks to AI effectively
-- ✅ Debug and fix errors with AI assistance
-- ✅ Navigate unfamiliar codebases with confidence
-- ✅ Work with version control and Git operations
-
+<td align="left" valign="top" width="50%">
+<br/>
+&nbsp;&nbsp;✅ Build complete applications from idea to deployment<br/>
+&nbsp;&nbsp;✅ Communicate coding tasks to AI effectively<br/>
+&nbsp;&nbsp;✅ Debug and fix errors with AI assistance<br/>
+&nbsp;&nbsp;✅ Navigate unfamiliar codebases with confidence<br/>
+&nbsp;&nbsp;✅ Work with version control and Git operations
 </td>
-<td valign="top" width="50%">
-
-- ✅ Configure CLAUDE.md, rules, skills, and hooks
-- ✅ Use background agents and model routing
-- ✅ Extend Claude Code with MCP servers
-- ✅ Deploy applications to production
-- ✅ Build a portfolio of projects to showcase
-
+<td align="left" valign="top" width="50%">
+<br/>
+&nbsp;&nbsp;✅ Configure CLAUDE.md, rules, skills, and hooks<br/>
+&nbsp;&nbsp;✅ Use background agents and model routing<br/>
+&nbsp;&nbsp;✅ Extend Claude Code with MCP servers<br/>
+&nbsp;&nbsp;✅ Deploy applications to production<br/>
+&nbsp;&nbsp;✅ Build a portfolio of projects to showcase
 </td>
 </tr>
 </table>
@@ -437,25 +435,21 @@ Production-ready<br/>Full implementations<br/>Professional quality
 <div align="center">
 <table width="100%">
 <tr>
-<td valign="top" width="50%">
-
+<td align="left" valign="top" width="50%">
 <div align="center"><b>What you need:</b></div>
-
-- 💻 A computer (macOS, Windows, or Linux)
-- 🌐 Internet connection
-- ⌨️ Terminal access (we'll show you how)
-- 🔑 Claude account (Pro/Max subscription or API key)
-
+<br/>
+&nbsp;&nbsp;💻 A computer (macOS, Windows, or Linux)<br/>
+&nbsp;&nbsp;🌐 Internet connection<br/>
+&nbsp;&nbsp;⌨️ Terminal access (we'll show you how)<br/>
+&nbsp;&nbsp;🔑 Claude account (Pro/Max subscription or API key)
 </td>
-<td valign="top" width="50%">
-
+<td align="left" valign="top" width="50%">
 <div align="center"><b>What you DON'T need:</b></div>
-
-- ❌ Prior programming experience
-- ❌ Computer science degree
-- ❌ Expensive software
-- ❌ Previous AI experience
-
+<br/>
+&nbsp;&nbsp;❌ Prior programming experience<br/>
+&nbsp;&nbsp;❌ Computer science degree<br/>
+&nbsp;&nbsp;❌ Expensive software<br/>
+&nbsp;&nbsp;❌ Previous AI experience
 </td>
 </tr>
 </table>
