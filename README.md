@@ -30,6 +30,7 @@
 <a href="#-course-map"><img src="https://img.shields.io/badge/🗺️_Course_Map-00897B?style=for-the-badge&logoColor=white" alt="Course Map"/></a>
 <a href="#-challenges"><img src="https://img.shields.io/badge/🏆_Challenges-FF6D00?style=for-the-badge&logoColor=white" alt="Challenges"/></a>
 <a href="#-need-help"><img src="https://img.shields.io/badge/📚_Resources-7B1FA2?style=for-the-badge&logoColor=white" alt="Resources"/></a>
+<a href="#-go-further--paid-content"><img src="https://img.shields.io/badge/🔥_Advanced_+_Projects-FF4500?style=for-the-badge&logoColor=white" alt="Paid Content"/></a>
 
 <br/>
 
@@ -58,14 +59,17 @@
 
 </div>
 
+> **April 2026:**
+> - ⭐ 230+ stars — growing fast, thank you!
+> - 🔬 **NEW: "Claude Code Internals" series** — 3 exclusive modules reverse-engineering how Claude Code actually works under the hood (query engine, hook system, permission engine, prompt assembly)
+> - 🛠️ **NEW: 2 architecture projects** — Build an AI Agent Coordinator + Event-Driven Hook Engine from scratch
+> - 📦 [Real Projects Pack](https://payhip.com/b/dFXWO) — now **13 hands-on builds** ($39.99)
+> - 🎓 [Advanced Modules](https://payhip.com/b/8E107) — now **11 enterprise-level modules** including the Internals series ($29.99)
+>
 > **March 2026:**
-> - ⭐ 130+ stars — thank you!
 > - 🔧 Massive quality pass — 900+ fixes across all modules
 > - 🪟 Full Windows support added (PowerShell install + commands in every module)
 > - 🔑 Claude Pro/Max subscription login — not just API keys anymore
-> - 🎨 Beautiful new README with SVG module cards and visual course map
-> - 📦 **NEW:** [Real Projects Pack](https://payhip.com/b/dFXWO) — 11 hands-on builds ($39.99)
-> - 🎓 **NEW:** [Advanced Modules](https://payhip.com/b/8E107) — 8 enterprise-level modules ($29.99)
 > - ☕ Love it? [Buy me a coffee](https://buymeacoffee.com/koki7o) or give it a ⭐
 
 <img src="https://capsule-render.vercel.app/api?type=soft&color=gradient&customColorList=2,3,12&height=6&section=header" width="100%"/>
@@ -371,6 +375,137 @@ Navigate unfamiliar codebases with ease. Start at [Module 4](module-04-working-w
 
 <br/>
 
+<!-- GO FURTHER — PAID CONTENT (HIGH VISIBILITY) -->
+
+<div align="center">
+
+## 🔥 Go Further — Paid Content
+
+**The free course gives you the skills. The paid packs give you the systems, projects, and insider knowledge to go pro.**
+
+<br/>
+
+<table width="100%">
+<tr>
+<td align="center" width="33%">
+
+### 🔬 Claude Code Internals
+
+**How it REALLY works under the hood**
+
+We studied Claude Code's actual source code and reverse-engineered the architecture into 3 exclusive deep-dive modules. Nobody else teaches this.
+
+<br/>
+
+✅ The LLM query engine loop<br/>
+✅ All 44 tools & how they're selected<br/>
+✅ 5-layer permission engine<br/>
+✅ 8-event hook system (Observer pattern)<br/>
+✅ Dynamic prompt assembly from 6 sources<br/>
+✅ Feature flags & build-time elimination<br/>
+✅ ResolveOnce async race pattern<br/>
+✅ Context compression & memory system
+
+</td>
+<td align="center" width="33%">
+
+### 📦 Real Projects Pack
+
+**13 hands-on builds you can ship**
+
+Each project is a complete guided build with CLAUDE.md templates, rules files, and prompts you can copy-paste.
+
+<br/>
+
+✅ AI-Powered Todo App (Claude API)<br/>
+✅ Code Review Automation Tool<br/>
+✅ Documentation Generator<br/>
+✅ Bug Finder Assistant<br/>
+✅ Test Case Generator (TDD)<br/>
+✅ API Client Builder (OpenAPI)<br/>
+✅ Database Schema Designer<br/>
+✅ CLI Tool Starter Kit<br/>
+✅ Microservice Template (Docker/K8s)<br/>
+✅ Full-Stack SaaS Boilerplate<br/>
+✅ Claude Code Power Config<br/>
+✅ **NEW:** AI Agent Coordinator<br/>
+✅ **NEW:** Event-Driven Hook Engine
+
+</td>
+<td align="center" width="33%">
+
+### 🎓 Advanced Modules
+
+**11 enterprise-level modules (36+ hours)**
+
+Go from "it works on my machine" to production infrastructure, multi-agent systems, and Claude Code mastery.
+
+<br/>
+
+✅ Kubernetes & auto-scaling (M16)<br/>
+✅ Multi-agent orchestration (M17)<br/>
+✅ Custom MCP servers & npm (M18)<br/>
+✅ SSO, RBAC, GDPR compliance (M19)<br/>
+✅ Performance optimization (M20)<br/>
+✅ Custom agents & teams (M21)<br/>
+✅ Sandbox, plugins & config (M22)<br/>
+✅ Professional RPI workflows (M23)<br/>
+✅ **NEW:** Query engine internals (M24)<br/>
+✅ **NEW:** Hook system deep dive (M25)<br/>
+✅ **NEW:** Permission engine & prompts (M26)
+
+</td>
+</tr>
+</table>
+
+<br/>
+
+### What you get: Free vs Paid
+
+<table width="100%">
+<tr>
+<th width="40%">Skill</th>
+<th width="20%" align="center">Free Course</th>
+<th width="20%" align="center">+ Projects ($39.99)</th>
+<th width="20%" align="center">+ Advanced ($29.99)</th>
+</tr>
+<tr><td>Use Claude Code basics</td><td align="center">✅</td><td align="center">✅</td><td align="center">✅</td></tr>
+<tr><td>Write prompts & use tools</td><td align="center">✅</td><td align="center">✅</td><td align="center">✅</td></tr>
+<tr><td>Git, debugging, testing</td><td align="center">✅</td><td align="center">✅</td><td align="center">✅</td></tr>
+<tr><td>MCP servers & hooks basics</td><td align="center">✅</td><td align="center">✅</td><td align="center">✅</td></tr>
+<tr><td>Deploy one app to production</td><td align="center">✅</td><td align="center">✅</td><td align="center">✅</td></tr>
+<tr><td><b>Build 13 real projects with guided templates</b></td><td align="center">—</td><td align="center">✅</td><td align="center">—</td></tr>
+<tr><td><b>Full-Stack SaaS Boilerplate (Stripe, Auth, Multi-tenant)</b></td><td align="center">—</td><td align="center">✅</td><td align="center">—</td></tr>
+<tr><td><b>Build your own AI Agent Coordinator</b></td><td align="center">—</td><td align="center">✅</td><td align="center">—</td></tr>
+<tr><td><b>Build your own Hook Engine from scratch</b></td><td align="center">—</td><td align="center">✅</td><td align="center">—</td></tr>
+<tr><td><b>Multi-agent orchestration (16-agent systems)</b></td><td align="center">—</td><td align="center">—</td><td align="center">✅</td></tr>
+<tr><td><b>Kubernetes, auto-scaling, multi-region deploy</b></td><td align="center">—</td><td align="center">—</td><td align="center">✅</td></tr>
+<tr><td><b>Enterprise SSO, RBAC, GDPR, audit logging</b></td><td align="center">—</td><td align="center">—</td><td align="center">✅</td></tr>
+<tr><td><b>Production MCP servers & npm publishing</b></td><td align="center">—</td><td align="center">—</td><td align="center">✅</td></tr>
+<tr><td><b>Claude Code Internals — how it actually works</b></td><td align="center">—</td><td align="center">—</td><td align="center">✅</td></tr>
+<tr><td><b>5-layer permission engine deep dive</b></td><td align="center">—</td><td align="center">—</td><td align="center">✅</td></tr>
+<tr><td><b>LLM query loop, 44 tools, prompt assembly</b></td><td align="center">—</td><td align="center">—</td><td align="center">✅</td></tr>
+</table>
+
+<br/>
+
+<a href="https://payhip.com/b/dFXWO"><img src="https://img.shields.io/badge/📦_Projects_Pack_$39.99_→-32CD32?style=for-the-badge&labelColor=1a1a2e" alt="Get Projects Pack"/></a>&nbsp;&nbsp;&nbsp;
+<a href="https://payhip.com/b/8E107"><img src="https://img.shields.io/badge/🎓_Advanced_Modules_$29.99_→-0066FF?style=for-the-badge&labelColor=1a1a2e" alt="Get Advanced Modules"/></a>&nbsp;&nbsp;&nbsp;
+<a href="https://payhip.com/b/S8nU1"><img src="https://img.shields.io/badge/🔥_Complete_Bundle_$59.99_(Save_$10)_→-FF4500?style=for-the-badge&labelColor=1a1a2e" alt="Get Bundle"/></a>
+
+<br/>
+<br/>
+
+<sub>All packs include CLAUDE.md templates, rules files, and copy-paste prompts. Instant download after purchase.</sub>
+
+</div>
+
+<br/>
+
+<img src="https://capsule-render.vercel.app/api?type=soft&color=gradient&customColorList=2,3,12&height=6&section=header" width="100%"/>
+
+<br/>
+
 <!-- CHALLENGES -->
 
 <div align="center">
@@ -591,20 +726,20 @@ Claude Code runs in your terminal. Don't be intimidated! We'll teach you everyth
 <tr>
 <td align="center" width="33%">
 
-### 🔨 Build
-Create your own apps, tools, and side projects with confidence
+### 🔨 Build Real Projects
+Go from tutorials to shipping — **[13 guided project builds](https://payhip.com/b/dFXWO)** including SaaS boilerplates, AI tools, and microservices
 
 </td>
 <td align="center" width="33%">
 
-### 🌍 Contribute
-Navigate open source codebases and make meaningful contributions
+### 🔬 Understand the Internals
+Learn what nobody else teaches — **[how Claude Code actually works](https://payhip.com/b/8E107)** under the hood (query engine, hooks, permissions, prompt assembly)
 
 </td>
 <td align="center" width="33%">
 
-### 📈 Grow
-Integrate Claude Code into professional workflows and level up
+### 📈 Go Enterprise
+Scale to production with **[11 advanced modules](https://payhip.com/b/8E107)** — Kubernetes, multi-agent systems, SSO/RBAC, MCP servers, and more
 
 </td>
 </tr>
@@ -673,109 +808,6 @@ Integrate Claude Code into professional workflows and level up
 </div>
 
 </div>
-
-<br/>
-
-<img src="https://capsule-render.vercel.app/api?type=soft&color=gradient&customColorList=2,3,12&height=6&section=header" width="100%"/>
-
-<br/>
-
-<!-- PREMIUM CONTENT -->
-
-<div align="center">
-
-## 🔨 Keep Building
-
-*The free course teaches you how. The paid content gives you what to build and where to go next.*
-
-</div>
-
-<br/>
-
-<details open>
-<summary>
-
-### 📦 You've learned the tools — now build something real
-
-</summary>
-
-<br/>
-
-In Module 9 you built one complete project. The **[Real Projects Pack ($39.99)](https://payhip.com/b/dFXWO)** gives you **11 more** — each designed around skills from this course:
-
-<div align="center">
-<table width="100%">
-<tr><th>Free Module You Completed</th><th>🔨 Project You'll Build</th></tr>
-<tr><td>Modules 3-4 <em>(tools + files)</em></td><td>Code Review Tool · Documentation Generator · Bug Finder</td></tr>
-<tr><td>Module 5 <em>(prompting)</em></td><td>AI-Powered Todo App with Claude API</td></tr>
-<tr><td>Module 8 <em>(testing)</em></td><td>Test Case Generator with TDD workflows</td></tr>
-<tr><td>Module 11 <em>(MCP)</em></td><td>Claude Code Power Config (full <code>.claude/</code> setup)</td></tr>
-<tr><td>Module 14 <em>(APIs)</em></td><td>API Client Builder from OpenAPI specs</td></tr>
-<tr><td>Module 15 <em>(deployment)</em></td><td>Microservice Template · Full-Stack SaaS Boilerplate</td></tr>
-<tr><td>🎁 Bonus</td><td>Database Schema Designer · CLI Tool Starter Kit</td></tr>
-</table>
-</div>
-
-Every project includes CLAUDE.md templates, rules files, and copy-paste prompts.
-
-<div align="center">
-
-<a href="https://payhip.com/b/dFXWO"><img src="https://img.shields.io/badge/Get_the_Projects_Pack_→-32CD32?style=for-the-badge&labelColor=1a1a2e" alt="Get Projects Pack"/></a>
-
-</div>
-
-</details>
-
-<details>
-<summary>
-
-### 🎓 You've deployed one app — now do it at scale
-
-</summary>
-
-<br/>
-
-The **[Advanced Modules ($29.99)](https://payhip.com/b/8E107)** take you from "it works on my machine" to production infrastructure:
-
-<div align="center">
-<table width="100%">
-<tr><th>You Liked...</th><th>Go Deeper With...</th></tr>
-<tr><td>Module 6 <em>(agents)</em></td><td><b>M17:</b> Multi-agent orchestration · <b>M21:</b> Custom agents</td></tr>
-<tr><td>Module 11 <em>(MCP)</em></td><td><b>M18:</b> Production MCP servers, npm publishing</td></tr>
-<tr><td>Module 12 <em>(customization)</em></td><td><b>M22:</b> Plugins, permissions, write-time quality</td></tr>
-<tr><td>Module 15 <em>(deployment)</em></td><td><b>M16:</b> Kubernetes, auto-scaling, multi-region</td></tr>
-<tr><td>Working in teams</td><td><b>M19:</b> SSO, RBAC, audit logging, GDPR</td></tr>
-<tr><td>Cost management</td><td><b>M20:</b> Model routing, strategic compaction</td></tr>
-<tr><td>Professional workflows</td><td><b>M23:</b> RPI methodology, monorepo patterns</td></tr>
-</table>
-</div>
-
-<div align="center">
-
-<a href="https://payhip.com/b/8E107"><img src="https://img.shields.io/badge/Get_the_Advanced_Modules_→-0066FF?style=for-the-badge&labelColor=1a1a2e" alt="Get Advanced Modules"/></a>
-
-</div>
-
-</details>
-
-<details>
-<summary>
-
-### 🔥 Get both — Complete Bundle $59.99 (Save $10)
-
-</summary>
-
-<br/>
-
-8 advanced modules + 11 project templates. The modules teach the patterns, the projects let you practice them.
-
-<div align="center">
-
-<a href="https://payhip.com/b/S8nU1"><img src="https://img.shields.io/badge/Get_the_Complete_Bundle_→-FF6B35?style=for-the-badge&labelColor=1a1a2e" alt="Get Bundle"/></a>
-
-</div>
-
-</details>
 
 <br/>
 
@@ -856,6 +888,28 @@ The **[Advanced Modules ($29.99)](https://payhip.com/b/8E107)** take you from "i
 
 <br/>
 
+<!-- FINAL CTA -->
+
+<div align="center">
+
+## 🚀 Ready to Go Further?
+
+**You've got 15 free modules. Now go pro with the paid packs.**
+
+<br/>
+
+<a href="https://payhip.com/b/dFXWO"><img src="https://img.shields.io/badge/📦_13_Projects_$39.99_→-32CD32?style=for-the-badge&labelColor=1a1a2e" alt="Get Projects Pack"/></a>&nbsp;&nbsp;&nbsp;
+<a href="https://payhip.com/b/8E107"><img src="https://img.shields.io/badge/🎓_11_Advanced_Modules_$29.99_→-0066FF?style=for-the-badge&labelColor=1a1a2e" alt="Get Advanced Modules"/></a>&nbsp;&nbsp;&nbsp;
+<a href="https://payhip.com/b/S8nU1"><img src="https://img.shields.io/badge/🔥_Complete_Bundle_$59.99_(Save_$10)_→-FF4500?style=for-the-badge&labelColor=1a1a2e" alt="Get Bundle"/></a>
+
+</div>
+
+<br/>
+
+<img src="https://capsule-render.vercel.app/api?type=soft&color=gradient&customColorList=2,3,12&height=6&section=header" width="100%"/>
+
+<br/>
+
 <!-- FOOTER -->
 
 <div align="center">
@@ -878,7 +932,7 @@ This course will guide you from your first terminal command to your first deploy
 
 <br/>
 
-*Last updated: March 2026*
+*Last updated: April 2026*
 
 <br/>
 
