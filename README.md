@@ -26,6 +26,7 @@
 
 <br/>
 
+<a href="https://thedevfounder.com/claude-code"><img src="https://img.shields.io/badge/🎁_Free_PDF_Pack-D97757?style=for-the-badge&logoColor=white" alt="Free PDF Pack"/></a>
 <a href="#-quick-start"><img src="https://img.shields.io/badge/🚀_Quick_Start-2962FF?style=for-the-badge&logoColor=white" alt="Quick Start"/></a>
 <a href="#-course-map"><img src="https://img.shields.io/badge/🗺️_Course_Map-00897B?style=for-the-badge&logoColor=white" alt="Course Map"/></a>
 <a href="#-challenges"><img src="https://img.shields.io/badge/🏆_Challenges-FF6D00?style=for-the-badge&logoColor=white" alt="Challenges"/></a>
@@ -59,8 +60,11 @@
 
 </div>
 
+> **July 2026:**
+> - 🎁 **NEW: Free Resource Pack** — 2-page cheat sheet, 5 CLAUDE.md templates, and the 10 prompts I use every day. Grab all three free at **[thedevfounder.com/claude-code](https://thedevfounder.com/claude-code)**
+>
 > **April 2026:**
-> - ⭐ 230+ stars — growing fast, thank you!
+> - ⭐ 300+ stars — growing fast, thank you!
 > - 🔬 **NEW: "Claude Code Internals" series** — 3 exclusive modules reverse-engineering how Claude Code actually works under the hood (query engine, hook system, permission engine, prompt assembly)
 > - 🛠️ **NEW: 2 architecture projects** — Build an AI Agent Coordinator + Event-Driven Hook Engine from scratch
 > - 📦 [Real Projects Pack](https://payhip.com/b/dFXWO) — now **13 hands-on builds** ($39.99)
@@ -366,6 +370,65 @@ Navigate unfamiliar codebases with ease. Start at [Module 4](module-04-working-w
 <div align="center">
 
 > ⏱ **Total: ~9 hours** — go at your own pace. Skip what you know, spend extra time on what challenges you.
+
+</div>
+
+<br/>
+
+<img src="https://capsule-render.vercel.app/api?type=soft&color=gradient&customColorList=2,3,12&height=6&section=header" width="100%"/>
+
+<br/>
+
+<!-- FREE RESOURCE PACK — EMAIL CAPTURE -->
+
+<div align="center">
+
+## 🎁 Free Resource Pack
+
+**Everything above, condensed into three PDFs you'll actually keep open while you work.**
+
+<br/>
+
+<table width="100%">
+<tr>
+<td align="center" width="33%">
+
+### 📄 Cheat Sheet
+
+**2-page reference poster**
+
+Install, auth, slash commands, MCP, CLAUDE.md and the daily prompts — all on one page.
+
+</td>
+<td align="center" width="33%">
+
+### 🧩 CLAUDE.md Templates
+
+**5 ready-to-paste files**
+
+Drop one in your project root so Claude follows your rules from the very first prompt.
+
+</td>
+<td align="center" width="33%">
+
+### ⚡ 10 Daily Prompts
+
+**The ones I actually use**
+
+Refactors, reviews, tests, debugging — with a note on why each one works.
+
+</td>
+</tr>
+</table>
+
+<br/>
+
+<a href="https://thedevfounder.com/claude-code"><img src="https://img.shields.io/badge/🎁_Get_all_3_PDFs_—_Free-D97757?style=for-the-badge&logoColor=white" alt="Get the free PDF pack"/></a>
+
+<br/>
+<br/>
+
+*100% free. One email, three PDFs, unsubscribe whenever you like.*
 
 </div>
 
@@ -923,7 +986,8 @@ This course will guide you from your first terminal command to your first deploy
 
 <br/>
 
-<a href="module-01-welcome-to-claude-code.md"><img src="https://img.shields.io/badge/🚀_Start_with_Module_1_→-0066FF?style=for-the-badge&labelColor=1a1a2e&logoColor=white" alt="Start Learning"/></a>
+<a href="module-01-welcome-to-claude-code.md"><img src="https://img.shields.io/badge/🚀_Start_with_Module_1_→-0066FF?style=for-the-badge&labelColor=1a1a2e&logoColor=white" alt="Start Learning"/></a>&nbsp;&nbsp;&nbsp;
+<a href="https://thedevfounder.com/claude-code"><img src="https://img.shields.io/badge/🎁_Free_PDF_Pack_→-D97757?style=for-the-badge&labelColor=1a1a2e&logoColor=white" alt="Free PDF Pack"/></a>
 
 <br/>
 <br/>
@@ -932,7 +996,7 @@ This course will guide you from your first terminal command to your first deploy
 
 <br/>
 
-*Last updated: April 2026*
+*Last updated: July 2026*
 
 <br/>
 
