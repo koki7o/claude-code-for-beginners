@@ -81,11 +81,11 @@ Keep it under 200 lines. Seriously. Claude loads this into context every session
 | Architecture decisions and key files | File-by-file codebase descriptions |
 | Environment quirks and gotchas | Tutorials or long explanations |
 
-Use emphasis ("IMPORTANT:", "NEVER", "ALWAYS") for critical rules — Claude pays more attention to them.
+Use emphasis ("IMPORTANT:", "NEVER", "ALWAYS") for critical rules - Claude pays more attention to them.
 
 **Key fact:** CLAUDE.md survives compaction. After `/compact`, Claude re-reads CLAUDE.md from disk. Anything you only said in conversation is summarized and may lose detail. If something matters across sessions, put it in CLAUDE.md.
 
-**Tip:** You can add `<!-- maintainer notes here -->` in CLAUDE.md — HTML comments are stripped before injection into context, so they're invisible to Claude but useful for your team.
+**Tip:** You can add `<!-- maintainer notes here -->` in CLAUDE.md - HTML comments are stripped before injection into context, so they're invisible to Claude but useful for your team.
 
 A solid CLAUDE.md includes something like:
 

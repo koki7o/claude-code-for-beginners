@@ -298,7 +298,7 @@ coverage
 
 **docker-compose.yml:**
 ```yaml
-# docker-compose.yml (Compose V2 — no version key needed)
+# docker-compose.yml (Compose V2 - no version key needed)
 
 services:
   app:

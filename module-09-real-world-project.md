@@ -175,9 +175,9 @@ Before diving into implementation, set up a CLAUDE.md so Claude Code follows you
 Create a CLAUDE.md for this Task Management API that includes:
 
 ## Quick Commands
-- npm run dev — Start development server
-- npm test — Run all tests
-- npm run lint — Run ESLint
+- npm run dev - Start development server
+- npm test - Run all tests
+- npm run lint - Run ESLint
 
 ## Architecture
 - Express.js REST API with SQLite
@@ -195,7 +195,7 @@ Create a CLAUDE.md for this Task Management API that includes:
 - Mock database for unit tests, test database for integration
 
 ## Don't
-- Don't use console.log — use the logger utility
+- Don't use console.log - use the logger utility
 - Don't skip input validation on any endpoint
 - Don't commit .env files
 ```

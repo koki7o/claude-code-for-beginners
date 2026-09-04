@@ -56,7 +56,7 @@ Make sure you have write access to the install location. The install script will
 
 ### Problem: Node.js version errors
 
-Claude Code's native installer bundles its own runtime — you don't need Node.js installed separately. If you see a Node.js version error, you may be using the old npm-based install method.
+Claude Code's native installer bundles its own runtime - you don't need Node.js installed separately. If you see a Node.js version error, you may be using the old npm-based install method.
 
 **Solution:** Reinstall using the native installer:
 
@@ -68,7 +68,7 @@ curl -fsSL https://claude.ai/install.sh | bash
 irm https://claude.ai/install.ps1 | iex
 ```
 
-> **Note:** Node.js may still be needed for your own projects (running `npm`, MCP servers, etc.) — but Claude Code itself does not require it.
+> **Note:** Node.js may still be needed for your own projects (running `npm`, MCP servers, etc.) - but Claude Code itself does not require it.
 
 ---
 
@@ -83,7 +83,7 @@ Claude Code supports two authentication methods:
 
 **If using a subscription:**
 
-Run `claude` and it will open a browser window to log in. If the browser doesn't open, press `c` to copy the login URL. Make sure you have an active Pro, Max, Teams, or Enterprise plan — the free Claude.ai plan does **not** include Claude Code.
+Run `claude` and it will open a browser window to log in. If the browser doesn't open, press `c` to copy the login URL. Make sure you have an active Pro, Max, Teams, or Enterprise plan - the free Claude.ai plan does **not** include Claude Code.
 
 To log out and re-authenticate: type `/logout` in Claude Code.
 
@@ -95,7 +95,7 @@ Set the environment variable before starting Claude Code:
 # macOS/Linux (current session)
 export ANTHROPIC_API_KEY="your-api-key-here"
 
-# macOS/Linux (persistent — add to ~/.bashrc or ~/.zshrc)
+# macOS/Linux (persistent - add to ~/.bashrc or ~/.zshrc)
 echo 'export ANTHROPIC_API_KEY="your-api-key-here"' >> ~/.zshrc
 source ~/.zshrc  # Reloads your shell config so the change takes effect
 
@@ -103,7 +103,7 @@ source ~/.zshrc  # Reloads your shell config so the change takes effect
 $env:ANTHROPIC_API_KEY="your-api-key-here"
 ```
 
-Get your API key from [console.anthropic.com](https://console.anthropic.com) — it starts with `sk-ant-`.
+Get your API key from [console.anthropic.com](https://console.anthropic.com) - it starts with `sk-ant-`.
 
 ---
 
@@ -119,7 +119,7 @@ Error: Invalid API key
 1. **Get a fresh API key** from [console.anthropic.com](https://console.anthropic.com)
 2. **Check for typos:** keys start with `sk-ant-`, no spaces or extra quotes
 3. **Verify it's set:** `echo $ANTHROPIC_API_KEY`
-4. **Consider switching to subscription login** — run `unset ANTHROPIC_API_KEY` then `claude` to log in via browser instead
+4. **Consider switching to subscription login** - run `unset ANTHROPIC_API_KEY` then `claude` to log in via browser instead
 
 ---
 

@@ -41,7 +41,7 @@
 
 <br/>
 
-> 💡 Created by an experienced Claude Code power user who ships production apps with it daily —
+> 💡 Created by an experienced Claude Code power user who ships production apps with it daily -
 > including [gitscroll.dev](https://gitscroll.dev), [mcp-framework](https://github.com/koki7o/mcp-framework) 🦀, [time-portal](https://time-portal.vercel.app), [childrenbooks](https://childrenbooks.vercel.app), [aicofounders.co](https://aicofounders.co), and [moltplace.net](https://www.moltplace.net)
 
 <br/>
@@ -61,24 +61,24 @@
 </div>
 
 > **September 2026:**
-> - 📚 **Deepened Module 10** — proper coverage of checkpoints & rewind (`/rewind`, `Esc Esc`) and cost/usage (`/cost`, `/usage`).
-> - 🧭 **Version-proofed model guidance** — the course now teaches model selection by *tier* (fast / balanced / most-capable), so new model releases never date it.
+> - 📚 **Deepened Module 10** - proper coverage of checkpoints & rewind (`/rewind`, `Esc Esc`) and cost/usage (`/cost`, `/usage`).
+> - 🧭 **Version-proofed model guidance** - the course now teaches model selection by *tier* (fast / balanced / most-capable), so new model releases never date it.
 > - 📦 Paid companions grew: **Advanced Modules → 12** (new "What's New: 2026 Advancements") · **Real Projects Pack → 14** (new Multi-Agent Background Pipeline).
 >
 > **July 2026:**
-> - 🎁 **NEW: Free Resource Pack** — 2-page cheat sheet, 5 CLAUDE.md templates, and the 10 prompts I use every day. Grab all three free at **[thedevfounder.com/claude-code](https://thedevfounder.com/claude-code)**
+> - 🎁 **NEW: Free Resource Pack** - 2-page cheat sheet, 5 CLAUDE.md templates, and the 10 prompts I use every day. Grab all three free at **[thedevfounder.com/claude-code](https://thedevfounder.com/claude-code)**
 >
 > **April 2026:**
-> - ⭐ 300+ stars — growing fast, thank you!
-> - 🔬 **NEW: "Claude Code Internals" series** — 3 exclusive modules reverse-engineering how Claude Code actually works under the hood (query engine, hook system, permission engine, prompt assembly)
-> - 🛠️ **NEW: 2 architecture projects** — Build an AI Agent Coordinator + Event-Driven Hook Engine from scratch
-> - 📦 [Real Projects Pack](https://payhip.com/b/dFXWO) — now **14 hands-on builds** ($39.99)
-> - 🎓 [Advanced Modules](https://payhip.com/b/8E107) — now **12 enterprise-level modules** including the Internals series ($29.99)
+> - ⭐ 300+ stars - growing fast, thank you!
+> - 🔬 **NEW: "Claude Code Internals" series** - 3 exclusive modules reverse-engineering how Claude Code actually works under the hood (query engine, hook system, permission engine, prompt assembly)
+> - 🛠️ **NEW: 2 architecture projects** - Build an AI Agent Coordinator + Event-Driven Hook Engine from scratch
+> - 📦 [Real Projects Pack](https://payhip.com/b/dFXWO) - now **14 hands-on builds** ($39.99)
+> - 🎓 [Advanced Modules](https://payhip.com/b/8E107) - now **12 enterprise-level modules** including the Internals series ($29.99)
 >
 > **March 2026:**
-> - 🔧 Massive quality pass — 900+ fixes across all modules
+> - 🔧 Massive quality pass - 900+ fixes across all modules
 > - 🪟 Full Windows support added (PowerShell install + commands in every module)
-> - 🔑 Claude Pro/Max subscription login — not just API keys anymore
+> - 🔑 Claude Pro/Max subscription login - not just API keys anymore
 > - ☕ Love it? [Buy me a coffee](https://buymeacoffee.com/koki7o) or give it a ⭐
 
 <img src="https://capsule-render.vercel.app/api?type=soft&color=gradient&customColorList=2,3,12&height=6&section=header" width="100%"/>
@@ -91,7 +91,7 @@
 
 ## ⚡ What is Claude Code?
 
-**An AI-powered CLI that reads your files, writes code, runs commands, and ships features — through natural conversation.**
+**An AI-powered CLI that reads your files, writes code, runs commands, and ships features - through natural conversation.**
 
 </div>
 
@@ -105,7 +105,7 @@
 
 <div align="center">
 
-Instead of manually writing every line, you describe what you want and Claude Code builds it — reading files, making edits, running commands, and explaining what it's doing along the way.
+Instead of manually writing every line, you describe what you want and Claude Code builds it - reading files, making edits, running commands, and explaining what it's doing along the way.
 
 <br/>
 
@@ -158,7 +158,7 @@ cd my-project       # Move into it
 claude              # Start Claude Code
 ```
 
-> 🔑 Claude Code works with a **Claude Pro/Max subscription** or an **Anthropic API key**. On first launch, it opens a browser to log in — or you can set `ANTHROPIC_API_KEY` for API-based usage.
+> 🔑 Claude Code works with a **Claude Pro/Max subscription** or an **Anthropic API key**. On first launch, it opens a browser to log in - or you can set `ANTHROPIC_API_KEY` for API-based usage.
 
 > 📖 **Need detailed setup help?** [Module 1](module-01-welcome-to-claude-code.md) covers installation step-by-step for all platforms, authentication options, and troubleshooting.
 
@@ -308,7 +308,7 @@ Navigate unfamiliar codebases with ease. Start at [Module 4](module-04-working-w
 
 <div align="center">
 
-### 🟢 Foundation (Modules 1–5)
+### 🟢 Foundation (Modules 1-5)
 
 *Install, explore, and learn to communicate effectively with Claude Code.*
 
@@ -330,9 +330,9 @@ Navigate unfamiliar codebases with ease. Start at [Module 4](module-04-working-w
 
 <div align="center">
 
-### 🔵 Core Skills (Modules 6–10)
+### 🔵 Core Skills (Modules 6-10)
 
-*Build real things — agents, Git workflows, debugging, testing, and professional practices.*
+*Build real things - agents, Git workflows, debugging, testing, and professional practices.*
 
 </div>
 
@@ -352,7 +352,7 @@ Navigate unfamiliar codebases with ease. Start at [Module 4](module-04-working-w
 
 <div align="center">
 
-### 🟣 Going Deeper (Modules 11–15)
+### 🟣 Going Deeper (Modules 11-15)
 
 *Extend Claude Code with MCP, skills, hooks, multi-language support, APIs, and deployment.*
 
@@ -374,7 +374,7 @@ Navigate unfamiliar codebases with ease. Start at [Module 4](module-04-working-w
 
 <div align="center">
 
-> ⏱ **Total: ~9 hours** — go at your own pace. Skip what you know, spend extra time on what challenges you.
+> ⏱ **Total: ~9 hours** - go at your own pace. Skip what you know, spend extra time on what challenges you.
 
 </div>
 
@@ -384,7 +384,7 @@ Navigate unfamiliar codebases with ease. Start at [Module 4](module-04-working-w
 
 <br/>
 
-<!-- FREE RESOURCE PACK — EMAIL CAPTURE -->
+<!-- FREE RESOURCE PACK - EMAIL CAPTURE -->
 
 <div align="center">
 
@@ -402,7 +402,7 @@ Navigate unfamiliar codebases with ease. Start at [Module 4](module-04-working-w
 
 **2-page reference poster**
 
-Install, auth, slash commands, MCP, CLAUDE.md and the daily prompts — all on one page.
+Install, auth, slash commands, MCP, CLAUDE.md and the daily prompts - all on one page.
 
 </td>
 <td align="center" width="33%">
@@ -420,7 +420,7 @@ Drop one in your project root so Claude follows your rules from the very first p
 
 **The ones I actually use**
 
-Refactors, reviews, tests, debugging — with a note on why each one works.
+Refactors, reviews, tests, debugging - with a note on why each one works.
 
 </td>
 </tr>
@@ -428,7 +428,7 @@ Refactors, reviews, tests, debugging — with a note on why each one works.
 
 <br/>
 
-<a href="https://thedevfounder.com/claude-code"><img src="https://img.shields.io/badge/🎁_Get_all_3_PDFs_—_Free-D97757?style=for-the-badge&logoColor=white" alt="Get the free PDF pack"/></a>
+<a href="https://thedevfounder.com/claude-code"><img src="https://img.shields.io/badge/🎁_Get_all_3_PDFs_-_Free-D97757?style=for-the-badge&logoColor=white" alt="Get the free PDF pack"/></a>
 
 <br/>
 <br/>
@@ -443,11 +443,11 @@ Refactors, reviews, tests, debugging — with a note on why each one works.
 
 <br/>
 
-<!-- GO FURTHER — PAID CONTENT (HIGH VISIBILITY) -->
+<!-- GO FURTHER - PAID CONTENT (HIGH VISIBILITY) -->
 
 <div align="center">
 
-## 🔥 Go Further — Paid Content
+## 🔥 Go Further - Paid Content
 
 **The free course gives you the skills. The paid packs give you the systems, projects, and insider knowledge to go pro.**
 
@@ -496,8 +496,9 @@ Each project is a complete guided build with CLAUDE.md templates, rules files, a
 ✅ Microservice Template (Docker/K8s)<br/>
 ✅ Full-Stack SaaS Boilerplate<br/>
 ✅ Claude Code Power Config<br/>
-✅ **NEW:** AI Agent Coordinator<br/>
-✅ **NEW:** Event-Driven Hook Engine
+✅ AI Agent Coordinator<br/>
+✅ Event-Driven Hook Engine<br/>
+✅ **NEW:** Multi-Agent Background Pipeline
 
 </td>
 <td align="center" width="33%">
@@ -518,9 +519,10 @@ Go from "it works on my machine" to production infrastructure, multi-agent syste
 ✅ Custom agents & teams (M21)<br/>
 ✅ Sandbox, plugins & config (M22)<br/>
 ✅ Professional RPI workflows (M23)<br/>
-✅ **NEW:** Query engine internals (M24)<br/>
-✅ **NEW:** Hook system deep dive (M25)<br/>
-✅ **NEW:** Permission engine & prompts (M26)
+✅ Query engine internals (M24)<br/>
+✅ Hook system deep dive (M25)<br/>
+✅ Permission engine & prompts (M26)<br/>
+✅ **NEW:** 2026 advancements (M27)
 
 </td>
 </tr>
@@ -542,17 +544,17 @@ Go from "it works on my machine" to production infrastructure, multi-agent syste
 <tr><td>Git, debugging, testing</td><td align="center">✅</td><td align="center">✅</td><td align="center">✅</td></tr>
 <tr><td>MCP servers & hooks basics</td><td align="center">✅</td><td align="center">✅</td><td align="center">✅</td></tr>
 <tr><td>Deploy one app to production</td><td align="center">✅</td><td align="center">✅</td><td align="center">✅</td></tr>
-<tr><td><b>Build 14 real projects with guided templates</b></td><td align="center">—</td><td align="center">✅</td><td align="center">—</td></tr>
-<tr><td><b>Full-Stack SaaS Boilerplate (Stripe, Auth, Multi-tenant)</b></td><td align="center">—</td><td align="center">✅</td><td align="center">—</td></tr>
-<tr><td><b>Build your own AI Agent Coordinator</b></td><td align="center">—</td><td align="center">✅</td><td align="center">—</td></tr>
-<tr><td><b>Build your own Hook Engine from scratch</b></td><td align="center">—</td><td align="center">✅</td><td align="center">—</td></tr>
-<tr><td><b>Multi-agent orchestration (16-agent systems)</b></td><td align="center">—</td><td align="center">—</td><td align="center">✅</td></tr>
-<tr><td><b>Kubernetes, auto-scaling, multi-region deploy</b></td><td align="center">—</td><td align="center">—</td><td align="center">✅</td></tr>
-<tr><td><b>Enterprise SSO, RBAC, GDPR, audit logging</b></td><td align="center">—</td><td align="center">—</td><td align="center">✅</td></tr>
-<tr><td><b>Production MCP servers & npm publishing</b></td><td align="center">—</td><td align="center">—</td><td align="center">✅</td></tr>
-<tr><td><b>Claude Code Internals — how it actually works</b></td><td align="center">—</td><td align="center">—</td><td align="center">✅</td></tr>
-<tr><td><b>5-layer permission engine deep dive</b></td><td align="center">—</td><td align="center">—</td><td align="center">✅</td></tr>
-<tr><td><b>LLM query loop, 44 tools, prompt assembly</b></td><td align="center">—</td><td align="center">—</td><td align="center">✅</td></tr>
+<tr><td><b>Build 14 real projects with guided templates</b></td><td align="center">-</td><td align="center">✅</td><td align="center">-</td></tr>
+<tr><td><b>Full-Stack SaaS Boilerplate (Stripe, Auth, Multi-tenant)</b></td><td align="center">-</td><td align="center">✅</td><td align="center">-</td></tr>
+<tr><td><b>Build your own AI Agent Coordinator</b></td><td align="center">-</td><td align="center">✅</td><td align="center">-</td></tr>
+<tr><td><b>Build your own Hook Engine from scratch</b></td><td align="center">-</td><td align="center">✅</td><td align="center">-</td></tr>
+<tr><td><b>Multi-agent orchestration (16-agent systems)</b></td><td align="center">-</td><td align="center">-</td><td align="center">✅</td></tr>
+<tr><td><b>Kubernetes, auto-scaling, multi-region deploy</b></td><td align="center">-</td><td align="center">-</td><td align="center">✅</td></tr>
+<tr><td><b>Enterprise SSO, RBAC, GDPR, audit logging</b></td><td align="center">-</td><td align="center">-</td><td align="center">✅</td></tr>
+<tr><td><b>Production MCP servers & npm publishing</b></td><td align="center">-</td><td align="center">-</td><td align="center">✅</td></tr>
+<tr><td><b>Claude Code Internals - how it actually works</b></td><td align="center">-</td><td align="center">-</td><td align="center">✅</td></tr>
+<tr><td><b>5-layer permission engine deep dive</b></td><td align="center">-</td><td align="center">-</td><td align="center">✅</td></tr>
+<tr><td><b>LLM query loop, 44 tools, prompt assembly</b></td><td align="center">-</td><td align="center">-</td><td align="center">✅</td></tr>
 </table>
 
 <br/>
@@ -580,7 +582,7 @@ Go from "it works on my machine" to production infrastructure, multi-agent syste
 
 ## 🏆 Challenges
 
-*Practice makes perfect — each module includes hands-on challenges*
+*Practice makes perfect - each module includes hands-on challenges*
 
 </div>
 
@@ -795,19 +797,19 @@ Claude Code runs in your terminal. Don't be intimidated! We'll teach you everyth
 <td align="center" width="33%">
 
 ### 🔨 Build Real Projects
-Go from tutorials to shipping — **[13 guided project builds](https://payhip.com/b/dFXWO)** including SaaS boilerplates, AI tools, and microservices
+Go from tutorials to shipping - **[13 guided project builds](https://payhip.com/b/dFXWO)** including SaaS boilerplates, AI tools, and microservices
 
 </td>
 <td align="center" width="33%">
 
 ### 🔬 Understand the Internals
-Learn what nobody else teaches — **[how Claude Code actually works](https://payhip.com/b/8E107)** under the hood (query engine, hooks, permissions, prompt assembly)
+Learn what nobody else teaches - **[how Claude Code actually works](https://payhip.com/b/8E107)** under the hood (query engine, hooks, permissions, prompt assembly)
 
 </td>
 <td align="center" width="33%">
 
 ### 📈 Go Enterprise
-Scale to production with **[12 advanced modules](https://payhip.com/b/8E107)** — Kubernetes, multi-agent systems, SSO/RBAC, MCP servers, and more
+Scale to production with **[12 advanced modules](https://payhip.com/b/8E107)** - Kubernetes, multi-agent systems, SSO/RBAC, MCP servers, and more
 
 </td>
 </tr>
@@ -948,7 +950,7 @@ Scale to production with **[12 advanced modules](https://payhip.com/b/8E107)** �
 
 <br/>
 
-*If this course helped you, give it a ⭐ — it helps others find it!*
+*If this course helped you, give it a ⭐ - it helps others find it!*
 
 </div>
 

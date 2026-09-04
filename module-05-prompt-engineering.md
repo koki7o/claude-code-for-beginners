@@ -453,8 +453,8 @@ Add input validation to the registration form.
 
 Verify by:
 - Run the existing tests (npm test)
-- Try submitting with an empty email — should show an error
-- Try submitting with a password under 8 characters — should show an error
+- Try submitting with an empty email - should show an error
+- Try submitting with a password under 8 characters - should show an error
 - All existing tests should still pass
 ```
 

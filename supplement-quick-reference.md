@@ -33,11 +33,11 @@ Or press `Ctrl+C`
 |---------|-------------|
 | `/exit` | Exit Claude Code |
 | `/help` | Show help information |
-| `/clear` | Reset context — start fresh between unrelated tasks |
+| `/clear` | Reset context - start fresh between unrelated tasks |
 | `/compact [focus]` | Summarize context with optional focus (e.g., `/compact Focus on API changes`) |
 | `/cost` | Show current token usage and costs |
 | `/effort low\|high\|max` | Adjust reasoning depth (low = fast/cheap, max = deep/Opus only) |
-| `/btw` | Side question — answer appears in overlay, never enters history |
+| `/btw` | Side question - answer appears in overlay, never enters history |
 | `/rewind` | Open checkpoint menu to restore conversation, code, or both |
 | `/context` | Visualize current context usage |
 | `/model` | Switch model mid-session |
@@ -316,7 +316,7 @@ Please [specific request].
 
 ### Option 1: Claude Subscription (Pro/Max/Teams/Enterprise)
 ```bash
-# Just run claude — it opens a browser to log in
+# Just run claude - it opens a browser to log in
 claude
 ```
 
@@ -492,14 +492,14 @@ class\s+\w+          # Class definitions
 
 ## Token Saving Tips
 
-- **`/clear` between unrelated tasks** — stale context wastes tokens on every message
-- **Start on Sonnet, switch to Opus only for hard problems** — Sonnet handles ~80% of tasks at 1/5 the cost
-- **`/effort low` for simple lookups** — reduces reasoning tokens significantly
-- **Proactive `/compact` at ~50% context** — don't wait for auto-compact at 95%
-- **`/btw` for questions that don't need to stay in context** — zero context cost
-- **Delegate verbose output to subagents** — test output, logs stay in the subagent's context
-- **Keep CLAUDE.md under 200 lines** — move specialized workflows to skills (loaded on-demand)
-- **Reference files with `@path`** — `@src/auth.ts` includes the file directly without Claude searching
+- **`/clear` between unrelated tasks** - stale context wastes tokens on every message
+- **Start on Sonnet, switch to Opus only for hard problems** - Sonnet handles ~80% of tasks at 1/5 the cost
+- **`/effort low` for simple lookups** - reduces reasoning tokens significantly
+- **Proactive `/compact` at ~50% context** - don't wait for auto-compact at 95%
+- **`/btw` for questions that don't need to stay in context** - zero context cost
+- **Delegate verbose output to subagents** - test output, logs stay in the subagent's context
+- **Keep CLAUDE.md under 200 lines** - move specialized workflows to skills (loaded on-demand)
+- **Reference files with `@path`** - `@src/auth.ts` includes the file directly without Claude searching
 
 ---
 

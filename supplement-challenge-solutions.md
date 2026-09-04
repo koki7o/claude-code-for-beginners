@@ -411,9 +411,9 @@ Help me create a CLAUDE.md file for this project that includes:
 # Project: Task Manager API
 
 ## Quick Commands
-- `npm run dev` — Start development server
-- `npm test` — Run test suite
-- `npm run lint` — Check code style
+- `npm run dev` - Start development server
+- `npm test` - Run test suite
+- `npm run lint` - Check code style
 
 ## Architecture
 - Express.js REST API with PostgreSQL

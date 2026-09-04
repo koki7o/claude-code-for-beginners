@@ -355,19 +355,19 @@ claude -p "Research best practices for caching strategies and summarize"
 
 ### Choosing the Right Model for the Task
 
-You can switch which model Claude Code uses with the `/model` command inside a session (it lists the models available to you), or by passing the `--model` flag when starting a session. Rather than memorize model names — which change as new models ship — think in **tiers**:
+You can switch which model Claude Code uses with the `/model` command inside a session (it lists the models available to you), or by passing the `--model` flag when starting a session. Rather than memorize model names - which change as new models ship - think in **tiers**:
 
-- **Fast tier** — quickest, cheapest. For mechanical, high-volume, or straightforward work.
-- **Balanced tier** — a strong mix of speed, quality, and cost. The everyday default for real coding.
-- **Most-capable tier** — the deepest reasoning, at the highest cost and slowest speed. For hard decisions where being right matters more than being fast.
+- **Fast tier** - quickest, cheapest. For mechanical, high-volume, or straightforward work.
+- **Balanced tier** - a strong mix of speed, quality, and cost. The everyday default for real coding.
+- **Most-capable tier** - the deepest reasoning, at the highest cost and slowest speed. For hard decisions where being right matters more than being fast.
 
 > **📍 How to tell which model is which tier**
-> Run **`/model`** inside Claude Code — it lists the models available to you. Read the list from light to heavy:
+> Run **`/model`** inside Claude Code - it lists the models available to you. Read the list from light to heavy:
 > - **Fast tier** = the lightest, cheapest model shown
 > - **Balanced tier** = the mid option (usually the default)
-> - **Most-capable tier** = the top option — highest cost, deepest reasoning
+> - **Most-capable tier** = the top option - highest cost, deepest reasoning
 >
-> The names change as Anthropic releases new models, so don't memorize them — the current lineup and pricing is always in the `/model` picker and on Anthropic's models page (**docs.anthropic.com/en/docs/about-claude/models**). Pick by **tier**, not by name.
+> The names change as Anthropic releases new models, so don't memorize them - the current lineup and pricing is always in the `/model` picker and on Anthropic's models page (**docs.anthropic.com/en/docs/about-claude/models**). Pick by **tier**, not by name.
 
 Match the tier to the task:
 

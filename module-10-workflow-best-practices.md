@@ -628,12 +628,12 @@ These commands and shortcuts will save you significant time and tokens. Learn th
 
 | Command | What It Does | When to Use It |
 |---------|-------------|----------------|
-| `/clear` | Reset context completely | Between unrelated tasks — stale context wastes tokens |
+| `/clear` | Reset context completely | Between unrelated tasks - stale context wastes tokens |
 | `/compact [focus]` | Summarize context | At ~50% context usage. Add focus: `/compact Focus on API changes` |
 | `/cost` | Show token usage | Anytime you want to check spending |
 | `/btw` | Side question in overlay | Quick questions that don't need to stay in history |
 | `/effort low\|high\|max` | Adjust reasoning depth | `low` for simple lookups, `max` for architecture decisions |
-| `/rewind` | Open checkpoint menu | Undo a wrong turn — restore conversation, code, or both |
+| `/rewind` | Open checkpoint menu | Undo a wrong turn - restore conversation, code, or both |
 | `/context` | Visualize context usage | See what's taking up space |
 | `/rename` | Name the current session | Makes it easy to resume later with `claude --resume name` |
 
@@ -646,7 +646,7 @@ These commands and shortcuts will save you significant time and tokens. Learn th
 | `Shift+Tab` | Cycle permission modes (Default → AcceptEdits → Plan → Auto) |
 | `Ctrl+G` | Open plan in your external editor |
 | `Ctrl+O` | Toggle verbose mode (see Claude's thinking) |
-| `Ctrl+B` | Send current task to background — you can keep working |
+| `Ctrl+B` | Send current task to background - you can keep working |
 | `Alt+T` | Toggle thinking on/off |
 
 ### The `/clear` Habit
@@ -665,39 +665,39 @@ One thing to remember: CLAUDE.md survives compaction (it's re-read from disk), b
 
 ### Recovering with Checkpoints and Rewind
 
-Claude Code automatically saves a **checkpoint** before it makes changes — a snapshot of your conversation and your files at that moment. So when something goes wrong — Claude took a bad turn, edited the wrong file, or you simply changed your mind — you don't have to untangle it by hand.
+Claude Code automatically saves a **checkpoint** before it makes changes - a snapshot of your conversation and your files at that moment. So when something goes wrong - Claude took a bad turn, edited the wrong file, or you simply changed your mind - you don't have to untangle it by hand.
 
 Press **`Esc` twice** (or run **`/rewind`**) to open the checkpoint menu. You can restore:
 
-- **Conversation only** — rewind the chat, keep the code. For when the discussion went off track but the files are fine.
-- **Code only** — undo the file changes, keep the conversation. For when the edits were wrong but you want to keep talking through it.
-- **Both** — go fully back to how things were at that checkpoint.
+- **Conversation only** - rewind the chat, keep the code. For when the discussion went off track but the files are fine.
+- **Code only** - undo the file changes, keep the conversation. For when the edits were wrong but you want to keep talking through it.
+- **Both** - go fully back to how things were at that checkpoint.
 
 Think of it as an undo button for the *whole session*, not just the last edit. It's the safety net that makes it fine to let Claude try things: if an approach doesn't pan out, rewind to a clean point and try again.
 
 Two things to know:
 
-- Checkpoints cover the changes *Claude* made through its tools — they're a **within-session** safety net, not long-term history. They don't replace git, so still commit your real milestones (Module 7).
+- Checkpoints cover the changes *Claude* made through its tools - they're a **within-session** safety net, not long-term history. They don't replace git, so still commit your real milestones (Module 7).
 - Rewinding the conversation also rewinds context, so anything learned *after* that checkpoint is gone too. If there's a detail worth keeping, note it (or put it in CLAUDE.md) before you rewind.
 
 ### Watching Your Cost
 
-Claude Code isn't free to run. On a Claude subscription (Pro/Max) or an API key, every message spends tokens — and tokens are either money or usage-limit budget. A few habits keep the number low without you thinking about it.
+Claude Code isn't free to run. On a Claude subscription (Pro/Max) or an API key, every message spends tokens - and tokens are either money or usage-limit budget. A few habits keep the number low without you thinking about it.
 
 Check where you stand anytime:
 
-- **`/cost`** — token usage and spend for the current session, including your prompt-cache hit ratio (a low ratio means context is being re-processed instead of reused).
-- **`/usage`** — a broader breakdown, including per-loop usage so you can see which repeated actions burn the most.
-- **`/context`** — a visual of what's filling your context window right now.
+- **`/cost`** - token usage and spend for the current session, including your prompt-cache hit ratio (a low ratio means context is being re-processed instead of reused).
+- **`/usage`** - a broader breakdown, including per-loop usage so you can see which repeated actions burn the most.
+- **`/context`** - a visual of what's filling your context window right now.
 
 The levers that actually move the number, roughly by impact:
 
-1. **`/clear` between unrelated tasks** — the single biggest win. Stale context is re-processed on *every* message.
-2. **Match the tier to the task** — use the fast tier for mechanical work; save the most-capable tier for genuinely hard problems (Module 6). Running everything on the most-capable tier is the most common way people overspend.
-3. **`/compact` proactively** — summarize a long session instead of dragging every detail forward.
-4. **`/effort low` for simple lookups** — less reasoning means fewer tokens on tasks that don't need the depth.
+1. **`/clear` between unrelated tasks** - the single biggest win. Stale context is re-processed on *every* message.
+2. **Match the tier to the task** - use the fast tier for mechanical work; save the most-capable tier for genuinely hard problems (Module 6). Running everything on the most-capable tier is the most common way people overspend.
+3. **`/compact` proactively** - summarize a long session instead of dragging every detail forward.
+4. **`/effort low` for simple lookups** - less reasoning means fewer tokens on tasks that don't need the depth.
 
-None of this needs babysitting. Set the habits — `/clear` when you switch tasks, the right tier for the job — and glance at `/cost` now and then to confirm nothing's leaking.
+None of this needs babysitting. Set the habits - `/clear` when you switch tasks, the right tier for the job - and glance at `/cost` now and then to confirm nothing's leaking.
 
 ---
 
