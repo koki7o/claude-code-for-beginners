@@ -60,6 +60,11 @@
 
 </div>
 
+> **September 2026:**
+> - 📚 **Deepened Module 10** — proper coverage of checkpoints & rewind (`/rewind`, `Esc Esc`) and cost/usage (`/cost`, `/usage`).
+> - 🧭 **Version-proofed model guidance** — the course now teaches model selection by *tier* (fast / balanced / most-capable), so new model releases never date it.
+> - 📦 Paid companions grew: **Advanced Modules → 12** (new "What's New: 2026 Advancements") · **Real Projects Pack → 14** (new Multi-Agent Background Pipeline).
+>
 > **July 2026:**
 > - 🎁 **NEW: Free Resource Pack** — 2-page cheat sheet, 5 CLAUDE.md templates, and the 10 prompts I use every day. Grab all three free at **[thedevfounder.com/claude-code](https://thedevfounder.com/claude-code)**
 >
@@ -67,8 +72,8 @@
 > - ⭐ 300+ stars — growing fast, thank you!
 > - 🔬 **NEW: "Claude Code Internals" series** — 3 exclusive modules reverse-engineering how Claude Code actually works under the hood (query engine, hook system, permission engine, prompt assembly)
 > - 🛠️ **NEW: 2 architecture projects** — Build an AI Agent Coordinator + Event-Driven Hook Engine from scratch
-> - 📦 [Real Projects Pack](https://payhip.com/b/dFXWO) — now **13 hands-on builds** ($39.99)
-> - 🎓 [Advanced Modules](https://payhip.com/b/8E107) — now **11 enterprise-level modules** including the Internals series ($29.99)
+> - 📦 [Real Projects Pack](https://payhip.com/b/dFXWO) — now **14 hands-on builds** ($39.99)
+> - 🎓 [Advanced Modules](https://payhip.com/b/8E107) — now **12 enterprise-level modules** including the Internals series ($29.99)
 >
 > **March 2026:**
 > - 🔧 Massive quality pass — 900+ fixes across all modules
@@ -474,7 +479,7 @@ We studied Claude Code's actual source code and reverse-engineered the architect
 
 ### 📦 Real Projects Pack
 
-**13 hands-on builds you can ship**
+**14 hands-on builds you can ship**
 
 Each project is a complete guided build with CLAUDE.md templates, rules files, and prompts you can copy-paste.
 
@@ -499,7 +504,7 @@ Each project is a complete guided build with CLAUDE.md templates, rules files, a
 
 ### 🎓 Advanced Modules
 
-**11 enterprise-level modules (36+ hours)**
+**12 enterprise-level modules (36+ hours)**
 
 Go from "it works on my machine" to production infrastructure, multi-agent systems, and Claude Code mastery.
 
@@ -537,7 +542,7 @@ Go from "it works on my machine" to production infrastructure, multi-agent syste
 <tr><td>Git, debugging, testing</td><td align="center">✅</td><td align="center">✅</td><td align="center">✅</td></tr>
 <tr><td>MCP servers & hooks basics</td><td align="center">✅</td><td align="center">✅</td><td align="center">✅</td></tr>
 <tr><td>Deploy one app to production</td><td align="center">✅</td><td align="center">✅</td><td align="center">✅</td></tr>
-<tr><td><b>Build 13 real projects with guided templates</b></td><td align="center">—</td><td align="center">✅</td><td align="center">—</td></tr>
+<tr><td><b>Build 14 real projects with guided templates</b></td><td align="center">—</td><td align="center">✅</td><td align="center">—</td></tr>
 <tr><td><b>Full-Stack SaaS Boilerplate (Stripe, Auth, Multi-tenant)</b></td><td align="center">—</td><td align="center">✅</td><td align="center">—</td></tr>
 <tr><td><b>Build your own AI Agent Coordinator</b></td><td align="center">—</td><td align="center">✅</td><td align="center">—</td></tr>
 <tr><td><b>Build your own Hook Engine from scratch</b></td><td align="center">—</td><td align="center">✅</td><td align="center">—</td></tr>
@@ -802,7 +807,7 @@ Learn what nobody else teaches — **[how Claude Code actually works](https://pa
 <td align="center" width="33%">
 
 ### 📈 Go Enterprise
-Scale to production with **[11 advanced modules](https://payhip.com/b/8E107)** — Kubernetes, multi-agent systems, SSO/RBAC, MCP servers, and more
+Scale to production with **[12 advanced modules](https://payhip.com/b/8E107)** — Kubernetes, multi-agent systems, SSO/RBAC, MCP servers, and more
 
 </td>
 </tr>

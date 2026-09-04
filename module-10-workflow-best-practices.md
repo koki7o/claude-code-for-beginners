@@ -663,6 +663,42 @@ Don't wait for auto-compact at 95% context. By that point, Claude may lose impor
 
 One thing to remember: CLAUDE.md survives compaction (it's re-read from disk), but anything you only said in conversation is summarized and may lose detail. If something is important enough to survive compaction, put it in CLAUDE.md.
 
+### Recovering with Checkpoints and Rewind
+
+Claude Code automatically saves a **checkpoint** before it makes changes — a snapshot of your conversation and your files at that moment. So when something goes wrong — Claude took a bad turn, edited the wrong file, or you simply changed your mind — you don't have to untangle it by hand.
+
+Press **`Esc` twice** (or run **`/rewind`**) to open the checkpoint menu. You can restore:
+
+- **Conversation only** — rewind the chat, keep the code. For when the discussion went off track but the files are fine.
+- **Code only** — undo the file changes, keep the conversation. For when the edits were wrong but you want to keep talking through it.
+- **Both** — go fully back to how things were at that checkpoint.
+
+Think of it as an undo button for the *whole session*, not just the last edit. It's the safety net that makes it fine to let Claude try things: if an approach doesn't pan out, rewind to a clean point and try again.
+
+Two things to know:
+
+- Checkpoints cover the changes *Claude* made through its tools — they're a **within-session** safety net, not long-term history. They don't replace git, so still commit your real milestones (Module 7).
+- Rewinding the conversation also rewinds context, so anything learned *after* that checkpoint is gone too. If there's a detail worth keeping, note it (or put it in CLAUDE.md) before you rewind.
+
+### Watching Your Cost
+
+Claude Code isn't free to run. On a Claude subscription (Pro/Max) or an API key, every message spends tokens — and tokens are either money or usage-limit budget. A few habits keep the number low without you thinking about it.
+
+Check where you stand anytime:
+
+- **`/cost`** — token usage and spend for the current session, including your prompt-cache hit ratio (a low ratio means context is being re-processed instead of reused).
+- **`/usage`** — a broader breakdown, including per-loop usage so you can see which repeated actions burn the most.
+- **`/context`** — a visual of what's filling your context window right now.
+
+The levers that actually move the number, roughly by impact:
+
+1. **`/clear` between unrelated tasks** — the single biggest win. Stale context is re-processed on *every* message.
+2. **Match the tier to the task** — use the fast tier for mechanical work; save the most-capable tier for genuinely hard problems (Module 6). Running everything on the most-capable tier is the most common way people overspend.
+3. **`/compact` proactively** — summarize a long session instead of dragging every detail forward.
+4. **`/effort low` for simple lookups** — less reasoning means fewer tokens on tasks that don't need the depth.
+
+None of this needs babysitting. Set the habits — `/clear` when you switch tasks, the right tier for the job — and glance at `/cost` now and then to confirm nothing's leaking.
+
 ---
 
 ## Hands-On Practice

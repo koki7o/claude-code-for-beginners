@@ -355,40 +355,54 @@ claude -p "Research best practices for caching strategies and summarize"
 
 ### Choosing the Right Model for the Task
 
-You can switch which model Claude Code uses with the `/model` command inside a session, or by passing the `--model` flag when starting a session. Different models suit different tasks:
+You can switch which model Claude Code uses with the `/model` command inside a session (it lists the models available to you), or by passing the `--model` flag when starting a session. Rather than memorize model names — which change as new models ship — think in **tiers**:
 
-| Task Type | Suggested Model | Why |
+- **Fast tier** — quickest, cheapest. For mechanical, high-volume, or straightforward work.
+- **Balanced tier** — a strong mix of speed, quality, and cost. The everyday default for real coding.
+- **Most-capable tier** — the deepest reasoning, at the highest cost and slowest speed. For hard decisions where being right matters more than being fast.
+
+> **📍 How to tell which model is which tier**
+> Run **`/model`** inside Claude Code — it lists the models available to you. Read the list from light to heavy:
+> - **Fast tier** = the lightest, cheapest model shown
+> - **Balanced tier** = the mid option (usually the default)
+> - **Most-capable tier** = the top option — highest cost, deepest reasoning
+>
+> The names change as Anthropic releases new models, so don't memorize them — the current lineup and pricing is always in the `/model` picker and on Anthropic's models page (**docs.anthropic.com/en/docs/about-claude/models**). Pick by **tier**, not by name.
+
+Match the tier to the task:
+
+| Task Type | Suggested Tier | Why |
 |-----------|----------------|-----|
-| Architecture decisions | Opus | Needs deep reasoning |
-| Writing feature code | Sonnet | Good balance of speed and quality |
-| Generating test suites | Sonnet | Reliable pattern matching |
-| Code review | Opus | Catches subtle issues |
-| Generating documentation | Haiku | Fast, straightforward task |
-| Codebase navigation | Haiku | Speed matters most |
-| Tracing and fixing bugs | Sonnet | Needs code understanding |
-| Cleaning up code | Sonnet | Balances quality and cost |
-| Finding vulnerabilities | Opus | Catches subtle security issues |
-| Database migrations | Sonnet | Reliable schema work |
-| Designing API contracts | Opus | Architectural decisions |
-| Auditing dependencies | Haiku | Fast scanning task |
-| Code style fixes | Haiku | Simple, mechanical task |
-| Generating changelogs | Haiku | Summarization task |
-| Performance profiling | Sonnet | Needs analytical depth |
-| Adding error handling | Sonnet | Pattern-aware changes |
+| Architecture decisions | Most-capable | Needs deep reasoning |
+| Writing feature code | Balanced | Good balance of speed and quality |
+| Generating test suites | Balanced | Reliable pattern matching |
+| Code review | Most-capable | Catches subtle issues |
+| Generating documentation | Fast | Fast, straightforward task |
+| Codebase navigation | Fast | Speed matters most |
+| Tracing and fixing bugs | Balanced | Needs code understanding |
+| Cleaning up code | Balanced | Balances quality and cost |
+| Finding vulnerabilities | Most-capable | Catches subtle security issues |
+| Database migrations | Balanced | Reliable schema work |
+| Designing API contracts | Most-capable | Architectural decisions |
+| Auditing dependencies | Fast | Fast scanning task |
+| Code style fixes | Fast | Simple, mechanical task |
+| Generating changelogs | Fast | Summarization task |
+| Performance profiling | Balanced | Needs analytical depth |
+| Adding error handling | Balanced | Pattern-aware changes |
 
-**The pattern:** Opus for decisions that require deep thinking. Sonnet for tasks that need good judgment and code understanding. Haiku for fast, mechanical, or straightforward tasks. Matching the model to the task saves money and time without sacrificing quality where it matters.
+**The pattern:** most-capable tier for decisions that require deep thinking, balanced tier for tasks that need good judgment and code understanding, fast tier for quick, mechanical, or straightforward tasks. Matching the tier to the task saves money and time without sacrificing quality where it matters.
 
-**Note:** You can't assign different models to different tasks within a single session. To use different models in parallel, run separate sessions:
+**Note:** You can't assign different models to different tasks within a single session. To use different tiers in parallel, run separate sessions (replace `<fast-model>` / `<balanced-model>` / `<capable-model>` with names from `/model`):
 
 ```bash
-# Terminal 1 -- fast scan with Haiku
-claude --model haiku -p "Scan for unused dependencies in this project"
+# Terminal 1 -- fast scan with a lightweight model
+claude --model <fast-model> -p "Scan for unused dependencies in this project"
 
-# Terminal 2 -- thorough review with Sonnet
-claude --model sonnet -p "Review the authentication flow for bugs"
+# Terminal 2 -- thorough review with a stronger model
+claude --model <balanced-model> -p "Review the authentication flow for bugs"
 
-# Terminal 3 -- deep planning with Opus
-claude --model opus -p "Plan the migration from REST to GraphQL"
+# Terminal 3 -- deep planning with the most capable model
+claude --model <capable-model> -p "Plan the migration from REST to GraphQL"
 ```
 
 ---

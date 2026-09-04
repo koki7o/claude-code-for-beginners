@@ -506,7 +506,7 @@ Once you understand the format, skills become your primary way to encode workflo
 - `e2e-testing` -- End-to-end test generation using Playwright Page Object Model. Frontmatter: `argument-hint: [page-or-feature]`. Includes supporting files with POM templates and selector conventions.
 
 **Quality:**
-- `security-review` -- Vulnerability scanning against common patterns (SQL injection, XSS, secrets in code). Frontmatter: `context: fork`, `agent: Explore`, `model: sonnet`. Runs in isolation so findings don't pollute the main conversation.
+- `security-review` -- Vulnerability scanning against common patterns (SQL injection, XSS, secrets in code). Frontmatter: `context: fork`, `agent: Explore`, `model: <balanced-model>`. Runs in isolation so findings don't pollute the main conversation.
 - `coding-standards` -- Per-language enforcement with auto-fix suggestions. Frontmatter: `user-invocable: false` (background knowledge). Claude loads this automatically when editing code.
 
 **Operations:**
@@ -800,7 +800,7 @@ Agent files live in `.claude/agents/`:
 ---
 description: Reviews code for quality and best practices. Use proactively after code changes.
 tools: Read, Grep, Glob, Bash
-model: sonnet
+model: <balanced-model>
 ---
 
 You are a senior code reviewer. When invoked, analyze the code and provide
@@ -817,7 +817,7 @@ The frontmatter gives you fine-grained control over what the agent can do:
 - `name` -- unique identifier
 - `description` -- tells Claude when to delegate to this agent. Write it well and Claude will route the right tasks here automatically.
 - `tools` -- what tools the agent can use (inherits everything if omitted)
-- `model` -- `sonnet`, `opus`, `haiku`, or `inherit`
+- `model` -- a tier (`/model` lists your options), or `inherit`
 - `permissionMode` -- `default`, `acceptEdits`, `plan`, `dontAsk`, or `bypassPermissions`
 - `memory` -- `user`, `project`, or `local` for persistent cross-session memory. This is how agents get smarter over time.
 - `skills` -- preload specific skills into the agent's context
@@ -846,20 +846,20 @@ To make agents concrete, here are three production agents with different design 
 ---
 description: Analyzes codebases and creates detailed implementation plans. Use when the user needs architecture decisions or multi-step plans.
 tools: Read, Grep, Glob
-model: opus
+model: <capable-model>
 ---
 
 You are a senior architect. Analyze the codebase and produce a detailed plan.
 Never suggest changes directly -- only produce plans with reasoning.
 ```
-Why opus? Planning requires deep reasoning and long-horizon thinking. Why only Read/Grep/Glob? A planner must never modify code -- it only reads and reasons. Restricting tools makes this guarantee structural, not behavioral.
+Why the most-capable tier? Planning requires deep reasoning and long-horizon thinking. Why only Read/Grep/Glob? A planner must never modify code -- it only reads and reasons. Restricting tools makes this guarantee structural, not behavioral.
 
 **2. Security Reviewer Agent** -- specialized checklist, moderate cost:
 ```yaml
 ---
 description: Reviews code for security vulnerabilities using OWASP guidelines. Use after code changes that touch auth, input handling, or data access.
 tools: Read, Grep, Glob, Bash
-model: sonnet
+model: <balanced-model>
 ---
 
 You are a security specialist. Review code against OWASP Top 10.
@@ -867,20 +867,20 @@ Check for: SQL injection, XSS, CSRF, broken auth, secrets in code,
 insecure deserialization, and missing input validation.
 Run `grep -r` for patterns like API keys, passwords, and tokens.
 ```
-Why sonnet? Security review needs good reasoning but runs frequently -- opus would be too expensive for every PR. Bash access is included so the agent can run `grep` for secret patterns and `npm audit` or similar tools.
+Why the balanced tier? Security review needs good reasoning but runs frequently -- the most-capable tier would be too expensive for every PR. Bash access is included so the agent can run `grep` for secret patterns and `npm audit` or similar tools.
 
 **3. Documentation Updater Agent** -- routine work, high volume:
 ```yaml
 ---
 description: Updates documentation to reflect code changes. Use after features are merged.
 tools: Read, Grep, Glob, Edit, Write
-model: haiku
+model: <fast-model>
 ---
 
 You update documentation files to match current code. Read the changed files,
 then update relevant docs. Keep the existing style and tone.
 ```
-Why haiku? Doc updates are straightforward -- read what changed, update the matching docs. This runs often and the work is routine, so the cheapest capable model keeps costs down. Edit and Write access is needed because this agent actually modifies files.
+Why the fast tier? Doc updates are straightforward -- read what changed, update the matching docs. This runs often and the work is routine, so the cheapest capable model keeps costs down. Edit and Write access is needed because this agent actually modifies files.
 
 Module 21 goes deep into agent architecture, including multi-agent coordination, worktree isolation, and agent-to-agent communication patterns.
 
