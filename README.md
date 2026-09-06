@@ -85,6 +85,67 @@
 
 <br/>
 
+<!-- WHY NOW - URGENCY -->
+
+<div align="center">
+
+## ⏳ Why This Matters *Now*
+
+</div>
+
+<br/>
+
+<div align="center">
+
+**The way software gets built changed. Quietly, and fast.**
+
+The developers shipping the most right now aren't the ones typing the fastest -
+they're the ones who learned to *direct* AI instead of competing with it. That gap
+is widening every month, and it compounds: the person who started six months ago
+isn't six months ahead, they're building things you haven't learned to ask for yet.
+
+<br/>
+
+<table width="100%">
+<tr>
+<td align="center" width="33%">
+
+### 🐢 Without it
+Still writing every line by hand, hitting the same walls, wondering how everyone else ships so fast.
+
+</td>
+<td align="center" width="33%">
+
+### 🚀 With it
+Describe the outcome, review the work, ship in an afternoon what used to take a week.
+
+</td>
+<td align="center" width="33%">
+
+### 📈 The gap
+Compounds daily. Every project you build with AI is one the "I'll learn it later" crowd didn't.
+
+</td>
+</tr>
+</table>
+
+<br/>
+
+**You don't need to be early to the whole AI wave. You just can't afford to be late to this.**
+It's free, it's self-paced, and Module 1 takes 20 minutes. The only wrong move is waiting.
+
+<br/>
+
+<a href="module-01-welcome-to-claude-code.md"><img src="https://img.shields.io/badge/⚡_Start_Now_-_It's_Free_→-FF4500?style=for-the-badge&labelColor=1a1a2e&logoColor=white" alt="Start Now"/></a>
+
+</div>
+
+<br/>
+
+<img src="https://capsule-render.vercel.app/api?type=soft&color=gradient&customColorList=2,3,12&height=6&section=header" width="100%"/>
+
+<br/>
+
 <!-- WHAT IS CLAUDE CODE -->
 
 <div align="center">
@@ -797,7 +858,7 @@ Claude Code runs in your terminal. Don't be intimidated! We'll teach you everyth
 <td align="center" width="33%">
 
 ### 🔨 Build Real Projects
-Go from tutorials to shipping - **[13 guided project builds](https://payhip.com/b/dFXWO)** including SaaS boilerplates, AI tools, and microservices
+Go from tutorials to shipping - **[14 guided project builds](https://payhip.com/b/dFXWO)** including SaaS boilerplates, AI tools, and microservices
 
 </td>
 <td align="center" width="33%">
@@ -968,8 +1029,8 @@ Scale to production with **[12 advanced modules](https://payhip.com/b/8E107)** -
 
 <br/>
 
-<a href="https://payhip.com/b/dFXWO"><img src="https://img.shields.io/badge/📦_13_Projects_$39.99_→-32CD32?style=for-the-badge&labelColor=1a1a2e" alt="Get Projects Pack"/></a>&nbsp;&nbsp;&nbsp;
-<a href="https://payhip.com/b/8E107"><img src="https://img.shields.io/badge/🎓_11_Advanced_Modules_$29.99_→-0066FF?style=for-the-badge&labelColor=1a1a2e" alt="Get Advanced Modules"/></a>&nbsp;&nbsp;&nbsp;
+<a href="https://payhip.com/b/dFXWO"><img src="https://img.shields.io/badge/📦_14_Projects_$39.99_→-32CD32?style=for-the-badge&labelColor=1a1a2e" alt="Get Projects Pack"/></a>&nbsp;&nbsp;&nbsp;
+<a href="https://payhip.com/b/8E107"><img src="https://img.shields.io/badge/🎓_12_Advanced_Modules_$29.99_→-0066FF?style=for-the-badge&labelColor=1a1a2e" alt="Get Advanced Modules"/></a>&nbsp;&nbsp;&nbsp;
 <a href="https://payhip.com/b/S8nU1"><img src="https://img.shields.io/badge/🔥_Complete_Bundle_$59.99_(Save_$10)_→-FF4500?style=for-the-badge&labelColor=1a1a2e" alt="Get Bundle"/></a>
 
 </div>
@@ -1003,7 +1064,7 @@ This course will guide you from your first terminal command to your first deploy
 
 <br/>
 
-*Last updated: July 2026*
+*Last updated: September 2026*
 
 <br/>
 
