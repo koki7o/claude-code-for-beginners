@@ -16,7 +16,7 @@
 
 ## What You'll Learn
 
-This module covers the core of what you'll actually do day-to-day with Claude Code: reading existing code, writing new code, making edits without breaking things, refactoring, and navigating your way around a codebase. These skills matter more than you think -- they're the difference between flailing and being productive.
+This is the day-to-day stuff - the things you'll actually do most with Claude Code. Reading existing code, writing new code, editing without breaking things, refactoring, and finding your way around a codebase. These are the skills that separate flailing from flying.
 
 ---
 
@@ -24,19 +24,19 @@ This module covers the core of what you'll actually do day-to-day with Claude Co
 
 ### Why Reading Code Matters
 
-Here's the deal: about 80% of programming is reading code, not writing it. You read code to understand how features work, to track down bugs, to figure out where to add something new, to pick up patterns, and to review what other people have written. Getting good at reading code -- with Claude Code's help -- will make everything else faster.
+Here's the thing nobody tells beginners: roughly 80% of programming is reading code, not writing it. You read to understand how a feature works, to hunt a bug, to figure out where new code goes, to pick up the local patterns, to review someone else's work. Get fast at reading - with Claude Code doing the heavy lifting - and everything else speeds up.
 
 ### Reading Single Files
 
-Ask Claude Code to read and explain a file:
+Have Claude Code read a file and explain it:
 
 ```text
 Read server.js and explain what it does
 ```
 
-It'll show you the file contents, explain its main purpose, highlight key functions, and point out important patterns.
+It shows you the contents, explains the main purpose, flags the key functions, and points out the patterns that matter.
 
-You can also zero in on specific parts:
+You can also zero in:
 ```text
 Read the login function in auth.js and explain how it works
 ```
@@ -53,7 +53,7 @@ Read package.json and tell me:
 
 ### Reading Multiple Related Files
 
-When you need to understand how a feature works across several files, just tell Claude Code which files to look at:
+When a feature is spread across files, just name them:
 
 ```text
 I want to understand how user authentication works.
@@ -64,13 +64,13 @@ Please read:
 And explain the complete authentication flow
 ```
 
-Claude Code will read all of them, trace the execution flow, explain how they connect, and show you how data moves between them.
+Claude Code reads all three, traces the flow, explains how they connect, and shows you how the data moves between them.
 
 ---
 
 ### Understanding Project Structure
 
-To get the big picture of a project:
+For the big picture:
 
 ```text
 Help me understand this project's structure.
@@ -81,7 +81,7 @@ Show me:
 - How the code is organized
 ```
 
-Or use the Explore agent for a deeper dive:
+Or send the Explore agent in for a deeper dig:
 ```text
 Use the Explore agent to analyze this codebase and give me:
 1. Overall architecture
@@ -94,7 +94,7 @@ Use the Explore agent to analyze this codebase and give me:
 
 ### Reading Patterns and Conventions
 
-This is one of the most underrated things you can do. Before you write anything, learn how the codebase already does things:
+This one's underrated. Before you write a single line, learn how the codebase already does things:
 
 ```text
 Show me how error handling is done in this project
@@ -102,7 +102,7 @@ Find examples of API endpoints and show me the pattern
 How are database queries organized?
 ```
 
-You'll learn the project's conventions, follow existing patterns, maintain consistency, and avoid reinventing solutions that already exist in the codebase.
+You'll pick up the project's conventions, follow the patterns already there, keep things consistent, and stop reinventing wheels the codebase already has.
 
 ---
 
@@ -110,7 +110,7 @@ You'll learn the project's conventions, follow existing patterns, maintain consi
 
 ### Following Project Conventions
 
-Before writing new code, understand the conventions first:
+Learn the conventions before you add anything:
 
 ```text
 Before I add a new feature, show me:
@@ -120,7 +120,7 @@ Before I add a new feature, show me:
 - Naming conventions used
 ```
 
-Then write code that follows those patterns:
+Then write code that fits right in:
 ```text
 Add a new route for /api/products following the same pattern as /api/users
 ```
@@ -129,7 +129,7 @@ Add a new route for /api/products following the same pattern as /api/users
 
 ### Writing Clean Code
 
-Be explicit about what you want. The more specific your request, the better the output:
+Say what you want. The more specific the ask, the better what comes back:
 
 ```text
 Create a function to validate email addresses with:
@@ -162,7 +162,7 @@ function validateEmail(email) {
 
 ### Writing Modular Code
 
-Ask for separation of concerns upfront:
+Ask for separation of concerns up front:
 
 ```text
 Create a user service module that handles:
@@ -187,7 +187,7 @@ database/
 
 ### Adding Documentation
 
-Get in the habit of requesting docs as you write -- it's much easier than going back later:
+Ask for docs as you write, not later. Later never comes.
 
 ```text
 Create a calculateTax function and include:
@@ -203,7 +203,7 @@ Create a calculateTax function and include:
 
 ### Making Precise Changes
 
-The Edit tool is where Claude Code really shines for modifications.
+Modifications are where the Edit tool earns its name.
 
 A simple change:
 ```text
@@ -233,20 +233,20 @@ Remove the console.log statements from auth.js
 
 ### Preserving Existing Patterns
 
-Trust me on this -- always tell Claude Code to follow existing style:
+Do this every time: tell Claude Code to follow the style that's already there.
 
 ```text
 Add a new endpoint for deleting users.
 Follow the same pattern as the existing endpoints in routes/users.js
 ```
 
-Claude Code will read the existing endpoints, match their structure, use the same error handling approach, and follow the naming conventions already in place.
+Claude Code reads the existing endpoints, matches their shape, reuses the same error handling, and keeps the naming conventions intact.
 
 ---
 
 ### Making Safe Edits
 
-Fair warning: you should review changes before they land. Ask Claude Code to show you the plan first:
+Review changes before they land. Ask for the plan first:
 
 ```text
 Show me what you would change to add error handling to the database connection, but don't make the changes yet
@@ -261,7 +261,7 @@ That looks good, please apply the changes
 
 ### Editing Multiple Files
 
-For changes that span several files:
+For a change that ripples across files:
 
 ```text
 Add TypeScript types for the User model.
@@ -271,7 +271,7 @@ Update:
 - Type definitions
 ```
 
-Claude Code will make changes in the right order, update all imports, keep everything consistent, and check that nothing breaks.
+Claude Code makes the changes in the right order, updates every import, keeps it all consistent, and checks nothing broke.
 
 ---
 
@@ -279,18 +279,18 @@ Claude Code will make changes in the right order, update all imports, keep every
 
 ### What is Refactoring?
 
-Refactoring means improving code structure without changing what it does. The goals are straightforward: improve readability, reduce complexity, remove duplication, and make the code easier to maintain going forward.
+Improving the structure of code without changing what it does. The goals are plain: easier to read, less complex, no duplication, and less painful to maintain later.
 
 ---
 
 ### Removing Code Duplication
 
-First, find the duplication:
+Find the duplication first:
 ```text
 Look for duplicate code in the routes files and suggest refactoring
 ```
 
-Then refactor it:
+Then clear it out:
 ```text
 I see the validation logic is duplicated in routes/users.js and routes/posts.js.
 Extract it into a reusable validation module.
@@ -312,14 +312,14 @@ routes/posts.js - uses validation middleware
 
 ### Improving Function Structure
 
-Long functions are hard to read and harder to debug. Ask Claude Code to break them apart:
+Long functions are hard to read and harder to debug. Ask Claude Code to break them up:
 
 ```text
 The processOrder function is 150 lines long.
 Refactor it into smaller, focused functions.
 ```
 
-It'll identify logical sections, extract them into separate functions with clear names, and keep the behavior identical.
+It spots the logical sections, pulls each into its own well-named function, and keeps the behavior identical.
 
 ---
 
@@ -347,7 +347,7 @@ function calculateTotal(subtotal) {
 
 ### Modernizing Code
 
-If you're working with older code, ask Claude Code to bring it up to date:
+Working with older code? Ask Claude Code to drag it into the present:
 
 ```text
 Refactor auth.js to use:
@@ -366,7 +366,7 @@ The search function is slow with large datasets.
 Optimize it for better performance.
 ```
 
-Claude Code might add caching, swap in a more efficient algorithm, suggest indexes, or implement pagination -- depending on what's actually causing the slowdown.
+Depending on what's actually causing the drag, Claude Code might add caching, swap in a better algorithm, suggest indexes, or paginate the results.
 
 ---
 
@@ -374,7 +374,7 @@ Claude Code might add caching, swap in a more efficient algorithm, suggest index
 
 ### Finding Specific Code
 
-Use Grep to search for code:
+Use Grep to search inside files:
 
 ```text
 Find all places where the sendEmail function is called
@@ -410,20 +410,20 @@ Show me all configuration files
 
 ### Understanding Code Flow
 
-This can be tricky in large projects, but Claude Code handles it well. Ask it to trace execution:
+Tricky in a big project, but Claude Code handles it well. Ask it to trace the path:
 
 ```text
 Trace the execution flow when a user logs in.
 Start from the API endpoint and show me each step.
 ```
 
-It'll find the endpoint, show the middleware chain, follow function calls through to the database queries, and explain the complete flow.
+It finds the endpoint, shows the middleware chain, follows the calls down to the database queries, and lays out the whole flow.
 
 ---
 
 ### Finding Dependencies
 
-Understanding what depends on what is crucial for safe changes:
+Knowing what depends on what is the difference between a safe change and a 2am incident:
 
 ```text
 What files depend on the User model?
@@ -444,13 +444,13 @@ Find all references to the authenticateUser function
 
 ### Pattern Recognition
 
-One of the best ways to learn is by studying existing code:
+One of the best ways to learn is to study code that already works:
 
 ```text
 Show me 3 examples of how API endpoints are structured in this project
 ```
 
-Then apply what you've learned:
+Then put it to use:
 ```text
 Now create a new endpoint following that same pattern
 ```
@@ -483,7 +483,7 @@ Review the authentication module and teach me:
 
 ### Creating Logical Structure
 
-When starting a new project, ask Claude Code to set up the structure:
+Starting fresh? Have Claude Code lay out the structure:
 
 ```text
 I'm building a REST API.
@@ -522,7 +522,7 @@ Help me split it into logical modules.
 
 **Task:** Understand an unfamiliar codebase
 
-Choose any open source project and:
+Pick any open source project and:
 
 1. Clone it
 2. Ask: "Explain what this project does and how it's structured"
@@ -557,13 +557,13 @@ Requirements:
 
 **Task:** Improve existing code
 
-First, create messy code on purpose:
+First, make a mess on purpose:
 ```text
 Create a function that calculates shipping cost.
 Make it poorly structured with unclear variable names.
 ```
 
-Then refactor it:
+Then clean it up:
 ```text
 Refactor the calculateShipping function to:
 - Use descriptive variable names
@@ -639,19 +639,19 @@ Before moving to Module 5, make sure you can:
 ## Common Questions (FAQ)
 
 **Q: How do I know if my code is "clean"?**
-Ask Claude Code: "Review this code for clarity and suggest improvements." It's genuinely useful for this.
+Ask Claude Code: "Review this code for clarity and suggest improvements." It's genuinely good at this.
 
 **Q: When should I refactor?**
-When code is hard to understand, duplicated, or becoming painful to modify. If you dread touching a file, it probably needs refactoring.
+When code is hard to follow, duplicated, or painful to change. If you dread opening a file, that file needs refactoring.
 
 **Q: How do I learn coding patterns?**
-Read good code, ask Claude Code to explain the patterns you see, and practice implementing them yourself.
+Read good code, ask Claude Code to explain the patterns you spot, then implement them yourself. That third step is the one that sticks.
 
 **Q: What if I break something while editing?**
-This is why Git exists. Commit before making changes so you can always roll back.
+This is exactly what Git is for. Commit before you change things and you can always roll back.
 
 **Q: How detailed should my edit requests be?**
-Be specific about *what* to change, but let Claude Code handle the implementation details.
+Be specific about *what* to change; let Claude Code handle *how*.
 
 ---
 
@@ -664,7 +664,7 @@ Be specific about *what* to change, but let Claude Code handle the implementatio
 5. **Ask Claude Code to explain** -- learn from the code you're working with
 6. **Test incrementally** -- verify changes work before moving on
 7. **Git commit frequently** -- it's your safety net for experiments
-8. **Codify your standards** -- if you find yourself repeating the same conventions to Claude Code, put them in a CLAUDE.md file or in `.claude/rules/`. Once written, Claude Code follows them automatically in every session.
+8. **Codify your standards** -- if you keep repeating the same conventions to Claude Code, put them in a CLAUDE.md file or in `.claude/rules/`. Once written, Claude Code follows them automatically, every session.
 
 ---
 

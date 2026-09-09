@@ -16,7 +16,7 @@
 
 ## What You'll Learn
 
-This module covers the habits and practices that separate throwaway scripts from production-quality code. We're talking task management, code review, documentation, error handling, logging, code organization, security, and performance. It's a lot -- but these are the things that'll make your code something you're actually proud of six months from now.
+The habits that separate a throwaway script from production code. Task management, code review, documentation, error handling, logging, code organization, security, performance. It's a lot - but these are the things that make your code something you're actually proud of six months from now, instead of something you're scared to open.
 
 ---
 
@@ -24,13 +24,13 @@ This module covers the habits and practices that separate throwaway scripts from
 
 ### What is TodoWrite?
 
-When you give Claude Code a complex, multi-step task, it automatically creates an internal todo list to track its own progress. You'll see a checklist appear showing what Claude plans to do, what it's working on, and what's done. You don't need to manage this list yourself -- just give Claude a clear breakdown of what you need.
+Hand Claude Code a complex, multi-step task and it builds itself an internal todo list to track its own progress. You'll see a checklist appear - what it plans to do, what it's on now, what's done. You don't manage this list; you just give Claude a clear breakdown of what you need and it takes care of the rest.
 
 ---
 
 ### When to Use TodoWrite
 
-Use it for multi-step features (3+ steps), complex tasks that need planning, situations where a user requests multiple things at once, or when you just want a clear record of implementation progress.
+Use it for multi-step features (3+ steps), complex tasks that need planning, requests that bundle several things at once, or any time you just want a clear record of progress.
 
 Skip it for single simple tasks, trivial changes, and quick fixes. Not everything needs a checklist.
 
@@ -68,7 +68,7 @@ Claude Code creates something like this:
 
 ### Tracking Progress
 
-Claude Code automatically marks tasks as in_progress when it starts them and completed when it finishes. Only one task shows as in_progress at a time, so you always know exactly where things stand.
+Claude Code marks a task in_progress when it starts and completed when it finishes, on its own. Only one task is in_progress at a time, so you always know exactly where things stand.
 
 You can ask things like:
 ```text
@@ -83,7 +83,7 @@ What's the next step?
 
 ### Review Before Committing
 
-Always review changes before committing. Trust me on this -- it's the single easiest way to catch mistakes before they become permanent.
+Always review changes before committing. It's the single easiest way to catch a mistake before it becomes permanent.
 
 ```text
 Before I commit, show me:
@@ -97,7 +97,7 @@ Before I commit, show me:
 
 ### Self-Review Checklist
 
-Ask Claude Code to run through the common pitfalls:
+Have Claude Code walk the usual pitfalls:
 
 ```text
 Review my changes and check for:
@@ -114,7 +114,7 @@ Review my changes and check for:
 
 ### Reviewing Others' Code
 
-When you're reviewing a pull request, Claude Code can help you get up to speed quickly:
+Reviewing a pull request? Claude Code gets you up to speed fast:
 
 ```text
 I need to review this pull request.
@@ -132,7 +132,7 @@ Help me:
 
 ### Code Comments
 
-Here's the deal: good comments explain *why*, not *what*. The code itself should tell you what's happening. Comments should tell you the reasoning behind it.
+Here's the rule: good comments explain *why*, not *what*. The code already says what's happening. The comment's job is the reasoning behind it.
 
 Good:
 ```javascript
@@ -147,13 +147,13 @@ Bad:
 const delay = Math.pow(2, retryCount) * 1000;
 ```
 
-If your comment just restates the code in English, delete it.
+If a comment just restates the code in English, delete it.
 
 ---
 
 ### Function Documentation
 
-You can ask Claude Code to add JSDoc comments across a whole file:
+Have Claude Code add JSDoc across a whole file:
 
 ```text
 Add JSDoc comments to all functions in userService.js with:
@@ -168,7 +168,7 @@ Add JSDoc comments to all functions in userService.js with:
 
 ### README Files
 
-A solid README is the front door to your project. Ask Claude Code to scaffold one:
+A solid README is the front door to your project. Have Claude Code scaffold one:
 
 ```text
 Create a README.md for this project with:
@@ -203,7 +203,7 @@ Generate API documentation for all endpoints in routes/:
 
 ### Comprehensive Error Handling
 
-This matters more than you think. Unhandled errors are how apps crash in production at 2 AM.
+This one earns its keep. Unhandled errors are how apps fall over in production at 2am.
 
 ```text
 Add error handling to the database queries in userService.js:
@@ -214,13 +214,13 @@ Add error handling to the database queries in userService.js:
 - Don't expose internal errors to users
 ```
 
-That last point is important -- your users should get a clean "something went wrong" message, not a raw stack trace with your database schema in it.
+That last point matters: your users should get a clean "something went wrong," not a raw stack trace with your database schema in it.
 
 ---
 
 ### Error Types
 
-Custom error classes make your error handling way more precise:
+Custom error classes make your handling far more precise:
 
 ```text
 Create custom error classes for:
@@ -240,7 +240,7 @@ Each should:
 
 ### Error Responses
 
-Keep your error responses consistent. Pick a format and stick with it across every endpoint:
+Keep error responses consistent. Pick a shape and use it on every endpoint:
 
 ```text
 Create error response middleware that returns:
@@ -262,19 +262,19 @@ Create error response middleware that returns:
 
 ### Strategic Logging
 
-Log the right things:
+Log the things worth logging:
 - Important operations -- user login, data changes
 - Errors and exceptions
 - Performance metrics
 - Security events
 - External API calls
 
-And don't log these:
+And keep these out:
 - Passwords or sensitive data (seriously, never)
 - Excessive debug info in production
 - Personal identifiable information (PII)
 
-Getting this balance right is an underrated skill.
+Getting that balance right is an underrated skill.
 
 ---
 
@@ -306,7 +306,7 @@ Add logging throughout the application:
 
 ### Log Format
 
-Structured logs -- JSON format -- are far easier to search and filter than plain text, especially once you're running in production:
+Structured logs - JSON - are far easier to search and filter than plain text, especially once you're in production:
 
 ```text
 Configure logger to output:
@@ -326,7 +326,7 @@ Configure logger to output:
 
 ### File Structure
 
-Organizing by feature instead of by type makes a huge difference as your project grows. When everything related to "users" lives in one folder, you don't have to jump between five different directories to understand one feature.
+Organizing by feature instead of by type pays off big as a project grows. When everything about "users" lives in one folder, you're not hopping across five directories to understand one feature.
 
 ```text
 Help me reorganize from:
@@ -353,7 +353,7 @@ src/
 
 ### DRY Principle (Don't Repeat Yourself)
 
-Duplication is how bugs multiply. Fix it in one place, forget about the other three copies, and now you've got inconsistent behavior.
+Duplication is how bugs multiply. Fix it in one place, forget the other three copies, and now your behavior is inconsistent.
 
 ```text
 Find duplicate code in this project and refactor:
@@ -368,7 +368,7 @@ Find duplicate code in this project and refactor:
 
 ### Single Responsibility
 
-If a file is doing too many things, it's time to split it up:
+If a file is doing too many jobs, split it up:
 
 ```text
 The userController.js file is doing too much.
@@ -383,7 +383,7 @@ Refactor so that:
 
 ### Codifying Standards with Rules
 
-Instead of relying on memory or hoping everyone follows the same conventions, you can encode your project's standards into rules files that Claude Code follows automatically.
+Instead of leaning on memory or hoping everyone follows the same conventions, encode your project's standards into rules files that Claude Code follows automatically.
 
 **Create a rules directory:**
 ```text
@@ -411,7 +411,7 @@ globs: ["src/**/*.ts", "src/**/*.js"]
 - Always include a meaningful error message for debugging
 ```
 
-**Why this matters:** Rules are enforced automatically every time Claude Code works on matching files. No more "we forgot to add error handling" -- it's baked into the workflow. This is especially powerful on teams where multiple people use Claude Code on the same codebase.
+**Why this matters:** rules get enforced automatically every time Claude Code touches a matching file. No more "we forgot to add error handling" - it's baked into the workflow. Especially powerful on a team where several people drive Claude Code on the same codebase.
 
 ---
 
@@ -419,7 +419,7 @@ globs: ["src/**/*.ts", "src/**/*.js"]
 
 ### Input Validation
 
-Fair warning: this is one of those areas where cutting corners will come back to bite you.
+Fair warning: this is one of those areas where cutting a corner comes back to bite you.
 
 ```text
 Add comprehensive input validation:
@@ -450,7 +450,7 @@ Review and improve authentication security:
 
 ### Secrets Management
 
-Hardcoded secrets in source code are one of the most common -- and most preventable -- security mistakes.
+Hardcoded secrets in source are one of the most common - and most preventable - security mistakes there is.
 
 ```text
 Ensure no secrets in code:
@@ -480,7 +480,7 @@ Add security headers using helmet.js:
 
 ### Database Optimization
 
-Slow queries are the most common performance bottleneck in web apps, and they're usually the easiest to fix:
+Slow queries are the most common bottleneck in a web app, and usually the easiest to fix:
 
 ```text
 Optimize database queries:
@@ -503,7 +503,7 @@ Implement caching for expensive operations:
 - Implement cache invalidation strategy
 ```
 
-Cache invalidation is one of the famously hard problems in computer science, so don't feel bad if it takes some thought.
+Cache invalidation is famously one of the hard problems in computer science, so don't feel bad if it takes some thought.
 
 ---
 
@@ -525,7 +525,7 @@ Optimize with async operations:
 
 ### Feature Development Flow
 
-Here's what a professional feature development cycle looks like end to end:
+What a professional feature cycle looks like, end to end:
 
 **Step 1: Plan**
 ```text
@@ -578,13 +578,13 @@ Create a pull request with:
 - Security considerations
 ```
 
-This flow might feel like a lot of overhead at first, but it catches problems early and keeps your git history clean. Future you will appreciate it.
+Feels like overhead at first. But it catches problems early and keeps your git history clean - and future you notices the difference.
 
 ---
 
 ### Advanced Workflow: The Automated Pipeline
 
-Once you're comfortable with the manual workflow above, you can automate chunks of it. Here's a professional pipeline that handles quality checks automatically:
+Once the manual flow above is second nature, you can automate chunks of it. Here's a professional pipeline that handles the quality checks for you:
 
 **Step 1: Pre-flight checks**
 ```text
@@ -604,7 +604,7 @@ Before writing any code for this feature:
 4. Create a plan, then implement
 ```
 
-This "research before coding" approach prevents the common mistake of reimplementing something that already exists or breaking patterns the rest of the codebase follows.
+Researching before coding heads off the classic mistake of reimplementing something that already exists, or breaking a pattern the rest of the codebase follows.
 
 **Step 3: Automated quality gate**
 ```text
@@ -616,13 +616,13 @@ After implementing, run the full quality check:
 5. Generate a summary of all changes
 ```
 
-**The key insight:** The best workflows aren't about following more steps -- they're about automating the steps so quality becomes effortless. Set up the automation once, and every feature you build goes through the same rigorous process without any extra effort.
+**The key insight:** the best workflows aren't about following more steps - they're about automating the steps so quality becomes effortless. Set it up once, and every feature you build runs the same rigorous process for free.
 
 ---
 
 ## Lesson 10: Session Management
 
-These commands and shortcuts will save you significant time and tokens. Learn them early.
+These commands and shortcuts save real time and real tokens. Learn them early.
 
 ### Essential Commands
 
@@ -651,38 +651,38 @@ These commands and shortcuts will save you significant time and tokens. Learn th
 
 ### The `/clear` Habit
 
-This is the single easiest way to reduce token usage. When you finish a task and start something unrelated, type `/clear`. Otherwise, Claude Code carries forward all the context from the previous task -- every file it read, every command it ran -- and processes it on every subsequent message. That adds up fast.
+The single easiest way to cut token usage. Finish a task, start something unrelated, type `/clear`. Otherwise Claude Code drags the whole previous task forward - every file it read, every command it ran - and re-processes it on every message. That adds up fast.
 
 ### Proactive `/compact`
 
-Don't wait for auto-compact at 95% context. By that point, Claude may lose important details. Instead, compact proactively around 50% with instructions about what to keep:
+Don't wait for auto-compact at 95%. By then Claude may have lost details that mattered. Compact on purpose around 50%, with instructions about what to keep:
 
 ```text
 /compact Focus on the database migration changes and the test failures
 ```
 
-One thing to remember: CLAUDE.md survives compaction (it's re-read from disk), but anything you only said in conversation is summarized and may lose detail. If something is important enough to survive compaction, put it in CLAUDE.md.
+One thing to remember: CLAUDE.md survives compaction (it's re-read from disk), but anything you only said in conversation gets summarized and can lose detail. If it's important enough to survive compaction, put it in CLAUDE.md.
 
 ### Recovering with Checkpoints and Rewind
 
-Claude Code automatically saves a **checkpoint** before it makes changes - a snapshot of your conversation and your files at that moment. So when something goes wrong - Claude took a bad turn, edited the wrong file, or you simply changed your mind - you don't have to untangle it by hand.
+Claude Code automatically saves a **checkpoint** before it makes changes - a snapshot of your conversation and your files at that moment. So when something goes wrong - a bad turn, the wrong file edited, or you just changed your mind - you don't have to untangle it by hand.
 
 Press **`Esc` twice** (or run **`/rewind`**) to open the checkpoint menu. You can restore:
 
 - **Conversation only** - rewind the chat, keep the code. For when the discussion went off track but the files are fine.
-- **Code only** - undo the file changes, keep the conversation. For when the edits were wrong but you want to keep talking through it.
+- **Code only** - undo the file changes, keep the conversation. For when the edits were wrong but you want to keep talking it through.
 - **Both** - go fully back to how things were at that checkpoint.
 
-Think of it as an undo button for the *whole session*, not just the last edit. It's the safety net that makes it fine to let Claude try things: if an approach doesn't pan out, rewind to a clean point and try again.
+Think of it as an undo button for the *whole session*, not just the last edit. It's the safety net that makes it fine to let Claude try things: if an approach doesn't pan out, rewind to a clean point and go again.
 
 Two things to know:
 
-- Checkpoints cover the changes *Claude* made through its tools - they're a **within-session** safety net, not long-term history. They don't replace git, so still commit your real milestones (Module 7).
+- Checkpoints cover the changes *Claude* made through its tools - a **within-session** safety net, not long-term history. They don't replace git, so still commit your real milestones (Module 7).
 - Rewinding the conversation also rewinds context, so anything learned *after* that checkpoint is gone too. If there's a detail worth keeping, note it (or put it in CLAUDE.md) before you rewind.
 
 ### Watching Your Cost
 
-Claude Code isn't free to run. On a Claude subscription (Pro/Max) or an API key, every message spends tokens - and tokens are either money or usage-limit budget. A few habits keep the number low without you thinking about it.
+Claude Code isn't free to run. On a subscription (Pro/Max) or an API key, every message spends tokens - and tokens are either money or usage-limit budget. A few habits keep the number low without you thinking about it.
 
 Check where you stand anytime:
 
@@ -693,7 +693,7 @@ Check where you stand anytime:
 The levers that actually move the number, roughly by impact:
 
 1. **`/clear` between unrelated tasks** - the single biggest win. Stale context is re-processed on *every* message.
-2. **Match the tier to the task** - use the fast tier for mechanical work; save the most-capable tier for genuinely hard problems (Module 6). Running everything on the most-capable tier is the most common way people overspend.
+2. **Match the tier to the task** - fast tier for mechanical work; save the most-capable tier for genuinely hard problems (Module 6). Running everything on the most-capable tier is the most common way people overspend.
 3. **`/compact` proactively** - summarize a long session instead of dragging every detail forward.
 4. **`/effort low` for simple lookups** - less reasoning means fewer tokens on tasks that don't need the depth.
 
@@ -770,58 +770,58 @@ Before completing this course, make sure you can:
 
 ### Quality Over Speed
 
-Write it right the first time. Tests save time in the long run -- even when it doesn't feel like it in the moment. Documentation helps future you. And security is never optional.
+Write it right the first time. Tests save time in the long run - even when it doesn't feel like it in the moment. Documentation helps future you. Security is never optional.
 
 ### Communication
 
-Clear commit messages, comprehensive PR descriptions, good documentation, meaningful logs. Code is a team sport, even when the team is just present-you and future-you.
+Clear commit messages, comprehensive PR descriptions, good docs, meaningful logs. Code is a team sport, even when the team is just present-you and future-you.
 
 ### Continuous Improvement
 
-Review your own code critically. Learn from mistakes. Stay updated on best practices. Refactor when appropriate -- not constantly, but when the code is clearly fighting you.
+Read your own code critically. Learn from the mistakes. Keep up with best practices. Refactor when it's warranted - not constantly, but when the code is clearly fighting you.
 
 ---
 
 ## What's Next?
 
-That wraps up the 10 core modules. You've got a solid foundation in Claude Code, you can build complete applications, and you know the professional practices that keep projects maintainable.
+That wraps the 10 core modules. You've got a solid foundation in Claude Code, you can build complete applications, and you know the professional practices that keep projects maintainable.
 
-If you want to keep going, there are advanced modules available:
+Want to keep going? There are advanced modules ahead:
 - Module 11: MCP Servers
 - Module 12: Skills and Hooks
 - Module 13: Multiple Languages/Frameworks
 - Module 14: API Integration
 - Module 15: Production Deployment
 
-Or just start building. Apply these skills to real projects, contribute to open source, build your portfolio. The best way to get better is to ship things.
+Or just start building. Point these skills at real projects, contribute to open source, grow your portfolio. The fastest way to get better is to ship things.
 
 ---
 
 ## Final Pro Tips
 
-1. **Plan before coding** -- A few minutes planning saves hours debugging.
+1. **Plan before coding** -- A few minutes of planning saves hours of debugging.
 
-2. **Test as you build** -- Don't leave testing for the end. It always gets skipped.
+2. **Test as you build** -- Don't leave testing for the end. The end is where it gets skipped.
 
 3. **Commit often** -- Small, frequent commits beat one massive commit every time.
 
-4. **Document while fresh** -- Write docs while you still remember why you made the decisions you made.
+4. **Document while fresh** -- Write the docs while you still remember why you decided what you decided.
 
-5. **Security first** -- It's much harder to bolt on later.
+5. **Security first** -- Much harder to bolt on later.
 
 6. **Performance matters** -- But don't optimize prematurely. Measure first.
 
 7. **Code is read more than written** -- Optimize for readability.
 
-8. **Ask for help** -- Claude Code is there whenever you need a second pair of eyes.
+8. **Ask for help** -- Claude Code is right there whenever you want a second pair of eyes.
 
 ---
 
 *Module 10 Complete -- Core Course Finished!*
 
-Next up: if you're ready for more, the advanced modules start with Module 11 -- MCP Servers, which opens up a whole new layer of what Claude Code can do.
+Next up: if you're ready for more, the advanced modules start with Module 11 -- MCP Servers, which opens a whole new layer of what Claude Code can do.
 
-> **Ready to go professional?** The [Advanced Modules](https://payhip.com/b/8E107) cover production deployment at scale, enterprise integration, performance optimization, and custom agent orchestration. Or grab the [Real Projects Pack](https://payhip.com/b/dFXWO) to practice these workflows on 11 real builds. [Bundle both and save $10.](https://payhip.com/b/8E107+real-projects-bundle)
+> **Ready to go professional?** The [Advanced Modules](https://payhip.com/b/8E107) cover production deployment at scale, enterprise integration, performance optimization, and custom agent orchestration. Or grab the [Real Projects Pack](https://payhip.com/b/dFXWO) to practice these workflows on 14 real builds. [Bundle both and save $10.](https://payhip.com/b/S8nU1)
 
 ---
 

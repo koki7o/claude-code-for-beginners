@@ -16,7 +16,7 @@
 
 ## What You'll Learn
 
-This module covers the tools Claude Code uses behind the scenes -- what they are, when it reaches for each one, and how they chain together to get real work done. You'll also learn how to steer Claude Code toward specific tools when you want more control.
+Every time Claude Code does something, it's reaching for a tool. This module is the tour: what each tool is, when it picks that one, and how it chains several together to get real work done. Plus how to steer it toward a specific tool when you want the wheel.
 
 ---
 
@@ -24,26 +24,26 @@ This module covers the tools Claude Code uses behind the scenes -- what they are
 
 ### Understanding Tools
 
-Tools are the specific capabilities Claude Code has for interacting with your system and codebase. Each tool does one thing well:
+A tool is one specific thing Claude Code can do to your system or codebase. Each does one job well:
 
 - **Reading** -- looking at a document
 - **Writing** -- creating a new document
 - **Editing** -- making changes to an existing document
 - **Running commands** -- performing actions in the terminal
 
-That's really all there is to it. Claude Code picks the right tool (or combination of tools) based on what you ask it to do.
+That's genuinely most of it. Claude Code picks the right tool - or the right combination - based on what you asked for.
 
 ### How Claude Code Uses Tools
 
-When you make a request, Claude Code goes through a straightforward process:
+When you make a request, the process is simple:
 
 1. Understands your request
 2. Decides which tools to use
-3. Uses them -- you'll see this happening in real time
+3. Uses them -- you watch it happen in real time
 4. Shows you the results
 5. Explains what it did
 
-Here's what that looks like in practice:
+In practice:
 
 ```text
 You: "Create a Python file that prints Hello World"
@@ -86,7 +86,7 @@ Reading app.js...
 [File contents displayed with line numbers]
 ```
 
-Read is completely non-destructive -- it never changes anything. It's always safe.
+Read never changes anything. It's always safe.
 
 ---
 
@@ -117,7 +117,7 @@ Created config.js with:
 - Environment variables
 ```
 
-One thing to know: Write replaces an entire file's contents. For existing files, Claude Code usually prefers Edit (which only changes specific parts) unless a complete rewrite is needed.
+Worth knowing: Write replaces a file's entire contents. So for a file that already exists, Claude Code usually prefers Edit (which touches only what it needs to) unless a full rewrite is actually the point.
 
 ---
 
@@ -149,9 +149,9 @@ New:
 const PORT = 8080;
 ```
 
-This matters more than you think -- the Edit tool shows you exactly what changed, only touches what's needed, and leaves the rest of your code alone. You get a clear before/after view every time.
+This matters more than it looks. Edit shows you exactly what changed, touches only what's needed, and leaves the rest of your code alone - a clean before/after, every time.
 
-Get in the habit of reviewing Edit tool outputs. Trust me on this.
+Get in the habit of actually reading those diffs. It's the difference between catching a mistake and shipping it.
 
 ---
 
@@ -230,7 +230,7 @@ Found in auth.test.js:23
 describe('function login', () => {
 ```
 
-Grep also supports regular expressions, which makes it surprisingly powerful for tracking down patterns across a large codebase.
+Grep speaks regular expressions too, which makes it quietly powerful for chasing a pattern across a big codebase.
 
 ---
 
@@ -276,7 +276,7 @@ git status           # Check Git status
 docker build .       # Build Docker image
 ```
 
-Claude Code will show you the command it wants to run and ask for your permission before executing it, so you stay in control.
+Before it runs anything, Claude Code shows you the command and asks permission. You stay in control.
 
 ---
 
@@ -284,7 +284,7 @@ Claude Code will show you the command it wants to run and ask for your permissio
 
 **Purpose:** Run long-running commands without blocking
 
-This is useful for:
+Handy for:
 - Development servers
 - Watch mode for tests
 - Database servers
@@ -323,7 +323,7 @@ Claude Code uses this for:
 - Research tasks
 - Complex analysis
 
-The Task tool is a single capability, but it shines with different kinds of prompts. Here are a few prompt strategies worth knowing about:
+The Task tool is one capability, but it earns its keep on different kinds of prompts. A few worth knowing:
 
 #### 1. Exploration Tasks
 ```text
@@ -363,13 +363,13 @@ Claude Code:
 - Returns comprehensive explanation
 ```
 
-The key advantage here is that Claude Code works autonomously -- it handles multiple steps, makes decisions along the way, and comes back with thorough results. You don't need to hold its hand through each step.
+The point of this one: it works on its own. It handles the steps, makes the small decisions along the way, and comes back with the finished answer. No hand-holding through each move.
 
 ---
 
 ### The WebSearch Tool
 
-> **Note:** WebSearch and WebFetch are extended tools. If they're not available in your setup, Claude Code will let you know. You can always search manually and paste relevant information into the conversation.
+> **Note:** WebSearch and WebFetch are extended tools. If they're not available in your setup, Claude Code will tell you. You can always search yourself and paste what you find into the conversation.
 
 **Purpose:** Search the internet for information
 
@@ -455,7 +455,7 @@ Claude Code:
 
 **Request:** "Add a new /users endpoint to the API that returns all users from the database"
 
-Here's what Claude Code actually does behind the scenes:
+Here's what's actually happening behind the scenes:
 
 **Step 1: Understand the codebase**
 ```text
@@ -537,7 +537,7 @@ Result: No more error!
 
 ### You Can Guide Claude Code
 
-Claude Code chooses tools automatically, but you can absolutely steer it.
+Claude Code picks tools on its own, but you can absolutely take the wheel.
 
 **Be general** -- let Claude Code decide:
 ```text
@@ -558,7 +558,7 @@ Run the linter
 
 ### When to Be Specific
 
-Here's the short version: be specific when you know what you want, and let Claude Code decide when you're not sure.
+Short version: be specific when you know what you want, hand it the wheel when you don't.
 
 Be specific when:
 - You know exactly what you need
@@ -585,7 +585,7 @@ Let Claude Code decide when:
 3. **Edit:** "Add multiply and divide functions to calculator.js"
 4. **Read:** "Show me the updated file"
 
-This gives you a feel for how Write creates files, Read displays them, and Edit makes targeted changes.
+Do this once and the three click: Write creates, Read shows, Edit changes one thing without disturbing the rest.
 
 ---
 
@@ -601,7 +601,7 @@ Navigate to any project directory, then try:
 4. **Grep:** "Find all TODO comments"
 5. **Grep:** "Search for 'import' statements"
 
-You'll quickly see the difference -- Glob finds files by name, Grep finds content inside files.
+The difference lands fast: Glob finds files by name, Grep finds content inside files.
 
 ---
 
@@ -633,7 +633,7 @@ Analyze this codebase and answer:
 4. Where should I start if I want to add a new feature?
 ```
 
-This is where Claude Code really shines -- it'll autonomously dig through the codebase instead of needing you to point it at individual files.
+This is where Claude Code really earns its keep - it'll dig through the whole codebase itself instead of making you point at files one at a time.
 
 ---
 
@@ -655,16 +655,16 @@ Before moving to Module 4, make sure you understand:
 ## Common Questions (FAQ)
 
 ### Q: Can I see which tools Claude Code is using?
-**A:** Yes -- Claude Code shows you each tool use in real-time.
+**A:** Yes -- it shows you each tool use in real time.
 
 ### Q: Can I prevent Claude Code from using certain tools?
-**A:** Yes. Just be explicit: "Please explain the fix but don't modify any files yet."
+**A:** Yes. Just say so: "Please explain the fix but don't modify any files yet."
 
 ### Q: Why does Claude Code use multiple tools for one task?
-**A:** Complex tasks need multiple steps -- reading code, understanding it, then modifying it. One tool rarely covers the whole job.
+**A:** Because real tasks have steps - read the code, understand it, then change it. One tool rarely covers the whole job.
 
 ### Q: What if a tool fails?
-**A:** Claude Code will explain the error and try alternative approaches or ask for your guidance.
+**A:** Claude Code explains the error and either tries another route or asks you which way to go.
 
 ### Q: Can I suggest which tool to use?
 **A:** Absolutely. "Use grep to find..." or "Read the file first, then..." both work.
@@ -673,25 +673,25 @@ Before moving to Module 4, make sure you understand:
 
 ## What's Next?
 
-You've now got a solid mental model of Claude Code's toolbox -- what each tool does, when it gets used, and how to request specific ones. That foundation matters for everything that comes next.
+You've now got a solid mental model of the toolbox - what each tool does, when it gets used, and how to ask for a specific one. That mental model quietly powers everything that follows.
 
-Next up: Module 4 -- working with files and code. We'll cover reading codebases, writing clean code, and making effective edits.
+Next up: Module 4 -- working with files and code. Reading codebases, writing clean code, making edits that land.
 
 ---
 
 ## Pro Tips
 
-1. **Watch the tools** -- Pay attention to which tools Claude Code reaches for. You'll start to internalize the workflow.
+1. **Watch the tools** -- Notice which ones Claude Code reaches for. The workflow starts to become second nature.
 
-2. **Review edits carefully** -- Always check Edit tool outputs. This is how you catch mistakes early.
+2. **Review edits carefully** -- Always read the Edit output. It's how you catch a mistake while it's still cheap.
 
-3. **Use Grep for code search** -- It's faster than reading through multiple files yourself.
+3. **Use Grep for code search** -- Faster than reading through five files yourself.
 
-4. **Let Claude Code handle complexity** -- If you find yourself micromanaging a task across many files, that's a sign you should step back and let Claude Code work through it autonomously.
+4. **Let Claude Code handle complexity** -- If you're micromanaging a task across a dozen files, that's your cue to step back and let it work autonomously.
 
-5. **Think in tool sequences** -- Before asking, consider what combination of tools the task probably needs. This helps you write better prompts.
+5. **Think in tool sequences** -- Before you ask, picture the tools the job probably needs. It makes your prompts sharper.
 
-6. **Ask "why did you use that tool?"** -- Seriously, it's one of the fastest ways to learn how Claude Code thinks.
+6. **Ask "why did you use that tool?"** -- Genuinely one of the fastest ways to learn how Claude Code thinks.
 
 ---
 

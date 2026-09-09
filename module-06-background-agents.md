@@ -8,7 +8,7 @@
 
 **Learn to use specialized agents for complex tasks**
 
-[← Previous](module-05-custom-instructions.md) · [🏠 Home](README.md) · [Next →](module-07-git-operations.md)
+[← Previous](module-05-prompt-engineering.md) · [🏠 Home](README.md) · [Next →](module-07-git-operations.md)
 
 </div>
 
@@ -16,7 +16,7 @@
 
 ## What You'll Learn
 
-This module covers agentic tasks -- prompts where you delegate complex, multi-step work to Claude Code and let it operate autonomously. You'll learn when to reach for this approach, how to write effective exploration and planning prompts, and how to run multiple Claude Code sessions in parallel when you've got a lot of ground to cover.
+This module is about agentic tasks - prompts where you hand a complex, multi-step job to Claude Code and let it run on its own. When to reach for it, how to write exploration and planning prompts that actually work, and how to run several Claude Code sessions side by side when there's a lot of ground to cover.
 
 ---
 
@@ -24,9 +24,9 @@ This module covers agentic tasks -- prompts where you delegate complex, multi-st
 
 ### Understanding Agentic Tasks
 
-Claude Code can work autonomously to complete complex tasks. You give it a goal, it figures out the steps, and it reports back when it's done. There aren't separate "agents" to select -- you just write a prompt that delegates the work, and Claude Code handles the rest.
+Claude Code can work on its own to finish a complex task. You give it a goal, it works out the steps, it reports back. There's no separate "agent" to pick from a menu - you just write a prompt that delegates the work, and it takes it from there.
 
-Here's how agentic delegation differs from regular Claude Code conversation:
+Here's how delegation differs from a normal back-and-forth:
 
 **Regular Claude Code:**
 - You guide each step
@@ -39,15 +39,15 @@ Here's how agentic delegation differs from regular Claude Code conversation:
 - Completes multi-step tasks independently
 - Reports back when done
 
-The short version: regular mode is a conversation, agentic mode is delegation.
+Short version: regular mode is a conversation, agentic mode is delegation.
 
 ---
 
 ### When to Delegate
 
-Agentic prompts shine when the task involves multiple steps, exploration, or decision-making. Think: exploring an unfamiliar codebase, planning a feature implementation, doing research that spans many files, or tackling anything where you'd otherwise be saying "now do this... okay now do that..." over and over.
+Agentic prompts earn their keep when the task has multiple steps, real exploration, or decisions to make. Think: mapping an unfamiliar codebase, planning a feature, research that spans a dozen files - anything where you'd otherwise be typing "now do this... okay now do that..." on repeat.
 
-Stick with regular conversation for simple, single-step tasks, quick modifications, or situations where you actually want to see each tool call happen -- like when you're learning how Claude Code works under the hood.
+Stick with a normal conversation for simple, single-step jobs, quick edits, or any time you actually want to watch each tool call happen - like when you're still learning how Claude Code works under the hood.
 
 ---
 
@@ -55,7 +55,7 @@ Stick with regular conversation for simple, single-step tasks, quick modificatio
 
 ### When to Use Exploration Prompts
 
-Exploration prompts are your go-to when you need to figure out how a project works, find where something is implemented, or get a feel for the architecture. Claude Code reads files, traces connections, and comes back with a coherent explanation instead of making you piece it together yourself.
+Exploration prompts are for when you need to figure out how a project works, find where something lives, or get a feel for the architecture. Claude Code reads the files, traces the connections, and hands you a coherent explanation instead of making you assemble it yourself.
 
 ---
 
@@ -66,7 +66,7 @@ Exploration prompts are your go-to when you need to figure out how a project wor
 Explore this codebase and explain how authentication works
 ```
 
-When you send that, Claude Code searches for auth-related files, reads the relevant code, analyzes the implementation, traces the flow, and returns a comprehensive explanation. All without you lifting a finger.
+Send that and Claude Code hunts down the auth-related files, reads the relevant code, works out the implementation, traces the flow, and comes back with a full explanation. You don't lift a finger.
 
 ---
 
@@ -82,7 +82,7 @@ I need to know:
 - The complete flow from checkout to confirmation
 ```
 
-Claude Code finds all payment-related files, reads configuration, traces the payment flow, analyzes security implementations, and gives you a detailed report.
+Claude Code finds every payment-related file, reads the config, traces the flow, checks the security, and gives you a detailed report.
 
 ---
 
@@ -132,7 +132,7 @@ Analyze this codebase and explain:
 
 ### Controlling Depth Through Your Prompt
 
-The depth of Claude Code's analysis depends on how you phrase your request. There aren't formal "thoroughness settings" -- it's about how specific and demanding your prompt is.
+How deep Claude Code goes depends on how you phrase the ask. There's no "thoroughness" dial - it's about how specific and demanding your prompt is.
 
 **Quick pass -- ask for an overview:**
 ```text
@@ -155,9 +155,9 @@ Do a thorough analysis of the entire API. Document every endpoint, trace each re
 
 ### When to Ask Claude Code to Plan
 
-Asking Claude Code to plan gets you implementation strategies before you write a single line of code. Use planning prompts for new features, system architecture, complex changes, and catching problems before they become expensive.
+Ask Claude Code to plan and you get an implementation strategy before you write a line. Use planning prompts for new features, system architecture, complex changes, and catching problems while they're still cheap.
 
-Trust me on this -- spending five minutes asking Claude Code to plan before a big change can save you hours of backtracking.
+Five minutes of planning before a big change routinely saves hours of backtracking. Do it.
 
 ---
 
@@ -168,7 +168,7 @@ Trust me on this -- spending five minutes asking Claude Code to plan before a bi
 Create an implementation plan for adding user roles and permissions to this project
 ```
 
-Claude Code analyzes your current codebase, identifies what needs to change, plans the steps, considers edge cases, and returns a detailed plan you can follow -- or push back on.
+Claude Code reads your current codebase, works out what has to change, sequences the steps, thinks through the edge cases, and hands you a plan to follow - or argue with.
 
 ---
 
@@ -259,7 +259,7 @@ Create an optimization strategy for improving dashboard load times.
 
 ### Combining Research and Implementation
 
-Some tasks don't fit neatly into "explore" or "plan" -- they combine research, implementation, testing, and documentation in a single prompt. Claude Code handles these multi-step workflows autonomously when you lay out the steps clearly.
+Some tasks don't fit neatly into "explore" or "plan" - they mix research, implementation, testing, and docs into one job. Claude Code handles these autonomously as long as you lay out the steps clearly.
 
 ---
 
@@ -273,7 +273,7 @@ Some tasks don't fit neatly into "explore" or "plan" -- they combine research, i
 4. Document how it works
 ```
 
-Claude Code searches the web for best practices, reads your current code, implements rate limiting, creates tests, and writes documentation -- all autonomously.
+Claude Code searches the web for the best practices, reads your current code, implements the rate limiting, writes the tests, and documents it - all on its own.
 
 ---
 
@@ -300,9 +300,9 @@ fix each issue, add tests to prevent regression, and document the changes.
 
 ### Why Work in Parallel?
 
-Sometimes you've got three independent questions and no reason to ask them one at a time. Running parallel Claude Code sessions lets multiple tasks proceed simultaneously, so you get all your answers at once instead of waiting in sequence.
+Sometimes you've got three independent questions and no reason to ask them one at a time. Running parallel Claude Code sessions lets the tasks move at once, so all your answers land together instead of in a queue.
 
-**Important:** A single Claude Code session handles one conversation at a time. To run tasks in parallel, you need to open multiple sessions -- either multiple terminal tabs or use `claude -p "task"` in separate terminals.
+**Important:** A single Claude Code session handles one conversation at a time. To run things in parallel you need multiple sessions - either multiple terminal tabs, or `claude -p "task"` in separate terminals.
 
 ---
 
@@ -411,13 +411,13 @@ claude --model <capable-model> -p "Plan the migration from REST to GraphQL"
 
 ### Understanding the Output
 
-Agentic tasks return comprehensive reports -- detailed explanations, file locations, code snippets, recommendations, and warnings about potential issues. The output is meant to be actionable, not just informational.
+Agentic tasks come back with real reports - explanations, file locations, code snippets, recommendations, and warnings about anything that looks off. The output is built to be acted on, not just read.
 
 ---
 
 ### Acting on Plans
 
-Once Claude Code creates a plan, you've got options.
+Once Claude Code hands you a plan, you've got options.
 
 **Implement it:**
 ```text
@@ -439,7 +439,7 @@ I don't understand step 3. Can you explain in more detail?
 
 ### Using Exploration Results
 
-After Claude Code explores your code, put that knowledge to work.
+After Claude Code maps your code, put what it found to work.
 
 **Make informed changes:**
 ```text
@@ -459,7 +459,7 @@ Where is that configured?
 
 ### Be Specific About What You Want
 
-This is the single biggest factor in getting good results. Vague prompts produce vague output.
+This is the single biggest lever on the quality of what you get. Vague in, vague out.
 
 ❌ **Vague:**
 ```text
@@ -491,7 +491,7 @@ targeting the 5 most frequently called endpoints
 
 ### Specify Constraints
 
-Real projects have real limitations. State your constraints upfront:
+Real projects have real limits. State them up front:
 ```text
 Plan implementing real-time notifications, but:
 - Cannot use WebSockets (firewall restrictions)
@@ -503,7 +503,7 @@ Plan implementing real-time notifications, but:
 
 ### Ask for Different Perspectives
 
-When you're weighing options, let Claude Code do the comparison work:
+When you're weighing options, let Claude Code do the comparison:
 ```text
 Create 3 different approaches for adding search to this project:
 1. Simple SQL LIKE queries
@@ -531,7 +531,7 @@ Explore this project and:
 4. List potential areas for improvement
 ```
 
-Then follow up on something that caught your eye:
+Then chase whatever caught your eye:
 ```text
 You mentioned [component]. Can you show me where it's defined?
 ```
@@ -601,7 +601,7 @@ claude -p "Research simple SQL LIKE query performance at scale: setup complexity
 6. Test that logging works
 ```
 
-This would take you hours to do manually. Claude Code handles it in minutes.
+This would eat hours by hand. Claude Code does it in minutes.
 
 ---
 
@@ -625,7 +625,7 @@ Before moving to Module 7, make sure you understand:
 Depends on the task. A simple exploration might take 30 seconds; complex planning can run 1-2 minutes.
 
 **Q: Can I stop a task mid-run?**
-Yes -- press `Esc` to stop, or `Ctrl+C` to cancel. You can also press `Ctrl+B` to send a running task to the background and continue working in the same session. Background tasks auto-deny any permissions that weren't pre-approved.
+Yes -- press `Esc` to stop, or `Ctrl+C` to cancel. You can also press `Ctrl+B` to send a running task to the background and keep working in the same session. Background tasks auto-deny any permissions that weren't pre-approved.
 
 **Q: Does Claude Code make changes to my code during these tasks?**
 Only if you ask it to implement something. Exploration and planning prompts just analyze and suggest.
@@ -634,10 +634,10 @@ Only if you ask it to implement something. Exploration and planning prompts just
 Absolutely. Like any AI, it can get things wrong. Always review the output before acting on it.
 
 **Q: Should I use agentic prompts for simple tasks?**
-No. They add overhead. For quick, straightforward tasks, regular conversation is faster.
+No. They add overhead. For quick, straightforward tasks, a regular conversation is faster.
 
 **Q: Can multiple parallel sessions work on the same files?**
-Fair warning: if parallel sessions modify the same files, you can end up with conflicts. Keep parallel sessions pointed at different parts of the codebase, or use worktree isolation: `claude --worktree feature-name` gives each session its own copy of the repo.
+Careful here: if parallel sessions touch the same files, you can end up with conflicts. Keep them pointed at different parts of the codebase, or use worktree isolation - `claude --worktree feature-name` gives each session its own copy of the repo.
 
 **Q: Can I resume a previous session?**
 Yes. Use `claude --resume` to pick up where you left off, or `claude --resume auth-refactor` to resume a named session. You can name sessions with `/rename`.
@@ -671,7 +671,7 @@ Yes. Use `claude --resume` to pick up where you left off, or `claude --resume au
 
 ---
 
-Next up: Module 7 -- where you'll learn to handle Git operations and version control through Claude Code.
+Next up: Module 7 -- handling Git and version control through Claude Code.
 
 > **Agentic workflows are just the beginning.** The [Advanced Modules](https://payhip.com/b/8E107) cover multi-session orchestration (Module 17) and building custom agentic workflows with autonomous loops and safety safeguards (Module 21).
 
@@ -683,6 +683,6 @@ Next up: Module 7 -- where you'll learn to handle Git operations and version con
 
 <div align="center">
 
-[← Previous Module](module-05-custom-instructions.md) · [🏠 Home](README.md) · [Next Module →](module-07-git-operations.md)
+[← Previous Module](module-05-prompt-engineering.md) · [🏠 Home](README.md) · [Next Module →](module-07-git-operations.md)
 
 </div>

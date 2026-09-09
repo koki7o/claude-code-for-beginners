@@ -16,7 +16,7 @@
 
 ## What You'll Learn
 
-This module is all about connecting your projects to the outside world. You'll use Claude Code's WebSearch and WebFetch tools to pull in documentation, then build real API integrations -- complete with authentication, rate limiting, error handling, and production-ready client wrappers.
+This module is about connecting your projects to the outside world. Use Claude Code's WebSearch and WebFetch tools to pull in documentation, then build real API integrations - auth, rate limiting, error handling, and production-ready client wrappers.
 
 ---
 
@@ -24,7 +24,7 @@ This module is all about connecting your projects to the outside world. You'll u
 
 ### Finding Documentation
 
-You can point Claude Code at the web to find official docs for just about anything:
+Point Claude Code at the web to find official docs for just about anything:
 
 ```text
 Search for the latest Stripe API documentation
@@ -42,7 +42,7 @@ Search for Node.js Express middleware best practices
 
 ### Finding Solutions
 
-Same idea works when you're stuck on a specific problem:
+Same move when you're stuck on a specific problem:
 
 ```text
 Search for how to fix "CORS error in Express API"
@@ -74,7 +74,7 @@ Search for the best npm packages for:
 
 ### Fetching and Understanding Docs
 
-WebFetch goes a step further -- it actually pulls down a page and lets Claude Code reason about the contents. This is incredibly useful for API docs.
+WebFetch goes a step further - it actually pulls down a page and lets Claude Code reason about the contents. Incredibly useful for API docs.
 
 ```text
 Fetch the documentation from https://docs.stripe.com/api/customers/create
@@ -90,7 +90,7 @@ and show me how to list repositories for a user
 
 ### Generating Code from Docs
 
-Here's where things get interesting. You can have Claude Code read the docs and produce a full implementation in one shot:
+Here's where it gets interesting. Have Claude Code read the docs and produce a full implementation in one shot:
 
 ```text
 Fetch the SendGrid API documentation
@@ -211,11 +211,11 @@ Create a GitHub API client with:
 
 ## Lesson 4: Authentication Methods
 
-Authentication is one of those things that sounds simple until you're three hours deep in token refresh logic. The good news: Claude Code handles the boilerplate well, so you can focus on the parts that actually matter.
+Authentication sounds simple until you're three hours deep in token-refresh logic. The good news: Claude Code handles the boilerplate well, so you can spend your attention on the parts that actually matter.
 
 ### API Key Authentication
 
-The simplest approach -- just a key in a header:
+The simplest approach - a key in a header:
 
 ```text
 Create a SendGrid email client that:
@@ -230,7 +230,7 @@ Create a SendGrid email client that:
 
 ### OAuth 2.0 Integration
 
-OAuth is more involved. There are multiple steps, and getting them wrong means silent failures that are annoying to debug.
+OAuth is more involved. Multiple steps, and getting one wrong means silent failures that are a pain to debug.
 
 ```text
 Implement GitHub OAuth flow:
@@ -242,13 +242,13 @@ Implement GitHub OAuth flow:
 6. Handle token refresh
 ```
 
-Claude Code will generate the complete OAuth flow with security best practices baked in.
+Claude Code generates the complete OAuth flow with security best practices baked in.
 
 ---
 
 ### JWT Token Management
 
-JWTs are everywhere in modern APIs. The tricky part isn't using them -- it's managing their lifecycle properly.
+JWTs are everywhere in modern APIs. The tricky part isn't using them - it's managing their lifecycle properly.
 
 ```text
 Create an API client for our internal service that:
@@ -266,7 +266,7 @@ Create an API client for our internal service that:
 
 ### Implementing Client-Side Rate Limiting
 
-This matters more than you think. Hit a rate limit in production and your whole integration falls over. Build the limiter upfront.
+This matters more than it sounds. Hit a rate limit in production and the whole integration falls over. Build the limiter up front.
 
 ```text
 Create a rate limiter class that:
@@ -342,7 +342,7 @@ class APIRateLimiter {
 
 ### Robust API Error Handling
 
-Fair warning: if you skip error handling on API calls, you'll regret it the first time a third-party service goes down. And they all go down eventually.
+Fair warning: skip error handling on API calls and you'll regret it the first time a third-party service goes down. And they all go down eventually.
 
 ```text
 Create comprehensive error handling for API calls that:
@@ -362,7 +362,7 @@ Create comprehensive error handling for API calls that:
 
 ### Retry Logic with Exponential Backoff
 
-The key insight here: retry server errors and network failures, but never retry client errors. A 400 Bad Request won't magically start working on the second try.
+The key insight: retry server errors and network failures, never retry client errors. A 400 Bad Request won't magically start working on the second try.
 
 ```typescript
 async function fetchWithRetry<T>(
@@ -416,7 +416,7 @@ function sleep(ms: number): Promise<void> {
 
 ### Production-Ready API Client
 
-This is where everything comes together. A real API wrapper needs all the pieces -- auth, retries, rate limiting, types, tests. Trust me on this: getting the infrastructure right upfront saves enormous pain later.
+This is where it all comes together. A real API wrapper needs every piece - auth, retries, rate limiting, types, tests. Getting the infrastructure right up front saves enormous pain later.
 
 ```text
 Build a complete Stripe API wrapper with:
@@ -485,7 +485,7 @@ Create a GitHub CLI tool that:
 
 ### Exercise 3: Multi-API Dashboard
 
-This one's a step up -- you're combining multiple APIs into a single service, and each one can fail independently. That's the real challenge.
+A step up - you're combining several APIs into one service, and each can fail on its own. That's the real challenge.
 
 ```text
 Build a daily digest service that fetches:
@@ -559,7 +559,7 @@ Before moving to Module 15, make sure you can:
 
 ## Pro Tip: API Integration Rules
 
-If you're building multiple API integrations, create a rules file to keep them consistent:
+Building multiple API integrations? Create a rules file to keep them consistent:
 
 ```markdown
 <!-- .claude/rules/api-integration.md -->
@@ -575,7 +575,7 @@ globs: ["src/services/**/*.ts", "src/api/**/*.ts"]
 - TypeScript interfaces for all request/response types
 ```
 
-Once this is in place, every API integration Claude Code builds will follow the same patterns automatically.
+Once it's in place, every API integration Claude Code builds follows the same patterns automatically.
 
 ---
 

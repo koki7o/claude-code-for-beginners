@@ -16,7 +16,7 @@
 
 ## What You'll Learn
 
-This module covers the two skills that'll save you the most headaches as a developer: debugging and testing. You'll work through reading error messages, systematic debugging strategies, writing unit and integration tests, test-driven development, and handling performance issues. Trust me on this -- getting comfortable with these early pays off more than almost anything else.
+The two skills that save you the most pain as a developer: debugging and testing. Reading error messages, debugging with a method instead of vibes, writing unit and integration tests, test-driven development, and chasing down performance problems. Getting comfortable with these early pays off more than almost anything else you can learn.
 
 ---
 
@@ -24,11 +24,11 @@ This module covers the two skills that'll save you the most headaches as a devel
 
 ### Anatomy of an Error Message
 
-Error messages tell you four things:
+An error message tells you four things:
 - *What* went wrong
 - *Where* it happened (file and line)
 - *Why* it happened (sometimes)
-- The *stack trace* -- the path the code took to reach the error
+- The *stack trace* -- the path the code took to get there
 
 ---
 
@@ -41,22 +41,22 @@ TypeError: Cannot read properties of undefined (reading 'name')
     at Layer.handle [as handle_request] (/app/node_modules/express/lib/router/layer.js:95:5)
 ```
 
-Here's how to read it:
+How to read it:
 
 **Error Type:** `TypeError` -- the category of error.
 
-**Error Message:** `Cannot read properties of undefined (reading 'name')` -- you're trying to access `.name` on something that's `undefined`.
+**Error Message:** `Cannot read properties of undefined (reading 'name')` -- you're trying to read `.name` off something that's `undefined`.
 
 **Stack Trace:**
 - Line 1: Error occurred in `userService.js` at line 15
 - Line 2: Called from `users.js` at line 42
-- Line 3: Part of Express routing (framework code -- you can usually ignore these lines)
+- Line 3: Part of Express routing (framework code -- usually safe to ignore)
 
 ---
 
 ### Getting Help from Claude Code
 
-Paste the error directly into Claude Code and ask about it:
+Paste the error straight in and ask:
 
 ```text
 I'm getting this error:
@@ -66,7 +66,7 @@ TypeError: Cannot read properties of undefined (reading 'name')
 Can you explain what this means and how to fix it?
 ```
 
-Claude Code will explain the error in plain English, show you the problematic code, suggest fixes, and explain why the error happened in the first place.
+Claude Code explains it in plain English, shows you the offending code, suggests a fix, and tells you why it happened in the first place.
 
 ---
 
@@ -74,7 +74,7 @@ Claude Code will explain the error in plain English, show you the problematic co
 
 ### The Debugging Process
 
-There's a temptation to just start changing things at random when something breaks. Resist that. Follow a process instead.
+When something breaks, the temptation is to start changing things at random. Resist it. Follow a process.
 
 **1. Reproduce the Error**
 ```text
@@ -107,7 +107,7 @@ Run the tests to make sure the fix works and doesn't break anything else.
 
 ### Using Console Logs for Debugging
 
-This is the oldest trick in the book, and it still works great. Ask Claude Code to add debug logs:
+Oldest trick in the book, still works great. Have Claude Code add debug logs:
 
 ```text
 Add console.log statements to the login function to show:
@@ -117,7 +117,7 @@ Add console.log statements to the login function to show:
 - Any intermediate values
 ```
 
-And when you're done debugging, clean up after yourself:
+Then clean up after yourself:
 
 ```text
 Remove all the debug console.log statements I added
@@ -127,7 +127,7 @@ Remove all the debug console.log statements I added
 
 ### Using Debugger Statements
 
-For more control, you can drop a `debugger` statement into your code:
+For finer control, drop a `debugger` statement in:
 
 ```text
 Add a debugger statement in the calculateTotal function
@@ -145,15 +145,15 @@ node inspect app.js
 
 ### What are Unit Tests?
 
-Unit tests verify that individual functions and components work correctly in isolation. They catch bugs early, serve as documentation for how your code should behave, make refactoring much safer, and generally push you toward better code. If you're not writing them yet, this is the module where that changes.
+Unit tests check that individual functions and components work in isolation. They catch bugs early, double as documentation of how your code should behave, make refactoring far safer, and quietly push you toward better code. If you're not writing them yet, this is the module where that changes.
 
 ---
 
 ### Writing Your First Test with Claude Code
 
-Jest is a popular JavaScript testing framework. If you don't have it yet, Claude Code can install it for you -- just ask: "Set up Jest for testing in this project."
+Jest is a popular JavaScript testing framework. Don't have it yet? Claude Code can install it - just ask: "Set up Jest for testing in this project."
 
-Tell Claude Code what you want to test and what cases matter:
+Tell it what to test and which cases matter:
 
 ```text
 Write unit tests for the calculateTotal function using Jest.
@@ -227,7 +227,7 @@ Tests:       4 passed, 4 total
 
 ### Testing Edge Cases
 
-The happy path is easy. Edge cases are where bugs hide. Ask for them explicitly:
+The happy path is easy. Edge cases are where the bugs hide. Ask for them by name:
 
 ```text
 Add tests for edge cases to the calculateTotal tests:
@@ -244,13 +244,13 @@ Add tests for edge cases to the calculateTotal tests:
 
 ### What are Integration Tests?
 
-Integration tests verify that different parts of your application work together correctly -- things like API endpoints, database operations, authentication flows, and third-party API calls. Unit tests check the pieces; integration tests check the wiring between them.
+Integration tests check that different parts of your app work together - API endpoints, database operations, auth flows, third-party calls. Unit tests check the pieces; integration tests check the wiring between them.
 
 ---
 
 ### Writing API Integration Tests
 
-Supertest is a library for testing HTTP endpoints. If you need it, ask Claude Code: "Install Supertest for API testing."
+Supertest is a library for testing HTTP endpoints. Need it? Ask Claude Code: "Install Supertest for API testing."
 
 ```text
 Create integration tests for the /api/users endpoint using Supertest.
@@ -325,7 +325,7 @@ describe('Users API', () => {
 
 ### What is TDD?
 
-The short version: write tests BEFORE writing code.
+Short version: write the tests BEFORE the code.
 
 The process is a tight loop:
 1. Write a failing test
@@ -333,7 +333,7 @@ The process is a tight loop:
 3. Refactor if needed
 4. Repeat
 
-It feels backwards at first. Stick with it -- it gets natural fast, and it forces you to think about what your code should actually do before you start typing.
+It feels backwards at first. Stick with it - it turns natural fast, and it forces you to decide what the code should actually do before you start typing.
 
 ---
 
@@ -356,7 +356,7 @@ Don't write the function yet, just the tests.
 Run the tests
 ```
 
-Tests fail because the function doesn't exist yet. That's exactly what you want.
+Tests fail because the function doesn't exist yet. That's the point.
 
 **Step 3: Implement**
 ```text
@@ -380,7 +380,7 @@ Refactor it to be more clear while keeping tests passing.
 
 ### TDD in Practice: Automating the Workflow
 
-Once you're comfortable with the TDD loop, you can speed it up by telling Claude Code to handle the full cycle:
+Once the loop feels natural, speed it up by handing Claude Code the whole cycle:
 
 ```text
 Using TDD, add an email validation utility:
@@ -396,7 +396,7 @@ Using TDD, add an email validation utility:
 Do all steps in sequence, showing me the test results at each stage.
 ```
 
-**The power move:** You can also set up a continuous TDD workflow where Claude Code watches for test failures and implements fixes automatically:
+**The power move:** set up a continuous TDD loop where Claude Code watches for failures and fixes them on its own:
 
 ```text
 Watch the test suite. Every time a test fails:
@@ -406,7 +406,7 @@ Watch the test suite. Every time a test fails:
 4. Run the full suite to make sure nothing else broke
 ```
 
-This is how TDD becomes second nature -- the tests drive the implementation, and you focus on defining the behavior you want rather than writing the code directly.
+This is how TDD becomes second nature - the tests drive the code, and you spend your attention defining the behavior you want instead of typing the implementation.
 
 ---
 
@@ -418,7 +418,7 @@ This is how TDD becomes second nature -- the tests drive the implementation, and
 TypeError: Cannot read properties of undefined (reading 'x')
 ```
 
-You'll see this one constantly. Debug it with Claude Code:
+You'll meet this one constantly. Debug it with Claude Code:
 
 ```text
 I'm getting "Cannot read properties of undefined (reading 'name')" in the getUser function.
@@ -437,7 +437,7 @@ Promise rejection: Database query failed
 UnhandledPromiseRejectionWarning
 ```
 
-These can be tricky because the error often surfaces far from where the actual problem is. Try:
+These are sneaky because the error often shows up far from the actual problem. Try:
 
 ```text
 I have an unhandled promise rejection in the database query.
@@ -451,7 +451,7 @@ Show me:
 
 ### Scenario 3: Logic Errors
 
-Code runs without crashing but gives wrong results. These are the sneaky ones -- no error message to guide you.
+Code runs fine, results are wrong. The worst kind - no error message to point the way.
 
 ```text
 The shopping cart total is calculating incorrectly.
@@ -467,7 +467,7 @@ Help me debug the calculateTotal function:
 
 ### Scenario 4: Performance Issues
 
-Code works, but it's painfully slow.
+Code works, but it drags.
 
 ```text
 The user dashboard takes 5 seconds to load.
@@ -497,7 +497,7 @@ Found issues:
 Estimated improvement: 5s → 0.5s
 ```
 
-**Pro tip: The build-error-resolver pattern.** When your build breaks and the error is cryptic, try this approach:
+**Pro tip: the build-error-resolver pattern.** When your build breaks with something cryptic, try this:
 
 ```text
 My build is failing with this error: [paste error]
@@ -510,7 +510,7 @@ Don't just fix the immediate error. Instead:
 5. Fix those too if they'd cause the same problem
 ```
 
-This catches the whole class of bug, not just the one instance you happened to notice.
+Fixes the whole class of bug, not just the one instance you happened to trip over.
 
 ---
 
@@ -551,7 +551,7 @@ Write additional tests to cover:
 
 ### Testing Standards with Rules
 
-You can codify your testing standards so Claude Code enforces them automatically. Create a testing rule file:
+You can codify your testing standards so Claude Code enforces them for you. Create a testing rule file:
 
 **Example (.claude/rules/testing.md):**
 ```markdown
@@ -571,13 +571,13 @@ globs: ["**/*.test.*", "**/*.spec.*"]
 - Clean up any test data in afterEach/afterAll hooks
 ```
 
-When Claude Code writes or modifies tests, it automatically follows these rules for every matching file. No more inconsistent test quality across the codebase.
+Now whenever Claude Code writes or edits a test, it follows these rules automatically for every matching file. No more test quality that drifts from one corner of the codebase to another.
 
 ---
 
 ### Mocking External Dependencies
 
-You don't want your tests actually sending emails or hitting third-party APIs. That's where mocking comes in.
+You don't want your tests actually firing emails or hammering a third-party API. That's what mocking is for.
 
 ```text
 Create tests for the sendEmail function, but mock the actual email sending.
@@ -713,37 +713,37 @@ Before moving to Module 9, make sure you can:
 ## Common Questions (FAQ)
 
 **Q: How much test coverage is enough?**
-Aim for 80%+, but focus on critical paths. 100% coverage doesn't mean zero bugs -- it just means every line ran at least once.
+Aim for 80%+, but focus on critical paths. 100% coverage doesn't mean zero bugs - it just means every line ran at least once.
 
 **Q: Should I test everything?**
-Focus on business logic, edge cases, and error handling. Don't bother testing framework code or trivial getters/setters.
+Focus on business logic, edge cases, and error handling. Skip framework code and trivial getters/setters.
 
 **Q: How do I debug intermittent bugs?**
-Add extensive logging, try to reproduce consistently, and check for race conditions. These are genuinely hard -- fair warning.
+Add heavy logging, work to reproduce it consistently, and check for race conditions. These are genuinely hard - fair warning.
 
 **Q: What's the difference between unit and integration tests?**
-Unit tests check functions in isolation. Integration tests check how pieces work together. You need both.
+Unit tests check functions in isolation. Integration tests check how the pieces work together. You want both.
 
 **Q: Should I write tests for old code that has none?**
-Add tests when you modify that code. Don't spend weeks retroactively testing things that already work.
+Add tests when you modify that code. Don't spend weeks retroactively testing things that already work fine.
 
 ---
 
 ## Pro Tips
 
 1. **Read errors carefully** -- the answer is often in the message itself
-2. **Add tests as you code** -- leaving testing for later means it won't happen
-3. **Use TDD for complex logic** -- it saves time in the long run, even though it feels slower at first
-4. **Debug systematically** -- randomly changing things is not debugging
-5. **Keep tests fast** -- slow test suites don't get run
-6. **Mock wisely** -- mock I/O and external services, not business logic
-7. **Test behavior, not implementation** -- your tests should survive a refactor
+2. **Add tests as you code** -- "later" is where testing goes to die
+3. **Use TDD for complex logic** -- it saves time in the long run, even when it feels slower at first
+4. **Debug systematically** -- changing things at random is not debugging
+5. **Keep tests fast** -- a slow suite is a suite nobody runs
+6. **Mock wisely** -- mock I/O and external services, not your business logic
+7. **Test behavior, not implementation** -- good tests survive a refactor
 
 ---
 
-> **Want to build your own debugging tools?** The [Real Projects Pack](https://payhip.com/b/dFXWO) includes a Bug Finder Assistant and Test Case Generator -- both powered by the techniques you learned here.
+> **Want to build your own debugging tools?** The [Real Projects Pack](https://payhip.com/b/dFXWO) includes a Bug Finder Assistant and Test Case Generator -- both powered by the techniques you just learned.
 
-Next up: Module 9 -- where you'll pull everything together and build a complete, real-world project from scratch.
+Next up: Module 9 -- where you pull everything together and build a complete, real-world project from scratch.
 
 ---
 

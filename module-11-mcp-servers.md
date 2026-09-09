@@ -8,7 +8,7 @@
 
 **Learn to use Model Context Protocol servers to give Claude Code new capabilities**
 
-[← Previous](module-10-testing-and-debugging.md) · [🏠 Home](README.md) · [Next →](module-12-skills-and-hooks.md)
+[← Previous](module-10-workflow-best-practices.md) · [🏠 Home](README.md) · [Next →](module-12-skills-and-hooks.md)
 
 </div>
 
@@ -16,7 +16,7 @@
 
 ## What You'll Learn
 
-MCP is how Claude Code goes from a general-purpose coding assistant to something tailored specifically to your stack, your tools, your workflow. This module covers what MCP actually is, how to install and configure servers, which ones are worth your time (and which aren't), and how to build your own from scratch.
+MCP is how Claude Code goes from a general-purpose coding assistant to something shaped around *your* stack, *your* tools, *your* workflow. What MCP actually is, how to install and configure servers, which ones are worth your time (and which aren't), and how to build your own from scratch.
 
 ---
 
@@ -24,17 +24,17 @@ MCP is how Claude Code goes from a general-purpose coding assistant to something
 
 ### What is MCP?
 
-**Model Context Protocol (MCP)** is a standard way to give Claude Code access to external data and services. Here's the deal: Claude Code is already good at a lot of things out of the box, but MCP is how you make it great at *your* specific things.
+**Model Context Protocol (MCP)** is a standard way to give Claude Code access to external data and services. Claude Code is already good at a lot out of the box - MCP is how you make it great at *your* specific things.
 
-Think of MCP servers as plugins. Each one gives Claude a new capability -- maybe it's the ability to query your database, maybe it's pulling live documentation, maybe it's driving a browser. They all follow the same protocol, so once you understand how one works, you understand how they all work.
+Think of MCP servers as plugins. Each gives Claude a new capability - querying your database, pulling live docs, driving a browser. They all speak the same protocol, so once you understand one, you understand all of them.
 
 ---
 
 ### Why Use MCP?
 
-Without MCP, you're stuck with Claude Code's built-in tools. That's fine for general coding work, but the moment you need to hit your company's database, check a deployment status, or pull docs for some niche library, you're back to copy-pasting context manually.
+Without MCP you're limited to Claude Code's built-in tools. Fine for general work - but the moment you need to hit your company's database, check a deployment, or pull docs for some niche library, you're back to copy-pasting context by hand.
 
-With MCP, Claude can reach directly into your databases, talk to your APIs, pull live documentation, and integrate with tools like GitHub and Notion -- all without you playing middleman. Once you start using MCP servers, working without them feels painful.
+With MCP, Claude reaches straight into your databases, talks to your APIs, pulls live documentation, and plugs into tools like GitHub and Notion - no middleman. Start using MCP servers and working without them starts to feel painful.
 
 ---
 
@@ -42,7 +42,7 @@ With MCP, Claude can reach directly into your databases, talk to your APIs, pull
 
 ### Configuration Files
 
-MCP servers live in simple JSON config files. There are two places they can go:
+MCP servers live in simple JSON config files. Two places they can go:
 
 Project-level (shared with your team via version control):
 ```text
@@ -54,7 +54,7 @@ User-level (your personal global config):
 ~/.claude/settings.json    # under the "mcpServers" key
 ```
 
-Most of the time you want project-level config. That way everyone on the team gets the same MCP servers when they work on the project. Use the user-level config for servers you want available everywhere, regardless of which project you're in.
+Most of the time you want project-level config, so everyone on the team gets the same servers when they open the project. Use user-level for servers you want everywhere, no matter which project you're in.
 
 Here's what each looks like in practice:
 
@@ -86,34 +86,34 @@ User-level (`~/.claude/settings.json`):
 
 ### Installing Your First MCP Server
 
-The easiest way to get started is to just ask Claude Code for help:
+Easiest way to start is to just ask Claude Code:
 
 ```text
 Help me install the filesystem MCP server.
 I want to give you access to my /home/user/projects directory.
 ```
 
-Claude Code will show you exactly what configuration to add, help you edit the right file, and verify that everything is wired up correctly. No need to fumble through docs on your own.
+Claude Code shows you exactly what config to add, helps you edit the right file, and checks it's wired up correctly. No fumbling through docs on your own.
 
 ---
 
 ### MCP Server Settings
 
-A couple of settings worth knowing about:
+A couple of settings worth knowing:
 
-`enableAllProjectMcpServers` -- Set this to `true` in your user settings if you're tired of Claude Code asking you to approve project MCP servers every time. Only do this if you trust the projects you work on.
+`enableAllProjectMcpServers` -- set this to `true` in your user settings if you're tired of approving project MCP servers every time. Only do this if you trust the projects you work on.
 
-You can also allowlist or blocklist specific MCP servers so you have fine-grained control over which ones are permitted to run. This is handy if your team adds servers to `.mcp.json` but you don't want all of them active on your machine.
+You can also allowlist or blocklist specific servers, so you've got fine-grained control over which ones are allowed to run. Handy when your team drops servers into `.mcp.json` but you don't want all of them active on your machine.
 
 ---
 
 ## Lesson 3: Common MCP Servers
 
-Here are the servers you'll see mentioned most often. These are the "official" ones from the MCP project itself.
+The servers you'll see mentioned most. These are the "official" ones from the MCP project itself.
 
 ### Filesystem MCP Server
 
-This one gives Claude direct access to files and directories outside the current project. Useful when you need Claude to work across multiple directories or access files that aren't in your repo.
+Gives Claude direct access to files and directories outside the current project. Useful when you need Claude working across multiple directories or touching files that aren't in your repo.
 
 ```json
 {
@@ -136,7 +136,7 @@ Using the filesystem MCP server, list all Python files in my projects directory
 
 ### PostgreSQL MCP Server
 
-If your app talks to Postgres, this server lets Claude query it directly. No more dumping query results into the chat -- Claude can just go look.
+If your app talks to Postgres, this server lets Claude query it directly. No more dumping query results into the chat - Claude just goes and looks.
 
 ```json
 {
@@ -158,7 +158,7 @@ Query the users table and show me the schema
 
 ### SQLite MCP Server
 
-Same idea as the Postgres server, but for SQLite. Great for local dev databases or smaller projects where Postgres would be overkill.
+Same idea as the Postgres server, for SQLite. Great for local dev databases or smaller projects where Postgres would be overkill.
 
 ```json
 {
@@ -180,7 +180,7 @@ Find all tables with user data
 
 ### GitHub MCP Server
 
-This one connects Claude to the GitHub API. Listing repos, reading issues, creating PRs -- all without leaving your terminal.
+Connects Claude to the GitHub API. Listing repos, reading issues, creating PRs - all without leaving your terminal.
 
 ```json
 {
@@ -207,11 +207,11 @@ Using the GitHub MCP server:
 
 ## Lesson 4: The MCP Servers That Actually Matter
 
-There are hundreds of MCP servers floating around on npm and GitHub. Most of them you'll never need. Don't waste time installing every shiny new one you see on social media. Focus on the ones that solve real, daily problems.
+There are hundreds of MCP servers floating around npm and GitHub. Most you'll never need. Don't burn time installing every shiny one you see on social media - focus on the ones that solve real, daily problems.
 
 ### Context7 - Live Documentation Lookup
 
-This matters more than you think. Context7 pulls live, version-specific documentation so Claude stops hallucinating API signatures. You know that moment when Claude confidently gives you a function call that doesn't exist in the version you're using? Context7 fixes that.
+This one matters more than it sounds. Context7 pulls live, version-specific documentation so Claude stops hallucinating API signatures. You know that moment when Claude confidently hands you a function call that doesn't exist in your version? Context7 fixes that.
 
 ```json
 {
@@ -224,13 +224,13 @@ This matters more than you think. Context7 pulls live, version-specific document
 }
 ```
 
-Trust me on this one -- install it first, thank me later.
+Install it first, thank me later.
 
 ---
 
 ### Playwright - Browser Automation
 
-Need to test a web app? Scrape a page? Verify that your frontend changes actually work? Playwright gives Claude the ability to drive a real browser. It can click buttons, fill forms, take screenshots, and assert on page content.
+Need to test a web app? Scrape a page? Confirm your frontend changes actually work? Playwright gives Claude a real browser to drive. It can click buttons, fill forms, take screenshots, and assert on page content.
 
 ```json
 {
@@ -243,13 +243,13 @@ Need to test a web app? Scrape a page? Verify that your frontend changes actuall
 }
 ```
 
-If you do any frontend work at all, this one should be on your short list.
+If you do any frontend work at all, put this one on the short list.
 
 ---
 
 ### Claude in Chrome - Real Browser Debugging
 
-This is different from Playwright, and most people skip it but shouldn't. Instead of automating a headless browser, Claude in Chrome gives Claude access to your *actual* browser context -- the page you're looking at right now, the console errors, the network requests. When you're debugging a frontend issue and you want Claude to see exactly what you see, this is the tool.
+Different from Playwright, and most people skip it when they shouldn't. Instead of automating a headless browser, Claude in Chrome gives Claude your *actual* browser context - the page you're looking at right now, the console errors, the network requests. When you're debugging a frontend issue and you want Claude to see exactly what you see, this is the tool.
 
 ```json
 {
@@ -268,7 +268,7 @@ This is different from Playwright, and most people skip it but shouldn't. Instea
 
 ### DeepWiki - GitHub Repo Documentation
 
-Ever needed to understand how some open-source library works internally? DeepWiki gets you documentation for any GitHub repo without leaving your session. Instead of tab-switching and reading through READMEs, just ask Claude and let DeepWiki fetch the details.
+Ever needed to understand how some open-source library works under the hood? DeepWiki gets you documentation for any GitHub repo without leaving your session. Instead of tab-switching through READMEs, just ask Claude and let DeepWiki fetch the details.
 
 ```json
 {
@@ -285,7 +285,7 @@ Ever needed to understand how some open-source library works internally? DeepWik
 
 ### Quality Over Quantity
 
-Resist the urge to install 20 MCP servers at once. Each one adds startup time and cognitive overhead. Start with Context7 -- accurate docs matter more than anything -- add Playwright or Chrome when you're doing frontend work, and bring in others as you actually need them. Three well-chosen servers beat fifteen that just sit there.
+Resist the urge to install 20 servers at once. Each one adds startup time and mental overhead. Start with Context7 - accurate docs beat everything - add Playwright or Chrome when you're doing frontend work, and pull in others as you actually need them. Three well-chosen servers beat fifteen that just sit there.
 
 ---
 
@@ -293,9 +293,9 @@ Resist the urge to install 20 MCP servers at once. Each one adds startup time an
 
 ### Why Create Custom Servers?
 
-The pre-built servers cover a lot of ground, but eventually you'll hit something specific to your world -- your company's internal APIs, a custom database, some domain-specific workflow that no open-source server is going to handle. That's when you build your own.
+The pre-built servers cover a lot, but eventually you hit something specific to your world - your company's internal APIs, a custom database, some domain workflow no open-source server is going to handle. That's when you build your own.
 
-The good news: it's not hard. An MCP server is just a small program that speaks the MCP protocol over standard I/O. If you can write a Node script, you can write an MCP server.
+Good news: it's not hard. An MCP server is just a small program that speaks the MCP protocol over standard I/O. If you can write a Node script, you can write an MCP server.
 
 ---
 
@@ -303,17 +303,17 @@ The good news: it's not hard. An MCP server is just a small program that speaks 
 
 Every MCP server can provide three things:
 
-- **Tools** -- Functions that Claude can call. This is the one you'll use most.
-- **Resources** -- Data that Claude can read on demand.
-- **Prompts** -- Predefined prompt templates for common workflows.
+- **Tools** -- functions Claude can call. The one you'll use most.
+- **Resources** -- data Claude can read on demand.
+- **Prompts** -- predefined prompt templates for common workflows.
 
-You don't have to implement all three. Most custom servers start with just a tool or two and grow from there.
+You don't have to implement all three. Most custom servers start with a tool or two and grow from there.
 
 ---
 
 ### Creating a Simple MCP Server
 
-Here's a real example. Say you want Claude to be able to check the weather. This is what the full server looks like:
+A real example. Say you want Claude to check the weather. Here's the whole server:
 
 ```javascript
 // weather-mcp-server.js
@@ -355,13 +355,13 @@ const transport = new StdioServerTransport();
 await server.connect(transport);
 ```
 
-Notice the pattern: you create a `McpServer`, register tools on it with `server.tool()`, set up a `StdioServerTransport`, and connect. That's the whole structure. Everything else is just your business logic inside the tool handler.
+Notice the pattern: create a `McpServer`, register tools on it with `server.tool()`, set up a `StdioServerTransport`, connect. That's the whole skeleton. Everything else is just your business logic inside the tool handler.
 
 ---
 
 ### Configuring Your Custom Server
 
-Once your server file exists, point Claude Code at it in your `.mcp.json`:
+Once the server file exists, point Claude Code at it in your `.mcp.json`:
 
 ```json
 {
@@ -387,7 +387,7 @@ Now just talk to Claude like normal:
 Using the weather MCP server, what's the weather in San Francisco?
 ```
 
-Claude sees the tool, calls it, gets the result, and gives you an answer. No special syntax required.
+Claude sees the tool, calls it, gets the result, answers. No special syntax.
 
 ---
 
@@ -395,7 +395,7 @@ Claude sees the tool, calls it, gets the result, and gives you an answer. No spe
 
 ### Resources
 
-Resources let you expose data that Claude can pull in on demand -- think of them as read-only endpoints. Here's how you register one with `server.resource()`:
+Resources let you expose data Claude can pull in on demand - read-only endpoints, basically. Register one with `server.resource()`:
 
 ```javascript
 server.resource(
@@ -413,13 +413,13 @@ server.resource(
 );
 ```
 
-This is particularly useful for data that doesn't change often -- employee directories, configuration docs, reference tables. Claude can pull it in when needed without you having to paste it into the conversation.
+Great for data that doesn't change often - employee directories, config docs, reference tables. Claude pulls it in when it needs it, without you pasting it into the conversation.
 
 ---
 
 ### Prompts
 
-Prompts are predefined templates that standardize how Claude approaches certain tasks. If your team has a specific code review process, for example, you can bake it right into an MCP server:
+Prompts are predefined templates that standardize how Claude approaches a task. If your team has a specific code review process, bake it right into an MCP server:
 
 ```javascript
 server.prompt(
@@ -441,7 +441,7 @@ server.prompt(
 );
 ```
 
-This way, everyone on the team gets the same review criteria, and nobody has to remember the full prompt each time.
+Now everyone on the team gets the same review criteria, and nobody has to remember the full prompt each time.
 
 ---
 
@@ -489,13 +489,13 @@ const transport = new StdioServerTransport();
 await server.connect(transport);
 ```
 
-One server, one tool, and now Claude can look up customer data whenever you need it. You can see how easy it'd be to add more tools -- `query_orders`, `get_customer_by_id`, whatever your workflow needs.
+One server, one tool, and now Claude can look up customer data whenever you need it. You can see how easy it'd be to add more - `query_orders`, `get_customer_by_id`, whatever your workflow needs.
 
 ---
 
 ### Example 2: Internal API MCP
 
-Here's a more ambitious one. Say your company has an internal deployment API and you want Claude to be able to kick off deploys:
+A more ambitious one. Say your company has an internal deployment API and you want Claude to kick off deploys:
 
 ```javascript
 server.tool(
@@ -528,7 +528,7 @@ server.tool(
 );
 ```
 
-Now you can say "deploy the auth service version 2.3.1" and Claude handles the API call. Powerful stuff -- but make sure you've got proper guardrails in place before giving Claude access to production deployments. Which brings us to...
+Now you can say "deploy the auth service version 2.3.1" and Claude handles the API call. Powerful - but get proper guardrails in place before you hand Claude the keys to production deploys. Which brings us to...
 
 ---
 
@@ -536,19 +536,19 @@ Now you can say "deploy the auth service version 2.3.1" and Claude handles the A
 
 ### Security
 
-Fair warning: this is the one section where I won't be casual. Getting security wrong with MCP servers can bite you hard.
+Fair warning: this is the one section I won't be casual about. Getting security wrong with MCP servers can hurt.
 
 - Use environment variables for secrets. Never hardcode API keys or database passwords in your server code or config files.
-- Validate all inputs. Zod schemas help, but think about what happens if someone -- or Claude -- passes unexpected values.
-- Limit access to sensitive operations. Just because you *can* give Claude access to your production database doesn't mean you should give it write access.
-- Use authentication and authorization. If your MCP server talks to internal APIs, make sure it uses proper auth tokens with minimal required permissions.
-- Audit log everything. When Claude takes actions through your MCP server, you want a record of what happened and when.
+- Validate all inputs. Zod schemas help, but think about what happens if someone - or Claude - passes an unexpected value.
+- Limit access to sensitive operations. Just because you *can* give Claude write access to production doesn't mean you should.
+- Use authentication and authorization. If your server talks to internal APIs, use proper auth tokens with minimal permissions.
+- Audit log everything. When Claude takes action through your server, you want a record of what happened and when.
 
 ---
 
 ### Error Handling
 
-Things will go wrong -- APIs will be down, databases will time out, inputs will be weird. Don't let your server crash. Wrap your tool handlers in try/catch and return useful error messages so Claude can tell the user what went wrong:
+Things will go wrong - APIs go down, databases time out, inputs get weird. Don't let your server crash. Wrap tool handlers in try/catch and return useful error messages so Claude can tell the user what happened:
 
 ```javascript
 server.tool(
@@ -570,18 +570,18 @@ server.tool(
 );
 ```
 
-The `isError: true` flag tells Claude the tool call failed, so it can respond appropriately instead of trying to parse garbage output.
+The `isError: true` flag tells Claude the call failed, so it responds sensibly instead of trying to parse garbage output.
 
 ---
 
 ### Performance
 
-Nobody wants Claude sitting there spinning for 30 seconds while your MCP server chokes. Keep things snappy:
+Nobody wants Claude spinning for 30 seconds while your server chokes. Keep it snappy:
 
-- Cache frequently accessed data. If you're pulling the same reference table every time, cache it.
-- Use connection pooling for databases. Don't open a new connection on every tool call.
-- Implement timeouts. If an API call hangs, fail fast rather than blocking forever.
-- Limit result sizes. Returning 10,000 rows to Claude doesn't help anyone. Paginate or summarize.
+- Cache frequently accessed data. Pulling the same reference table every time? Cache it.
+- Use connection pooling for databases. Don't open a fresh connection on every tool call.
+- Implement timeouts. If an API call hangs, fail fast instead of blocking forever.
+- Limit result sizes. Returning 10,000 rows to Claude helps no one. Paginate or summarize.
 
 ---
 
@@ -599,7 +599,7 @@ Nobody wants Claude sitting there spinning for 30 seconds while your MCP server 
 5. Ask Claude to look up docs for a library you use
 ```
 
-This should take about 10 minutes and will immediately show you the value of MCP. If Context7 saves you from even one hallucinated API call, it's already paid for itself.
+About 10 minutes, and it shows you the value of MCP immediately. If Context7 saves you from even one hallucinated API call, it's already paid for itself.
 
 ---
 
@@ -619,7 +619,7 @@ Create an MCP server that:
 Test it with Claude Code
 ```
 
-This is a great starter project because it's simple enough to finish in one sitting but complex enough to teach you the full pattern -- setting up the server, registering multiple tools, handling reads and writes, and wiring it all into Claude Code.
+A great starter because it's simple enough to finish in one sitting but complete enough to teach the full pattern - setting up the server, registering multiple tools, handling reads and writes, and wiring it into Claude Code.
 
 ---
 
@@ -627,13 +627,13 @@ This is a great starter project because it's simple enough to finish in one sitt
 
 **Task:** Create something you'll actually use
 
-Pick one of these, or come up with your own:
+Pick one, or invent your own:
 - A todo list manager that connects to a file or database
 - A git helper with shortcuts for common git operations
 - A project template generator for spinning up new repos
 - A code snippet library so Claude can pull from your team's patterns
 
-The goal here isn't just practice -- it's to build something that makes your real workflow better. Pick the one that solves a problem you actually have.
+The goal isn't just practice - it's to build something that makes your real workflow better. Pick the one that solves a problem you actually have.
 
 ---
 
@@ -664,15 +664,15 @@ Essential community servers:
 - @anthropic/claude-in-chrome-mcp-server -- browser debugging
 - @anthropic/mcp-server-deepwiki -- GitHub repo docs
 
-You'll find many more on npm and GitHub -- search for "mcp-server" -- but remember, quality over quantity. Install what you need, not what looks cool on Twitter.
+You'll find many more on npm and GitHub - search "mcp-server" - but remember: quality over quantity. Install what you need, not what looks cool on Twitter.
 
 ---
 
 ## What's Next?
 
-You now know how to extend Claude Code with MCP servers, which means you're no longer limited to what Claude can do out of the box. You can connect it to any database, wire it up to any API, and build custom tools for your exact workflow.
+You now know how to extend Claude Code with MCP servers, which means you're no longer boxed into what Claude does out of the box. Connect it to any database, wire it to any API, build custom tools for your exact workflow.
 
-Next up: Module 12 -- Customizing Claude Code. That one covers CLAUDE.md, Skills, Commands, Hooks, and Agents, which is where you really make Claude Code your own.
+Next up: Module 12 -- Customizing Claude Code. CLAUDE.md, Skills, Commands, Hooks, and Agents - where you really make Claude Code your own.
 
 > **Ready to build production-grade MCP servers?** The [Advanced Modules](https://payhip.com/b/8E107) dedicate an entire module (Module 18) to custom MCP server development -- protocol internals, testing, performance tuning, and publishing to npm.
 
@@ -680,6 +680,6 @@ Next up: Module 12 -- Customizing Claude Code. That one covers CLAUDE.md, Skills
 
 <div align="center">
 
-[← Previous Module](module-10-testing-and-debugging.md) · [🏠 Home](README.md) · [Next Module →](module-12-skills-and-hooks.md)
+[← Previous Module](module-10-workflow-best-practices.md) · [🏠 Home](README.md) · [Next Module →](module-12-skills-and-hooks.md)
 
 </div>

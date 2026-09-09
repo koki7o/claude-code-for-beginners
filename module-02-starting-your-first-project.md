@@ -16,7 +16,7 @@
 
 ## What You'll Learn
 
-This module covers the main ways to kick off a project with Claude Code -- starting from scratch, working with code that already exists, using templates, and cloning repos. You'll also get a feel for when each approach makes sense.
+There's more than one way to start a project. Four, really: from an empty folder, from code that already exists, from a template, or from a cloned repo. This module walks all four and, more usefully, when to reach for each.
 
 ---
 
@@ -24,29 +24,29 @@ This module covers the main ways to kick off a project with Claude Code -- start
 
 ### What Does "From Scratch" Mean?
 
-Starting from scratch means you begin with an empty directory and let Claude Code help you build everything from the ground up. No boilerplate, no starter code -- just you and a blank canvas.
+An empty directory and nothing else. No boilerplate, no starter code - just you, Claude Code, and a blank canvas you fill in together.
 
 ### When to Start from Scratch
 
 - You're building something brand new
 - You want to understand how every piece fits together
-- You need something very specific that templates won't cover
-- You're prototyping an idea quickly
+- You need something specific that no template covers
+- You're prototyping an idea fast
 
 ### How to Start from Scratch
 
 #### Step 1: Create Your Project Directory
 
-Always start by creating a dedicated folder for your project:
+Always give a project its own folder:
 
 ```bash
 mkdir my-awesome-project
 cd my-awesome-project
 ```
 
-`mkdir` creates a new folder; `cd` moves into it. (These were covered in Module 1.)
+`mkdir` creates the folder; `cd` moves into it. (Both from Module 1.)
 
-This keeps your code organized and isolated from everything else on your machine.
+This keeps your code organized and walled off from everything else on your machine.
 
 #### Step 2: Start Claude Code
 
@@ -54,11 +54,11 @@ This keeps your code organized and isolated from everything else on your machine
 claude
 ```
 
-You're now ready to build.
+You're ready to build.
 
 #### Step 3: Describe What You Want to Build
 
-Be as specific or as general as you like:
+As specific or as loose as you like:
 
 **Simple Approach:**
 ```
@@ -101,27 +101,27 @@ Features:
 Please start with the project structure and package.json
 ```
 
-Honestly, starting simple is almost always the right call. You can layer on features later, and it's way easier to build incrementally than to debug a huge initial prompt.
+Honestly, starting simple is almost always the right call. You can layer features on later, and building up beats debugging one giant opening prompt every time.
 
 #### Step 4: Let Claude Code Build
 
-After you send your request, Claude Code will:
-1. Ask clarifying questions if needed
+Once you send your request, Claude Code will:
+1. Ask clarifying questions if it needs to
 2. Create the project structure
 3. Set up configuration files (these describe your project and its dependencies)
 4. Write initial code
 5. Explain what it created
 
-Watch as it uses different tools:
+Watch which tools it reaches for:
 - **Write** -- creating new files
 - **Bash** -- running commands like `npm init`
 - **Read** -- checking what it created
 
-Don't worry about understanding these tools in detail yet -- Module 3 covers them thoroughly.
+Don't sweat the tools yet - Module 3 covers them properly.
 
 #### Step 5: Review the Structure
 
-Once Claude Code finishes, ask:
+When it finishes, ask:
 
 ```
 Can you show me the project structure?
@@ -141,7 +141,7 @@ my-awesome-project/
 └── README.md
 ```
 
-Your structure may look different depending on the technologies Claude Code chooses. That's fine.
+Yours might look different depending on the tech Claude Code picked. That's fine.
 
 #### Step 6: Test It
 
@@ -156,7 +156,7 @@ Claude Code will:
 
 #### Step 7: Set Up Project Memory
 
-Once your project is working, give Claude Code some context about your preferences:
+Once it's working, hand Claude Code some context about how you like to work:
 
 ```
 Create a CLAUDE.md file for this project with:
@@ -165,7 +165,7 @@ Create a CLAUDE.md file for this project with:
 - How to run and test the project
 ```
 
-This file lives in your project root and helps Claude Code maintain consistency across sessions. It's optional at this stage, but gets more valuable as your project grows. We'll go deep on this in Module 12.
+This file lives in your project root and keeps Claude Code consistent across sessions. Optional this early, but it earns its keep as the project grows. We go deep on it in Module 12.
 
 ---
 
@@ -173,14 +173,14 @@ This file lives in your project root and helps Claude Code maintain consistency 
 
 ### What is an Existing Codebase?
 
-An existing codebase is a project that someone else built -- or that you built a while back -- that you now want to modify, fix, or just understand.
+Code someone else wrote - or code past-you wrote and half-forgot - that you now need to change, fix, or just understand.
 
 ### When to Work with Existing Code
 
-This comes up more often than you'd think:
+More often than you'd expect:
 
 - Contributing to open source
-- Joining a team project already in progress
+- Joining a team project already in motion
 - Maintaining legacy code nobody wants to touch
 - Learning from real-world examples
 - Debugging someone else's code
@@ -201,17 +201,17 @@ claude
 
 #### Step 3: Understand the Codebase
 
-Start by asking Claude Code to explore:
+Before you change anything, have it look around:
 
 ```
 Can you help me understand what this project does? Please explore the codebase and give me an overview.
 ```
 
-Claude Code will read key files, analyze the project structure, and come back with a summary covering what the project does, the technologies it uses, its main components, and how to run it. (You'll learn more about the specific tools it uses in Module 3.)
+Claude Code reads the key files, works out the structure, and comes back with a summary: what the project does, what it's built with, its main pieces, and how to run it. (More on the specific tools it uses in Module 3.)
 
 #### Step 4: Find Specific Code
 
-Need to find something? Just ask:
+Need to find something? Ask:
 
 ```
 Where is the user authentication logic?
@@ -223,17 +223,17 @@ Or:
 Find all files that handle database operations
 ```
 
-Claude Code will search through your files to find the relevant code.
+Claude Code searches your files and points you at the relevant code.
 
 #### Step 5: Make Changes
 
-Once you understand the code, make modifications:
+Once you get the lay of the land, make your change:
 
 ```
 Add a new endpoint to the API that returns user statistics
 ```
 
-Claude Code will find the right file, add the code in the correct place, follow existing patterns, and explain what it did.
+Claude Code finds the right file, drops the code in the right place, follows the patterns already there, and tells you what it did.
 
 #### Step 6: Test Your Changes
 
@@ -247,7 +247,7 @@ Run the tests to make sure I didn't break anything
 
 ### What are Templates?
 
-Templates are pre-built project structures that give you a head start -- basically blueprints that handle the boring setup so you can focus on the interesting parts.
+Pre-built project structures that hand you a head start - blueprints that take care of the boring setup so you can get to the interesting part.
 
 ### Common Templates
 
@@ -256,7 +256,7 @@ Templates are pre-built project structures that give you a head start -- basical
 - **nest-cli** -- NestJS applications
 - **create-next-app** -- Next.js projects
 
-Don't worry if you don't recognize these names. They're popular tools in the JavaScript ecosystem. Claude Code can help you pick the right one for your project.
+Don't recognize these? No problem - they're popular tools in the JavaScript world, and Claude Code can help you pick the right one.
 
 ### How to Use Templates
 
@@ -284,7 +284,7 @@ Set up a basic Express server with TypeScript, organized with:
 - Config folder
 ```
 
-Claude Code will create the structure from scratch.
+Claude Code builds the structure from scratch.
 
 #### Method 3: Use Framework CLIs
 
@@ -299,7 +299,7 @@ npx create-next-app@latest --typescript --tailwind
 
 ### Customizing Templates
 
-After scaffolding, you can keep going:
+Once it's scaffolded, keep going:
 
 ```
 Add authentication using JWT
@@ -314,7 +314,7 @@ Add a Docker configuration
 
 ### What is Cloning?
 
-Cloning means downloading a copy of a project from the internet. Projects are typically stored on hosting platforms like GitHub or GitLab. Don't worry about the details of Git yet -- Module 7 covers that. For now, just think of cloning as "downloading a project to your computer."
+Downloading a copy of a project from the internet. Projects usually live on hosting platforms like GitHub or GitLab. Don't worry about the Git details yet - Module 7 handles that. For now, "cloning" just means "pulling a project onto your computer."
 
 ### When to Clone
 
@@ -331,7 +331,7 @@ Say you want to clone: `https://github.com/user/awesome-project`
 
 #### Step 2: Clone It
 
-You can either clone manually:
+Do it by hand:
 
 ```bash
 git clone https://github.com/user/awesome-project
@@ -339,7 +339,7 @@ cd awesome-project
 claude
 ```
 
-Or ask Claude Code to do it:
+Or let Claude Code handle it:
 
 ```bash
 claude
@@ -350,7 +350,7 @@ Then:
 Clone the repository https://github.com/user/awesome-project and help me set it up
 ```
 
-Claude Code will run `git clone`, read the README, install dependencies, and explain how to run the project.
+Claude Code runs `git clone`, reads the README, installs dependencies, and explains how to run it.
 
 #### Step 3: Understand the Project
 
@@ -368,7 +368,7 @@ Please explore this codebase and explain:
 Help me set up this project. Install dependencies and configure any necessary environment variables.
 ```
 
-Claude Code will check for package.json, requirements.txt, etc., install dependencies, look for .env.example files, and guide you through configuration.
+Claude Code checks for package.json, requirements.txt, and the like, installs dependencies, looks for .env.example files, and walks you through the config.
 
 #### Step 5: Make Your First Contribution
 
@@ -376,7 +376,7 @@ Claude Code will check for package.json, requirements.txt, etc., install depende
 I want to add a feature that [describe feature]. Where should I start?
 ```
 
-Claude Code will analyze the codebase, suggest the right files to modify, help you implement the feature, and guide you through testing.
+Claude Code reads the codebase, points you at the right files, helps you build the feature, and walks you through testing it.
 
 ---
 
@@ -384,7 +384,7 @@ Claude Code will analyze the codebase, suggest the right files to modify, help y
 
 ### Decision Matrix
 
-Here's how to choose:
+How to pick:
 
 | Scenario | Best Approach | Why |
 |----------|---------------|-----|
@@ -398,13 +398,13 @@ Here's how to choose:
 
 ### Tips for Choosing
 
-Start from scratch when you want to learn deeply, have unique requirements, are building something custom, or following a specific architecture.
+Start from scratch when you want to learn deeply, have unusual requirements, are building something custom, or following a specific architecture.
 
-Use templates when you want to move fast, are using popular frameworks, need standard configuration, or are prototyping.
+Use templates when you want to move fast, are on popular frameworks, need standard config, or are prototyping.
 
-Clone repositories when you're contributing to projects, learning from examples, following tutorials, or using starter templates.
+Clone repositories when you're contributing, learning from examples, following tutorials, or starting from someone's template.
 
-Trust me on this -- there's no single "right" answer. As you get more experience, you'll develop instincts for which approach fits. When in doubt, templates are a safe default for most common project types, and starting from scratch is best when you really want to learn.
+There's no single right answer here, and with a bit of experience you'll just feel which one fits. When in doubt: templates are the safe default for common project types, and from-scratch wins when the whole point is to learn.
 
 ---
 
@@ -592,51 +592,51 @@ Before moving to Module 3, make sure you can:
 ## Common Questions (FAQ)
 
 ### Q: Should I always start from scratch?
-No. Use templates for common project types -- they'll save you a lot of time. Start from scratch when you're learning or building something that doesn't fit a standard mold.
+No. Use templates for common project types - they'll save you real time. Go from scratch when you're learning, or building something that doesn't fit a standard mold.
 
 ### Q: How do I know which template to use?
-Ask Claude Code. Seriously -- just say "What's the best way to start a [type of project]?" and it'll point you in the right direction.
+Ask Claude Code. Genuinely - say "What's the best way to start a [type of project]?" and it'll point you the right way.
 
 ### Q: What if I don't understand the cloned code?
-Ask Claude Code to explain it. This is honestly one of the things it's best at -- walking you through unfamiliar codebases piece by piece.
+Ask Claude Code to explain it. This is one of the things it's flat-out best at - walking you through an unfamiliar codebase piece by piece.
 
 ### Q: Can Claude Code help with non-JavaScript projects?
-Absolutely. It works with Python, Go, Rust, Java, and many other languages. This module used JavaScript examples because they're common for web projects, but you can use any language -- or ask Claude Code to pick one for you.
+Absolutely. Python, Go, Rust, Java, plenty more. This module leaned on JavaScript because it's common for web work, but use any language you like - or have Claude Code pick one.
 
 ### Q: How detailed should my initial prompt be?
-Start with the basics, then add details as you go. You can always refine -- and iterating is usually faster than trying to write the perfect prompt on your first try.
+Start basic, add detail as you go. You can always refine, and iterating beats agonizing over the perfect first prompt.
 
 ---
 
 ## What's Next?
 
-You've now got the full toolkit for starting projects -- from blank directories to cloned repos and everything in between.
+You've now got the full toolkit for starting projects - blank directories, cloned repos, and everything in between.
 
-Next up: Module 3, where we dig into Claude Code's tools -- what each one does and when to reach for it.
+Next up: Module 3, where we get into Claude Code's tools - what each one does and when to reach for it.
 
 ---
 
 ## Pro Tips for Beginners
 
-1. **Start simple, iterate** -- Build the basic version first, then add features. This matters more than you think.
+1. **Start simple, iterate** -- Build the basic version first, then add features. This matters more than it sounds.
 
-2. Use templates for common patterns. No point reinventing the wheel when a good scaffold exists.
+2. Use templates for common patterns. No point reinventing the wheel when a good scaffold already exists.
 
-3. **Read before modifying** -- Understand existing code before changing it. Skipping this step is how bugs happen.
+3. **Read before modifying** -- Understand existing code before you change it. Skipping this is how bugs get born.
 
-4. Ask for explanations as you go. Claude Code can teach you while it builds -- take advantage of that.
+4. Ask for explanations as you go. Claude Code will teach you while it builds - take the free lesson.
 
-5. Always read README files in cloned repos. They're there for a reason.
+5. Always read the README in a cloned repo. It's there for a reason.
 
-6. Use Git from the start -- we'll cover this in Module 7, but getting into the habit early pays off.
+6. Use Git from the start - Module 7 covers it, but the habit pays off early.
 
-7. Test frequently. Run your code often to catch issues before they pile up.
+7. Test frequently. Run your code often and catch problems before they stack up.
 
-8. **Set up a CLAUDE.md file** -- even a few lines about your project's conventions will make Claude Code more consistent across sessions
+8. **Set up a CLAUDE.md file** -- even a few lines about your project's conventions makes Claude Code more consistent across sessions
 
 ---
 
-> **Looking for project ideas?** The [Real Projects Pack](https://payhip.com/b/dFXWO) has 11 ready-to-build projects -- from CLI tools to a full-stack SaaS boilerplate -- each with step-by-step Claude Code workflows.
+> **Looking for project ideas?** The [Real Projects Pack](https://payhip.com/b/dFXWO) has 14 ready-to-build projects -- from CLI tools to a full-stack SaaS boilerplate -- each with step-by-step Claude Code workflows.
 
 ---
 

@@ -16,7 +16,7 @@
 
 ## What You'll Learn
 
-This is the module where Claude Code goes from a useful tool to *your* tool. We'll cover CLAUDE.md files (Claude's persistent memory), modular rules, the settings hierarchy, custom skills, commands, hooks, and a first look at custom agents. By the end you'll know how to control basically every aspect of how Claude behaves in your projects.
+This is where Claude Code goes from a useful tool to *your* tool. CLAUDE.md files (Claude's persistent memory), modular rules, the settings hierarchy, custom skills, commands, hooks, and a first look at custom agents. By the end you can control just about every aspect of how Claude behaves in your projects.
 
 ---
 
@@ -24,21 +24,21 @@ This is the module where Claude Code goes from a useful tool to *your* tool. We'
 
 ### The Most Important File in Your Project
 
-Here's the deal: the single most impactful thing you can do with Claude Code is set up a good `CLAUDE.md`. It's Claude's persistent memory -- loaded automatically at the start of every session. Without one, Claude starts every conversation knowing nothing about your project conventions, your preferred commands, or how your codebase is organized.
+The single highest-impact thing you can do with Claude Code is set up a good `CLAUDE.md`. It's Claude's persistent memory, loaded automatically at the start of every session. Without one, Claude opens every conversation knowing nothing about your conventions, your commands, or how your codebase is laid out.
 
-You can bootstrap one quickly:
+Bootstrap one fast:
 
 ```text
 /init
 ```
 
-Or create it manually in your project root.
+Or create it by hand in your project root.
 
 ---
 
 ### Where CLAUDE.md Files Live
 
-There are several locations, each with a different scope:
+Several locations, each with a different scope:
 
 **Project memory** (shared with your team via version control):
 ```text
@@ -62,13 +62,13 @@ There are several locations, each with a different scope:
 # Linux: /etc/claude-code/CLAUDE.md
 ```
 
-More specific files take precedence over broader ones. So your project `CLAUDE.md` overrides your global one for that project.
+More specific files win over broader ones. Your project `CLAUDE.md` overrides your global one for that project.
 
 ---
 
 ### What Goes in a Good CLAUDE.md
 
-Keep it under 200 lines. Seriously. Claude loads this into context every session, so bloated files waste tokens and dilute the important stuff. Going past 200 lines measurably reduces how well Claude follows your instructions.
+Keep it under 200 lines. Seriously. Claude loads this into context every session, so a bloated file wastes tokens and drowns the important stuff. Past 200 lines, how well Claude follows your instructions measurably drops.
 
 **What to include vs. what to leave out:**
 
@@ -87,7 +87,7 @@ Use emphasis ("IMPORTANT:", "NEVER", "ALWAYS") for critical rules - Claude pays 
 
 **Tip:** You can add `<!-- maintainer notes here -->` in CLAUDE.md - HTML comments are stripped before injection into context, so they're invisible to Claude but useful for your team.
 
-A solid CLAUDE.md includes something like:
+A solid CLAUDE.md looks something like:
 
 ```markdown
 # Project: My App
@@ -120,7 +120,7 @@ A solid CLAUDE.md includes something like:
 - /prisma/schema.prisma - Database schema
 ```
 
-Don't put everything in one file. Use `@imports` to pull in detailed references:
+Don't cram everything into one file. Use `@imports` to pull in detailed references:
 
 ```markdown
 See @README.md for project overview and @docs/api-reference.md for API details.
@@ -137,7 +137,7 @@ Both relative and absolute paths work. Relative paths resolve from the file cont
 
 ### Production CLAUDE.md Examples
 
-What does a mature CLAUDE.md look like for real projects? Here are condensed examples across different stacks:
+What does a mature CLAUDE.md look like on real projects? A few condensed examples across stacks:
 
 **SaaS Next.js (Supabase + Stripe + RLS):**
 - Architecture split: server components use `createServerClient()`, client components use `createBrowserClient()` -- never mix them
@@ -165,20 +165,20 @@ What does a mature CLAUDE.md look like for real projects? Here are condensed exa
 
 ### How Claude Looks Up Memory
 
-Claude reads CLAUDE.md files recursively up the directory tree from your current working directory. If you're working in `packages/frontend/`, Claude reads:
+Claude reads CLAUDE.md files recursively up the directory tree from your current working directory. Working in `packages/frontend/`? Claude reads:
 - `packages/frontend/CLAUDE.md`
 - `packages/CLAUDE.md`
 - `CLAUDE.md` (project root)
 
-CLAUDE.md files in subdirectories below your cwd are loaded lazily -- only when Claude actually reads files in those directories.
+CLAUDE.md files in subdirectories below your cwd are loaded lazily - only when Claude actually reads files in those directories.
 
 ---
 
 ### Auto Memory
 
-Claude Code also has auto memory -- notes Claude writes for itself as it works. These live at `~/.claude/projects/<project>/memory/` and include things like debugging insights, project patterns, and architecture notes.
+Claude Code also has auto memory - notes Claude writes for itself as it works. These live at `~/.claude/projects/<project>/memory/` and cover things like debugging insights, project patterns, and architecture notes.
 
-The first 200 lines of `MEMORY.md` in that directory are loaded every session. Use `/memory` to view and edit these files.
+The first 200 lines of `MEMORY.md` in that directory load every session. Use `/memory` to view and edit these files.
 
 ---
 
@@ -186,7 +186,7 @@ The first 200 lines of `MEMORY.md` in that directory are loaded every session. U
 
 ### Modular Instructions with `.claude/rules/`
 
-For larger projects, one CLAUDE.md file isn't enough. Rules let you organize instructions into focused files:
+On a larger project, one CLAUDE.md file isn't enough. Rules let you split instructions into focused files:
 
 ```text
 your-project/
@@ -198,13 +198,13 @@ your-project/
 │       └── security.md
 ```
 
-Every `.md` file in `.claude/rules/` is automatically loaded as project memory. You can also create personal rules at `~/.claude/rules/` that apply to all your projects.
+Every `.md` file in `.claude/rules/` loads automatically as project memory. You can also create personal rules at `~/.claude/rules/` that apply to all your projects.
 
 ---
 
 ### Path-Scoped Rules
 
-This is where rules get interesting. You can scope them to specific files using YAML frontmatter:
+This is where rules get interesting. Scope them to specific files with YAML frontmatter:
 
 ```markdown
 ---
@@ -219,7 +219,7 @@ globs: ["src/api/**/*.ts"]
 - Include OpenAPI documentation comments
 ```
 
-Rules without a `globs` field load unconditionally. Rules with globs only activate when Claude is working with matching files.
+Rules with no `globs` field load unconditionally. Rules with globs only activate when Claude is working on matching files.
 
 Supported glob patterns:
 
@@ -230,7 +230,7 @@ Supported glob patterns:
 | `*.md` | Markdown files in project root only |
 | `src/**/*.{ts,tsx}` | TypeScript and TSX files under src |
 
-Organize rules into subdirectories if you want -- they're discovered recursively:
+Organize rules into subdirectories if you like - they're discovered recursively:
 
 ```text
 .claude/rules/
@@ -243,7 +243,7 @@ Organize rules into subdirectories if you want -- they're discovered recursively
 └── general.md
 ```
 
-For polyglot projects -- where you have multiple languages in one repo -- organizing rules by language keeps things clean and avoids cross-contamination of conventions:
+For polyglot projects - multiple languages in one repo - organizing rules by language keeps things clean and stops conventions bleeding across languages:
 
 ```text
 .claude/rules/
@@ -263,7 +263,7 @@ For polyglot projects -- where you have multiple languages in one repo -- organi
     └── concurrency.md
 ```
 
-The `common/` directory holds rules that apply regardless of language -- things like commit message format, testing philosophy, and security requirements. Language-specific directories contain rules scoped to their respective file types using `globs` frontmatter (e.g., `globs: ["**/*.ts", "**/*.tsx"]` for the TypeScript rules). Language-specific rules can reference common ones with `@imports`, so your Go error-handling rules can point to `@../common/coding-style.md` for the shared conventions they build on. This structure mirrors how your codebase is actually organized and makes it obvious where new rules belong.
+The `common/` directory holds rules that apply regardless of language - commit message format, testing philosophy, security requirements. Language-specific directories hold rules scoped to their file types with `globs` frontmatter (e.g. `globs: ["**/*.ts", "**/*.tsx"]` for the TypeScript rules). Language rules can reference common ones with `@imports`, so your Go error-handling rules can point at `@../common/coding-style.md` for the shared conventions they build on. The structure mirrors how your codebase is actually organized, and it makes it obvious where a new rule belongs.
 
 ---
 
@@ -271,7 +271,7 @@ The `common/` directory holds rules that apply regardless of language -- things 
 
 ### The 5-Tier Settings Hierarchy
 
-If you've ever wondered "why isn't my setting working?" -- it's almost always a precedence problem. Claude Code settings follow a specific order, and higher tiers override lower ones:
+If you've ever wondered "why isn't my setting working?" - it's almost always precedence. Claude Code settings follow a specific order, and higher tiers override lower ones:
 
 | Priority | Location | Scope |
 |----------|----------|-------|
@@ -287,7 +287,7 @@ Plus: `managed-settings.json` deployed by admins has the absolute highest priori
 
 ### Basic Permission Settings
 
-The most useful setting you'll configure is permissions. Here's a practical example:
+The most useful setting you'll touch is permissions. A practical example:
 
 ```json
 {
@@ -305,19 +305,19 @@ The most useful setting you'll configure is permissions. Here's a practical exam
 }
 ```
 
-A few key rules to keep in mind:
+A few rules to keep straight:
 - Deny always wins over allow
 - `Bash(npm run *)` -- the space before `*` means "npm run" must be a complete prefix followed by a space
 - `Edit(/src/**)` -- gitignore-style patterns, `**` matches recursively
 - `WebFetch(domain:example.com)` -- restrict web fetches by domain
 
-Put shared team rules in `.claude/settings.json`. Put your personal overrides in `.claude/settings.local.json`.
+Shared team rules go in `.claude/settings.json`. Your personal overrides go in `.claude/settings.local.json`.
 
 ---
 
 ### Permission Modes
 
-You can also set a default mode for how Claude handles permissions overall. This is separate from individual allow/deny rules -- think of it as the baseline posture:
+You can also set a default mode for how Claude handles permissions overall. Separate from individual allow/deny rules - think of it as the baseline posture:
 
 | Mode | What It Does |
 |------|-------------|
@@ -327,7 +327,7 @@ You can also set a default mode for how Claude handles permissions overall. This
 | `dontAsk` | Auto-denies unless pre-approved |
 | `bypassPermissions` | Skips all checks (containers only!) |
 
-Most people stick with `default` and use allow/deny rules for fine-tuning. The `bypassPermissions` mode is strictly for disposable container environments -- do not use it on your actual machine.
+Most people stay on `default` and tune with allow/deny rules. `bypassPermissions` is strictly for disposable container environments - don't use it on your actual machine.
 
 ---
 
@@ -335,7 +335,7 @@ Most people stick with `default` and use allow/deny rules for fine-tuning. The `
 
 ### The Real Skill Format
 
-Skills are custom slash commands that extend what Claude can do. Forget TypeScript files in `~/.config/` -- that's not how it works. Skills are Markdown files with YAML frontmatter.
+Skills are custom slash commands that extend what Claude can do. Forget TypeScript files in `~/.config/` - that's not how it works. Skills are Markdown files with YAML frontmatter.
 
 Every skill needs:
 ```text
@@ -383,7 +383,7 @@ Use it:
 /review-code
 ```
 
-Or just ask Claude something that matches the description -- Claude will load the skill automatically.
+Or just ask Claude something that matches the description - it loads the skill automatically.
 
 ---
 
@@ -395,15 +395,15 @@ Or just ask Claude something that matches the description -- Claude will load th
 | Project | `.claude/skills/<name>/SKILL.md` | This project only |
 | Plugin | `<plugin>/skills/<name>/SKILL.md` | Where plugin is enabled |
 
-When skills share the same name, higher priority wins: enterprise > personal > project.
+When skills share a name, higher priority wins: enterprise > personal > project.
 
-Skills in subdirectories of your project are also discovered automatically. Working in `packages/frontend/`? Claude picks up skills from `packages/frontend/.claude/skills/` too.
+Skills in subdirectories of your project are discovered too. Working in `packages/frontend/`? Claude picks up skills from `packages/frontend/.claude/skills/` as well.
 
 ---
 
 ### Frontmatter Reference
 
-Here's the full menu of frontmatter fields. All fields are optional, but `description` is strongly recommended -- without it, Claude has no idea when your skill is relevant:
+The full menu of frontmatter fields. All optional, but `description` is strongly recommended - without it, Claude has no idea when your skill is relevant:
 
 | Field | What It Does |
 |-------|-------------|
@@ -422,7 +422,7 @@ Here's the full menu of frontmatter fields. All fields are optional, but `descri
 
 ### Dynamic Substitutions
 
-Skills would be pretty limited if you couldn't pass data into them. These placeholders get replaced at runtime:
+Skills would be pretty limited if you couldn't pass data in. These placeholders get replaced at runtime:
 
 | Variable | What It Gets Replaced With |
 |----------|---------------------------|
@@ -470,13 +470,13 @@ agent: Explore
 Summarize this pull request. Focus on what changed and why.
 ```
 
-The commands execute first, their output replaces the placeholders, and Claude only sees the final rendered content.
+The commands run first, their output replaces the placeholders, and Claude only ever sees the final rendered content.
 
 ---
 
 ### Supporting Files
 
-Skills can include extra files in their directory:
+Skills can bring extra files along in their directory:
 
 ```text
 review-code/
@@ -499,24 +499,24 @@ For an example of a good review, see [examples/good-review.md](examples/good-rev
 
 ### Real-World Skills Gallery
 
-Once you understand the format, skills become your primary way to encode workflows. Here are the categories of skills that show up in mature setups:
+Once the format clicks, skills become your main way to encode a workflow. The categories that show up in mature setups:
 
 **Development Workflow:**
-- `tdd-workflow` -- Structured red-green-refactor cycle. Frontmatter: `allowed-tools: Bash, Edit, Read` and `disable-model-invocation: true`. The skill walks Claude through writing a failing test first, implementing the minimum code to pass, then refactoring.
-- `e2e-testing` -- End-to-end test generation using Playwright Page Object Model. Frontmatter: `argument-hint: [page-or-feature]`. Includes supporting files with POM templates and selector conventions.
+- `tdd-workflow` -- Structured red-green-refactor cycle. Frontmatter: `allowed-tools: Bash, Edit, Read` and `disable-model-invocation: true`. Walks Claude through writing a failing test first, implementing the minimum to pass, then refactoring.
+- `e2e-testing` -- End-to-end test generation using Playwright Page Object Model. Frontmatter: `argument-hint: [page-or-feature]`. Ships supporting files with POM templates and selector conventions.
 
 **Quality:**
 - `security-review` -- Vulnerability scanning against common patterns (SQL injection, XSS, secrets in code). Frontmatter: `context: fork`, `agent: Explore`, `model: <balanced-model>`. Runs in isolation so findings don't pollute the main conversation.
-- `coding-standards` -- Per-language enforcement with auto-fix suggestions. Frontmatter: `user-invocable: false` (background knowledge). Claude loads this automatically when editing code.
+- `coding-standards` -- Per-language enforcement with auto-fix suggestions. Frontmatter: `user-invocable: false` (background knowledge). Claude loads it automatically when editing code.
 
 **Operations:**
-- `deployment-patterns` -- Docker build verification, CI/CD pipeline checks, environment variable validation. Frontmatter: `disable-model-invocation: true` (only run when you explicitly ask). Includes checklists as supporting files.
+- `deployment-patterns` -- Docker build verification, CI/CD pipeline checks, environment variable validation. Frontmatter: `disable-model-invocation: true` (only runs when you explicitly ask). Includes checklists as supporting files.
 - `database-migrations` -- Safe schema change workflow: generate migration, review SQL, check for destructive operations, test rollback. Frontmatter: `allowed-tools: Bash, Read, Grep`.
 
 **Learning:**
-- `continuous-learning` -- Extracts patterns from the current session and records them with a confidence score. Frontmatter: `hooks: { "Stop": [...] }` to trigger at session end. Over time, builds a knowledge base of project-specific insights that feed back into CLAUDE.md.
+- `continuous-learning` -- Extracts patterns from the current session and records them with a confidence score. Frontmatter: `hooks: { "Stop": [...] }` to trigger at session end. Over time it builds a knowledge base of project-specific insights that feed back into CLAUDE.md.
 
-Each of these follows the same SKILL.md format you already know -- the difference is just in how they combine frontmatter fields, supporting files, and dynamic context injection. You'll build your own in the exercises below.
+Each follows the same SKILL.md format you already know - the only difference is how they combine frontmatter fields, supporting files, and dynamic context injection. You'll build your own in the exercises below.
 
 ---
 
@@ -555,11 +555,11 @@ Template variables:
 
 ### Commands vs Skills -- When to Use Which
 
-The short version: skills are the future, commands are the legacy format. A file at `.claude/commands/review.md` and a skill at `.claude/skills/review/SKILL.md` both create `/review` and work the same way. If both exist with the same name, the skill wins.
+Short version: skills are the future, commands are the legacy format. A file at `.claude/commands/review.md` and a skill at `.claude/skills/review/SKILL.md` both create `/review` and work the same way. If both exist with the same name, the skill wins.
 
-Use skills when you need the extra power -- supporting files, frontmatter control (model, tools, invocation settings), Claude auto-invoking based on context, or running in a forked subagent.
+Use skills when you need the extra power - supporting files, frontmatter control (model, tools, invocation settings), Claude auto-invoking based on context, or running in a forked subagent.
 
-Use commands when you just want something quick. One markdown file, done. No directory structure needed. Good for prototyping before you need the extra features.
+Use commands when you just want something quick. One markdown file, done. No directory structure. Good for prototyping before you need the extra features.
 
 In practice, most people start with commands and graduate to skills once they need more.
 
@@ -567,7 +567,7 @@ In practice, most people start with commands and graduate to skills once they ne
 
 ### What a Full Command Library Looks Like
 
-Power users end up with 30-40+ commands organized by category. Here's what a mature command library looks like:
+Power users end up with 30-40+ commands organized by category. A mature command library:
 
 | Category | Commands | Purpose |
 |----------|----------|---------|
@@ -577,7 +577,7 @@ Power users end up with 30-40+ commands organized by category. Here's what a mat
 | Session | `/sessions`, `/checkpoint`, `/compact` | Context and session management |
 | Multi-Agent | `/orchestrate`, `/multi-plan` | Coordinated workflows across multiple agents |
 
-You don't need to build all of these on day one. Most teams start with 3-5 commands that address their biggest pain points -- usually something like `/plan`, `/review`, and `/test`. As patterns emerge in your daily work, you'll notice things you keep asking Claude to do repeatedly. Those repetitive prompts are your next commands. The library grows organically from actual usage, not from trying to anticipate every possible need upfront.
+You don't need all of these on day one. Most teams start with 3-5 commands that hit their biggest pain points - usually something like `/plan`, `/review`, and `/test`. As patterns emerge in your daily work, you'll notice the things you keep asking Claude to do. Those repeated prompts are your next commands. The library grows out of real usage, not out of trying to anticipate every possible need up front.
 
 ---
 
@@ -585,7 +585,7 @@ You don't need to build all of these on day one. Most teams start with 3-5 comma
 
 ### Automating Everything
 
-Hooks are shell commands that run automatically at specific points in Claude Code's lifecycle. Unlike skills -- which Claude decides when to use -- hooks are deterministic. They run every time their trigger event fires.
+Hooks are shell commands that run automatically at specific points in Claude Code's lifecycle. Unlike skills - which Claude decides when to use - hooks are deterministic. They fire every time their trigger event does.
 
 ---
 
@@ -617,7 +617,7 @@ Claude Code has 17 hook events:
 
 ### Exit Codes
 
-Your hook script communicates with Claude Code through exit codes:
+Your hook script talks to Claude Code through exit codes:
 
 - Exit 0 -- Success. Action proceeds. Stdout is parsed for optional JSON output.
 - Exit 2 -- Block. The action is prevented. Stderr is fed back to Claude as an error.
@@ -627,7 +627,7 @@ Your hook script communicates with Claude Code through exit codes:
 
 ### Configuring Hooks
 
-Hooks go in your settings.json file. Here's the structure:
+Hooks go in your settings.json file. The structure:
 
 ```json
 {
@@ -727,19 +727,19 @@ exit 0
 
 ### Hook Types
 
-Shell commands cover most use cases, but sometimes you want something smarter. Hooks support three types:
+Shell commands cover most cases, but sometimes you want something smarter. Hooks support three types:
 
 - `type: "command"` -- runs a shell command. All the examples above use this.
-- `type: "prompt"` -- sends hook context to an LLM for evaluation. The model returns `{"ok": true/false}`, which works well when the decision requires judgment rather than a simple regex check.
-- `type: "agent"` -- spawns a full subagent that can use tools like Read, Grep, and Glob to investigate before deciding. This is the heavy option -- use it when verification requires actually reading files or running tests.
+- `type: "prompt"` -- sends hook context to an LLM for evaluation. The model returns `{"ok": true/false}`, which works well when the decision needs judgment rather than a simple regex check.
+- `type: "agent"` -- spawns a full subagent that can use tools like Read, Grep, and Glob to investigate before deciding. The heavy option - reach for it when verification means actually reading files or running tests.
 
-Hooks can also run in the background with `"async": true`, which is useful for running tests after file changes without blocking Claude.
+Hooks can also run in the background with `"async": true`, handy for running tests after file changes without blocking Claude.
 
 ---
 
 ### Session Management Hooks
 
-The most practical hook pattern is memory persistence across sessions. Claude's context resets between sessions, but hooks let you bridge that gap by saving and restoring state automatically.
+The most practical hook pattern is memory persistence across sessions. Claude's context resets between sessions, but hooks let you bridge the gap by saving and restoring state automatically.
 
 The pattern uses three hooks working together:
 
@@ -780,11 +780,11 @@ The pattern uses three hooks working together:
 }
 ```
 
-- **`SessionStart`** loads saved context from a state file (e.g., `.claude/state/last-session.json`) and outputs it as JSON so Claude picks up where it left off -- recent decisions, open tasks, known issues.
-- **`PreCompact`** saves the current working state before Claude compacts the conversation. This is critical because compaction throws away detail; the hook preserves what matters.
-- **`SessionEnd`** extracts patterns and insights from the session and persists them for next time.
+- **`SessionStart`** loads saved context from a state file (e.g. `.claude/state/last-session.json`) and outputs it as JSON so Claude picks up where it left off - recent decisions, open tasks, known issues.
+- **`PreCompact`** saves the current working state before Claude compacts the conversation. Critical, because compaction throws away detail; the hook preserves what matters.
+- **`SessionEnd`** extracts patterns and insights from the session and stores them for next time.
 
-Notice the scripts use Node.js instead of bash. This is deliberate -- Node.js scripts in a `scripts/` directory work identically on macOS, Linux, and Windows (via WSL), making your hooks portable across your team. Keep the scripts in `.claude/hooks/scripts/` and they'll be versioned alongside the rest of your configuration.
+Notice the scripts use Node.js instead of bash. That's deliberate - Node scripts in a `scripts/` directory behave identically on macOS, Linux, and Windows (via WSL), so your hooks stay portable across the team. Keep them in `.claude/hooks/scripts/` and they get versioned alongside the rest of your config.
 
 ---
 
@@ -792,7 +792,7 @@ Notice the scripts use Node.js instead of bash. This is deliberate -- Node.js sc
 
 ### What Are Custom Agents?
 
-Custom agents are specialized AI assistants with their own context window, tools, and personality. When Claude encounters a task matching an agent's description, it delegates to that agent.
+Custom agents are specialized AI assistants with their own context window, tools, and personality. When Claude hits a task matching an agent's description, it delegates to that agent.
 
 Agent files live in `.claude/agents/`:
 
@@ -815,7 +815,7 @@ Focus on:
 The frontmatter gives you fine-grained control over what the agent can do:
 
 - `name` -- unique identifier
-- `description` -- tells Claude when to delegate to this agent. Write it well and Claude will route the right tasks here automatically.
+- `description` -- tells Claude when to delegate to this agent. Write it well and Claude routes the right tasks here automatically.
 - `tools` -- what tools the agent can use (inherits everything if omitted)
 - `model` -- a tier (`/model` lists your options), or `inherit`
 - `permissionMode` -- `default`, `acceptEdits`, `plan`, `dontAsk`, or `bypassPermissions`
@@ -831,15 +831,15 @@ Where agents live:
 | `.claude/agents/` | This project |
 | `~/.claude/agents/` | All your projects |
 
-Use `/agents` to manage them interactively, or create the files manually.
+Use `/agents` to manage them interactively, or create the files by hand.
 
-We'll go much deeper on agents in the advanced modules. For now, just know they exist and how the basic file format works.
+We go much deeper on agents in the advanced modules. For now, just know they exist and how the basic file format works.
 
 ---
 
 ### Real-World Agent Examples
 
-To make agents concrete, here are three production agents with different design tradeoffs. Pay attention to *why* each choice was made -- model selection and tool restrictions aren't arbitrary.
+To make agents concrete, three production agents with different design tradeoffs. Watch *why* each choice was made - model selection and tool restrictions aren't arbitrary.
 
 **1. Planner Agent** -- deep reasoning, zero side effects:
 ```yaml
@@ -852,7 +852,7 @@ model: <capable-model>
 You are a senior architect. Analyze the codebase and produce a detailed plan.
 Never suggest changes directly -- only produce plans with reasoning.
 ```
-Why the most-capable tier? Planning requires deep reasoning and long-horizon thinking. Why only Read/Grep/Glob? A planner must never modify code -- it only reads and reasons. Restricting tools makes this guarantee structural, not behavioral.
+Why the most-capable tier? Planning needs deep reasoning and long-horizon thinking. Why only Read/Grep/Glob? A planner must never modify code - it only reads and reasons. Restricting the tools makes that guarantee structural, not just behavioral.
 
 **2. Security Reviewer Agent** -- specialized checklist, moderate cost:
 ```yaml
@@ -867,7 +867,7 @@ Check for: SQL injection, XSS, CSRF, broken auth, secrets in code,
 insecure deserialization, and missing input validation.
 Run `grep -r` for patterns like API keys, passwords, and tokens.
 ```
-Why the balanced tier? Security review needs good reasoning but runs frequently -- the most-capable tier would be too expensive for every PR. Bash access is included so the agent can run `grep` for secret patterns and `npm audit` or similar tools.
+Why the balanced tier? Security review needs solid reasoning but runs often - the most-capable tier would be too expensive on every PR. Bash access is there so the agent can run `grep` for secret patterns and `npm audit` or similar.
 
 **3. Documentation Updater Agent** -- routine work, high volume:
 ```yaml
@@ -880,7 +880,7 @@ model: <fast-model>
 You update documentation files to match current code. Read the changed files,
 then update relevant docs. Keep the existing style and tone.
 ```
-Why the fast tier? Doc updates are straightforward -- read what changed, update the matching docs. This runs often and the work is routine, so the cheapest capable model keeps costs down. Edit and Write access is needed because this agent actually modifies files.
+Why the fast tier? Doc updates are straightforward - read what changed, update the matching docs. It runs often and the work is routine, so the cheapest capable model keeps costs down. Edit and Write access is needed because this agent actually modifies files.
 
 Module 21 goes deep into agent architecture, including multi-agent coordination, worktree isolation, and agent-to-agent communication patterns.
 
@@ -956,21 +956,21 @@ Module 21 goes deep into agent architecture, including multi-agent coordination,
 
 A few hard-won lessons that'll save you time:
 
-CLAUDE.md is the foundation of everything. Keep it under 150 lines -- every line goes into context every session, so bloat costs you real tokens. Use `@imports` for detailed references instead of cramming everything inline. Update it as your project evolves, and use CLAUDE.local.md for personal preferences that your team doesn't need to see.
+CLAUDE.md is the foundation of everything. Keep it under 150 lines - every line rides into context every session, so bloat costs real tokens. Use `@imports` for detailed references instead of cramming everything inline. Update it as your project evolves, and use CLAUDE.local.md for personal preferences your team doesn't need to see.
 
-Skills work best when they have clear, specific descriptions so Claude knows when to reach for them. Use `disable-model-invocation: true` for anything with side effects -- deploy, ship, anything destructive. You do not want Claude deciding on its own that it's time to deploy. Keep SKILL.md under 500 lines and put details in supporting files.
+Skills work best with clear, specific descriptions so Claude knows when to reach for them. Use `disable-model-invocation: true` for anything with side effects - deploy, ship, anything destructive. You do not want Claude deciding on its own that it's time to deploy. Keep SKILL.md under 500 lines and push detail into supporting files.
 
-Hooks are powerful but easy to get wrong. Fair warning: always quote shell variables (`"$VAR"` not `$VAR`), and use `"$CLAUDE_PROJECT_DIR"` for project-relative paths. The biggest pitfall is slow hooks -- they block Claude's execution, so keep them fast. Use `async: true` for long-running tasks like test suites.
+Hooks are powerful but easy to get wrong. Fair warning: always quote shell variables (`"$VAR"`, not `$VAR`), and use `"$CLAUDE_PROJECT_DIR"` for project-relative paths. The biggest trap is slow hooks - they block Claude's execution, so keep them fast. Use `async: true` for long-running work like test suites.
 
-Settings have a natural split: put shared team config in `.claude/settings.json` and personal overrides in `.claude/settings.local.json`. Remember that deny rules always win over allow rules -- use them for hard safety boundaries you never want crossed.
+Settings have a natural split: shared team config in `.claude/settings.json`, personal overrides in `.claude/settings.local.json`. And remember deny always beats allow - use deny rules for hard safety boundaries you never want crossed.
 
 ---
 
 ## What's Next?
 
-You now know how to customize every aspect of Claude Code. Between CLAUDE.md, rules, settings, skills, commands, hooks, and agents, you've got complete control over how Claude behaves in your projects. The real payoff comes over time as your configuration accumulates -- a well-tuned setup means Claude starts every session already knowing how you work.
+You now know how to customize every aspect of Claude Code. Between CLAUDE.md, rules, settings, skills, commands, hooks, and agents, you've got full control over how Claude behaves in your projects. The real payoff builds over time as your config accumulates - a well-tuned setup means Claude opens every session already knowing how you work.
 
-Next up: Module 13 -- using Claude Code with different programming languages and frameworks.
+Next up: Module 13 -- using Claude Code across different programming languages and frameworks.
 
 Want to go deeper? The [Advanced Modules](https://payhip.com/b/8E107) cover custom agents in depth (Module 21), sandbox and plugins (Module 22), and professional development workflows (Module 23).
 

@@ -16,7 +16,7 @@
 
 ## What You'll Learn
 
-This module is about the single most important skill you'll develop with Claude Code: writing good prompts. The quality of what you get back is almost entirely determined by the quality of what you put in. We'll cover how to be specific, how to give useful context, how to build things incrementally, and a handful of prompt patterns that work well for common coding tasks.
+This is the one that moves the needle most: writing good prompts. What you get back is almost entirely a function of what you put in. We'll cover being specific, giving useful context, building in layers, and a handful of prompt patterns that just work for common coding jobs.
 
 ---
 
@@ -24,9 +24,9 @@ This module is about the single most important skill you'll develop with Claude 
 
 ### What Makes a Good Coding Prompt?
 
-A good prompt is specific -- Claude Code knows exactly what you want. It's contextual -- you've given it the information it needs. It's actionable -- there's a clear thing to do. And it's testable -- you can verify the result actually works.
+A good prompt is specific - Claude Code knows exactly what you want. Contextual - you've given it what it needs to know. Actionable - there's a clear thing to do. And testable - you can check the result actually works.
 
-That sounds obvious, but it's easy to underestimate. Let's look at some real examples.
+Sounds obvious. It's also easy to underrate. So let's look at real examples.
 
 ### Bad vs Good Prompts
 
@@ -70,7 +70,7 @@ When a user submits an empty password, the app crashes with "Cannot read propert
 Please add validation to check for empty passwords and return an appropriate error message.
 ```
 
-The difference between "fix the bug" and that last version is night and day. The more you tell Claude Code about what's happening, what you expected, and where to look, the faster it'll get you to a fix.
+"Fix the bug" versus that last one is night and day. The more you say about what's happening, what you expected, and where to look, the faster you get to a fix.
 
 ---
 
@@ -137,7 +137,7 @@ Write a React functional component using:
 - Tailwind CSS for styling
 ```
 
-This matters more than you think. If you don't specify, Claude Code will make reasonable choices -- but they might not match your project's conventions. A few extra seconds of specificity saves you from rewriting things later.
+Worth the extra seconds. Leave it out and Claude Code makes reasonable choices - they just might not be your project's choices. A little specificity now saves a rewrite later.
 
 ---
 
@@ -145,7 +145,7 @@ This matters more than you think. If you don't specify, Claude Code will make re
 
 ### Project Context
 
-When you're working on an existing project, context is everything:
+On an existing project, context is the whole game:
 
 **Without Context:**
 ```text
@@ -160,11 +160,11 @@ Add a new route for /api/users that returns all users from the database.
 Follow the pattern used in /routes/posts.js
 ```
 
-That last line -- "Follow the pattern used in /routes/posts.js" -- is especially powerful. It tells Claude Code to match your existing style instead of inventing its own.
+That last line - "Follow the pattern used in /routes/posts.js" - is quietly one of the most powerful things you can write. It tells Claude Code to match your style instead of inventing its own.
 
 ### Code Context
 
-When modifying specific code:
+When you're changing specific code:
 
 **Without Context:**
 ```text
@@ -183,7 +183,7 @@ add try-catch error handling that:
 
 ### Business Context
 
-For features that need domain knowledge:
+For features that lean on domain knowledge:
 
 **Without Context:**
 ```text
@@ -200,7 +200,7 @@ Add validation to the user registration form:
 Show errors inline below each field, not in an alert
 ```
 
-The parenthetical about being a financial services app? That kind of detail changes how Claude Code thinks about the problem. It might suggest stricter validation or compliance-related checks you hadn't considered.
+That parenthetical - "we're a financial services app" - changes how Claude Code thinks. It might reach for stricter validation or compliance checks you hadn't asked for but definitely wanted.
 
 ---
 
@@ -208,7 +208,7 @@ The parenthetical about being a financial services app? That kind of detail chan
 
 ### Start Simple, Add Complexity
 
-Here's the deal: trying to describe an entire feature in one massive prompt usually doesn't work well. Build it up in layers instead.
+Cramming an entire feature into one giant prompt rarely goes well. Build it in layers instead.
 
 **Step 1: Basic Version**
 ```text
@@ -240,7 +240,7 @@ Now add:
 
 ### Why Iterate?
 
-Each step is small enough to understand, test, and fix on its own. When something breaks, you know it was the most recent change. And you actually learn what each piece does -- instead of staring at a huge blob of generated code wondering how it all fits together.
+Each step is small enough to understand, test, and fix on its own. When something breaks, you already know which change did it. And you actually learn what each piece does - instead of squinting at a wall of generated code wondering how any of it connects.
 
 ---
 
@@ -248,7 +248,7 @@ Each step is small enough to understand, test, and fix on its own. When somethin
 
 ### Pattern 1: The Scaffold Pattern
 
-Use this when starting a new project.
+For starting a new project.
 
 **Template:**
 ```text
@@ -278,7 +278,7 @@ Add Tailwind CSS
 
 ### Pattern 2: The Feature Pattern
 
-Use this when adding new functionality.
+For adding new functionality.
 
 **Template:**
 ```text
@@ -306,7 +306,7 @@ Store users in the database
 
 ### Pattern 3: The Fix Pattern
 
-Use this when debugging issues.
+For debugging.
 
 **Template:**
 ```text
@@ -328,7 +328,7 @@ Please investigate why the route isn't working
 
 ### Pattern 4: The Refactor Pattern
 
-Use this when improving existing code.
+For improving existing code.
 
 **Template:**
 ```text
@@ -351,13 +351,13 @@ Refactor the user validation functions to:
 Maintain all current validation rules
 ```
 
-That last line is critical. Always tell Claude Code what shouldn't change -- otherwise it might "improve" things you didn't want touched.
+That last line is the one people forget. Always say what shouldn't change - otherwise Claude Code might "improve" something you were perfectly happy with.
 
 ---
 
 ### Pattern 5: The Test Pattern
 
-Use this when writing tests.
+For writing tests.
 
 **Template:**
 ```text
@@ -387,7 +387,7 @@ Aim for 100% code coverage
 
 ### Pattern 6: The Persistence Pattern
 
-Use this when you want Claude Code to remember your preferences across a whole project.
+For when you want Claude Code to remember your preferences across the whole project.
 
 **Template:**
 ```text
@@ -410,7 +410,7 @@ Create a CLAUDE.md that says:
 - Run linter with: npm run lint
 ```
 
-**Why this works:** CLAUDE.md is loaded automatically every session when placed in your project's root directory. Instead of repeating your preferences, you write them once and Claude Code follows them forever. This is one of the highest-leverage things you can do as your projects grow.
+**Why this works:** CLAUDE.md loads automatically every session when it sits in your project root. Write your preferences once and Claude Code just follows them - no more repeating yourself. As projects grow, this is one of the highest-leverage moves you've got.
 
 ---
 
@@ -432,13 +432,13 @@ user preferences, delivery channels, retry logic, and anything else
 you need. Then write a spec.
 ```
 
-**Why this works:** You don't always know what details matter. Claude Code will ask about edge cases, error handling, and constraints you might not have thought of. The result is a much more complete specification than what you'd write from scratch.
+**Why this works:** You don't always know which details matter. Claude Code will poke at edge cases, error handling, and constraints you hadn't considered - and the spec that comes out is far more complete than one you'd write cold.
 
 ---
 
 ### Pattern 8: The Verification Target Pattern
 
-This is the single highest-leverage prompting tip: always tell Claude Code how to verify its work.
+The single highest-leverage prompting tip: always tell Claude Code how to check its own work.
 
 **Template:**
 ```text
@@ -458,7 +458,7 @@ Verify by:
 - All existing tests should still pass
 ```
 
-**Why this works:** Without verification targets, Claude Code guesses when it's done. With them, it has a concrete definition of "done" and will keep working until the criteria are met.
+**Why this works:** With no verification target, Claude Code has to guess when it's done. Give it one and "done" becomes concrete - it keeps working until the criteria are actually met.
 
 ---
 
@@ -466,7 +466,7 @@ Verify by:
 
 ### When to Ask Questions
 
-Instead of guessing, just ask. Seriously -- Claude Code is great at helping you think through decisions before you commit to them.
+Don't guess - ask. Claude Code is genuinely good at helping you think a decision through before you commit to it.
 
 **Scenario 1: Technology Choice**
 ```text
@@ -493,21 +493,21 @@ What are the current best practices for:
 
 ### Let Claude Code Ask YOU Questions
 
-This is one of my favorite patterns. Try this:
+One of my favorite moves. Try this:
 
 ```text
 Create a user dashboard for my app.
 Ask me any questions you need to fully understand what I want.
 ```
 
-Claude Code might ask things like:
+Claude Code might come back with:
 - What data should the dashboard show?
 - Who are the users?
 - What actions can they take?
 - What's the visual style?
 - Mobile responsive?
 
-This is surprisingly effective. It surfaces requirements you hadn't thought about, cuts down on back-and-forth, and the end result is usually much closer to what you actually wanted.
+Surprisingly effective. It surfaces requirements you hadn't thought about, cuts the back-and-forth, and the result lands much closer to what you actually meant.
 
 ---
 
@@ -515,7 +515,7 @@ This is surprisingly effective. It surfaces requirements you hadn't thought abou
 
 ### Chaining Prompts
 
-For complex tasks, don't try to do it all at once. Chain simple prompts together:
+For complex work, don't do it all in one shot. Chain simple prompts:
 
 **Prompt 1:**
 ```text
@@ -537,11 +537,11 @@ Add validation middleware to that route
 Write tests for the new route
 ```
 
-Each prompt builds on the previous one. Claude Code retains context within a conversation, so it remembers what it did in earlier steps.
+Each one builds on the last. Claude Code keeps context within a conversation, so it remembers what it did a few steps back.
 
 ### Providing Examples
 
-Showing is better than telling:
+Showing beats telling:
 
 ```text
 I want to add more API endpoints.
@@ -560,7 +560,7 @@ Please create similar endpoints for:
 
 ### Negative Instructions
 
-Sometimes it's just as important to say what you don't want:
+Sometimes what you don't want matters just as much:
 
 ```text
 Add user authentication but:
@@ -571,7 +571,7 @@ Add user authentication but:
 
 ### Constraints and Requirements
 
-Be explicit about non-functional requirements -- these are the things that often get missed:
+Spell out the non-functional stuff - it's the part that quietly gets missed:
 
 ```text
 Create a data processing script that:
@@ -587,7 +587,7 @@ Requirements:
 - Must provide progress updates
 ```
 
-Without those requirements, you'd probably get a script that reads the entire file into memory. Fine for small files, but it'll crash on anything large.
+Leave those out and you'll likely get a script that reads the whole file into memory. Fine for a small file - a crash waiting to happen on a big one.
 
 ---
 
@@ -722,43 +722,43 @@ Before moving to Module 6, make sure you can:
 
 ## Common Prompting Mistakes to Avoid
 
-**Mistake 1: Too Vague** -- Claude Code has to guess what you want. Fix this by being specific about technologies, structure, and behavior.
+**Mistake 1: Too Vague** -- Claude Code ends up guessing. Fix it by being specific about technologies, structure, and behavior.
 
-**Mistake 2: Everything at Once** -- One massive prompt for a complex feature is hard to verify and hard to fix when something goes wrong. Break it into steps and build iteratively.
+**Mistake 2: Everything at Once** -- One giant prompt for a complex feature is hard to verify and hard to fix when it goes sideways. Break it up and build iteratively.
 
-**Mistake 3: No Context** -- Claude Code doesn't magically know your project structure or conventions. Explain existing patterns, show examples.
+**Mistake 3: No Context** -- Claude Code doesn't magically know your project structure or conventions. Explain the patterns, show an example.
 
-**Mistake 4: Assuming Knowledge** -- "Add the usual validation" doesn't mean anything. What's usual? Be explicit about what you mean.
+**Mistake 4: Assuming Knowledge** -- "Add the usual validation" means nothing. Whose usual? Say what you mean.
 
-**Mistake 5: Not Testing Between Steps** -- Requesting many changes without verifying each one works is a recipe for confusion. Request, test, then proceed.
+**Mistake 5: Not Testing Between Steps** -- Stacking a dozen changes without checking each one is a fast route to confusion. Request, test, then move on.
 
 ---
 
 ## Pro Tips
 
-1. **Start conversations with context** -- "I'm working on a React app with TypeScript..." sets the stage for everything that follows.
+1. **Start conversations with context** -- "I'm working on a React app with TypeScript..." sets the stage for everything after.
 
 2. **Reference your own code** -- "Following the pattern in auth.js..." is one of the most useful things you can say.
 
-3. **State constraints up front** -- "Without using external libraries..." avoids wasted effort.
+3. **State constraints up front** -- "Without using external libraries..." saves wasted effort.
 
-4. **Ask for an explanation first** -- "Please explain your approach before implementing" can save you from going down the wrong path.
+4. **Ask for an explanation first** -- "Please explain your approach before implementing" can stop a wrong turn before it happens.
 
-5. **Build in public** -- "Let's start with X, then add Y" makes your plan clear.
+5. **Build in public** -- "Let's start with X, then add Y" makes your plan legible.
 
-6. **Verify understanding** -- "Can you summarize what you're going to build?" catches misunderstandings early.
+6. **Verify understanding** -- "Can you summarize what you're going to build?" catches a misread early.
 
-7. **Pay attention to how Claude Code interprets your prompts.** If it misunderstands something, that's feedback on how to write the next prompt better.
+7. **Watch how Claude Code reads your prompts.** When it misunderstands, that's free feedback on how to write the next one.
 
-8. **Course-correct early** -- If Claude goes down the wrong path, don't keep piling on corrections. After 2 failed attempts, use `/clear` and start fresh with a better prompt. It's faster than fighting accumulated context.
+8. **Course-correct early** -- If Claude goes down the wrong path, don't keep piling on corrections. After two failed attempts, use `/clear` and start fresh with a better prompt. Faster than fighting accumulated context.
 
-9. **Use @file references** -- Instead of asking Claude to "find the auth file", reference it directly: "Explain the logic in @src/utils/auth.js". The `@` prefix includes the file directly without Claude searching for it.
+9. **Use @file references** -- Instead of "find the auth file", point straight at it: "Explain the logic in @src/utils/auth.js". The `@` prefix pulls the file in without Claude having to go looking.
 
 ---
 
 ## What's Next?
 
-That covers prompt engineering -- honestly the skill that makes the biggest difference in how productive you'll be with Claude Code. Trust me on this: time spent writing a clear prompt is never wasted.
+That's prompt engineering - honestly the skill that decides how productive you'll be with Claude Code. Time spent writing a clear prompt is never wasted. Every minute you put in, you get back several.
 
 > **Take your prompting further.** The [Advanced Modules](https://payhip.com/b/8E107) cover professional prompt workflows including the RPI methodology (Research-Plan-Implement) and token-efficient session management (Module 23).
 

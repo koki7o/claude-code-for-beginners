@@ -16,7 +16,7 @@
 
 ## What You'll Learn
 
-Claude Code doesn't care what language you're writing in. Python, TypeScript, Go, Rust, Java -- it handles all of them, and it adapts to the idioms and conventions of each. This module walks you through using it across the major ecosystems, including projects that mix several languages at once.
+Claude Code doesn't care what language you write in. Python, TypeScript, Go, Rust, Java - it handles them all, and it adapts to each one's idioms and conventions. This module walks it across the major ecosystems, including projects that mix several languages at once.
 
 ---
 
@@ -24,7 +24,7 @@ Claude Code doesn't care what language you're writing in. Python, TypeScript, Go
 
 ### Setting Up Python Projects
 
-Here's a solid starting prompt for spinning up a new Python project from scratch:
+A solid starting prompt for spinning up a fresh Python project:
 
 ```text
 Create a new Python project with:
@@ -69,7 +69,7 @@ Create a Django project for a blog with:
 
 ### FastAPI Application
 
-FastAPI is where Claude Code really shines with Python -- the type hints and Pydantic models give it a lot to work with.
+FastAPI is where Claude Code really hits its stride with Python - the type hints and Pydantic models give it a lot to work with.
 
 ```text
 Create a FastAPI application with:
@@ -85,20 +85,20 @@ Create a FastAPI application with:
 
 ### Python Standards That Matter
 
-Beyond just generating code, you want Claude Code to enforce patterns that actually matter in Python codebases. Here are the ones worth encoding into your workflow:
+Beyond just generating code, you want Claude Code enforcing the patterns that actually matter in Python. The ones worth baking into your workflow:
 
-- **Always use type hints**, including return types. Not just for function signatures -- annotate variables when the type isn't obvious. This gives Claude Code (and your IDE) far more to work with.
-- **Use `Protocol` for duck typing** instead of abstract base classes where possible. Protocols are more Pythonic and don't force inheritance hierarchies.
-- **Context managers for resource cleanup.** If something opens, connects, or acquires -- it should use `with`. Tell Claude Code to wrap database connections, file handles, and locks in context managers every time.
-- **List comprehensions over loops**, but only when readability isn't sacrificed. A comprehension that spans three lines is worse than a simple for-loop.
-- **pytest fixtures and parametrized tests.** Don't let Claude Code generate `unittest.TestCase` classes. Fixtures for setup/teardown, `@pytest.mark.parametrize` for testing multiple inputs.
+- **Always use type hints**, including return types. Not just on function signatures - annotate variables when the type isn't obvious. It gives Claude Code (and your IDE) far more to work with.
+- **Use `Protocol` for duck typing** instead of abstract base classes where you can. Protocols are more Pythonic and don't force inheritance hierarchies.
+- **Context managers for resource cleanup.** If something opens, connects, or acquires, it should use `with`. Have Claude Code wrap database connections, file handles, and locks in context managers every time.
+- **List comprehensions over loops**, but only when readability survives. A comprehension that sprawls across three lines is worse than a plain for-loop.
+- **pytest fixtures and parametrized tests.** Don't let Claude Code generate `unittest.TestCase` classes. Fixtures for setup/teardown, `@pytest.mark.parametrize` for multiple inputs.
 - **Django-specific conventions:**
-  - ViewSets over function-based views -- they reduce boilerplate and play better with routers
+  - ViewSets over function-based views - less boilerplate, better with routers
   - Always use serializers for data validation, even for internal APIs
-  - Management commands over standalone scripts -- they get Django's ORM and settings for free
+  - Management commands over standalone scripts - they get Django's ORM and settings for free
 - **FastAPI-specific:** Pydantic models for everything, dependency injection for shared resources, async endpoints by default.
 
-You can make these standards persistent by encoding them into `.claude/rules/python/` files. Module 12 covers this in detail, but the short version: create a rule file with these conventions, and Claude Code will follow them automatically whenever it touches Python files.
+Make these stick by encoding them into `.claude/rules/python/` files. Module 12 has the full setup, but the short version: create a rule file with these conventions and Claude Code follows them automatically whenever it touches Python.
 
 ---
 
@@ -106,7 +106,7 @@ You can make these standards persistent by encoding them into `.claude/rules/pyt
 
 ### Node.js Backend
 
-Express with TypeScript is one of the most common stacks you'll encounter. Claude Code handles the boilerplate well, which is good because there's a lot of it.
+Express with TypeScript is one of the most common stacks you'll meet. Claude Code handles the boilerplate well - good, because there's a lot of it.
 
 ```text
 Create an Express TypeScript API with:
@@ -156,18 +156,18 @@ Create a Next.js application with:
 
 TypeScript's type system is powerful, but only if you actually use it. These are the standards that separate clean TypeScript from "JavaScript with extra steps":
 
-- **Strict mode, always.** Enable every strict flag in `tsconfig.json`. No exceptions. Claude Code should never generate code that requires loosening strictness.
-- **No `any`.** Use `unknown` and narrow the type with type guards. If Claude Code reaches for `any`, push back. The whole point of TypeScript is the types.
-- **Named exports over default exports.** Default exports make refactoring harder and auto-imports less reliable. The only exception is Next.js page components, where default exports are required by the framework.
-- **`interface` for object shapes, `type` for unions and intersections.** This isn't just style -- interfaces can be extended and merged, types can't. Use each where it's strongest.
-- **Barrel exports only at module boundaries.** A `src/components/index.ts` that re-exports everything is fine. A barrel file in every subdirectory creates circular dependency nightmares.
+- **Strict mode, always.** Turn on every strict flag in `tsconfig.json`. No exceptions. Claude Code should never generate code that needs strictness loosened to compile.
+- **No `any`.** Use `unknown` and narrow with type guards. If Claude Code reaches for `any`, push back. The types are the whole point.
+- **Named exports over default exports.** Default exports make refactoring harder and auto-imports flakier. The one exception is Next.js page components, where the framework requires a default export.
+- **`interface` for object shapes, `type` for unions and intersections.** Not just style - interfaces can be extended and merged, types can't. Use each where it's strongest.
+- **Barrel exports only at module boundaries.** A `src/components/index.ts` that re-exports everything is fine. A barrel file in every subdirectory is a circular-dependency nightmare waiting to happen.
 - **React-specific conventions:**
-  - Server Components by default in Next.js App Router -- only add `'use client'` when the component genuinely needs browser APIs or interactivity
+  - Server Components by default in the Next.js App Router - only add `'use client'` when the component genuinely needs browser APIs or interactivity
   - Props interfaces named `{ComponentName}Props`
   - Custom hooks for shared logic, not utility functions that secretly use React internals
   - Zod schemas for runtime validation at API boundaries
 
-Encode these into `.claude/rules/typescript/` files so they apply automatically. See Module 12 for the full setup.
+Encode these into `.claude/rules/typescript/` files so they apply automatically. Module 12 has the full setup.
 
 ---
 
@@ -205,16 +205,16 @@ Create a Go web server with:
 
 ### Go Standards That Matter
 
-Go's simplicity is deceptive. The language is small, but writing idiomatic Go requires discipline. These are the patterns Claude Code should always follow:
+Go's simplicity is deceptive. The language is small, but idiomatic Go takes discipline. The patterns Claude Code should always follow:
 
-- **Always wrap errors with context.** Use `fmt.Errorf("failed to fetch user: %w", err)` -- never return a bare error, and never silently ignore one. The `%w` verb preserves the error chain for `errors.Is` and `errors.As`.
-- **Table-driven tests as the default.** Every test function should start with a slice of test cases. This is the single most idiomatic Go testing pattern, and Claude Code should reach for it automatically.
-- **Context propagation through all layers.** Every function that does I/O or could block should accept `context.Context` as its first parameter. No exceptions. This enables cancellation, timeouts, and tracing.
-- **Goroutine safety: always know who owns the lifecycle.** Before launching a goroutine, answer: who waits for it to finish? What happens if it panics? Use `errgroup` for managing groups of goroutines with proper error collection.
-- **Channel patterns: prefer closing channels over signaling.** A closed channel is readable by all receivers simultaneously -- a signal value only reaches one. Use `done` channels or context cancellation for shutdown coordination.
-- **Go reviewer mindset.** When asking Claude Code to review Go code, have it check for: exported functions without doc comments, error returns that aren't checked, goroutines without lifecycle management, and missing `defer` for cleanup.
+- **Always wrap errors with context.** Use `fmt.Errorf("failed to fetch user: %w", err)` - never return a bare error, never silently swallow one. The `%w` verb preserves the error chain for `errors.Is` and `errors.As`.
+- **Table-driven tests as the default.** Every test function should start with a slice of test cases. It's the single most idiomatic Go testing pattern, and Claude Code should reach for it automatically.
+- **Context propagation through all layers.** Every function that does I/O or could block should take `context.Context` as its first parameter. No exceptions. That's what enables cancellation, timeouts, and tracing.
+- **Goroutine safety: always know who owns the lifecycle.** Before you launch a goroutine, answer: who waits for it to finish? What happens if it panics? Use `errgroup` for managing groups of goroutines with proper error collection.
+- **Channel patterns: prefer closing channels over signaling.** A closed channel is readable by all receivers at once - a signal value only reaches one. Use `done` channels or context cancellation for shutdown coordination.
+- **Go reviewer mindset.** When you ask Claude Code to review Go, have it check for: exported functions without doc comments, unchecked error returns, goroutines without lifecycle management, and missing `defer` for cleanup.
 
-Encode these into `.claude/rules/golang/` files so they're enforced automatically. Module 12 has the details on setting up language-scoped rules.
+Encode these into `.claude/rules/golang/` files so they're enforced automatically. Module 12 has the details on language-scoped rules.
 
 ---
 
@@ -222,7 +222,7 @@ Encode these into `.claude/rules/golang/` files so they're enforced automaticall
 
 ### Rust CLI Tool
 
-Fair warning: Rust projects involve more back-and-forth with Claude Code than most languages. The borrow checker is strict, and sometimes the generated code won't compile on the first pass. That's normal. Just feed the compiler errors back and Claude Code will sort it out.
+Fair warning: Rust projects involve more back-and-forth than most languages. The borrow checker is strict, and the generated code sometimes won't compile on the first pass. Totally normal. Feed the compiler errors back and Claude Code sorts it out.
 
 ```text
 Create a Rust CLI application with:
@@ -255,7 +255,7 @@ Create a Rust web API with Actix-web:
 
 ### Spring Boot REST API
 
-Spring Boot projects tend to be verbose. Claude Code is genuinely useful here because it'll generate all the annotation-heavy boilerplate that nobody wants to type by hand.
+Spring Boot projects run verbose. Claude Code genuinely earns its keep here - it generates all the annotation-heavy boilerplate nobody wants to type by hand.
 
 ```text
 Create a Spring Boot application with:
@@ -275,7 +275,7 @@ Create a Spring Boot application with:
 
 ### SwiftUI Application
 
-Swift and iOS development is another area where Claude Code pulls its weight. The framework APIs are extensive, and having Claude Code generate the boilerplate for views, data models, and persistence saves real time.
+Swift and iOS is another spot where Claude Code pulls its weight. The framework APIs are sprawling, and having it generate the boilerplate for views, data models, and persistence saves real time.
 
 ```text
 Create a SwiftUI application with:
@@ -291,18 +291,18 @@ Create a SwiftUI application with:
 
 ### Swift Standards That Matter
 
-iOS codebases accumulate complexity fast. These patterns keep things manageable:
+iOS codebases pile on complexity fast. These patterns keep them manageable:
 
-- **Swift actors for state isolation.** Any shared mutable state should live inside an `actor`. This eliminates data races at compile time instead of debugging them at runtime.
-- **Protocol-oriented design over class inheritance.** Define behavior through protocols, provide defaults via extensions. This is how the Swift standard library is built, and your code should follow the same pattern.
-- **Dependency injection via protocols for testability.** Never instantiate services directly inside views or view models. Define a protocol, inject the concrete implementation, and swap in mocks for testing.
+- **Swift actors for state isolation.** Any shared mutable state should live inside an `actor`. It kills data races at compile time instead of leaving you to debug them at runtime.
+- **Protocol-oriented design over class inheritance.** Define behavior through protocols, provide defaults via extensions. It's how the Swift standard library is built - your code should follow suit.
+- **Dependency injection via protocols for testability.** Never instantiate services directly inside views or view models. Define a protocol, inject the concrete implementation, swap in mocks for testing.
 - **SwiftUI patterns:**
-  - Use the `@Observable` macro (not `ObservableObject`) for new code -- it's more efficient and requires less boilerplate
+  - Use the `@Observable` macro (not `ObservableObject`) for new code - more efficient, less boilerplate
   - Prefer view modifiers over wrapper views for styling and behavior
   - Use `NavigationStack` with typed navigation paths, not the deprecated `NavigationView`
-- **Testing with XCTest:** Use `async` test methods for testing async code. Combine `XCTestExpectation` with structured concurrency for integration tests. Keep UI tests focused on critical user flows, not pixel-perfect layout.
+- **Testing with XCTest:** Use `async` test methods for async code. Combine `XCTestExpectation` with structured concurrency for integration tests. Keep UI tests focused on critical user flows, not pixel-perfect layout.
 
-Encode Swift-specific conventions into `.claude/rules/swift/` files to keep them consistent across your project. Module 12 covers the setup.
+Encode Swift conventions into `.claude/rules/swift/` files to keep them consistent across the project. Module 12 covers the setup.
 
 ---
 
@@ -310,7 +310,7 @@ Encode Swift-specific conventions into `.claude/rules/swift/` files to keep them
 
 ### Working with Multiple Languages
 
-This is where things get interesting. Real-world projects often mix languages -- a Python ML service talking to a Go gateway, fronted by a Node.js app. Claude Code can context-switch between them in the same session.
+Here's where it gets interesting. Real projects often mix languages - a Python ML service talking to a Go gateway, fronted by a Node.js app. Claude Code can context-switch between them in one session.
 
 ```text
 I have a project with:
@@ -331,7 +331,7 @@ Help me:
 
 ### Language-Specific Tasks
 
-You can tell Claude Code to adjust its style based on what file you're working in. Trust me on this -- it makes polyglot work way smoother.
+You can tell Claude Code to shift its style based on which file you're in. It makes polyglot work noticeably smoother.
 
 ```text
 I'm working in a polyglot codebase.
@@ -346,7 +346,7 @@ When I ask you to add features:
 
 ## Lesson 7: Language-Specific Best Practices
 
-Each language has its own set of conventions, and Claude Code can enforce them for you. Use these review prompts when you want a second pair of eyes on your code.
+Each language carries its own conventions, and Claude Code can enforce them for you. Reach for these review prompts when you want a second pair of eyes.
 
 ### Python Best Practices
 
@@ -406,9 +406,9 @@ Review this Rust code for:
 
 ## Lesson 8: Setting Up Language-Specific Claude Code Configuration
 
-Everything in this module -- the standards, the patterns, the idioms -- is only useful if Claude Code remembers it between sessions. That's what the `.claude/rules/` directory is for. You organize your conventions by language, and Claude Code loads the relevant ones based on what files you're working in.
+Everything in this module - the standards, the patterns, the idioms - is only useful if Claude Code remembers it between sessions. That's what `.claude/rules/` is for. You organize your conventions by language, and Claude Code loads the relevant ones based on which files you're in.
 
-Here's the recommended directory structure:
+The recommended directory structure:
 
 ```text
 .claude/rules/
@@ -424,7 +424,7 @@ Here's the recommended directory structure:
     └── patterns.md        # Error wrapping, table-driven tests
 ```
 
-Each rule file is a short Markdown document that states conventions directly. Here's what a real one looks like:
+Each rule file is a short Markdown document that states conventions directly. A real one:
 
 ```markdown
 ---
@@ -438,11 +438,11 @@ globs: ["**/*.py"]
 - Django views: use ViewSets, never function-based views
 ```
 
-The `globs` field in the YAML header tells Claude Code when to load this rule. A pattern like `**/*.py` means it only activates when working on Python files. The `common/` rules use a broader glob (or no glob restriction) so they apply everywhere.
+The `globs` field in the YAML header tells Claude Code when to load the rule. A pattern like `**/*.py` means it only activates on Python files. The `common/` rules use a broader glob (or no restriction) so they apply everywhere.
 
-Language-specific rules only load when Claude Code is working on matching files. This keeps your context focused -- Go conventions don't clutter the prompt when you're editing TypeScript, and vice versa.
+Language-specific rules only load when Claude Code is on matching files. That keeps context focused - Go conventions don't clutter the prompt while you're editing TypeScript, and the other way around.
 
-**Exercise:** Create a `.claude/rules/` directory for your primary language. Add one rule file with 5-10 conventions that matter most to your team. Use the path-scoped frontmatter to scope it to the right file types. Then start a Claude Code session and verify the rules are being followed.
+**Exercise:** Create a `.claude/rules/` directory for your primary language. Add one rule file with the 5-10 conventions that matter most to your team. Use path-scoped frontmatter to scope it to the right file types. Then start a session and check the rules are being followed.
 
 ---
 
@@ -500,7 +500,7 @@ Create a Go microservice that:
 
 ### Exercise 4: Polyglot Integration
 
-This one's the most ambitious -- connect services written in different languages into a working system:
+The most ambitious one - wire services written in different languages into a working system:
 
 ```text
 Build a system with:
@@ -606,7 +606,7 @@ cargo test
 
 > **Build real projects in any language.** The [Real Projects Pack](https://payhip.com/b/dFXWO) includes multi-language projects -- from TypeScript microservices to Python-powered code analysis tools -- each with Claude Code workflows tailored to the language.
 
-Next up: Module 14 -- API integration and working with external services. You'll connect Claude Code to real-world APIs, which is where a lot of practical development happens.
+Next up: Module 14 -- API integration and working with external services. You'll connect Claude Code to real-world APIs, which is where a lot of the practical work happens.
 
 ---
 

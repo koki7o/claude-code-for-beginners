@@ -606,7 +606,7 @@ globs: ["pattern"]
 
 ### Ask Claude Code itself
 
-You can just ask Claude Code to help you troubleshoot directly:
+When you're stuck, the fastest move is usually to just hand the error to Claude Code and let it work:
 
 ```text
 I'm getting this error: [error message]

@@ -16,7 +16,7 @@
 
 ## What You'll Learn
 
-This module covers the full arc of getting your app out into the world -- from deployment fundamentals and platform choices (Vercel, Heroku, VPS) to Docker containerization, CI/CD pipelines, environment configuration, monitoring, logging, security, and handling database migrations in production.
+The full arc of getting your app out into the world - deployment fundamentals and platform choices (Vercel, Heroku, VPS), Docker containerization, CI/CD pipelines, environment configuration, monitoring, logging, security, and handling database migrations in production without losing sleep.
 
 ---
 
@@ -24,17 +24,17 @@ This module covers the full arc of getting your app out into the world -- from d
 
 ### What is Deployment?
 
-Deployment means making your application available on the internet so others can use it. That's it. Everything else in this module is about doing that *well*.
+Deployment means making your application available on the internet so other people can use it. That's it. Everything else in this module is about doing that *well*.
 
-Here's the deal: your app behaves differently on your laptop than it does on a production server, and understanding those differences is what separates a working demo from a reliable product.
+Your app behaves differently on your laptop than on a production server, and understanding the gap is what separates a working demo from a reliable product.
 
-**Development** is your local playground -- you're the only user, debug mode is on, you're using test data, and breaking things is fine. **Production** is the real deal -- real users, real data, no debug info exposed, and it needs to be reliable and fast. Treat them differently.
+**Development** is your local playground - you're the only user, debug mode is on, you're on test data, and breaking things is fine. **Production** is the real thing - real users, real data, no debug info exposed, and it has to stay reliable and fast. Treat them differently.
 
 ---
 
 ### Deployment Checklist
 
-Before deploying, run through this with Claude Code:
+Before you deploy, run through this with Claude Code:
 
 ```
 Help me prepare this application for production:
@@ -56,7 +56,7 @@ Help me prepare this application for production:
 
 ### What is Vercel?
 
-Vercel is a platform optimized for frontend frameworks -- Next.js, React, Vue, Svelte, static sites, and serverless functions. If you're building with Next.js especially, Vercel is the path of least resistance.
+Vercel is a platform tuned for frontend frameworks - Next.js, React, Vue, Svelte, static sites, serverless functions. If you're building with Next.js especially, Vercel is the path of least resistance.
 
 ---
 
@@ -71,7 +71,7 @@ Help me deploy this Next.js application to Vercel:
 5. Set up custom domain
 ```
 
-Claude Code will walk you through the CLI commands:
+Claude Code walks you through the CLI commands:
 
 ```bash
 # Install Vercel CLI
@@ -84,7 +84,7 @@ vercel login
 vercel --prod
 ```
 
-And create a `vercel.json` for you:
+And writes a `vercel.json` for you:
 
 ```json
 {
@@ -106,7 +106,7 @@ And create a `vercel.json` for you:
 
 ### What is Heroku?
 
-Heroku is a platform geared toward backend and full-stack apps -- Node.js APIs, Python/Django, Ruby on Rails, that sort of thing. It abstracts away most server management, which is nice when you're starting out.
+Heroku is aimed at backend and full-stack apps - Node.js APIs, Python/Django, Ruby on Rails, that sort of thing. It hides most of the server management, which is a relief when you're starting out.
 
 ---
 
@@ -122,13 +122,13 @@ Help me deploy this Express API to Heroku:
 6. Configure logging
 ```
 
-Claude Code will create your Procfile:
+Claude Code creates your Procfile:
 
 ```
 web: node dist/server.js
 ```
 
-And then guide you through the deploy commands:
+Then guides you through the deploy commands:
 
 ```bash
 # Install Heroku CLI first, then:
@@ -159,7 +159,7 @@ heroku logs --tail
 
 ### What is a VPS?
 
-A VPS is your own server -- think DigitalOcean, Linode, or AWS EC2. You get full control over everything, which is both the upside and the downside. It's great for custom configurations, running multiple applications, or just learning how servers actually work. Fair warning: there's more setup involved than a managed platform.
+A VPS is your own server - DigitalOcean, Linode, AWS EC2. You get full control over everything, which is both the upside and the downside. Great for custom configs, running several apps, or just learning how servers actually work. Fair warning: more setup than a managed platform.
 
 ---
 
@@ -176,7 +176,7 @@ Help me deploy this Node.js app to an Ubuntu VPS:
 7. Set up deployment script
 ```
 
-Claude Code will generate a deployment guide. On the server:
+Claude Code generates a deployment guide. On the server:
 
 ```bash
 # Update system
@@ -240,7 +240,7 @@ module.exports = {
 
 ### Why Docker?
 
-Docker packages your app with everything it needs to run -- the runtime, dependencies, system libraries, all of it. This means your app runs the same way on your laptop, in CI, and in production. No more "works on my machine." It also makes scaling and isolation much simpler.
+Docker packages your app with everything it needs to run - runtime, dependencies, system libraries, all of it. So it runs the same on your laptop, in CI, and in production. No more "works on my machine." It also makes scaling and isolation much simpler.
 
 ---
 
@@ -330,7 +330,7 @@ volumes:
 
 ### What is CI/CD?
 
-CI stands for Continuous Integration -- automatically testing your code whenever changes are pushed. CD stands for Continuous Deployment -- automatically deploying code that passes those tests. Together, they catch bugs early and let you ship faster without the manual overhead of deploying by hand every time.
+CI is Continuous Integration - automatically testing your code whenever changes get pushed. CD is Continuous Deployment - automatically shipping code that passes those tests. Together they catch bugs early and let you deploy faster without the manual grind of doing it by hand every time.
 
 ---
 
@@ -397,7 +397,7 @@ jobs:
 
 ### Managing Environment Variables
 
-This matters more than you think. Misconfigured environment variables are behind a surprising number of production incidents -- missing database URLs, wrong API keys, secrets accidentally committed to git.
+This matters more than it sounds. Misconfigured environment variables are behind a surprising share of production incidents - a missing database URL, a wrong API key, a secret accidentally committed to git.
 
 ```
 Help me set up proper environment configuration:
@@ -447,7 +447,7 @@ function validateEnv(): Config {
 export const config = validateEnv();
 ```
 
-The key idea here: validate early. If a required variable is missing, your app should crash immediately at startup with a clear error message -- not fail mysteriously ten minutes later when some request tries to hit the database.
+The idea: validate early. If a required variable is missing, the app should crash immediately at startup with a clear message - not fail mysteriously ten minutes later when some request tries to hit the database.
 
 ---
 
@@ -455,7 +455,7 @@ The key idea here: validate early. If a required variable is missing, your app s
 
 ### Setting Up Production Logging
 
-Once your app is in production, you can't just `console.log` and check your terminal. You need structured, leveled, persistent logging.
+Once your app is live, you can't just `console.log` and squint at your terminal. You need structured, leveled, persistent logging.
 
 ```
 Add production-grade logging:
@@ -502,7 +502,7 @@ export default logger;
 
 ### Health Checks
 
-Health check endpoints let your infrastructure know whether your app is actually working -- not just running, but ready to handle requests.
+Health check endpoints tell your infrastructure whether your app is actually working - not just running, but ready to handle requests.
 
 ```
 Add health check endpoints:
@@ -544,7 +544,7 @@ app.get('/health/ready', async (req, res) => {
 
 ### Safe Database Migrations
 
-This can be tricky. Schema changes on a live database with real data are one of the riskiest parts of deployment. Trust me on this -- always have a rollback plan, and always test on staging first.
+This one can bite. Schema changes on a live database with real data are among the riskiest parts of any deployment. Always have a rollback plan, and always test on staging first.
 
 ```
 Create a safe database migration strategy:
@@ -639,7 +639,7 @@ Set up deployment strategy that:
 
 ## Module 15 Checklist
 
-That wraps up the final module. Make sure you can:
+That wraps the final module. Make sure you can:
 
 - [ ] Prepare applications for production
 - [ ] Deploy to various platforms
@@ -682,7 +682,7 @@ That wraps up the final module. Make sure you can:
 
 ## Automating Deployment Workflows
 
-As your deployment process matures, you can codify it in a CLAUDE.md and use hooks to enforce it:
+As your deployment process matures, codify it in a CLAUDE.md and use hooks to enforce it:
 
 ```markdown
 # CLAUDE.md (deployment section)
@@ -710,17 +710,17 @@ You can also set up a hook that automatically runs linting after Claude Code edi
 }
 ```
 
-This kind of automation is what separates hobby projects from production-grade workflows. We covered hooks in detail in Module 12 -- go back and review if you want to set this up for your deployments.
+This kind of automation is what separates a hobby project from a production-grade workflow. We covered hooks in detail in Module 12 - go back and review if you want to set this up for your deployments.
 
 ---
 
 ## Wrapping Up the Course
 
-You've made it through the entire Claude Code for Beginners course. You now know how to build applications with Claude Code, write clean code, test and debug effectively, and deploy to production following solid practices.
+You made it through the entire Claude Code for Beginners course. You can now build applications with Claude Code, write clean code, test and debug it, and deploy to production on solid practices.
 
-The short version of what comes next: build things. Real projects -- not just tutorials -- are where this all clicks. Contribute to open source if that interests you. Share what you've learned. And keep going.
+What comes next is simple: build things. Real projects - not just tutorials - are where all of this clicks into place. Contribute to open source if that's your thing. Share what you learned. And keep going.
 
-> **Keep going.** The [Advanced Modules](https://payhip.com/b/8E107) pick up right where this course ends -- production Kubernetes deployments, multi-agent systems, enterprise integration, and performance optimization. The [Real Projects Pack](https://payhip.com/b/dFXWO) gives you 11 complete project templates to practice on. [Bundle both and save $10.](https://payhip.com/b/8E107+real-projects-bundle)
+> **Keep going.** The [Advanced Modules](https://payhip.com/b/8E107) pick up right where this course ends -- production Kubernetes deployments, multi-agent systems, enterprise integration, and performance optimization. The [Real Projects Pack](https://payhip.com/b/dFXWO) gives you 14 complete project templates to practice on. [Bundle both and save $10.](https://payhip.com/b/S8nU1)
 
 ---
 

@@ -16,13 +16,13 @@
 
 ## What You'll Learn
 
-This is where it all comes together. You're going to build a real application from scratch -- authentication, database, tests, error handling, documentation, version control, and deployment. It's a lot, but you've already practiced every piece of this individually. Now you're just wiring it all up into one cohesive project.
+This is where it all comes together. You're going to build a real application from scratch - auth, database, tests, error handling, docs, version control, deployment. It's a lot. But you've already practiced every piece of this on its own. All that's left is wiring them into one project that actually works.
 
 ---
 
 ## Project Options
 
-Choose one project that interests you:
+Pick the one that interests you:
 
 ### Option 1: Task Management API
 A REST API for managing tasks and projects
@@ -95,7 +95,7 @@ Features range from basic CRUD to categories, tags, due dates, priorities, searc
 
 ## We'll Build: Task Management API
 
-For this module, we'll walk through Option 1 step by step. The process applies to any of the projects above -- pick whichever one excites you and adapt the prompts accordingly.
+We'll walk through Option 1 step by step. The process maps onto any of the projects above - pick whichever one excites you and adapt the prompts as you go.
 
 ---
 
@@ -169,7 +169,7 @@ README.md
 
 ### Step 4b: Create a CLAUDE.md
 
-Before diving into implementation, set up a CLAUDE.md so Claude Code follows your project's conventions from the start:
+Before you write any real code, set up a CLAUDE.md so Claude Code follows your conventions from the first prompt:
 
 ```text
 Create a CLAUDE.md for this Task Management API that includes:
@@ -200,7 +200,7 @@ Create a CLAUDE.md for this Task Management API that includes:
 - Don't commit .env files
 ```
 
-This file gets loaded automatically every time you start Claude Code in this project. Instead of reminding Claude about your conventions in every prompt, you write them once and they stick. As the project grows, update CLAUDE.md to reflect what you've learned.
+This file loads automatically every time you start Claude Code in this project. Instead of re-explaining your conventions in every prompt, you write them once and they stick. As the project grows, keep CLAUDE.md updated with what you've learned.
 
 ---
 
@@ -403,7 +403,7 @@ Return clear error messages
 
 ### Step 14: Global Error Handler
 
-This matters more than you think. A good error handler is the difference between an app that's debuggable and one that's a nightmare when something goes wrong in production.
+This one earns its keep. A solid error handler is the line between an app you can debug and one that becomes a nightmare the moment something goes wrong in production.
 
 ```text
 Create error handling middleware at src/middleware/errorHandler.js that:
@@ -494,7 +494,7 @@ Aim for at least 80% coverage
 Add tests for any uncovered critical paths
 ```
 
-Fair warning: you'll almost certainly have failing tests on the first run. That's normal. Read the error messages carefully -- Claude Code can help you fix them, but understanding *why* they fail is where the real learning happens.
+Fair warning: you'll almost certainly have failing tests on the first run. Totally normal. Read the messages carefully - Claude Code can fix them, but understanding *why* they failed is where the actual learning lives.
 
 ---
 
@@ -545,7 +545,7 @@ Create initial commit with project structure
 
 ### Step 22: Commit Your Progress
 
-Trust me on this -- small, meaningful commits will save you later. If you break something, you can roll back to a working state instead of starting over.
+Small, meaningful commits will save you later. Break something and you can roll back to a working state instead of starting from zero.
 
 ```text
 Create meaningful commits for each major feature:
@@ -617,7 +617,7 @@ Add scripts to package.json:
 
 ### Enhancement Ideas
 
-If you want to keep going, here are some directions to take it:
+Want to keep going? A few directions:
 
 **More features:**
 ```text
@@ -645,7 +645,7 @@ If you want to keep going, here are some directions to take it:
 
 ## Final Checklist
 
-Before considering your project complete:
+Before you call the project done:
 
 **Functionality:**
 - [ ] All core features work
@@ -739,34 +739,34 @@ Create deployment guide for Ubuntu VPS:
 
 ## What You've Built
 
-Here's what you walked away with from this module:
+Walk away from this module and here's what you've got:
 
 - A complete, working API with secure authentication
 - A proper database schema with models
 - Comprehensive tests (unit and integration)
 - Solid error handling and logging
-- Real documentation that someone else could follow
+- Real documentation someone else could actually follow
 - A professional Git history
 - Production-ready configuration
 
-This is a genuine portfolio piece. It's the kind of project that shows you can build something end to end, not just follow a tutorial.
+This is a genuine portfolio piece. The kind of project that shows you can build something end to end, not just follow along with a tutorial.
 
 ---
 
 ## Going Further
 
-A few ideas if you want to keep building on this:
+A few ways to keep building on this:
 
 1. **Add a frontend** -- build a React app that consumes your API
 2. **Implement the enhancements** from Phase 10
 3. **Actually deploy it** -- getting code running on a real server teaches you things nothing else will
-4. **Ask for code review** -- have someone else read your code and give feedback
+4. **Ask for code review** -- have someone else read your code and push back
 5. **Contribute to open source** -- you've got the workflow down now
-6. **Build from the [Real Projects Pack](https://payhip.com/b/dFXWO)** -- 11 more project templates including a microservice architecture, full-stack SaaS boilerplate, and API client builder
+6. **Build from the [Real Projects Pack](https://payhip.com/b/dFXWO)** -- 14 more project templates including a microservice architecture, full-stack SaaS boilerplate, and API client builder
 
 ---
 
-Next up: Module 10 -- professional workflow and best practices that'll make everything you build from here on cleaner and faster.
+Next up: Module 10 -- the professional workflow and best practices that make everything you build from here on cleaner and faster.
 
 ---
 
